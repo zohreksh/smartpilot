@@ -6,7 +6,10 @@
         <h2>بیایید درباره پروژه شما صحبت کنیم.</h2>
         <p>از طراحی سایت و فروشگاه اینترنتی تا توسعه سامانه‌های اختصاصی و راهکارهای هوش مصنوعی.</p>
       </div>
-      <a class="header-button" href="#">درخواست مشاوره رایگان ←</a>
+      <div class="contact-action">
+        <a class="header-button" href="#">درخواست مشاوره رایگان</a>
+        <span class="contact-note">پاسخ‌گویی و بررسی اولیه پروژه</span>
+      </div>
     </div>
   </section>
 </template>
