@@ -25,3 +25,14 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+.team-section h2{margin-bottom:48px}
+.team-member{text-align:right;overflow:hidden}
+.team-image-wrap{margin-bottom:24px;border-radius:24px;overflow:hidden;background:#f5efe9}
+.team-image-wrap img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.team-member h3{margin:12px 0 8px;font-size:26px}
+.team-member p{margin:0 0 12px;color:#bd7448;font-weight:700}
+.team-member span{display:block;color:#6c7588;font-size:14px}
+.team-description{margin-top:18px;line-height:2;color:#6c7588}
+</style>
