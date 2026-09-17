@@ -1,0 +1,56 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# JetBrains / VS / VS Code
+.idea/
+.vs/
+.vscode/
+
+# .NET
+**/bin/
+**/obj/
+*.user
+*.suo
+
+# Node / Nuxt
+**/node_modules/
+**/.nuxt/
+**/.output/
+**/dist/
+**/playwright-report/
+**/test-results/
+**/blob-report/
+.playwright-browsers/
+**/.cleanup-backups/
+
+# Python
+**/__pycache__/
+**/*.pyc
+.venv/
+
+# Env files
+.env
+.env.*
+
+# Database backups and exports
+*.dump
+*.backup
+*.sql
+*.sql.gz
+infra/backups/*
+!infra/backups/.gitkeep
+
+# Source-controlled operational SQL (not dumps): Hevix reporting security foundation
+!infra/reporting/*.sql
+
+# Keep documented environment templates
+!.env.example
+!**/.env.example
+# Graphify generated files
+graphify-out/
+graph.json
+graph.html
+GRAPH_REPORT.md
+.claude/settings.json
+*.graph.json
