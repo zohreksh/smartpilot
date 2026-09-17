@@ -1,0 +1,1 @@
+<template><section id="contact" class="contact-section"><div class="container contact-panel"><div><span class="section-chip">شروع همکاری</span><h2>بیایید محصول دیجیتال بعدی را بسازیم</h2><p>مشاوره تخصصی برای طراحی، توسعه و هوش مصنوعی</p></div><a class="header-button" href="#">درخواست مشاوره ←</a></div></section></template>

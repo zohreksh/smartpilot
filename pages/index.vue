@@ -1,11 +1,1 @@
-<template>
-  <main>
-    <SiteHeader />
-    <HeroSection />
-    <ServicesSection />
-    <ProjectsSection />
-    <WhyUsSection />
-    <TeamSection />
-    <SiteFooter />
-  </main>
-</template>
+<template><main class="landing-page"><SiteHeader/><HeroSection/><ServicesSection/><ProjectsSection/><WhyUsSection/><TeamSection/><ContactSection/><SiteFooter/></main></template>

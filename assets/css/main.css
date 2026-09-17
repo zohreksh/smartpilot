@@ -88,3 +88,5 @@ button {
 .header-button{background:#111827;color:white;border:0;border-radius:18px;padding:14px 28px}
 .site-footer{margin-top:100px;padding:70px 0;background:#111827;color:white}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+
+.landing-page{overflow:hidden}.section{padding:80px 0}.contact-panel{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:45px;border-radius:32px;background:#111827;color:#fff}.contact-panel p{color:#cbd5e1}.contact-panel h2{font-size:36px;margin:12px 0}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.service-grid,.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.service-card,.why-card{padding:28px;border-radius:28px;background:#fff;box-shadow:0 15px 40px #0001}@media(max-width:900px){.hero-grid,.service-grid,.why-grid{grid-template-columns:1fr}.contact-panel{flex-direction:column}}
