@@ -2,8 +2,14 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <h3>NexaStudio</h3>
-        <p>ساخت آینده دیجیتال برای کسب‌وکارهای مدرن</p>
+        <div class="brand-mark footer-brand-mark">
+          <div class="brand-icon"></div>
+          <div class="brand-copy">
+            <strong>NexaStudio</strong>
+            <small>Digital Product Studio</small>
+          </div>
+        </div>
+        <p>ساخت آینده دیجیتال برای کسب‌وکارهای مدرن با طراحی محصول، توسعه اختصاصی و هوش مصنوعی.</p>
       </div>
       <div class="footer-links">
         <h4>خدمات</h4>
