@@ -1,12 +1,14 @@
 <template>
-  <header class="header">
+  <header class="site-header">
     <div class="container">
-      <strong>Studio</strong>
-      <nav>
-        <a>خدمات</a>
-        <a>پروژه‌ها</a>
-        <a>تماس</a>
+      <div class="header-brand">Studio</div>
+      <nav class="header-nav">
+        <a href="#">خدمات</a>
+        <a href="#">پروژه‌ها</a>
+        <a href="#">فرآیند همکاری</a>
+        <a href="#">تماس</a>
       </nav>
+      <button class="header-button">شروع همکاری</button>
     </div>
   </header>
 </template>
