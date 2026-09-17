@@ -15,7 +15,7 @@
             <a class="button-secondary" href="#contact">مشاهده پروژه</a>
           </div>
           <div class="hero-visual">
-            <img src="/images/projects/shidaneh-beauty-ecommerce-showcase.png" alt="پروژه شیدانه" />
+            <img src="/images/projects/shidaneh_beauty_ecommerce_showcase.png" alt="پروژه شیدانه" />
           </div>
         </article>
         <article class="project-card">
@@ -30,7 +30,7 @@
             <a class="button-secondary" href="#contact">مشاهده پروژه</a>
           </div>
           <div class="hero-visual">
-            <img src="/images/projects/hevix-heavy-machinery-showcase.png" alt="پروژه HEVIX" />
+            <img src="/images/projects/hevix_heavy_machinery_showcase.png" alt="پروژه HEVIX" />
           </div>
         </article>
       </div>
