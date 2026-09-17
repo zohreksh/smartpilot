@@ -1,7 +1,9 @@
 <template>
   <header class="site-header">
-    <div class="container">
-      <div class="header-brand">Studio</div>
+    <div class="container header-inner">
+      <div class="header-brand">
+        Digital Studio
+      </div>
       <nav class="header-nav">
         <a href="#">خدمات</a>
         <a href="#">پروژه‌ها</a>
