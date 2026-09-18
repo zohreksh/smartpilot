@@ -1,14 +1,11 @@
 <template>
   <section class="hero-section" id="hero">
     <div class="hero-showcase">
-      <NuxtImg
+      <img
         class="hero-background"
-        src="/images/hero/dual-laptop-web-showcase.webp"
+        src="/images/hero/dual_laptop_web_showcase.png"
         alt="نمایش پروژه‌های NexaStudio"
-        format="webp"
-        quality="82"
         loading="eager"
-        preload
       />
       <div class="hero-overlay">
         <span class="hero-badge">فراتر از یک وبسایت ساده</span>
