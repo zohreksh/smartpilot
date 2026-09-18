@@ -9,6 +9,5 @@
     <WhyUsSection />
     <TeamSection />
     <ContactSection />
-    <SiteFooter />
   </main>
 </template>
