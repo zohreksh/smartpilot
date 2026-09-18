@@ -1,0 +1,1 @@
+<template><section class="team"><h2>پشت این محصولات، یک تیم واقعی قرار دارد</h2><p>NexaStudio ترکیبی از طراحی محصول، توسعه نرم‌افزار و تجربه دیجیتال است.</p></section></template><style scoped>.team{padding:70px 8%;text-align:center;background:#fff}.team h2{font-size:40px}</style>
