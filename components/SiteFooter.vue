@@ -1,24 +1,35 @@
 <template>
   <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <h3>NexaStudio</h3>
-        <p>ساخت محصولات دیجیتال واقعی برای رشد کسب‌وکار شما</p>
+    <div class="footer-container">
+      <div class="footer-cta">
+        <h2>بیایید درباره پروژه شما صحبت کنیم.</h2>
+        <p>مشاوره رایگان، بررسی نیازها و ارائه پیشنهاد اختصاصی</p>
+        <button>درخواست مشاوره رایگان</button>
       </div>
-      <div class="footer-links">
-        <div>
-          <h4>دسترسی سریع</h4>
-          <a href="#">خانه</a>
-          <a href="#">خدمات ما</a>
-          <a href="#">نمونه کارها</a>
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>NexaStudio</h3>
+          <p>ساخت آینده دیجیتال برای کسب‌وکارهای مدرن با طراحی محصول، توسعه اختصاصی و هوش مصنوعی.</p>
         </div>
+
         <div>
-          <h4>ارتباط با ما</h4>
+          <h4>خدمات</h4>
+          <a href="#">طراحی سایت و فروشگاه اینترنتی</a>
+          <a href="#">توسعه سامانه‌های اختصاصی</a>
+          <a href="#">هوش مصنوعی و جستجوی هوشمند</a>
+          <a href="#">سئو و رشد ارگانیک</a>
+        </div>
+
+        <div>
+          <h4>ارتباط</h4>
           <a href="#">تماس با ما</a>
           <a href="#">شروع همکاری</a>
+          <a href="#">نمونه کارها</a>
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">NexaStudio © تمامی حقوق محفوظ است</div>
   </footer>
 </template>
@@ -27,46 +38,72 @@
 .site-footer {
   background: #0b1626;
   color: #fff;
-  padding: 55px 24px 20px;
   direction: rtl;
+  padding: 70px 24px 25px;
 }
-.footer-inner {
+
+.footer-container {
   max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  margin: auto;
 }
-.footer-brand h3 {
-  font-size: 32px;
+
+.footer-cta {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.footer-cta h2 {
+  font-size: 34px;
   margin: 0 0 12px;
 }
+
+.footer-cta p,
 .footer-brand p,
-.footer-links a {
-  color: #d8dde5;
+.footer-grid a {
+  color: #c7d0dc;
 }
-.footer-links {
-  display: flex;
-  gap: 70px;
+
+.footer-cta button {
+  margin-top: 25px;
+  background: #b86b35;
+  color: #fff;
+  border: 0;
+  border-radius: 30px;
+  padding: 14px 35px;
+  font-family: inherit;
 }
-.footer-links div {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
 }
-.footer-links h4 {
-  color: #d86b4a;
-  margin: 0 0 8px;
+
+.footer-grid h4 {
+  color: #e36d4f;
+  margin-bottom: 18px;
 }
+
+.footer-grid a {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-brand h3 {
+  font-size: 34px;
+  margin: 0 0 15px;
+}
+
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.15);
-  margin-top: 35px;
-  padding-top: 18px;
+  max-width: 1200px;
+  margin: 45px auto 0;
+  padding-top: 20px;
   text-align: center;
-  color: #bfc6d1;
+  border-top: 1px solid rgba(255,255,255,.15);
+  color: #aeb8c5;
 }
-@media(max-width:700px){
- .footer-inner{flex-direction:column}
- .footer-links{gap:30px}
+
+@media(max-width:800px){
+  .footer-grid{grid-template-columns:1fr}
 }
 </style>
