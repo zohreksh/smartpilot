@@ -15,7 +15,7 @@
             <a class="button-secondary" href="#contact">مشاهده پروژه</a>
           </div>
           <div class="hero-visual">
-            <NuxtImg src="/images/projects/shidaneh-beauty-ecommerce-showcase.webp" alt="پروژه شیدانه" format="webp" quality="80" loading="lazy" />
+            <img src="/images/projects/shidaneh_beauty_ecommerce_showcase.png" alt="پروژه شیدانه" loading="lazy" />
           </div>
         </article>
 
@@ -31,7 +31,7 @@
             <a class="button-secondary" href="#contact">مشاهده پروژه</a>
           </div>
           <div class="hero-visual">
-            <NuxtImg src="/images/projects/hevix-heavy-machinery-showcase.webp" alt="پروژه HEVIX" format="webp" quality="80" loading="lazy" />
+            <img src="/images/projects/hevix_heavy_machinery_showcase.png" alt="پروژه HEVIX" loading="lazy" />
           </div>
         </article>
       </div>
