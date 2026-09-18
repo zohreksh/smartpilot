@@ -35,9 +35,9 @@
 .cta-text span{font-size:12px;color:#d58a45}
 .cta-text h2{margin:8px 0 6px;font-size:28px;line-height:1.5;font-weight:800;color:#fff}
 .cta-text p{margin:0;color:#c1c8d0;font-size:12px}
-.footer-cta button{transform:translate(-70px,-30px);background:#ad6434;color:#fff;border:1px solid rgba(255,190,130,.45);border-radius:999px;padding:13px 30px;font-size:15px;font-family:inherit}
+.footer-cta button{transform:translate(-110px,-30px);background:#ad6434;color:#fff;border:1px solid rgba(255,190,130,.45);border-radius:999px;padding:13px 30px;font-size:15px;font-family:inherit}
 .footer-cta button b{font-weight:400;margin-right:8px}
-.footer-links{position:absolute;left:50%;bottom:0;transform:translateX(-50%);display:flex;align-items:center;gap:16px;color:#c5cbd3;font-size:12px;white-space:nowrap}
+.footer-links{position:absolute;left:0;bottom:0;display:flex;align-items:center;gap:16px;color:#c5cbd3;font-size:12px;white-space:nowrap}
 .footer-links i{height:14px;width:1px;background:rgba(255,255,255,.25)}
 @media(max-width:700px){.site-footer{height:auto;padding:35px 20px}.footer-cta{flex-direction:column;align-items:flex-start;gap:25px}.footer-cta button{transform:none}.footer-links{position:static;transform:none;margin-top:25px;flex-wrap:wrap}.cta-text h2{font-size:22px}}
 </style>
