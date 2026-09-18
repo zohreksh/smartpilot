@@ -8,6 +8,7 @@
           <small>ساخت آینده دیجیتال</small>
         </span>
       </a>
+
       <nav class="header-nav">
         <a class="active" href="#">خانه</a>
         <a href="#services">خدمات ما</a>
@@ -16,7 +17,8 @@
         <a href="#">وبلاگ</a>
         <a href="#contact">تماس با ما</a>
       </nav>
-      <a class="header-button" href="#contact">شروع همکاری ←</a>
+
+      <a class="header-button" href="#contact">شروع همکاری <span>←</span></a>
     </div>
   </header>
 </template>
