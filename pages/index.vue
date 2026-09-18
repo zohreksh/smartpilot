@@ -8,6 +8,6 @@
     <ProjectsSection />
     <WhyUsSection />
     <TeamSection />
-    <ContactSection />
+    <!-- <ContactSection /> -->
   </main>
 </template>

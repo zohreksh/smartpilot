@@ -59,6 +59,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   direction: rtl;
+  padding: 0 0 20px 0;
 }
 .team-card {
   background: #fff;
@@ -149,7 +150,6 @@
   object-fit: cover;
   display: block;
   border-radius: 20px;
-
 }
 @media (max-width: 900px) {
   .team-grid {
