@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="hero-projects">
-        <img class="hero-showcase-image" src="/images/hero/dual-laptop-web-showcase.png" alt="نمایش پروژه های NexaStudio" />
+        <img class="hero-showcase-image" src="/images/hero/dual_laptop_web_showcase.png" alt="نمایش پروژه های NexaStudio" />
       </div>
     </div>
   </section>
