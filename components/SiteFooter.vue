@@ -29,7 +29,7 @@
 .cta-text span{font-size:12px;color:#d58a45}
 .cta-text h2{margin:8px 0 6px;font-size:28px;line-height:1.5;font-weight:800;color:#fff}
 .cta-text p{margin:0;color:#c1c8d0;font-size:12px}
-.footer-cta button{transform:translate(25px,-30px);background:#ad6434;color:#fff;border:1px solid rgba(255,190,130,.45);border-radius:999px;padding:13px 30px;font-size:15px;font-family:inherit}
+.footer-cta button{transform:translate(35px,-30px);background:#ad6434;color:#fff;border:1px solid rgba(255,190,130,.45);border-radius:999px;padding:13px 30px;font-size:15px;font-family:inherit}
 .footer-cta button b{font-weight:400;margin-right:8px}
 .footer-links{position:absolute;left:0;bottom:0;display:flex;align-items:center;gap:16px;color:#c5cbd3;font-size:12px;white-space:nowrap}
 .footer-links i{height:14px;width:1px;background:rgba(255,255,255,.25)}
