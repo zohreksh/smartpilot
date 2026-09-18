@@ -4,26 +4,37 @@
       <h2>چرا NexaStudio؟</h2>
       <div class="why-grid">
         <article class="why-card">
-          <span class="why-icon">01</span>
+          <div class="why-icon">♧</div>
           <h3>تفکر محصول محور</h3>
-          <p>طراحی و توسعه با تمرکز روی نیاز واقعی کسب‌وکار و تجربه کاربر.</p>
+          <p>ما فقط کدنویسی نمی‌کنیم؛ برای رشد کسب‌وکار شما محصول می‌سازیم.</p>
         </article>
         <article class="why-card">
-          <span class="why-icon">02</span>
+          <div class="why-icon">▰</div>
           <h3>تمرکز بر نتایج واقعی</h3>
-          <p>راهکارهای دیجیتال با هدف رشد، بهبود عملکرد و ایجاد ارزش واقعی.</p>
+          <p>افزایش فروش، بهبود بهره‌وری و تجربه کاربری بهتر هدف ماست.</p>
         </article>
         <article class="why-card">
-          <span class="why-icon">03</span>
+          <div class="why-icon">◆</div>
           <h3>معماری مقیاس‌پذیر</h3>
-          <p>ساخت زیرساخت‌هایی که با رشد پروژه قابل توسعه و نگهداری باشند.</p>
+          <p>زیرساخت‌هایی پایدار و قابل توسعه برای امروز و فردای شما.</p>
         </article>
         <article class="why-card">
-          <span class="why-icon">04</span>
+          <div class="why-icon">✦</div>
           <h3>همراهی بلندمدت</h3>
-          <p>همراهی در مسیر توسعه، پشتیبانی و بهبود مستمر محصول.</p>
+          <p>از راه‌اندازی تا رشد، در کنار شما برای ساخت محصول بهتر هستیم.</p>
         </article>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.why-section{text-align:center;padding:70px 0}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:35px}
+.why-card{background:#fff;border:1px solid #eadfd7;border-radius:16px;padding:22px 18px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;direction:rtl}
+.why-icon{width:48px;height:48px;border-radius:50%;background:#fae9df;color:#b65b2a;display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:14px}
+.why-card h3{font-size:18px;margin:0 0 10px;color:#101b35}
+.why-card p{font-size:14px;line-height:2;color:#697386;margin:0}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.why-grid{grid-template-columns:1fr}}
+</style>
