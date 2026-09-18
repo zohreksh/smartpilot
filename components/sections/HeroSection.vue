@@ -1,17 +1,15 @@
 <template>
   <section class="hero-section" id="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
+    <div class="hero-showcase">
+      <img class="hero-background" src="/images/hero/dual_laptop_web_showcase.png" alt="نمایش پروژه‌های NexaStudio" />
+      <div class="hero-overlay">
         <span class="hero-badge">فراتر از یک وبسایت ساده</span>
-        <h1>زیرساخت دیجیتال <span>رشد کسب‌وکار شما</span></h1>
-        <p>NexaStudio با طراحی فروشگاه‌های آنلاین، سامانه‌های اختصاصی و راهکارهای مبتنی بر هوش مصنوعی، تجربه‌های دیجیتال مقیاس‌پذیر می‌سازد.</p>
+        <h1>زیرساخت دیجیتال<br /><span>رشد کسب‌وکار شما</span></h1>
+        <p>ما فروشگاه‌های آنلاین، سامانه‌های اختصاصی و راهکارهای هوشمند می‌سازیم؛ با معماری مقیاس‌پذیر، تجربه کاربری حرفه‌ای و تمرکز بر نتیجه واقعی.</p>
         <div class="hero-actions">
           <a class="button-primary" href="#contact">مشاوره رایگان ←</a>
           <a class="button-secondary" href="#projects">مشاهده نمونه کارها</a>
         </div>
-      </div>
-      <div class="hero-projects">
-        <img class="hero-showcase-image" src="/images/hero/dual_laptop_web_showcase.png" alt="نمایش پروژه های NexaStudio" />
       </div>
     </div>
   </section>
