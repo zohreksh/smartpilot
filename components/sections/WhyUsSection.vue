@@ -11,7 +11,9 @@
         <article class="why-card">
           <div class="why-icon">▰</div>
           <h3>تمرکز بر نتایج واقعی</h3>
-          <p>افزایش فروش، بهبود بهره‌وری و تجربه کاربری بهتر، معیار موفقیت ماست.</p>
+          <p>
+            افزایش فروش، بهبود بهره‌وری و تجربه کاربری بهتر، معیار موفقیت ماست.
+          </p>
         </article>
         <article class="why-card">
           <div class="why-icon">◆</div>
@@ -29,12 +31,59 @@
 </template>
 
 <style scoped>
-.why-section{text-align:center;padding:70px 0}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:35px}
-.why-card{background:#fff;border:1px solid #eadfd7;border-radius:16px;padding:22px 18px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;direction:rtl}
-.why-icon{width:48px;height:48px;border-radius:50%;background:#fae9df;color:#b65b2a;display:flex;align-items:flex-start;justify-content:center;font-size:25px;margin-bottom:14px}
-.why-card h3{font-size:18px;margin:0 0 10px;color:#101b35}
-.why-card p{font-size:14px;line-height:2;color:#697386;margin:0}
-@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.why-grid{grid-template-columns:1fr}}
+.why-section {
+  text-align: center;
+  padding: 20px 0 0 20px;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  /* margin-top: 35px; */
+}
+.why-card {
+  background: #fff;
+  border: 1px solid #eadfd7;
+  border-radius: 16px;
+  padding: 22px 18px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  direction: rtl;
+}
+.why-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fae9df;
+  color: #b65b2a;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+.why-card h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: #101b35;
+}
+.why-card p {
+  font-size: 14px;
+  line-height: 2;
+  color: #697386;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
