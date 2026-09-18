@@ -33,7 +33,7 @@
 <style scoped>
 .why-section {
   text-align: center;
-  padding: 20px 0 0 20px;
+  padding: 20px 0 30px 0
 }
 .why-grid {
   display: grid;
