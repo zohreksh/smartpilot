@@ -1,5 +1,29 @@
 <template>
   <section id="services" class="services-section">
+    <div class="hero-floating-cards container">
+      <article class="floating-service-card">
+        <div class="service-icon">⌘</div>
+        <div class="floating-service-content">
+          <h3>توسعه اختصاصی</h3>
+          <p>ساخت سامانه‌ها و محصولات دیجیتال اختصاصی متناسب با نیاز کسب‌وکار شما</p>
+        </div>
+      </article>
+      <article class="floating-service-card">
+        <div class="service-icon">✦</div>
+        <div class="floating-service-content">
+          <h3>هوش مصنوعی</h3>
+          <p>راهکارهای هوشمند برای اتوماسیون، تحلیل داده و رشد سریع‌تر</p>
+        </div>
+      </article>
+      <article class="floating-service-card">
+        <div class="service-icon">◉</div>
+        <div class="floating-service-content">
+          <h3>سئو و رشد ارگانیک</h3>
+          <p>بهینه‌سازی ساختار سایت برای دیده‌شدن و جذب مشتری واقعی</p>
+        </div>
+      </article>
+    </div>
+
     <div class="services-heading container">
       <span class="services-badge">خدمات ما</span>
       <h2>راهکارهای کامل برای دنیای دیجیتال</h2>
