@@ -8,7 +8,6 @@
     <ProjectsSection />
     <WhyUsSection />
     <TeamSection />
-    <ContactSection />
-    <SiteFooter />
+    <!-- <ContactSection /> -->
   </main>
 </template>
