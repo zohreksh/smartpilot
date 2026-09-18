@@ -5,7 +5,7 @@
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:32px}.brand-mark{display:flex;align-items:center;gap:10px}.header-nav{display:flex;align-items:center;gap:34px;font-weight:600}.header-button{background:linear-gradient(135deg,#c17a42,#9b542d);color:#fff;padding:13px 28px;border-radius:999px;font-weight:700}
 .hero-section{padding:0;position:relative}.hero-image-only{display:block;width:100%;height:auto;max-height:650px;object-fit:cover}
 .services-section{position:relative;z-index:10;margin-top:55px;padding:0 0 40px}
-.hero-floating-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:20;top:-55px;margin-bottom:-55px;justify-content:center}
+.hero-floating-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:20;top:-90px;margin-bottom:-55px;justify-content:center}
 .floating-service-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 16px;display:flex;direction:ltr;align-items:center;gap:14px;min-height:62px;box-shadow:var(--shadow)}
 .floating-service-card .service-icon{width:36px;height:36px;flex:none;font-size:18px;border-radius:50%;background:#f8e9df;color:#b86b35;display:flex;align-items:center;justify-content:center}
 .floating-service-content{direction:rtl;text-align:right}.floating-service-content h3{margin:0 0 2px;font-size:15px;font-weight:800}.floating-service-content p{margin:0;color:var(--muted);font-size:11px;line-height:1.5}
