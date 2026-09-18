@@ -1,40 +1,46 @@
 <template>
-  <footer class="footer">
-    <div class="footer-wrap">
-      <div class="footer-top">
-        <div class="brand">
-          <h2>NexaStudio</h2>
-          <p>ما در NexaStudio با طراحی، توسعه و هوش مصنوعی، ایده‌ها را به محصولات دیجیتال واقعی تبدیل می‌کنیم.</p>
-          <button>شروع همکاری</button>
+  <footer class="site-footer">
+    <div class="footer-bg"></div>
+    <div class="footer-container">
+      <div class="footer-cta">
+        <div>
+          <span>آماده ساخت آینده دیجیتال کسب‌وکار خود هستید؟</span>
+          <h2>بیایید درباره پروژه شما صحبت کنیم.</h2>
+        </div>
+        <button>درخواست مشاوره رایگان ←</button>
+      </div>
+
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>NexaStudio</h3>
+          <p>راهکارهای دیجیتال برای ساخت محصولات واقعی، توسعه اختصاصی و رشد کسب‌وکار شما.</p>
         </div>
 
-        <div class="col">
-          <h3>خدمات ما</h3>
-          <span>طراحی وب سایت</span>
-          <span>توسعه اختصاصی</span>
-          <span>هوش مصنوعی</span>
-          <span>سئو و رشد دیجیتال</span>
+        <div class="footer-column">
+          <h4>خدمات</h4>
+          <a>طراحی وب سایت و فروشگاه اینترنتی</a>
+          <a>توسعه سامانه‌های اختصاصی</a>
+          <a>هوش مصنوعی و جستجوی هوشمند</a>
+          <a>سئو و رشد ارگانیک</a>
         </div>
 
-        <div class="col">
-          <h3>دسترسی سریع</h3>
-          <span>خانه</span>
-          <span>نمونه کارها</span>
-          <span>تیم ما</span>
-          <span>تماس با ما</span>
+        <div class="footer-column">
+          <h4>دسترسی سریع</h4>
+          <a>خانه</a>
+          <a>نمونه کارها</a>
+          <a>تیم ما</a>
+          <a>تماس با ما</a>
         </div>
 
-        <div class="col">
-          <h3>ارتباط با ما</h3>
-          <span>شروع پروژه</span>
-          <span>مشاوره رایگان</span>
-          <span>ایمیل</span>
-          <span>شبکه‌های اجتماعی</span>
+        <div class="footer-column">
+          <h4>ارتباط با ما</h4>
+          <a>شروع همکاری</a>
+          <a>مشاوره تخصصی</a>
+          <a>شبکه‌های اجتماعی</a>
         </div>
       </div>
 
-      <div class="line"></div>
-      <div class="bottom">
+      <div class="footer-bottom">
         <span>NexaStudio © تمامی حقوق محفوظ است</span>
         <span>Digital Product Studio</span>
       </div>
@@ -43,17 +49,20 @@
 </template>
 
 <style scoped>
-.footer{background:#0b1424;color:white;padding:80px 24px 25px;direction:rtl}
-.footer-wrap{max-width:1200px;margin:auto}
-.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:50px}
-.brand h2{font-size:38px;margin:0 0 18px}
-.brand p{color:#b9c1cc;line-height:2;font-size:15px}
-.brand button{margin-top:25px;background:#d86b4a;border:0;color:white;padding:14px 35px;border-radius:30px;font-family:inherit;cursor:pointer}
-.col{display:flex;flex-direction:column;gap:16px}
-.col h3{color:#d86b4a;font-size:18px;margin:0 0 10px}
-.col span{color:#c7ced8;font-size:15px}
-.line{height:1px;background:rgba(255,255,255,.15);margin:45px 0 20px}
-.bottom{display:flex;justify-content:space-between;color:#9da7b5;font-size:14px}
-@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}.bottom{flex-direction:column;gap:15px}}
-@media(max-width:600px){.footer-top{grid-template-columns:1fr}}
+.site-footer{background:#101b2c;color:#fff;padding:55px 24px 25px;direction:rtl;position:relative;overflow:hidden}
+.footer-container{max-width:1200px;margin:auto;position:relative}
+.footer-bg{position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(216,107,74,.12);left:-180px;bottom:-220px}
+.footer-cta{display:flex;align-items:center;justify-content:space-between;padding-bottom:45px;border-bottom:1px solid rgba(255,255,255,.12)}
+.footer-cta span{color:#d86b4a;font-size:14px}
+.footer-cta h2{margin:12px 0 0;font-size:30px}
+.footer-cta button{background:#b96832;color:white;border:0;border-radius:30px;padding:15px 35px;font-family:inherit;font-size:15px}
+.footer-content{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:45px;padding:45px 0}
+.footer-brand h3{font-size:32px;margin:0 0 15px}
+.footer-brand p{color:#b8c1cd;line-height:2}
+.footer-column{display:flex;flex-direction:column;gap:14px}
+.footer-column h4{color:#d86b4a;margin:0 0 8px;font-size:18px}
+.footer-column a{color:#c8d0da}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;display:flex;justify-content:space-between;color:#9fa9b7}
+@media(max-width:900px){.footer-content{grid-template-columns:1fr 1fr}.footer-cta{flex-direction:column;align-items:flex-start;gap:25px}}
+@media(max-width:600px){.footer-content{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:10px}}
 </style>
