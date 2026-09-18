@@ -1,1 +1,0 @@
-<template><section class="why"><h2>چرا NexaStudio؟</h2><div><p>تمرکز بر نتایج واقعی</p><p>معماری مقیاس‌پذیر</p><p>همراهی بلندمدت</p></div></section></template><style scoped>.why{padding:50px 7%;text-align:center}.why div{display:flex;gap:20px;justify-content:center}.why p{padding:30px;background:#fff;border-radius:22px}</style>
