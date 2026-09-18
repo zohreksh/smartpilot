@@ -5,7 +5,7 @@
       <div class="team-grid">
         <article class="team-member">
           <div class="team-image-wrap">
-            <img src="/images/team/photo_2026-09-17_18-44-31.jpg" alt="زهره کشاورز" />
+            <img src="/images/team/zohreh.webp" alt="زهره کشاورز" />
           </div>
           <h3>زهره کشاورز</h3>
           <p>Product & AI Engineer</p>
@@ -14,7 +14,7 @@
         </article>
         <article class="team-member">
           <div class="team-image-wrap">
-            <img src="/images/team/photo_2026-09-17_18-44-57.jpg" alt="حسین کلانی" />
+            <img src="/images/team/hossein.webp" alt="حسین کلانی" />
           </div>
           <h3>حسین کلانی</h3>
           <p>Full Stack Developer</p>
