@@ -3,7 +3,7 @@
     <div class="hero-showcase">
       <img
         class="hero-background"
-        src="/images/hero/dual_laptop_web_showcase.png"
+        src="/images/hero/desktop-hero.webp"
         alt="نمایش پروژه‌های NexaStudio"
         loading="eager"
       />
