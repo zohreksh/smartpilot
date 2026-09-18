@@ -2,7 +2,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand-mark" href="#">
-        <span class="brand-icon">N</span>
+        <span class="brand-icon"></span>
         <span class="brand-copy">
           <strong>NexaStudio</strong>
           <small>ساخت آینده دیجیتال</small>
@@ -18,7 +18,7 @@
         <a href="#contact">تماس با ما</a>
       </nav>
 
-      <a class="header-button" href="#contact">شروع همکاری ←</a>
+      <a class="header-button" href="#contact">شروع همکاری <span>←</span></a>
     </div>
   </header>
 </template>

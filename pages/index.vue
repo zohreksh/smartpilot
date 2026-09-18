@@ -1,6 +1,14 @@
 <template>
-  <main>
+  <main class="landing-page">
     <SiteHeader />
-    <HeroSection />
+    <section class="hero-shell">
+      <HeroSection />
+    </section>
+    <ServicesSection />
+    <ProjectsSection />
+    <WhyUsSection />
+    <TeamSection />
+    <ContactSection />
+    <SiteFooter />
   </main>
 </template>

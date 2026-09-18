@@ -1,0 +1,1 @@
+<template><footer>NexaStudio © Digital Product Studio</footer></template><style scoped>footer{padding:30px;text-align:center;background:#0b1626;color:#fff}</style>

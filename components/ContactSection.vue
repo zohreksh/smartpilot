@@ -1,0 +1,1 @@
+<template><section class="contact"><h2>بیایید درباره پروژه شما صحبت کنیم</h2><button>درخواست مشاوره رایگان</button></section></template><style scoped>.contact{padding:80px;text-align:center;background:#102033;color:white}.contact button{margin-top:20px;padding:15px 30px;border-radius:30px;border:0;background:#c57a42;color:white}</style>
