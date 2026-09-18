@@ -82,7 +82,7 @@
 }
 .team-card h3 {
   font-size: 20px;
-  margin: 8px 0;
+  margin: 6px 0;
 }
 .team-headline span {
   display: block;
@@ -91,8 +91,9 @@
   color: #d86b4a;
 }
 .team-card p {
-  line-height: 1.8;
+  line-height: 1.5;
   color: #6c7588;
+  margin: 6px 0;
 }
 .job-title {
   color: #bd7448 !important;
@@ -101,7 +102,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 .specialties span {
   border: 1px solid #efb8a5;
@@ -113,11 +114,11 @@
 .skills-list {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  margin: 6px 0 0;
 }
 .skills-list li {
   color: #6c7588;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 .skills-list li::before {
   content: "•";
@@ -134,8 +135,8 @@
   aspect-ratio: 1;
   object-fit: cover;
   display: block;
-  padding: 6px;
   border-radius: 20px;
+  padding: 6px;
 }
 @media (max-width: 900px) {
   .team-grid {
