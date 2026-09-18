@@ -2,7 +2,8 @@ export default defineNuxtConfig({
   ssr: true,
   components: {
     dirs: [
-      { path: '~/components', pathPrefix: false }
+      { path: '~/components', pathPrefix: false },
+      { path: '~/components/sections', pathPrefix: false }
     ]
   },
   app: {
