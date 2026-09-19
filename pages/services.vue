@@ -28,7 +28,8 @@
 .hero h1{font-size:clamp(30px,4vw,46px);line-height:1.5;color:#2f3a45;margin:15px auto 22px;max-width:760px;font-weight:700}
 .hero p{max-width:760px;margin:auto;color:#667085;font-size:17px;line-height:2}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding-bottom:100px}
-.service-card{background:linear-gradient(145deg,#ffffff,#fff7ef);border:1px solid #ead8c7;border-radius:28px;padding:34px;min-height:250px;transition:.25s;box-shadow:0 10px 30px rgba(170,120,70,.08)}
+.service-card{border-radius:28px;padding:34px;min-height:250px;transition:.25s;box-shadow:0 10px 30px rgba(170,120,70,.08);border:1px solid transparent}
+.service-card:nth-child(1){background:#fff3ed;border-color:#f4d5c2}.service-card:nth-child(2){background:#eef7ff;border-color:#cfe3f5}.service-card:nth-child(3){background:#f2f8ef;border-color:#d5e8ca}.service-card:nth-child(4){background:#f8f1ff;border-color:#e2d2f4}.service-card:nth-child(5){background:#fff8e8;border-color:#f1dfb1}.service-card:nth-child(6){background:#edf8f7;border-color:#c7e5e1}
 .service-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(170,120,70,.14)}
 .service-card h2{font-size:25px;line-height:1.5;margin-bottom:18px}
 .service-card p{color:#667085;line-height:2;font-size:16px}
