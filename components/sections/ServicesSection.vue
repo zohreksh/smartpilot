@@ -66,3 +66,11 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+@media (max-width: 767px) {
+  .hero-floating-cards {
+    display: none;
+  }
+}
+</style>
