@@ -3,56 +3,41 @@
     <SiteHeader />
 
     <section class="about-hero container">
-      <span class="about-badge">درباره ما</span>
-      <h1>ما محصول دیجیتال می‌سازیم، نه فقط وب‌سایت</h1>
+      <span class="about-badge">درباره NexaStudio</span>
+      <h1>ما محصول دیجیتال می‌سازیم، نه فقط نرم‌افزار</h1>
       <p>
-        ما با ترکیب معماری نرم‌افزار، تجربه محصول و فناوری‌های جدید، به کسب‌وکارها
-        کمک می‌کنیم راهکارهای دیجیتال قابل توسعه بسازند.
+        ما ترکیبی از تجربه مهندسی نرم‌افزار، معماری سیستم و تفکر محصول هستیم؛
+        کمک می‌کنیم کسب‌وکارها ایده‌های خود را به محصولات دیجیتال واقعی،
+        قابل توسعه و ماندگار تبدیل کنند.
       </p>
+      <button>شروع گفتگو</button>
     </section>
 
-    <section class="about-section container">
-      <div class="section-title">
+    <section class="about-story container">
+      <div class="story-card">
         <span>داستان ما</span>
-        <h2>تجربه فنی در کنار نگاه محصول</h2>
+        <h2>از مهندسی نرم‌افزار تا ساخت محصولات دیجیتال</h2>
+        <p>
+          مسیر ما با توسعه نرم‌افزار شروع شد، اما تجربه ساخت پروژه‌های واقعی
+          به ما نشان داد که یک محصول موفق فقط با کدنویسی ساخته نمی‌شود.
+        </p>
+        <p>
+          شناخت مسئله، معماری درست، تجربه کاربری و نگاه بلندمدت عواملی هستند
+          که یک محصول را از یک پروژه معمولی جدا می‌کنند.
+        </p>
+        <p>
+          NexaStudio حاصل همین نگاه است؛ ترکیبی از مهندسی دقیق و تفکر محصول
+          برای ساخت راهکارهای دیجیتال ماندگار.
+        </p>
       </div>
-      <p>
-        حسین کولانی و زهره کشاورز، معمار و توسعه‌دهنده، با تمرکز بر ساخت محصولات
-        واقعی دیجیتال فعالیت می‌کنند. هدف ما ایجاد راهکارهایی است که علاوه بر
-        ظاهر مناسب، از نظر معماری، توسعه‌پذیری و ارزش کسب‌وکار نیز درست طراحی شده
-        باشند.
-      </p>
-    </section>
-
-    <section class="about-cards container">
-      <article>
-        <h3>تفکر محصول</h3>
-        <p>قبل از توسعه، مسئله کسب‌وکار، کاربر و مسیر رشد را بررسی می‌کنیم.</p>
-      </article>
-      <article>
-        <h3>معماری و توسعه</h3>
-        <p>راهکارهایی می‌سازیم که امکان توسعه و تغییر در آینده را داشته باشند.</p>
-      </article>
-      <article>
-        <h3>فناوری هوشمند</h3>
-        <p>از هوش مصنوعی و ابزارهای جدید برای ایجاد تجربه بهتر استفاده می‌کنیم.</p>
-      </article>
-    </section>
-
-    <section class="about-section container">
-      <div class="section-title">
-        <span>محصولات ما</span>
-        <h2>تجربه ساخت محصولات واقعی</h2>
+      <div class="story-stats">
+        <strong>20+</strong>
+        <span>سال تجربه توسعه</span>
+        <strong>2</strong>
+        <span>محصول دیجیتال واقعی</span>
+        <strong>∞</strong>
+        <span>ایده برای ساختن</span>
       </div>
-      <div class="products">
-        <div>شیدانه</div>
-        <div>هویکس</div>
-      </div>
-    </section>
-
-    <section class="about-cta container">
-      <h2>آماده ساخت یک محصول دیجیتال هستید؟</h2>
-      <p>بیایید درباره ایده و مسیر رشد پروژه شما صحبت کنیم.</p>
     </section>
   </main>
 </template>
@@ -60,6 +45,8 @@
 <style scoped>
 .about-page {
   direction: rtl;
+  background: #fcfaf7;
+  min-height: 100vh;
 }
 .container {
   max-width: 1200px;
@@ -68,59 +55,87 @@
 }
 .about-hero {
   text-align: center;
-  padding: 90px 24px 50px;
+  padding: 110px 24px 80px;
 }
 .about-badge,
-.section-title span {
+.about-story span {
   display: inline-block;
-  color: #d86b4a;
-  border: 1px solid #d86b4a;
+  color: #d95f00;
+  background: rgba(217, 95, 0, 0.08);
   border-radius: 999px;
-  padding: 6px 18px;
+  padding: 8px 18px;
 }
 .about-hero h1 {
-  font-size: 42px;
-  margin: 20px 0;
+  max-width: 850px;
+  margin: 28px auto 20px;
+  font-size: clamp(34px, 5vw, 56px);
+  color: #101828;
+  line-height: 1.35;
 }
-.about-hero p,
-.about-section p {
+.about-hero p {
+  max-width: 700px;
+  margin: auto;
+  color: #667085;
+  line-height: 2;
+  font-size: 18px;
+}
+.about-hero button {
+  margin-top: 32px;
+  border: 0;
+  background: #d95f00;
+  color: white;
+  border-radius: 999px;
+  padding: 14px 34px;
+  font-size: 16px;
+}
+.about-story {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  padding-bottom: 90px;
+}
+.story-card,
+.story-stats {
+  background: white;
+  border: 1px solid #eadfd7;
+  border-radius: 32px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(16,24,40,.05);
+}
+.story-card h2 {
+  font-size: 34px;
+  color: #101828;
+}
+.story-card p {
   color: #667085;
   line-height: 2;
 }
-.about-section {
-  margin-bottom: 60px;
-}
-.section-title h2 {
-  margin-top: 16px;
-}
-.about-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.about-cards article,
-.products div {
-  background: #fff;
-  border: 1px solid #eadfd7;
-  border-radius: 22px;
-  padding: 24px;
-}
-.products {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-.about-cta {
+.story-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
   text-align: center;
-  padding: 60px 24px;
+}
+.story-stats strong {
+  color: #d95f00;
+  font-size: 42px;
+}
+.story-stats span {
+  color: #667085;
+  background: none;
+  padding: 0;
 }
 @media (max-width: 767px) {
-  .about-hero h1 {
-    font-size: 30px;
-  }
-  .about-cards,
-  .products {
+  .about-story {
     grid-template-columns: 1fr;
+  }
+  .story-card,
+  .story-stats {
+    padding: 24px;
+  }
+  .story-card h2 {
+    font-size: 26px;
   }
 }
 </style>
