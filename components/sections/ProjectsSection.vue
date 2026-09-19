@@ -52,8 +52,7 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 0;
 }
 
@@ -74,21 +73,23 @@
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
   }
 
-  .project-image img {
-    aspect-ratio: 16 / 10;
-  }
-}
-
-@media (max-width: 430px) {
   .project-image {
     border-radius: 20px;
   }
 
   .project-image img {
-    aspect-ratio: 4 / 3;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 430px) {
+  .project-image {
+    border-radius: 16px;
   }
 }
 </style>
