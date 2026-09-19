@@ -48,7 +48,7 @@
               <span class="job-title">معمار و توسعه‌دهنده</span>
               <div class="skills-list">
                 <span>✓ معماری نرم‌افزار</span
-                ><span>✓ هوش مصنوعی و جستجوی هوشمند</span
+                ><span>✓ هوش مصنوعی</span
                 ><span>✓ توسعه سیستم‌های تخصصی</span>
               </div>
               <span class="profile-link">مشاهده پروفایل</span>
@@ -115,6 +115,14 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
+}
+
+.intro-card {
+  text-align: center;
+}
+
+.specialists-card {
+  text-align: center;
 }
 
 .intro-card .team-icon,
@@ -194,7 +202,8 @@
 .specialties {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 16px;
+  justify-content: center;
 }
 .specialties span {
   padding: 4px 10px;
