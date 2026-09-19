@@ -56,12 +56,17 @@
 @media (max-width: 768px) {
   .header-inner {
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     padding: 12px 0;
+    gap: 12px;
   }
 
   .brand-copy strong {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .brand-copy small {
+    font-size: 11px;
   }
 
   .header-nav {
@@ -75,20 +80,32 @@
   .header-button {
     padding: 12px 18px;
     min-height: 44px;
+    white-space: nowrap;
   }
 }
 
 @media (max-width: 430px) {
+  .header-inner {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
   .header-nav {
     display: none;
   }
 
-  .header-inner {
-    justify-content: space-between;
+  .brand-copy {
+    min-width: 0;
+  }
+
+  .brand-copy strong,
+  .brand-copy small {
+    white-space: nowrap;
   }
 
   .header-button {
-    padding: 11px 16px;
+    padding: 10px 14px;
+    font-size: 12px;
   }
 }
 </style>
