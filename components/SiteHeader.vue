@@ -1,4 +1,4 @@
-<template><header class="header"><strong>NexaStudio</strong><nav><a>خانه</a><a>خدمات ما</a><a>نمونه کارها</a><a>درباره ما</a><a>وبلاگ</a><a>تماس</a></nav><button>شروع همکاری</button></header></template>
+<template><header class="header"><strong>NexaStudio</strong><nav><a>خانه</a><a>خدمات ما</a><a>نمونه کارها</a><a href="/about">درباره ما</a><a>وبلاگ</a><a>تماس</a></nav><button>شروع همکاری</button></header></template>
 <style scoped>
 .header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;background:#fff;direction:rtl}
 .header strong{font-size:26px;white-space:nowrap}
