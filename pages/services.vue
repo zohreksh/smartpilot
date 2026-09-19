@@ -29,7 +29,8 @@
 .hero p{max-width:760px;margin:auto;color:#667085;font-size:17px;line-height:2}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding-bottom:100px}
 .service-card{border-radius:28px;padding:34px;min-height:250px;transition:.25s;box-shadow:0 10px 30px rgba(170,120,70,.08);border:1px solid transparent}
-.service-card:nth-child(1){background:#fff3ed;border-color:#f4d5c2}.service-card:nth-child(2){background:#eef7ff;border-color:#cfe3f5}.service-card:nth-child(3){background:#f2f8ef;border-color:#d5e8ca}.service-card:nth-child(4){background:#f8f1ff;border-color:#e2d2f4}.service-card:nth-child(5){background:#fff8e8;border-color:#f1dfb1}.service-card:nth-child(6){background:#edf8f7;border-color:#c7e5e1}
+.service-card:nth-child(1){background:#fff3ed;border-color:#f4d5c2}.service-card:nth-child(2){background:#eef7ff;border-color:#cfe3f5}.service-card:nth-child(3){background:#f8f1ff;border-color:#e2d2f4}.service-card:nth-child(4){background:#fff0f2;border-color:#f2cbd3}.service-card:nth-child(5){background:#fff8e8;border-color:#f1dfb1}.service-card:nth-child(6){background:#edf8f7;border-color:#c7e5e1}
+.service-card:nth-child(1) h2{color:#d95f00}.service-card:nth-child(2) h2{color:#1976d2}.service-card:nth-child(3) h2{color:#7c3aed}.service-card:nth-child(4) h2{color:#dc2626}.service-card:nth-child(5) h2{color:#b7791f}.service-card:nth-child(6) h2{color:#0f766e}
 .service-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(170,120,70,.14)}
 .service-card h2{font-size:25px;line-height:1.5;margin-bottom:18px}
 .service-card p{color:#667085;line-height:2;font-size:16px}
