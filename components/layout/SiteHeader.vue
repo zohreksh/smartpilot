@@ -1,15 +1,15 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
-const isMenuOpen = ref(false)
+const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
+  isMenuOpen.value = !isMenuOpen.value;
+};
 
 const closeMenu = () => {
-  isMenuOpen.value = false
-}
+  isMenuOpen.value = false;
+};
 </script>
 
 <template>
@@ -26,14 +26,19 @@ const closeMenu = () => {
         <a class="active" href="#">خانه</a>
         <a href="#services">خدمات ما</a>
         <a href="#projects">نمونه کارها</a>
-        <a href="#about">درباره ما</a>
+        <nuxt-link to="/about">درباره ما</nuxt-link>
         <a href="#">وبلاگ</a>
         <a href="#contact">تماس با ما</a>
       </nav>
 
       <span class="header-spacer" aria-hidden="true"></span>
 
-      <button class="mobile-menu-button" type="button" aria-label="باز کردن منو" @click="toggleMenu">
+      <button
+        class="mobile-menu-button"
+        type="button"
+        aria-label="باز کردن منو"
+        @click="toggleMenu"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -44,17 +49,27 @@ const closeMenu = () => {
       <a href="#" @click="closeMenu">خانه</a>
       <a href="#services" @click="closeMenu">خدمات ما</a>
       <a href="#projects" @click="closeMenu">نمونه کارها</a>
-      <a href="#about" @click="closeMenu">درباره ما</a>
+      <a href="/about" @click="closeMenu">درباره ما</a>
       <a href="#contact" @click="closeMenu">تماس با ما</a>
     </nav>
   </header>
 </template>
 
 <style scoped>
-.site-header { width: 100%; }
-.header-inner { min-width: 0; }
-.header-spacer { width: 150px; flex-shrink: 0; }
-.mobile-menu-button, .mobile-nav { display: none; }
+.site-header {
+  width: 100%;
+}
+.header-inner {
+  min-width: 0;
+}
+.header-spacer {
+  width: 150px;
+  flex-shrink: 0;
+}
+.mobile-menu-button,
+.mobile-nav {
+  display: none;
+}
 
 .mobile-menu-button span {
   display: block;
@@ -65,7 +80,10 @@ const closeMenu = () => {
 }
 
 @media (max-width: 768px) {
-  .desktop-nav, .header-spacer { display: none; }
+  .desktop-nav,
+  .header-spacer {
+    display: none;
+  }
 
   .header-inner {
     justify-content: space-between;
