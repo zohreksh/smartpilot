@@ -33,12 +33,12 @@
 </template>
 
 <style scoped>
-.about-page{direction:rtl;background:#faf8f5;color:#111827;overflow:hidden}
+.about-page{direction:rtl;background:#f7f2eb;color:#111827;overflow:hidden;min-height:100vh}
 .container{max-width:1180px;margin:auto;padding:0 28px}
-.about-hero{min-height:720px;display:flex;align-items:center;justify-content:center;text-align:center}
+.about-hero{min-height:620px;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:25px}
 .about-content{max-width:850px}
 .eyebrow{display:inline-block;color:#d95f00;background:#fff0e6;border-radius:30px;padding:8px 18px;font-size:14px}
-h1{font-size:clamp(38px,4.5vw,58px);line-height:1.45;margin:32px 0}h1 strong{color:#d95f00;display:block}
+h1{font-size:clamp(38px,4.5vw,58px);line-height:1.45;margin:18px 0}h1 strong{color:#d95f00;display:block}
 p{color:#667085;font-size:18px;line-height:2.1;max-width:800px;margin:22px auto}
-@media(max-width:800px){.about-hero{min-height:auto;padding:90px 28px}h1{font-size:34px}p{font-size:16px;line-height:2}}
+@media(max-width:800px){.about-hero{min-height:auto;padding:55px 28px 70px}h1{font-size:34px}p{font-size:16px;line-height:2}}
 </style>
