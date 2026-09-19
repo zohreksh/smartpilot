@@ -1,1 +1,8 @@
-<template><section class="section"><h2>راهکارهای کامل برای دنیای دیجیتال</h2><div class="grid"><article v-for="x in items"><h3>{{x}}</h3><p>راهکار سفارشی، تجربه کاربری و توسعه حرفه‌ای</p></article></div></section></template><script setup>const items=['طراحی سایت و فروشگاه اینترنتی','توسعه سامانه‌های اختصاصی','هوش مصنوعی و جستجوی هوشمند','پشتیبانی و رشد مستمر']</script><style scoped>.section{padding:50px 7%;text-align:center;direction:rtl}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.grid article{background:#fff;border:1px solid #f0ddd0;border-radius:24px;padding:30px}@media(max-width:900px){.section{padding:40px 20px}.grid{grid-template-columns:repeat(2,1fr);gap:14px}.grid article{padding:20px;border-radius:20px}}@media(max-width:480px){.grid{grid-template-columns:1fr}.grid article h3{font-size:17px}.grid article p{font-size:13px}}</style>
+<template><section class="section"><h2>راهکارهای کامل برای دنیای دیجیتال</h2><div class="grid"><article v-for="x in items"><h3>{{x}}</h3><p>راهکار سفارشی، تجربه کاربری و توسعه حرفه‌ای</p></article></div></section></template><script setup>const items=['طراحی سایت و فروشگاه اینترنتی','توسعه سامانه‌های اختصاصی','هوش مصنوعی و جستجوی هوشمند','پشتیبانی و رشد مستمر']</script><style scoped>
+.section{padding:50px 7%;text-align:center;direction:rtl}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.grid article{background:#fff;border:1px solid #f0ddd0;border-radius:24px;padding:30px;min-width:0}
+@media(max-width:1023px){.section{padding:45px 5%}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.section{padding:40px 20px}.grid{gap:14px}.grid article{padding:20px;border-radius:20px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.grid article h3{font-size:17px}.grid article p{font-size:13px}}
+</style>
