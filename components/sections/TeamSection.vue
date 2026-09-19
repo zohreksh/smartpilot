@@ -94,7 +94,7 @@
 }
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1.2fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   direction: rtl;
 }
@@ -115,6 +115,12 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
+}
+
+.intro-card .team-icon,
+.specialists-card .team-icon {
+  margin-left: auto;
+  margin-right: auto;
 }
 .team-card h3 {
   font-size: 20px;
@@ -207,11 +213,40 @@
     grid-template-columns: 1fr;
   }
   .member-layout {
-    align-items: flex-start;
+    align-items: center;
+    gap: 30px;
   }
   .team-image-wrap {
-    width: 90px;
-    height: 90px;
+    flex: 0 0 40%;
+    width: 40%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+  }
+  .member-content {
+    flex: 0 0 60%;
+    width: 60%;
+    min-width: 0;
+    padding-top: 15px;
+  }
+  .member-content h3 {
+    font-size: 17px;
+    white-space: nowrap;
+  }
+  .job-title {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+  .skills-list {
+    gap: 4px;
+    margin: 6px 0;
+  }
+  .skills-list span {
+    font-size: 11px;
+    padding: 3px 7px;
+  }
+  .profile-link {
+    font-size: 11px;
   }
   .section-header h2 {
     font-size: 26px;
