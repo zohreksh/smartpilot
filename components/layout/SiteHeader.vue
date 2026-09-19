@@ -5,7 +5,6 @@
         <span class="brand-icon"></span>
         <span class="brand-copy">
           <strong>NexaStudio</strong>
-          <small>ساخت آینده دیجیتال</small>
         </span>
       </a>
 
@@ -18,7 +17,7 @@
         <a href="#contact">تماس با ما</a>
       </nav>
 
-      <a class="header-button" href="#contact">شروع همکاری <span>←</span></a>
+      <span class="header-spacer" aria-hidden="true"></span>
     </div>
   </header>
 </template>
@@ -33,8 +32,12 @@
 }
 
 .brand-mark,
-.header-button {
+.header-spacer {
   flex-shrink: 0;
+}
+
+.header-spacer {
+  width: 150px;
 }
 
 .header-nav {
@@ -56,17 +59,9 @@
 @media (max-width: 768px) {
   .header-inner {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     padding: 12px 0;
     gap: 12px;
-  }
-
-  .brand-copy strong {
-    font-size: 18px;
-  }
-
-  .brand-copy small {
-    font-size: 11px;
   }
 
   .header-nav {
@@ -76,36 +71,21 @@
     justify-content: center;
     font-size: 13px;
   }
-
-  .header-button {
-    padding: 12px 18px;
-    min-height: 44px;
-    white-space: nowrap;
-  }
 }
 
 @media (max-width: 430px) {
   .header-inner {
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-between;
   }
 
   .header-nav {
     display: none;
   }
 
-  .brand-copy {
-    min-width: 0;
-  }
-
-  .brand-copy strong,
-  .brand-copy small {
-    white-space: nowrap;
-  }
-
-  .header-button {
-    padding: 10px 14px;
-    font-size: 12px;
+  .header-spacer {
+    width: 0;
   }
 }
 </style>
