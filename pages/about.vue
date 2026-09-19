@@ -4,7 +4,7 @@
 
     <section class="about-hero container">
       <div class="about-content">
-        <span class="eyebrow">درباره NexaStudio</span>
+        <!-- <span class="eyebrow">درباره NexaStudio</span> -->
         <h1>
           ما محصولات دیجیتال می‌سازیم؛
           <strong>از ایده تا محصول واقعی</strong>

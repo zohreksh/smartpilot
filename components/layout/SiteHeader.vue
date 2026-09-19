@@ -23,11 +23,11 @@ const closeMenu = () => {
       </a>
 
       <nav class="header-nav desktop-nav">
-        <a class="active" href="#">خانه</a>
+        <nuxt-link to="/"> خانه</nuxt-link>
+
         <a href="#services">خدمات ما</a>
         <a href="#projects">نمونه کارها</a>
         <nuxt-link to="/about">درباره ما</nuxt-link>
-        <a href="#">وبلاگ</a>
         <a href="#contact">تماس با ما</a>
       </nav>
 
