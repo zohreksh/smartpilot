@@ -3,60 +3,57 @@
     <SiteHeader />
 
     <section class="hero container">
-      <span class="eyebrow">ABOUT NEXASTUDIO</span>
-      <h1>ما فقط نرم‌افزار نمی‌سازیم؛<br />محصولات دیجیتال خلق می‌کنیم.</h1>
+      <span class="eyebrow">درباره NexaStudio</span>
+      <h1>ما محصولاتی می‌سازیم که<br />برای رشد طراحی شده‌اند.</h1>
       <p>
-        NexaStudio یک استودیوی توسعه محصول است؛ جایی که معماری نرم‌افزار،
-        مهندسی Full Stack و نگاه محصول کنار هم قرار می‌گیرند تا ایده‌ها به
-        سیستم‌های واقعی، مقیاس‌پذیر و ارزشمند تبدیل شوند.
+        ما تیمی از معماران و توسعه‌دهندگان هستیم که تجربه مهندسی نرم‌افزار را
+        با تفکر محصول ترکیب می‌کنیم؛ از شکل‌گیری ایده تا ساخت سیستم‌های واقعی.
       </p>
-      <div class="metrics">
-        <div><strong>20+</strong><span>سال تجربه مهندسی</span></div>
-        <div><strong>2</strong><span>محصول واقعی ساخته شده</span></div>
-        <div><strong>∞</strong><span>مسیر برای خلق محصول</span></div>
+      <div class="proof">
+        <span>Sheedaneh</span>
+        <span>Hevix</span>
+        <span>Product Engineering</span>
       </div>
     </section>
 
     <section class="story container">
-      <div class="story-content">
+      <div>
         <span class="label">داستان ما</span>
-        <h2>از نوشتن کد تا ساختن محصول</h2>
+        <h2>ساخت محصول، فراتر از نوشتن کد است.</h2>
         <p>
-          تجربه سال‌ها توسعه نرم‌افزار به ما آموخت که موفقیت یک محصول فقط به
-          اجرای فنی وابسته نیست. تصمیم‌های معماری، شناخت مسئله و درک مسیر رشد
-          کسب‌وکار هستند که یک محصول ماندگار را شکل می‌دهند.
+          تجربه ما در توسعه نرم‌افزار به ما یاد داد که موفقیت یک محصول فقط به
+          انتخاب تکنولوژی وابسته نیست؛ معماری، شناخت مسئله و تصمیم‌های درست
+          مهندسی هستند که آینده یک محصول را می‌سازند.
         </p>
         <p>
-          NexaStudio با همین دیدگاه شکل گرفت؛ ترکیبی از تفکر مهندسی و نگاه
-          محصول برای ساخت راهکارهایی که امروز کاربردی و فردا قابل توسعه باشند.
+          NexaStudio با همین نگاه شکل گرفت؛ ساخت راهکارهای دیجیتال که هم از نظر
+          فنی قدرتمند باشند و هم برای کسب‌وکار ارزش واقعی ایجاد کنند.
         </p>
       </div>
-
-      <div class="principles">
-        <article><b>01</b><h3>Architecture First</h3><p>طراحی پایه‌ای که برای رشد آینده آماده باشد.</p></article>
-        <article><b>02</b><h3>Product Thinking</h3><p>تمرکز روی مسئله واقعی، نه فقط پیاده‌سازی.</p></article>
-        <article><b>03</b><h3>Engineering Quality</h3><p>ساخت سیستم‌هایی پایدار، تمیز و قابل نگهداری.</p></article>
-      </div>
+      <aside>
+        <div><strong>01</strong><h3>Architecture First</h3><p>طراحی پایه‌ای که آماده رشد باشد.</p></div>
+        <div><strong>02</strong><h3>Product Thinking</h3><p>حل مسئله قبل از انتخاب راهکار.</p></div>
+        <div><strong>03</strong><h3>Real Experience</h3><p>تجربه حاصل از ساخت محصولات واقعی.</p></div>
+      </aside>
     </section>
   </main>
 </template>
 
 <style scoped>
-.about-page{direction:rtl;background:#faf8f5;color:#101828;min-height:100vh}
-.container{max-width:1180px;margin:auto;padding:0 24px}
-.hero{text-align:center;padding:150px 24px 100px;position:relative}
-.eyebrow,.label{display:inline-block;color:#d95f00;background:#fff1e8;padding:8px 18px;border-radius:999px;font-size:13px;letter-spacing:.5px}
-.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.25;letter-spacing:-2px;margin:32px 0;color:#0b1220}
-.hero p{max-width:760px;margin:auto;font-size:20px;line-height:2;color:#667085}
-.metrics{display:flex;justify-content:center;gap:20px;margin-top:60px;flex-wrap:wrap}
-.metrics div{background:white;border:1px solid #eee4db;border-radius:24px;padding:28px 42px;box-shadow:0 20px 50px rgba(16,24,40,.05)}
-.metrics strong{display:block;font-size:42px;color:#d95f00}.metrics span{color:#667085}
-.story{display:grid;grid-template-columns:1.5fr .8fr;gap:36px;padding-bottom:120px}
-.story-content{background:white;border-radius:40px;padding:56px;border:1px solid #eee4db}
-.story-content h2{font-size:46px;line-height:1.4;margin:24px 0}
-.story-content p{font-size:18px;line-height:2.1;color:#667085}
-.principles{display:flex;flex-direction:column;gap:18px}
-.principles article{background:#111827;color:white;border-radius:28px;padding:30px}
-.principles b{font-size:34px;color:#f97316}.principles h3{margin:14px 0}.principles p{color:#d0d5dd;line-height:1.8}
-@media(max-width:767px){.hero{padding-top:100px}.hero h1{font-size:36px}.story{grid-template-columns:1fr}.story-content{padding:28px}.story-content h2{font-size:30px}}
+.about-page{direction:rtl;background:#faf8f5;color:#111827;min-height:100vh}
+.container{max-width:1200px;margin:auto;padding:0 24px}
+.hero{text-align:center;padding:140px 24px 110px;position:relative}
+.eyebrow,.label{color:#d95f00;background:#fff0e6;border-radius:999px;padding:8px 18px;display:inline-block}
+.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.25;letter-spacing:-1px;margin:35px 0 25px}
+.hero p{max-width:760px;margin:auto;color:#667085;font-size:20px;line-height:2}
+.proof{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:45px}
+.proof span{background:#fff;border:1px solid #eadfd7;border-radius:999px;padding:12px 24px}
+.story{display:grid;grid-template-columns:1.5fr .8fr;gap:50px;padding-bottom:120px}
+.story h2{font-size:44px;line-height:1.4;margin:30px 0}
+.story p{color:#667085;font-size:18px;line-height:2.1}
+aside{display:flex;flex-direction:column;gap:18px}
+aside div{background:#111827;color:#fff;border-radius:28px;padding:28px}
+aside strong{color:#f97316;font-size:32px}
+aside p{color:#d0d5dd!important;font-size:15px!important}
+@media(max-width:767px){.story{grid-template-columns:1fr}.hero h1{font-size:36px}.story h2{font-size:30px}}
 </style>
