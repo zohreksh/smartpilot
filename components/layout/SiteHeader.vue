@@ -29,7 +29,8 @@ const closeMenu = () => {
 
         <a href="#projects">نمونه کارها</a>
         <nuxt-link to="/about">درباره ما</nuxt-link>
-        <a href="#contact">تماس با ما</a>
+        
+         <nuxt-link to="/contact">تماس با ما</nuxt-link>
       </nav>
 
       <span class="header-spacer" aria-hidden="true"></span>
