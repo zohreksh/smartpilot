@@ -18,7 +18,7 @@
           <div class="team-image-wrap">
             <img src="/images/team/hossein.webp" alt="حسین کولانی" />
           </div>
-          <h3>حسین کلانی</h3>
+          <h3>حسین کولانی</h3>
           <p class="job-title">مدیر فنی و توسعه محصول</p>
           <ul class="skills-list">
             <li>معماری نرم‌افزار</li>
