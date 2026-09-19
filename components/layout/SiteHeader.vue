@@ -25,7 +25,8 @@ const closeMenu = () => {
       <nav class="header-nav desktop-nav">
         <nuxt-link to="/"> خانه</nuxt-link>
 
-        <a href="#services">خدمات ما</a>
+        <nuxt-link to="/services">خدمات ما</nuxt-link>
+
         <a href="#projects">نمونه کارها</a>
         <nuxt-link to="/about">درباره ما</nuxt-link>
         <a href="#contact">تماس با ما</a>
