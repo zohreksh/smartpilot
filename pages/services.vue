@@ -755,7 +755,7 @@ const recoverProofImage = (image) => {
 
 .ai-core > span {
   color: var(--accent);
-  font-size: 15px;
+  font-size: 10.5px;
   font-weight: 800;
 }
 
@@ -770,7 +770,7 @@ const recoverProofImage = (image) => {
 .ai-core small {
   margin-top: 4px;
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 10px;
   direction: ltr;
 }
 
@@ -801,7 +801,7 @@ const recoverProofImage = (image) => {
   border-radius: 9px;
   background: #faece4;
   color: var(--accent);
-  font-size: 11.5px;
+  font-size: 9.5px;
   font-weight: 800;
 }
 
@@ -812,7 +812,7 @@ const recoverProofImage = (image) => {
 .ai-node strong {
   display: block;
   color: var(--text);
-  font-size: 15px;
+  font-size: 11.5px;
   line-height: 1.3;
   direction: ltr;
   text-align: right;
@@ -822,7 +822,7 @@ const recoverProofImage = (image) => {
   display: block;
   margin-top: 2px;
   color: var(--muted);
-  font-size: 11.5px;
+  font-size: 10px;
   line-height: 1.4;
 }
 
@@ -850,7 +850,7 @@ const recoverProofImage = (image) => {
   max-width: 390px;
   margin: 12px auto 0;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.7;
   text-align: center;
 }
@@ -981,7 +981,7 @@ const recoverProofImage = (image) => {
 
 .feature-top small {
   color: #9a8b80;
-  font-size: 15px;
+  font-size: 10.5px;
   direction: ltr;
 }
 
@@ -1450,7 +1450,7 @@ const recoverProofImage = (image) => {
 
 .proof-products figcaption span {
   color: var(--accent);
-  font-size: 15px;
+  font-size: 10.5px;
   font-weight: 800;
   direction: ltr;
   text-align: right;
@@ -1463,7 +1463,7 @@ const recoverProofImage = (image) => {
 
 .proof-products figcaption small {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.65;
 }
 
