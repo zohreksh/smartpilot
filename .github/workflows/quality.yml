@@ -66,23 +66,16 @@ jobs:
             curl --fail --silent --show-error "http://127.0.0.1:4173$route" >/dev/null
           done
 
+      - name: Install browser QA dependency
+        run: npm install --no-save --package-lock=false playwright@1.55.0
+
       - name: Install Chromium
-        run: npx --yes playwright@1.55.0 install --with-deps chromium
+        run: npx playwright install --with-deps chromium
 
-      - name: Capture responsive screenshots
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p qa-artifacts
-          for route in home services projects about contact; do
-            case "$route" in
-              home) url="/" ;;
-              *) url="/$route/" ;;
-            esac
-            npx --yes playwright@1.55.0 screenshot               --browser=chromium               --device="Pixel 5"               --full-page               "http://127.0.0.1:4173$url"               "qa-artifacts/mobile-$route.png"
-
-            npx --yes playwright@1.55.0 screenshot               --browser=chromium               --device="Desktop Chrome"               --full-page               "http://127.0.0.1:4173$url"               "qa-artifacts/desktop-$route.png"
-          done
+      - name: Run responsive browser QA
+        env:
+          QA_BASE_URL: http://127.0.0.1:4173
+        run: node scripts/responsive-qa.mjs
 
       - name: Upload responsive QA
         if: always()
