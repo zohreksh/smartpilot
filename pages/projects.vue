@@ -17,74 +17,61 @@ useHead({
 
     <section class="projects-hero">
       <div class="container">
-        <div class="portfolio-intro">
-          <div class="portfolio-title">
-            <span class="portfolio-index" dir="ltr">SELECTED WORK / 02</span>
+        <div class="hero-panel">
+          <div class="hero-copy">
+            <span class="hero-kicker" dir="ltr">SELECTED WORK / 02</span>
+
             <h1>
               محصول واقعی،
               <strong>نه فقط یک قاب زیبا</strong>
             </h1>
-          </div>
 
-          <div class="portfolio-summary">
             <p>
-              شیدانه و HEVIX دو محصول از دو بازار متفاوت‌اند. هر دو از مسئله واقعی
-              کسب‌وکار شروع شده‌اند و تا معماری، تجربه کاربری، داده، جستجو، SEO
-              و توسعه مستمر ادامه پیدا کرده‌اند.
+              شیدانه و HEVIX دو محصول از دو بازار متفاوت‌اند؛ هر دو از یک مسئله
+              واقعی شروع شده‌اند و تا معماری، تجربه کاربری، داده، جستجو، SEO و
+              توسعه مستمر ادامه پیدا کرده‌اند.
             </p>
-            <div class="portfolio-actions">
-              <NuxtLink class="primary-action" to="/contact">شروع یک پروژه</NuxtLink>
-              <a class="text-action" href="#shidaneh">مشاهده Case Studyها ↓</a>
+
+            <div class="hero-actions">
+              <a class="primary-action" href="#shidaneh">مشاهده Case Studyها</a>
+              <NuxtLink class="secondary-action" to="/contact">شروع یک پروژه</NuxtLink>
+            </div>
+
+            <div class="hero-tech">
+              <span>AI</span>
+              <span>Smart Search</span>
+              <span>Automated SEO</span>
+              <span>Custom Engineering</span>
             </div>
           </div>
-        </div>
 
-        <div class="portfolio-wall" aria-label="پروژه‌های منتخب NexaStudio">
-          <a class="portfolio-card shidaneh-card" href="#shidaneh">
-            <div class="portfolio-image">
+          <div class="hero-visual" aria-label="پروژه‌های منتخب NexaStudio">
+            <a class="hero-main-project" href="#shidaneh">
               <img
                 src="/images/projects/shidane.webp"
                 alt="نمای کامل محصول شیدانه"
                 loading="eager"
               />
-            </div>
-            <div class="portfolio-meta">
-              <div>
-                <span class="project-number">01</span>
+              <span class="project-label">
+                <small>Beauty Commerce</small>
                 <strong>شیدانه</strong>
-                <small>Beauty Commerce Platform</small>
-              </div>
-              <div class="project-tags">
-                <span>AI</span>
-                <span>Smart Search</span>
-                <span>Automated SEO</span>
-              </div>
-              <span class="project-arrow" aria-hidden="true">↙</span>
-            </div>
-          </a>
+              </span>
+            </a>
 
-          <a class="portfolio-card hevix-card" href="#hevix">
-            <div class="portfolio-image">
+            <a class="hero-inset-project" href="#hevix">
               <img
                 src="/images/projects/hevix.webp"
                 alt="نمای کامل محصول HEVIX"
                 loading="eager"
               />
-            </div>
-            <div class="portfolio-meta">
-              <div>
-                <span class="project-number">02</span>
+              <span class="project-label">
+                <small>Industrial Commerce</small>
                 <strong>HEVIX</strong>
-                <small>Industrial Commerce Platform</small>
-              </div>
-              <div class="project-tags">
-                <span>Custom Build</span>
-                <span>Catalog</span>
-                <span>Search</span>
-              </div>
-              <span class="project-arrow" aria-hidden="true">↙</span>
-            </div>
-          </a>
+              </span>
+            </a>
+
+            <span class="hero-project-count" aria-hidden="true">02</span>
+          </div>
         </div>
       </div>
     </section>
@@ -272,7 +259,7 @@ useHead({
 .projects-hero {
   position: relative;
   overflow: hidden;
-  padding: 28px 0 64px;
+  padding: 20px 0 58px;
 }
 
 .projects-hero::before {
@@ -280,205 +267,210 @@ useHead({
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 84% 6%, rgba(184, 107, 53, 0.1), transparent 24%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.28), transparent 34%);
+    radial-gradient(circle at 82% 8%, rgba(184, 107, 53, 0.09), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 42%);
   pointer-events: none;
 }
 
-.portfolio-intro {
+.hero-panel {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.75fr);
-  gap: 70px;
-  align-items: end;
-  padding: 18px 0 32px;
-  border-bottom: 1px solid rgba(218, 200, 187, 0.78);
+  grid-template-columns: minmax(0, 0.88fr) minmax(520px, 1.12fr);
+  gap: 52px;
+  align-items: center;
+  min-height: 570px;
+  padding: 44px 46px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 211, 199, 0.92);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(184, 107, 53, 0.12), transparent 26%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(255, 249, 245, 0.95));
+  box-shadow:
+    0 24px 58px rgba(16, 28, 50, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-.portfolio-title {
-  min-width: 0;
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -120px;
+  bottom: -150px;
+  border: 1px solid rgba(184, 107, 53, 0.13);
+  border-radius: 50%;
+  box-shadow: 0 0 0 40px rgba(184, 107, 53, 0.025);
+  pointer-events: none;
 }
 
-.portfolio-index {
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 650px;
+}
+
+.hero-kicker {
   display: inline-flex;
-  margin-bottom: 8px;
   color: #a9653d;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.12em;
 }
 
-.portfolio-title h1 {
-  max-width: 760px;
-  margin: 0;
+.hero-copy h1 {
+  margin: 12px 0 16px;
   color: var(--text);
-  font-size: clamp(40px, 5vw, 68px);
-  line-height: 1.32;
+  font-size: clamp(40px, 4.7vw, 64px);
+  line-height: 1.34;
   letter-spacing: -0.03em;
 }
 
-.portfolio-title h1 strong {
+.hero-copy h1 strong {
   display: block;
   color: var(--accent);
 }
 
-.portfolio-summary {
-  padding-bottom: 4px;
-}
-
-.portfolio-summary p {
-  max-width: 560px;
+.hero-copy > p {
+  max-width: 590px;
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.95;
 }
 
-.portfolio-actions {
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 26px;
 }
 
-.primary-action {
+.primary-action,
+.secondary-action {
   display: inline-flex;
-  min-height: 46px;
+  min-height: 47px;
   align-items: center;
   justify-content: center;
   padding: 11px 21px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #c77a43, #96502d);
-  color: #fff;
   font-size: 12px;
   font-weight: 800;
-  box-shadow: 0 12px 26px rgba(155, 84, 45, 0.18);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.text-action {
-  color: #7c695c;
-  font-size: 11px;
-  font-weight: 800;
+.primary-action {
+  background: linear-gradient(135deg, #c77a43, #96502d);
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(155, 84, 45, 0.2);
 }
 
-.portfolio-wall {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.14fr) minmax(320px, 0.86fr);
-  gap: 18px;
-  align-items: start;
-  padding-top: 22px;
+.secondary-action {
+  border: 1px solid rgba(226, 211, 199, 0.96);
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--text);
+}
+
+.primary-action:hover,
+.secondary-action:hover {
+  transform: translateY(-2px);
+}
+
+.hero-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 22px;
+}
+
+.hero-tech span {
+  padding: 5px 9px;
+  border: 1px solid rgba(230, 216, 205, 0.94);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #6c7482;
+  font-size: 8.5px;
+  font-weight: 700;
   direction: ltr;
 }
 
-.portfolio-card {
+.hero-visual {
+  position: relative;
+  z-index: 2;
+  min-height: 470px;
+}
+
+.hero-main-project,
+.hero-inset-project {
+  position: absolute;
   overflow: hidden;
-  min-width: 0;
-  border: 1px solid rgba(226, 211, 199, 0.94);
+  border: 1px solid rgba(224, 210, 199, 0.94);
+  background: #fff;
+  box-shadow: 0 20px 46px rgba(16, 28, 50, 0.1);
+}
+
+.hero-main-project {
+  inset: 12px 26px 56px 44px;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.93);
-  box-shadow: 0 18px 42px rgba(16, 28, 50, 0.065);
-  transition:
-    transform 0.22s ease,
-    box-shadow 0.22s ease,
-    border-color 0.22s ease;
 }
 
-.portfolio-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(184, 107, 53, 0.28);
-  box-shadow: 0 24px 52px rgba(16, 28, 50, 0.09);
+.hero-inset-project {
+  z-index: 3;
+  width: 55%;
+  left: 0;
+  bottom: 0;
+  border-radius: 21px;
 }
 
-.hevix-card {
-  margin-top: 58px;
-}
-
-.portfolio-image {
-  overflow: hidden;
-  background: #f7f2ee;
-}
-
-.portfolio-image img {
+.hero-main-project img,
+.hero-inset-project img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-.portfolio-meta {
-  display: grid;
-  grid-template-columns: minmax(150px, auto) minmax(0, 1fr) auto;
-  gap: 16px;
-  align-items: center;
-  padding: 15px 17px 17px;
-  direction: rtl;
+.project-label {
+  position: absolute;
+  right: 13px;
+  bottom: 12px;
+  display: flex;
+  min-width: 118px;
+  flex-direction: column;
+  gap: 1px;
+  padding: 8px 10px;
+  border: 1px solid rgba(232, 220, 212, 0.94);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  text-align: right;
 }
 
-.portfolio-meta > div:first-child {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1px 8px;
-  align-items: center;
-}
-
-.project-number {
-  grid-row: 1 / span 2;
-  display: inline-flex;
-  width: 34px;
-  height: 34px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 11px;
-  background: #faece4;
+.project-label small {
   color: var(--accent);
-  font-size: 9px;
+  font-size: 7.5px;
   font-weight: 800;
   direction: ltr;
 }
 
-.portfolio-meta strong {
+.project-label strong {
   color: var(--text);
-  font-size: 15px;
+  font-size: 12px;
 }
 
-.portfolio-meta small {
-  color: var(--muted);
-  font-size: 8.5px;
+.hero-project-count {
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  color: rgba(184, 107, 53, 0.16);
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 1;
   direction: ltr;
-  text-align: right;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 5px;
-}
-
-.project-tags span {
-  padding: 4px 8px;
-  border: 1px solid #eee2d9;
-  border-radius: 999px;
-  background: #faf7f4;
-  color: #6f7785;
-  font-size: 8.5px;
-  direction: ltr;
-}
-
-.project-arrow {
-  display: inline-flex;
-  width: 34px;
-  height: 34px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #eadfd7;
-  border-radius: 50%;
-  color: var(--accent);
-  font-size: 15px;
 }
 
 .project-principles {
@@ -748,12 +740,10 @@ useHead({
 }
 
 @media (max-width: 1080px) {
-  .portfolio-intro {
-    gap: 38px;
-  }
-
-  .portfolio-wall {
-    grid-template-columns: minmax(0, 1.06fr) minmax(300px, 0.94fr);
+  .hero-panel {
+    grid-template-columns: minmax(0, 0.9fr) minmax(430px, 1.1fr);
+    gap: 34px;
+    padding: 38px 34px;
   }
 
   .case-layout,
@@ -764,31 +754,30 @@ useHead({
 
 @media (max-width: 820px) {
   .projects-hero {
-    padding: 20px 0 56px;
+    padding: 16px 0 50px;
   }
 
-  .portfolio-intro,
+  .hero-panel,
   .case-layout,
   .reverse-layout,
   .capability-layout {
     grid-template-columns: 1fr;
   }
 
-  .portfolio-intro {
-    gap: 18px;
-    padding-top: 10px;
+  .hero-panel {
+    gap: 26px;
+    min-height: 0;
+    padding: 32px;
   }
 
-  .portfolio-summary {
+  .hero-copy {
     max-width: 720px;
   }
 
-  .portfolio-wall {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .hevix-card {
-    margin-top: 28px;
+  .hero-visual {
+    width: min(100%, 680px);
+    min-height: 460px;
+    margin: 0 auto;
   }
 
   .principles-grid {
@@ -822,49 +811,48 @@ useHead({
 
 @media (max-width: 600px) {
   .projects-hero {
-    padding: 16px 0 48px;
+    padding: 12px 0 44px;
   }
 
-  .portfolio-intro {
-    padding-bottom: 24px;
+  .hero-panel {
+    padding: 25px 20px 22px;
+    border-radius: 24px;
   }
 
-  .portfolio-title h1 {
+  .hero-copy h1 {
     font-size: clamp(33px, 9.6vw, 44px);
   }
 
-  .portfolio-summary p {
+  .hero-copy > p {
     font-size: 13.5px;
   }
 
-  .portfolio-actions {
+  .hero-actions {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-visual {
+    display: grid;
+    min-height: 0;
     gap: 12px;
   }
 
-  .portfolio-wall {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding-top: 16px;
+  .hero-main-project,
+  .hero-inset-project {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    border-radius: 18px;
   }
 
-  .hevix-card {
-    margin-top: 0;
+  .hero-inset-project {
+    left: auto;
+    bottom: auto;
   }
 
-  .portfolio-meta {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
-
-  .project-tags {
-    grid-column: 1 / -1;
-    order: 3;
-  }
-
-  .project-arrow {
-    grid-column: 2;
-    grid-row: 1;
+  .hero-project-count {
+    display: none;
   }
 
   .project-principles {
@@ -900,16 +888,12 @@ useHead({
 }
 
 @media (max-width: 390px) {
-  .portfolio-actions {
+  .hero-actions {
     grid-template-columns: 1fr;
   }
 
-  .text-action {
-    text-align: center;
-  }
-
-  .portfolio-meta {
-    padding: 13px 14px 15px;
+  .hero-tech {
+    gap: 5px;
   }
 }
 </style>
