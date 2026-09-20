@@ -55,7 +55,7 @@
         </div>
 
         <div class="brief-layout">
-          <form class="project-form" aria-describedby="form-status">
+          <form class="project-form" aria-describedby="form-status" @submit.prevent>
             <div class="form-row">
               <div class="field-group">
                 <label for="full-name">نام و نام خانوادگی</label>
@@ -74,7 +74,6 @@
                   id="contact-way"
                   name="contact-way"
                   type="text"
-                  autocomplete="email"
                   placeholder="ایمیل یا شماره تماس"
                 />
               </div>
