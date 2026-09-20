@@ -1,16 +1,22 @@
 <script setup>
 import { ref } from "vue";
 
+const config = useRuntimeConfig();
+
 usePageSeo({
   title: "توسعه هوش مصنوعی و خدمات محصول دیجیتال | SmartPilot",
   description:
     "توسعه هوش مصنوعی، جستجوی هوشمند، Agent، سئوی اتومات، سامانه‌های اختصاصی، فروشگاه اینترنتی، تحلیل داده و پشتیبانی مستمر توسط SmartPilot.",
   path: "/services",
-  image: "/images/projects/shidane1.webp",
+  image: `${config.app.baseURL}images/projects/shidane1.webp`,
 });
 
-const shidaneProofSrc = ref("/images/projects/shidane1.webp");
-const hevixProofSrc = ref("/images/projects/hevix1.webp");
+const shidaneProofSrc = ref(
+  `${config.app.baseURL}images/projects/shidane1.webp`,
+);
+const hevixProofSrc = ref(
+  `${config.app.baseURL}images/projects/hevix1.webp`,
+);
 
 let shidaneRetryCount = 0;
 let hevixRetryCount = 0;
@@ -19,13 +25,13 @@ const recoverProofImage = (image) => {
   if (image === "shidane") {
     if (shidaneRetryCount === 0) {
       shidaneRetryCount = 1;
-      shidaneProofSrc.value = "/images/projects/shidane1.webp?retry=1";
+      shidaneProofSrc.value = `${config.app.baseURL}images/projects/shidane1.webp?retry=1`;
       return;
     }
 
     if (shidaneRetryCount === 1) {
       shidaneRetryCount = 2;
-      shidaneProofSrc.value = "/images/projects/shidane.webp";
+      shidaneProofSrc.value = `${config.app.baseURL}images/projects/shidane.webp`;
     }
 
     return;
@@ -33,13 +39,13 @@ const recoverProofImage = (image) => {
 
   if (hevixRetryCount === 0) {
     hevixRetryCount = 1;
-    hevixProofSrc.value = "/images/projects/hevix1.webp?retry=1";
+    hevixProofSrc.value = `${config.app.baseURL}images/projects/hevix1.webp?retry=1`;
     return;
   }
 
   if (hevixRetryCount === 1) {
     hevixRetryCount = 2;
-    hevixProofSrc.value = "/images/projects/hevix.webp";
+    hevixProofSrc.value = `${config.app.baseURL}images/projects/hevix.webp`;
   }
 };
 </script>
