@@ -396,21 +396,6 @@
       </div>
     </section>
 
-    <section class="services-cta-section">
-      <div class="container">
-        <div class="services-cta">
-          <div>
-            <span class="cta-kicker">قدم بعدی</span>
-            <h2>لازم نیست از قبل راه‌حل را بدانید.</h2>
-            <p>
-              مسئله، وضعیت فعلی و هدف کسب‌وکار را بررسی می‌کنیم و مسیر مناسب را
-              پیشنهاد می‌دهیم؛ از یک قابلیت کوچک تا یک محصول کامل.
-            </p>
-          </div>
-          <NuxtLink class="cta-button" to="/contact">درخواست مشاوره</NuxtLink>
-        </div>
-      </div>
-    </section>
   </main>
 </template>
 
@@ -500,8 +485,7 @@
 }
 
 .primary-action,
-.secondary-action,
-.cta-button {
+.secondary-action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -513,8 +497,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.primary-action,
-.cta-button {
+.primary-action {
   background: linear-gradient(135deg, #c17a42, #9b542d);
   color: #fff;
   box-shadow: 0 12px 30px rgba(155, 84, 45, 0.18);
@@ -527,8 +510,7 @@
 }
 
 .primary-action:hover,
-.secondary-action:hover,
-.cta-button:hover {
+.secondary-action:hover {
   transform: translateY(-2px);
 }
 
@@ -1016,46 +998,6 @@
   font-size: 11px;
 }
 
-.services-cta-section {
-  padding: 20px 0 78px;
-}
-
-.services-cta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 34px;
-  padding: 34px 38px;
-  border-radius: 26px;
-  background: #101c32;
-  color: #fff;
-  box-shadow: 0 20px 50px rgba(16, 28, 50, 0.14);
-}
-
-.cta-kicker {
-  color: #e2a06f;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.services-cta h2 {
-  margin: 7px 0 6px;
-  color: #fff;
-  font-size: clamp(25px, 3vw, 34px);
-}
-
-.services-cta p {
-  max-width: 680px;
-  margin: 0;
-  color: #c8d0dc;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.cta-button {
-  flex: none;
-  min-width: 158px;
-}
 
 @media (max-width: 1080px) {
   .services-hero-inner {
@@ -1258,21 +1200,6 @@
     direction: rtl;
   }
 
-  .services-cta-section {
-    padding: 18px 0 56px;
-  }
-
-  .services-cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-    padding: 26px 22px;
-    border-radius: 22px;
-  }
-
-  .cta-button {
-    width: 100%;
-  }
 }
 
 @media (max-width: 390px) {
