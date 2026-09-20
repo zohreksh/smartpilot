@@ -4,7 +4,7 @@ import { ref } from "vue";
 const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
-  isMenuOpen.valueSmartPilotOpen.value;
+  isMenuOpen.value = !isMenuOpen.value;
 };
 
 const closeMenu = () => {
