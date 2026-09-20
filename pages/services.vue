@@ -1434,6 +1434,7 @@ const recoverProofImage = (image) => {
 .proof-products img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: contain;
   object-position: center;
