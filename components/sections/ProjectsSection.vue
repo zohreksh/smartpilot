@@ -2,9 +2,9 @@
   <section class="section projects-section" id="projects">
     <div class="home-section-heading projects-heading container">
       <span class="home-section-kicker">نمونه‌کارها</span>
-      <h2 class="home-section-title">محصولات واقعی، نه فقط طرح‌های نمایشی</h2>
+      <h2 class="home-section-title">محصولات واقعی؛ طراحی‌شده برای استفاده و توسعه</h2>
       <p class="home-section-description">
-        شیدانه و HEVIX دو محصول واقعی از دو بازار متفاوت‌اند؛ هر دو با معماری، توسعه و مسیر رشد قابل ادامه.
+        شیدانه و HEVIX از دو بازار متفاوت‌اند، اما هر دو با معماری اختصاصی، تجربه کاربری واقعی و مسیر توسعه مستمر ساخته شده‌اند.
       </p>
       <span class="home-section-rule" aria-hidden="true"></span>
     </div>
