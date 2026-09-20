@@ -24,10 +24,11 @@
       </article>
     </div>
 
-    <div class="services-heading container">
-      <span class="services-badge">خدمات ما</span>
-      <h2>راهکارهای کامل برای دنیای دیجیتال</h2>
-      <p>از ایده تا رشد، در کنار شما هستیم.</p>
+    <div class="services-heading home-section-heading container">
+      <span class="services-badge home-section-kicker">خدمات ما</span>
+      <h2 class="home-section-title">راهکارهای کامل برای دنیای دیجیتال</h2>
+      <p class="home-section-description">از ایده و معماری تا ساخت، هوشمندسازی و رشد، یک مسیر یکپارچه برای محصول شما.</p>
+      <span class="home-section-rule" aria-hidden="true"></span>
     </div>
 
     <div class="floating-services-grid container">
