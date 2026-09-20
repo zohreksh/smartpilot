@@ -24,13 +24,15 @@
 
 <style scoped>
 .projects-section {
-  /* padding: 70px 2%; */
   text-align: center;
+  overflow: hidden;
 }
+
 .projects-section .container {
   max-width: 100%;
   padding: 0;
 }
+
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -38,30 +40,56 @@
   direction: ltr;
   width: 100%;
 }
+
 .project-image {
   overflow: hidden;
   border-radius: 28px;
   width: 100%;
+  min-width: 0;
 }
+
 .project-image img {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 0px;
+  object-fit: contain;
+  border-radius: 0;
 }
+
 .shidane-project {
   order: 1;
 }
+
 .hevix-project {
   order: 2;
 }
+
+@media (max-width: 1023px) {
+  .projects-grid {
+    gap: 18px;
+  }
+}
+
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
+
+  .project-image {
+    border-radius: 20px;
+  }
+
   .project-image img {
-    height: 320px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 430px) {
+  .project-image {
+    border-radius: 16px;
   }
 }
 </style>

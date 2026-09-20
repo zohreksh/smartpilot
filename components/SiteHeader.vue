@@ -1,2 +1,0 @@
-<template><header class="header"><strong>NexaStudio</strong><nav><a>خانه</a><a>خدمات ما</a><a>نمونه کارها</a><a>درباره ما</a><a>وبلاگ</a><a>تماس</a></nav><button>شروع همکاری</button></header></template>
-<style scoped>.header{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;background:#fff}.header strong{font-size:26px}.header nav{display:flex;gap:28px;font-size:15px}.header button{border:0;border-radius:30px;padding:14px 30px;background:#a85d28;color:#fff}</style>
