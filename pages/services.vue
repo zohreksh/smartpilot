@@ -76,7 +76,7 @@
       </div>
     </section>
 
-    <section id="service-catalog" class="services-section">
+    <section id="service-catalog" class="service-catalog-section">
       <div class="container">
         <div class="section-heading">
           <span class="section-badge">خدمات ما</span>
@@ -645,7 +645,7 @@
   bottom: 30px;
 }
 
-.services-section {
+.service-catalog-section {
   padding: 70px 0 80px;
   scroll-margin-top: 110px;
 }
@@ -1175,7 +1175,7 @@
     display: none;
   }
 
-  .services-section,
+  .service-catalog-section,
   .engagement-section,
   .capabilities-section,
   .process-section,
