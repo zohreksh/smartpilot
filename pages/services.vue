@@ -81,38 +81,57 @@ const recoverProofImage = (image) => {
           </div>
         </div>
 
-        <div class="ai-visual" aria-label="حوزه‌های اصلی توسعه هوش مصنوعی">
-          <div class="ai-visual-heading">
-            <span>Nexa AI</span>
-            <strong>Intelligence Layer</strong>
-            <p>هوش مصنوعی به‌عنوان یک لایه واقعی در محصول، نه یک قابلیت جداافتاده.</p>
-          </div>
+        <div class="ai-visual" aria-label="نمودار حوزه‌های اصلی توسعه هوش مصنوعی">
+          <div class="ai-diagram">
+            <svg class="diagram-links" viewBox="0 0 420 340" aria-hidden="true">
+              <line x1="210" y1="170" x2="315" y2="76" />
+              <line x1="210" y1="170" x2="105" y2="76" />
+              <line x1="210" y1="170" x2="315" y2="264" />
+              <line x1="210" y1="170" x2="105" y2="264" />
+            </svg>
 
-          <div class="ai-capability-grid">
-            <article class="ai-capability">
+            <div class="ai-core">
+              <span>Nexa AI</span>
+              <strong>Intelligence</strong>
+              <small>Product Layer</small>
+            </div>
+
+            <article class="ai-node node-advisor">
               <span>01</span>
-              <strong>AI Advisor</strong>
-              <small>مشاور و دستیار هوشمند</small>
+              <div>
+                <strong>AI Advisor</strong>
+                <small>مشاور هوشمند</small>
+              </div>
             </article>
 
-            <article class="ai-capability">
+            <article class="ai-node node-search">
               <span>02</span>
-              <strong>Smart Search</strong>
-              <small>جستجوی معنایی و بازیابی</small>
+              <div>
+                <strong>Smart Search</strong>
+                <small>جستجوی معنایی</small>
+              </div>
             </article>
 
-            <article class="ai-capability">
+            <article class="ai-node node-agent">
               <span>03</span>
-              <strong>AI Agents</strong>
-              <small>اتوماسیون و عملیات</small>
+              <div>
+                <strong>AI Agents</strong>
+                <small>اتوماسیون عملیات</small>
+              </div>
             </article>
 
-            <article class="ai-capability">
+            <article class="ai-node node-data">
               <span>04</span>
-              <strong>AI + Data</strong>
-              <small>تحلیل، گزارش و تصمیم‌یار</small>
+              <div>
+                <strong>AI + Data</strong>
+                <small>تحلیل و تصمیم‌یار</small>
+              </div>
             </article>
           </div>
+
+          <p class="ai-diagram-caption">
+            یک لایه هوشمندی مشترک که به داده، جستجو، عملیات و تجربه کاربر متصل می‌شود.
+          </p>
         </div>
       </div>
     </section>
@@ -686,85 +705,154 @@ const recoverProofImage = (image) => {
 }
 
 .ai-visual {
-  position: relative;
-  align-self: stretch;
-  display: flex;
   min-width: 0;
+  padding-right: 28px;
+  border-right: 1px solid rgba(218, 200, 187, 0.72);
+}
+
+.ai-diagram {
+  position: relative;
+  width: min(100%, 420px);
+  aspect-ratio: 420 / 340;
+  margin: 0 auto;
+}
+
+.diagram-links {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.diagram-links line {
+  stroke: rgba(184, 107, 53, 0.22);
+  stroke-width: 1.2;
+  stroke-dasharray: 4 5;
+}
+
+.ai-core {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  width: 142px;
+  height: 142px;
+  transform: translate(-50%, -50%);
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding-right: 38px;
-  border-right: 1px solid rgba(218, 200, 187, 0.78);
+  border: 1px solid rgba(184, 107, 53, 0.3);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 28%, #fff, #fff7f1 62%, #f2dfd1 100%);
+  box-shadow:
+    0 18px 42px rgba(16, 28, 50, 0.09),
+    0 0 0 10px rgba(255, 255, 255, 0.34);
+  text-align: center;
 }
 
-.ai-visual-heading {
-  max-width: 360px;
-  margin-bottom: 24px;
-}
-
-.ai-visual-heading > span {
-  display: inline-flex;
+.ai-core > span {
   color: var(--accent);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+}
+
+.ai-core strong {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.2;
   direction: ltr;
 }
 
-.ai-visual-heading strong {
-  display: block;
+.ai-core small {
   margin-top: 4px;
+  color: var(--muted);
+  font-size: 7.5px;
+  direction: ltr;
+}
+
+.ai-node {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  width: 154px;
+  min-height: 62px;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 11px;
+  border: 1px solid rgba(226, 211, 199, 0.82);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  box-shadow: 0 9px 24px rgba(16, 28, 50, 0.045);
+}
+
+.ai-node > span {
+  display: inline-flex;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: #faece4;
+  color: var(--accent);
+  font-size: 8.5px;
+  font-weight: 800;
+}
+
+.ai-node div {
+  min-width: 0;
+}
+
+.ai-node strong {
+  display: block;
   color: var(--text);
-  font-size: 27px;
-  line-height: 1.35;
+  font-size: 10.5px;
+  line-height: 1.3;
   direction: ltr;
   text-align: right;
 }
 
-.ai-visual-heading p {
-  margin: 8px 0 0;
+.ai-node small {
+  display: block;
+  margin-top: 2px;
   color: var(--muted);
-  font-size: 11.5px;
-  line-height: 1.8;
+  font-size: 8.5px;
+  line-height: 1.4;
 }
 
-.ai-capability-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid rgba(218, 200, 187, 0.82);
-  border-right: 1px solid rgba(218, 200, 187, 0.82);
+.node-advisor {
+  top: 6%;
+  right: 0;
 }
 
-.ai-capability {
-  position: relative;
-  display: flex;
-  min-height: 112px;
-  flex-direction: column;
-  justify-content: center;
-  padding: 17px 18px;
-  border-left: 1px solid rgba(218, 200, 187, 0.82);
-  border-bottom: 1px solid rgba(218, 200, 187, 0.82);
-  background: rgba(255, 255, 255, 0.18);
+.node-search {
+  top: 6%;
+  left: 0;
 }
 
-.ai-capability > span {
-  color: rgba(184, 107, 53, 0.68);
-  font-size: 9px;
-  font-weight: 800;
-  direction: ltr;
+.node-agent {
+  right: 0;
+  bottom: 6%;
 }
 
-.ai-capability strong {
-  margin-top: 5px;
-  color: var(--text);
-  font-size: 13px;
-  line-height: 1.45;
+.node-data {
+  left: 0;
+  bottom: 6%;
 }
 
-.ai-capability small {
-  margin-top: 3px;
+.ai-diagram-caption {
+  max-width: 390px;
+  margin: 12px auto 0;
   color: var(--muted);
-  font-size: 9.5px;
-  line-height: 1.55;
+  font-size: 10.5px;
+  line-height: 1.7;
+  text-align: center;
 }
 
 .ai-services-section {
@@ -1418,13 +1506,13 @@ const recoverProofImage = (image) => {
 
   .ai-visual {
     width: 100%;
-    padding: 28px 0 0;
-    border-top: 1px solid rgba(218, 200, 187, 0.78);
+    padding: 26px 0 0;
+    border-top: 1px solid rgba(218, 200, 187, 0.72);
     border-right: 0;
   }
 
-  .ai-visual-heading {
-    max-width: 640px;
+  .ai-diagram {
+    width: min(100%, 460px);
   }
 
   .ai-side-grid {
@@ -1500,24 +1588,35 @@ const recoverProofImage = (image) => {
   }
 
   .ai-visual {
-    padding-top: 24px;
+    padding-top: 20px;
   }
 
-  .ai-visual-heading {
-    margin-bottom: 18px;
+  .ai-diagram {
+    width: 100%;
   }
 
-  .ai-visual-heading strong {
-    font-size: 23px;
+  .ai-core {
+    width: 118px;
+    height: 118px;
   }
 
-  .ai-capability-grid {
-    grid-template-columns: 1fr 1fr;
+  .ai-node {
+    width: 132px;
+    min-height: 56px;
+    padding: 8px 9px;
   }
 
-  .ai-capability {
-    min-height: 96px;
-    padding: 14px;
+  .ai-node > span {
+    width: 25px;
+    height: 25px;
+  }
+
+  .ai-node strong {
+    font-size: 9.5px;
+  }
+
+  .ai-node small {
+    font-size: 7.7px;
   }
 
   .ai-services-section,
@@ -1636,10 +1735,31 @@ const recoverProofImage = (image) => {
 }
 
 @media (max-width: 390px) {
-  .ai-capability-grid {
-    grid-template-columns: 1fr;
+  .ai-core {
+    width: 102px;
+    height: 102px;
   }
 
+  .ai-node {
+    width: 116px;
+    min-height: 50px;
+    gap: 6px;
+    padding: 7px;
+  }
+
+  .ai-node > span {
+    width: 22px;
+    height: 22px;
+    font-size: 7.5px;
+  }
+
+  .ai-node strong {
+    font-size: 8.6px;
+  }
+
+  .ai-node small {
+    font-size: 7px;
+  }
 
   .hero-actions {
     grid-template-columns: 1fr;
