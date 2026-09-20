@@ -4,7 +4,7 @@ usePageSeo({
   description:
     "NexaStudio استودیوی طراحی و توسعه محصول دیجیتال است؛ از سامانه‌های اختصاصی و فروشگاه اینترنتی تا هوش مصنوعی، جستجوی هوشمند، سئو و توسعه مستمر.",
   path: "/",
-  image: "/images/hero/desktop-hero.webp",
+  image: "/images/og/nexastudio-og.webp",
 });
 </script>
 
