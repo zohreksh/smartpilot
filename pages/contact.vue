@@ -1,11 +1,9 @@
 <template>
   <main class="contact-page">
     <SiteHeader />
-
     <section class="contact-hero">
       <img src="/images/hero/contact-hero.webp" alt="شروع همکاری و تبدیل ایده به محصول" />
     </section>
-
     <section class="contact-section container">
       <div class="contact-grid">
         <article class="contact-card info-card">
@@ -15,7 +13,6 @@
           <div class="contact-item"><strong>تلفن</strong><span>+98 21 0000 0000</span></div>
           <div class="contact-item"><strong>ساعات پاسخگویی</strong><span>شنبه تا پنجشنبه، ۹ صبح تا ۶ عصر</span></div>
         </article>
-
         <article class="contact-card message-card">
           <h2>برای ما پیام بگذارید</h2>
           <p>چند خط درباره نیاز یا ایده‌تان بنویسید.</p>
@@ -26,7 +23,6 @@
             <button type="button">ارسال پیام</button>
           </form>
         </article>
-
         <article class="contact-card process-card">
           <h2>فرآیند همکاری</h2>
           <p>مسیر ساده و شفاف برای شروع یک پروژه.</p>
@@ -38,7 +34,6 @@
     </section>
   </main>
 </template>
-
 <style scoped>
-.contact-page{direction:rtl;background:#f7f2eb;min-height:100vh;color:#111827}.contact-hero{padding:0 28px 45px}.contact-hero img{width:100%;display:block}.container{max-width:1280px;margin:auto;padding:0 28px}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.contact-card{background:#fffaf5;border:1px solid #ead8c7;border-radius:32px;padding:42px;min-height:520px}.contact-card h2{color:#243044;font-size:28px}.contact-card p{color:#667085;line-height:2}.contact-form{display:flex;flex-direction:column;gap:18px;margin-top:28px}input,textarea{border:1px solid #e5ddd4;background:#fff;border-radius:16px;padding:16px;font-family:inherit}textarea{min-height:150px}button{background:#d95f00;color:white;border:0;border-radius:16px;padding:17px;font-family:inherit}.contact-item{padding:22px 0;border-bottom:1px solid #ead8c7;display:flex;flex-direction:column;gap:8px}.contact-item strong,.process-item strong{color:#243044}.contact-item span,.process-item small{color:#667085}.process-item{display:flex;flex-direction:column;gap:8px;padding:22px 0;border-bottom:1px solid #ead8c7}.process-item span{color:#d95f00;font-weight:800;font-size:24px}@media(max-width:1000px){.contact-grid{grid-template-columns:1fr 1fr}}@media(max-width:800px){.contact-grid{grid-template-columns:1fr}.contact-hero{padding:0 16px 30px}.contact-card{padding:28px;min-height:auto}}
+.contact-page{direction:rtl;background:#f7f2eb;min-height:100vh;color:#111827}.contact-hero{padding:0 28px 45px}.contact-hero img{width:100%;display:block}.container{max-width:1440px;margin:auto;padding:0 28px}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}.contact-card{background:#fffaf5;border:1px solid #ead8c7;border-radius:32px;padding:42px;min-height:520px}.contact-card h2{color:#243044;font-size:28px}.contact-card p{color:#667085;line-height:2}.contact-form{display:flex;flex-direction:column;gap:18px;margin-top:28px}input,textarea{border:1px solid #e5ddd4;background:#fff;border-radius:16px;padding:16px;font-family:inherit}textarea{min-height:150px}button{background:#d95f00;color:white;border:0;border-radius:16px;padding:17px;font-family:inherit}.contact-item{padding:22px 0;border-bottom:1px solid #ead8c7;display:flex;flex-direction:column;gap:8px}.contact-item strong,.process-item strong{color:#243044}.contact-item span,.process-item small{color:#667085}.process-item{display:flex;flex-direction:column;gap:8px;padding:22px 0;border-bottom:1px solid #ead8c7}.process-item span{color:#d95f00;font-weight:800;font-size:24px}@media(max-width:1000px){.contact-grid{grid-template-columns:1fr 1fr}}@media(max-width:800px){.contact-grid{grid-template-columns:1fr}.contact-hero{padding:0 16px 30px}.contact-card{padding:28px;min-height:auto}}
 </style>
