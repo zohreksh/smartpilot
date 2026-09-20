@@ -8,8 +8,6 @@
     <ProjectsSection />
     <WhyUsSection />
     <TeamSection />
-    <!-- <ContactSection /> -->
-  </main>
+</main>
 </template>
 
-<!-- GitHub write test -->
