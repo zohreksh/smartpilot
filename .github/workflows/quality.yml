@@ -23,8 +23,17 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
+
+      - name: Refresh lockfile for bootstrap
+        run: npm install --package-lock-only --ignore-scripts
+
+      - name: Upload repaired lockfile
+        uses: actions/upload-artifact@v4
+        with:
+          name: repaired-lockfile
+          path: package-lock.json
 
       - name: Install dependencies
         run: npm ci
