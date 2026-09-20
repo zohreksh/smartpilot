@@ -39,15 +39,17 @@
 
 <style scoped>
 .why-section {
-  padding: 26px 0 36px;
+  position: relative;
+  padding: 78px 0 82px;
+  border-bottom: 1px solid rgba(215, 223, 230, 0.82);
+  background:
+    radial-gradient(circle at 86% 12%, rgba(112, 136, 164, 0.08), transparent 23%),
+    linear-gradient(180deg, #f7fafc 0%, #f9fbfd 100%);
   text-align: center;
 }
 
-.why-section h2 {
-  margin-bottom: 28px;
-  color: #101c32;
-  font-size: 32px;
-  letter-spacing: -0.015em;
+.why-heading {
+  margin-bottom: 34px;
 }
 
 .why-grid {
@@ -168,6 +170,14 @@
 }
 
 @media (max-width: 600px) {
+  .why-section {
+    padding: 60px 0 64px;
+  }
+
+  .why-heading {
+    margin-bottom: 28px;
+  }
+
   .why-grid {
     grid-template-columns: 1fr;
   }
