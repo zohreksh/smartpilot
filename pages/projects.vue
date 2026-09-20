@@ -63,7 +63,7 @@ usePageSeo({
                 alt="نمای کامل محصول HEVIX"
                 width="1659"
                 height="948"
-                loading="eager"
+                loading="lazy"
                 decoding="async"
               />
               <span class="project-label">
