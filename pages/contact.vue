@@ -1,11 +1,47 @@
+<script setup>
+import { ref } from "vue";
+
+const heroSrc = ref("/images/hero/contact-hero.webp");
+let heroRetryCount = 0;
+
+useHead({
+  link: [
+    {
+      rel: "preload",
+      as: "image",
+      href: "/images/hero/contact-hero.webp",
+      type: "image/webp",
+      fetchpriority: "high",
+    },
+  ],
+});
+
+const recoverHeroImage = () => {
+  if (heroRetryCount === 0) {
+    heroRetryCount = 1;
+    heroSrc.value = "/images/hero/contact-hero.webp?retry=1";
+    return;
+  }
+
+  if (heroRetryCount === 1) {
+    heroRetryCount = 2;
+    heroSrc.value = "/images/hero/contact-hero1.webp";
+  }
+};
+</script>
+
 <template>
   <main class="contact-page">
     <SiteHeader />
 
     <section class="contact-hero">
       <img
-        src="/images/hero/contact-hero.webp"
+        :src="heroSrc"
         alt="شروع همکاری و تبدیل ایده به محصول"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        @error="recoverHeroImage"
       />
     </section>
 
