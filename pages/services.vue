@@ -1091,6 +1091,7 @@ const recoverProofImage = (image) => {
 .service-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: 18px;
 }
 
@@ -1103,6 +1104,7 @@ const recoverProofImage = (image) => {
   align-items: start;
   min-width: 0;
   min-height: 292px;
+  height: 100%;
   padding: 26px;
   border: 1px solid var(--line);
   border-radius: 23px;
@@ -1132,11 +1134,6 @@ const recoverProofImage = (image) => {
 }
 
 .service-ai-card {
-  grid-column: 1 / -1;
-  min-height: 240px;
-  grid-template-columns: 58px minmax(230px, 0.72fr) minmax(0, 1.28fr);
-  gap: 22px;
-  align-items: center;
   border-color: rgba(184, 107, 53, 0.34);
   background:
     radial-gradient(circle at 92% 12%, rgba(184, 107, 53, 0.12), transparent 25%),
@@ -1212,10 +1209,6 @@ const recoverProofImage = (image) => {
 .service-body {
   grid-column: 2;
   min-width: 0;
-}
-
-.service-ai-card .service-body {
-  grid-column: auto;
 }
 
 .service-body p {
@@ -1516,10 +1509,6 @@ const recoverProofImage = (image) => {
     min-height: 0;
   }
 
-  .service-ai-card {
-    grid-template-columns: 52px minmax(200px, 0.7fr) minmax(0, 1.3fr);
-  }
-
   .engagement-layout,
   .proof-layout {
     gap: 38px;
@@ -1558,13 +1547,6 @@ const recoverProofImage = (image) => {
     grid-template-columns: 1fr;
   }
 
-  .service-ai-card {
-    grid-column: auto;
-    grid-template-columns: 46px minmax(0, 1fr);
-    min-height: 0;
-  }
-
-  .service-ai-card .service-body,
   .service-body {
     grid-column: 2;
   }
@@ -1688,15 +1670,14 @@ const recoverProofImage = (image) => {
     font-size: 22px;
   }
 
-  .service-row,
-  .service-ai-card {
+  .service-row {
     grid-template-columns: 1fr;
     min-height: 0;
+    height: auto;
     gap: 8px;
     padding: 23px 20px;
   }
 
-  .service-ai-card .service-body,
   .service-body {
     grid-column: auto;
   }
