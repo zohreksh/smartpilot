@@ -15,7 +15,10 @@
       <div class="contact-grid">
         <article class="contact-card message-card">
           <h2>برای ما پیام بگذارید</h2>
-          <p>چند خط درباره نیاز یا ایده‌تان بنویسید. به‌زودی با شما تماس می‌گیریم.</p>
+          <p>
+            چند خط درباره نیاز یا ایده‌تان بنویسید. به‌زودی با شما تماس
+            می‌گیریم.
+          </p>
 
           <form class="contact-form">
             <div class="form-row">
@@ -67,7 +70,7 @@
 }
 
 .contact-hero {
-  padding: 0 28px 45px;
+  padding: 0 0 45px;
 }
 
 .hero-banner {
