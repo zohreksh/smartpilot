@@ -306,22 +306,6 @@
       </div>
     </section>
 
-    <section class="contact-links-section">
-      <div class="container contact-links-panel">
-        <div>
-          <span class="links-kicker">قبل از شروع گفتگو</span>
-          <h2>می‌خواهید اول بیشتر با روش کار ما آشنا شوید؟</h2>
-          <p>
-            خدمات و تجربه محصولی NexaStudio را ببینید و بعد درباره پروژه خودتان
-            تصمیم بگیرید.
-          </p>
-        </div>
-        <div class="contact-links-actions">
-          <NuxtLink class="primary-action" to="/services">مشاهده خدمات</NuxtLink>
-          <NuxtLink class="secondary-action light-action" to="/about">درباره ما</NuxtLink>
-        </div>
-      </div>
-    </section>
   </main>
 </template>
 
@@ -481,41 +465,6 @@ a.contact-channel-card:hover {
   font-weight: 700;
 }
 
-.contact-links-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.primary-action,
-.secondary-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 800;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.primary-action {
-  background: linear-gradient(135deg, #c17a42, #9b542d);
-  color: #fff;
-  box-shadow: 0 12px 30px rgba(155, 84, 45, 0.18);
-}
-
-.secondary-action {
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.76);
-  color: var(--text);
-}
-
-.primary-action:hover,
-.secondary-action:hover {
-  transform: translateY(-2px);
-}
 
 .project-brief-section,
 .fit-section,
@@ -834,48 +783,6 @@ a.contact-channel-card:hover {
   line-height: 1.85;
 }
 
-.contact-links-section {
-  padding: 18px 0 78px;
-  background: rgba(255, 255, 255, 0.48);
-}
-
-.contact-links-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 34px;
-  padding: 34px 38px;
-  border-radius: 26px;
-  background: #101c32;
-  color: #fff;
-  box-shadow: 0 20px 50px rgba(16, 28, 50, 0.14);
-}
-
-.links-kicker {
-  color: #e2a06f;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.contact-links-panel h2 {
-  margin: 7px 0 6px;
-  color: #fff;
-  font-size: clamp(25px, 3vw, 34px);
-}
-
-.contact-links-panel p {
-  max-width: 660px;
-  margin: 0;
-  color: #c8d0dc;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.light-action {
-  border-color: rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-}
 
 @media (max-width: 1080px) {
   .brief-layout {
@@ -1039,27 +946,6 @@ a.contact-channel-card:hover {
     margin: 2px 0 5px;
   }
 
-  .contact-links-section {
-    padding: 18px 0 56px;
-  }
-
-  .contact-links-panel {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-    padding: 26px 22px;
-    border-radius: 22px;
-  }
-
-  .contact-links-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
-@media (max-width: 390px) {
-  .contact-links-actions {
-    grid-template-columns: 1fr;
-  }
-}
 </style>
