@@ -99,29 +99,68 @@
   direction: rtl;
 }
 .team-card {
-  background: #fff;
-  border: 1px solid #eadfd7;
-  border-radius: 22px;
-  padding: 18px;
-  min-height: 250px;
-  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.04);
+  position: relative;
+  overflow: hidden;
+  min-height: 270px;
+  padding: 20px;
+  border: 1px solid rgba(226, 211, 199, 0.92);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(184, 107, 53, 0.07), transparent 32%),
+    linear-gradient(150deg, #fff 0%, #fffaf6 100%);
+  box-shadow:
+    0 14px 34px rgba(16, 28, 50, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+.team-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 24px;
+  left: 24px;
+  height: 3px;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, transparent, rgba(184, 107, 53, 0.48), transparent);
+}
+.team-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(184, 107, 53, 0.28);
+  box-shadow:
+    0 22px 46px rgba(16, 28, 50, 0.085),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
 }
 .team-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #faece4;
   display: flex;
+  width: 48px;
+  height: 48px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(184, 107, 53, 0.18);
+  border-radius: 15px;
+  background: linear-gradient(145deg, #fff8f3, #f2ded0);
+  color: #a75c32;
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 8px 18px rgba(184, 107, 53, 0.07);
 }
 
 .intro-card {
+  border-color: rgba(184, 107, 53, 0.28);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(184, 107, 53, 0.11), transparent 36%),
+    linear-gradient(150deg, #fffaf6 0%, #fff 100%);
   text-align: center;
 }
 
 .specialists-card {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(112, 136, 164, 0.08), transparent 35%),
+    linear-gradient(150deg, #fff 0%, #f8fafc 100%);
   text-align: center;
 }
 
@@ -154,15 +193,17 @@
   padding-top: 0;
 }
 .team-image-wrap {
+  display: flex;
   width: 110px;
   height: 110px;
   flex-shrink: 0;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #f8f3ef;
-  display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(226, 211, 199, 0.9);
+  border-radius: 20px;
+  background: #f8f3ef;
+  box-shadow: 0 10px 24px rgba(16, 28, 50, 0.07);
 }
 .team-image-wrap img {
   width: 100%;
@@ -171,12 +212,14 @@
 }
 .job-title {
   display: inline-flex;
-  color: #bd7448 !important;
-  background: #fff3ed;
-  border-radius: 999px;
-  padding: 4px 10px;
   margin: 0 0 6px;
-  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid rgba(189, 116, 72, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 243, 237, 0.86);
+  color: #bd7448 !important;
+  font-size: 11.5px;
+  font-weight: 700;
 }
 .skills-list {
   display: flex;
@@ -187,12 +230,12 @@
   margin: 8px 0;
 }
 .skills-list span {
-  font-size: 12px;
-  color: #667085;
-  background: #f8f5f2;
-  border: 1px solid #eee2d9;
-  border-radius: 999px;
   padding: 4px 9px;
+  border: 1px solid rgba(232, 221, 213, 0.92);
+  border-radius: 999px;
+  background: rgba(250, 247, 244, 0.86);
+  color: #667085;
+  font-size: 11.5px;
   line-height: 1.4;
 }
 .profile-link {
@@ -206,11 +249,13 @@
   justify-content: center;
 }
 .specialties span {
-  padding: 4px 10px;
+  padding: 5px 10px;
+  border: 1px solid rgba(189, 116, 72, 0.14);
   border-radius: 999px;
-  background: #fff3ed;
-  color: #bd7448;
-  font-size: 11px;
+  background: rgba(255, 243, 237, 0.8);
+  color: #a9653d;
+  font-size: 10.5px;
+  font-weight: 700;
 }
 @media (max-width: 1023px) {
   .team-grid {
