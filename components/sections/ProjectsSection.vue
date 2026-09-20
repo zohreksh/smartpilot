@@ -14,14 +14,20 @@
           <img
             src="/images/projects/shidane.webp"
             alt="پروژه شیدانه"
+            width="1659"
+            height="948"
             loading="lazy"
+            decoding="async"
           />
         </div>
         <div class="project-image hevix-project">
           <img
             src="/images/projects/hevix.webp"
             alt="پروژه HEVIX"
+            width="1659"
+            height="948"
             loading="lazy"
+            decoding="async"
           />
         </div>
     </div>
