@@ -3,22 +3,22 @@
     <div class="container">
       <div class="section-header home-section-heading">
         <span class="section-badge home-section-kicker">تیم ما</span>
-        <h2 class="home-section-title">پشت هر محصول خوب، یک تیم مسئول ایستاده است</h2>
+        <h2 class="home-section-title">معماری و کیفیت محصول، مسئول مشخص دارد</h2>
         <p class="home-section-description">
-          معماری، توسعه و کیفیت محصول مستقیماً با ماست و برای نیازهای بزرگ‌تر، شبکه متخصصان متناسب با پروژه شکل می‌گیرد.
+          هسته معماری و توسعه را خودمان هدایت می‌کنیم و برای تخصص‌های مکمل، تیم متناسب با نیاز واقعی هر پروژه شکل می‌گیرد.
         </p>
         <span class="home-section-rule" aria-hidden="true"></span>
       </div>
       <div class="team-grid">
         <article class="team-card intro-card">
           <div class="team-icon">✦</div>
-          <h3>پشت این محصولات...</h3>
+          <h3>تیم کوچک، مسئولیت مستقیم</h3>
           <p>
-            ترکیبی از تجربه و تخصص، در کنار همکاری با متخصصان برای ساخت محصولات
-            دیجیتال بهتر.
+            هسته پروژه را مستقیم طراحی و هدایت می‌کنیم و فقط برای تخصص‌های مکمل،
+            افراد مناسب را به تیم اضافه می‌کنیم.
           </p>
           <strong
-            >ما فقط توسعه‌دهنده نیستیم؛ همراه شما در مسیر رشد هستیم.</strong
+            >مسئولیت فنی و کیفیت محصول از شروع پروژه تا توسعه‌های بعدی مشخص می‌ماند.</strong
           >
         </article>
         <article class="team-card member-card">
@@ -28,13 +28,16 @@
             </div>
             <div class="member-content">
               <h3>زهره کشاورز</h3>
-              <span class="job-title">معمار و توسعه‌دهنده</span>
+              <span class="job-title">معمار محصول و توسعه‌دهنده</span>
+              <p class="member-summary">
+                تمرکز بر تبدیل نیاز کسب‌وکار به تجربه کاربری، جریان محصول و مسیر رشد قابل اجرا.
+              </p>
               <div class="skills-list">
-                <span>✓ تجربه کاربری و محصول</span
-                ><span>✓ طراحی مسیر محصول</span
-                ><span>✓ استراتژی رشد دیجیتال</span>
+                <span>معماری تجربه و جریان محصول</span
+                ><span>طراحی مسیر توسعه و اولویت‌بندی</span
+                ><span>رشد و بهینه‌سازی محصول</span>
               </div>
-              <span class="profile-link">مشاهده پروفایل</span>
+              <span class="profile-link">پروفایل حرفه‌ای</span>
             </div>
           </div>
         </article>
@@ -45,21 +48,24 @@
             </div>
             <div class="member-content">
               <h3>حسین کولانی</h3>
-              <span class="job-title">معمار و توسعه‌دهنده</span>
+              <span class="job-title">معمار نرم‌افزار و توسعه‌دهنده</span>
+              <p class="member-summary">
+                تمرکز بر معماری فنی، سامانه‌های اختصاصی و ادغام قابلیت‌های هوش مصنوعی در محصول.
+              </p>
               <div class="skills-list">
-                <span>✓ معماری نرم‌افزار</span
-                ><span>✓ هوش مصنوعی</span
-                ><span>✓ توسعه سیستم‌های تخصصی</span>
+                <span>معماری سامانه‌های توسعه‌پذیر</span
+                ><span>هوش مصنوعی و قابلیت‌های هوشمند</span
+                ><span>طراحی و توسعه سیستم‌های تخصصی</span>
               </div>
-              <span class="profile-link">مشاهده پروفایل</span>
+              <span class="profile-link">پروفایل حرفه‌ای</span>
             </div>
           </div>
         </article>
         <article class="team-card specialists-card">
           <div class="team-icon">👥</div>
-          <h3>شبکه متخصصان</h3>
+          <h3>شبکه تخصص‌های مکمل</h3>
           <p>
-            برای پروژه‌های بزرگ‌تر، متخصصان موردنیاز را کنار هم قرار می‌دهیم.
+            برای هر پروژه، تخصص‌های مکمل فقط در جایی به تیم اضافه می‌شوند که واقعاً لازم باشند.
           </p>
           <div class="specialties">
             <span>UI/UX</span><span>Frontend</span><span>Backend</span
@@ -248,6 +254,14 @@
   font-size: 20px;
   font-weight: 800;
   letter-spacing: -0.01em;
+}
+
+.member-summary {
+  max-width: 250px;
+  margin: 10px 0 0;
+  color: #697386;
+  font-size: 11px;
+  line-height: 1.75;
 }
 
 .job-title {
