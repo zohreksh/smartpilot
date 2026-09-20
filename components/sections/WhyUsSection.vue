@@ -159,7 +159,7 @@
 .why-card p {
   margin: 0;
   color: #697386;
-  font-size: 13px;
+  font-size: 14.5px;
   line-height: 1.95;
 }
 
