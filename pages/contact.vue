@@ -383,7 +383,7 @@ const recoverHeroImage = () => {
 .contact-channels-heading p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15.5px;
   line-height: 1.8;
 }
 
@@ -444,7 +444,7 @@ a.contact-channel-card:hover {
 
 .channel-copy small {
   color: var(--accent);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -463,7 +463,7 @@ a.contact-channel-card:hover {
 
 .channel-copy span {
   color: var(--muted);
-  font-size: 11.5px;
+  font-size: 14.5px;
   line-height: 1.7;
 }
 
@@ -483,7 +483,7 @@ a.contact-channel-card:hover {
   border-radius: 999px;
   background: #f0ebe6;
   color: #8a7769;
-  font-size: 10px;
+  font-size: 11.5px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -497,7 +497,7 @@ a.contact-channel-card:hover {
   border-radius: 999px;
   background: #fff7f4;
   color: #c56839;
-  font-size: 14px;
+  font-size: 15.5px;
   font-weight: 700;
 }
 
@@ -533,7 +533,7 @@ a.contact-channel-card:hover {
   max-width: 700px;
   margin: 0 auto;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.9;
 }
 
@@ -571,7 +571,7 @@ a.contact-channel-card:hover {
 
 .field-group label {
   color: var(--text);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 700;
 }
 
@@ -586,7 +586,7 @@ a.contact-channel-card:hover {
   background: #fff;
   color: var(--text);
   font: inherit;
-  font-size: 13px;
+  font-size: 14.5px;
   line-height: 1.7;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -631,7 +631,7 @@ a.contact-channel-card:hover {
   background: #d9c8bb;
   color: #fff;
   font: inherit;
-  font-size: 14px;
+  font-size: 15.5px;
   font-weight: 800;
   cursor: not-allowed;
 }
@@ -639,7 +639,7 @@ a.contact-channel-card:hover {
 .form-footer p {
   margin: 0;
   color: #8a7769;
-  font-size: 11.5px;
+  font-size: 14.5px;
   line-height: 1.7;
 }
 
@@ -677,7 +677,7 @@ a.contact-channel-card:hover {
 
 .guide-head span {
   color: var(--accent);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -704,13 +704,13 @@ a.contact-channel-card:hover {
   display: block;
   margin-bottom: 4px;
   color: var(--text);
-  font-size: 13px;
+  font-size: 14.5px;
 }
 
 .guide-list span {
   display: block;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13.5px;
   line-height: 1.75;
 }
 
@@ -720,7 +720,7 @@ a.contact-channel-card:hover {
   border-radius: 14px;
   background: rgba(184, 107, 53, 0.08);
   color: #78563e;
-  font-size: 11.5px;
+  font-size: 14.5px;
   line-height: 1.8;
 }
 
@@ -756,7 +756,7 @@ a.contact-channel-card:hover {
 .fit-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 14px;
   line-height: 1.9;
 }
 
@@ -801,7 +801,7 @@ a.contact-channel-card:hover {
   border-radius: 50%;
   background: var(--bg);
   color: var(--accent);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 800;
   box-shadow: 0 0 0 8px rgba(252, 248, 244, 0.94);
 }
@@ -815,7 +815,7 @@ a.contact-channel-card:hover {
 .step-item p {
   margin: 0;
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 14px;
   line-height: 1.85;
 }
 
@@ -908,7 +908,7 @@ a.contact-channel-card:hover {
   }
 
   .section-heading p {
-    font-size: 14px;
+    font-size: 15.5px;
   }
 
   .project-form,
