@@ -1,5 +1,15 @@
+<script setup lang="ts">
+usePageSeo({
+  title: "درباره NexaStudio | تیم معماری و توسعه محصول دیجیتال",
+  description:
+    "درباره NexaStudio، رویکرد ما به معماری و توسعه محصول، تجربه ساخت شیدانه و HEVIX و تیمی که مسئولیت فنی و کیفیت محصول را مستقیم هدایت می‌کند.",
+  path: "/about",
+  image: "/images/projects/shidane.webp",
+});
+</script>
+
 <template>
-  <main class="about-page">
+  <main id="main-content" class="about-page" tabindex="-1">
     <SiteHeader />
 
     <section class="about-hero">
@@ -33,14 +43,14 @@
           <div class="visual-glow visual-glow-one" aria-hidden="true"></div>
           <div class="visual-glow visual-glow-two" aria-hidden="true"></div>
           <figure class="product-preview preview-primary">
-            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" />
+            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" width="1659" height="948" decoding="async" />
             <figcaption>
               <strong>شیدانه</strong>
               <span>فروشگاه و پلتفرم هوشمند زیبایی</span>
             </figcaption>
           </figure>
           <figure class="product-preview preview-secondary">
-            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" />
+            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" width="1659" height="948" decoding="async" />
             <figcaption>
               <strong>HEVIX</strong>
               <span>پلتفرم تخصصی قطعات و تجهیزات</span>
@@ -64,7 +74,7 @@
         <div class="proof-grid">
           <article class="proof-card">
             <div class="proof-image">
-              <img src="/images/projects/shidane.webp" alt="نمای پروژه شیدانه" loading="lazy" />
+              <img src="/images/projects/shidane.webp" alt="نمای پروژه شیدانه" width="1659" height="948" loading="lazy" decoding="async" />
             </div>
             <div class="proof-copy">
               <span>Shidaneh</span>
@@ -75,7 +85,7 @@
 
           <article class="proof-card">
             <div class="proof-image">
-              <img src="/images/projects/hevix.webp" alt="نمای پروژه هویکس" loading="lazy" />
+              <img src="/images/projects/hevix.webp" alt="نمای پروژه هویکس" width="1659" height="948" loading="lazy" decoding="async" />
             </div>
             <div class="proof-copy">
               <span>HEVIX</span>
@@ -151,40 +161,46 @@
           <span class="section-badge">سازندگان NexaStudio</span>
           <h2>مسئول معماری و کیفیت محصول، خودمان هستیم.</h2>
           <p>
-            NexaStudio توسط دو معمار و توسعه‌دهنده ساخته شده و برای پروژه‌های
-            بزرگ‌تر، تیم متناسب با مسئله شکل می‌گیرد.
+            هسته معماری و توسعه را خودمان هدایت می‌کنیم و برای تخصص‌های مکمل،
+            تیم متناسب با نیاز واقعی هر پروژه شکل می‌گیرد.
           </p>
         </div>
 
         <div class="founders-grid">
           <article class="founder-card">
             <div class="founder-image">
-              <img src="/images/team/zohreh.webp" alt="زهره کشاورز" loading="lazy" />
+              <img src="/images/team/zohreh.webp" alt="زهره کشاورز" width="1140" height="1280" loading="lazy" decoding="async" />
             </div>
             <div class="founder-content">
-              <span class="founder-role">معمار و توسعه‌دهنده</span>
+              <span class="founder-role">معمار محصول و توسعه‌دهنده</span>
               <h3>زهره کشاورز</h3>
-              <p>تمرکز بر محصول، تجربه کاربری، مسیر توسعه و رشد دیجیتال.</p>
+              <p>
+                تمرکز بر تبدیل نیاز کسب‌وکار به تجربه کاربری، جریان محصول و
+                مسیر رشد قابل اجرا.
+              </p>
               <div class="skill-chips" role="group" aria-label="تخصص‌های زهره کشاورز">
-                <span>Product</span>
-                <span>UX</span>
-                <span>Growth</span>
+                <span>معماری تجربه و جریان محصول</span>
+                <span>طراحی مسیر توسعه و اولویت‌بندی</span>
+                <span>رشد و بهینه‌سازی محصول</span>
               </div>
             </div>
           </article>
 
           <article class="founder-card">
             <div class="founder-image">
-              <img src="/images/team/hossein.webp" alt="حسین کولانی" loading="lazy" />
+              <img src="/images/team/hossein.webp" alt="حسین کولانی" width="1080" height="1280" loading="lazy" decoding="async" />
             </div>
             <div class="founder-content">
-              <span class="founder-role">معمار و توسعه‌دهنده</span>
+              <span class="founder-role">معمار نرم‌افزار و توسعه‌دهنده</span>
               <h3>حسین کولانی</h3>
-              <p>تمرکز بر معماری نرم‌افزار، هوش مصنوعی و سیستم‌های اختصاصی.</p>
+              <p>
+                تمرکز بر معماری فنی، سامانه‌های اختصاصی و ادغام قابلیت‌های
+                هوش مصنوعی در محصول.
+              </p>
               <div class="skill-chips" role="group" aria-label="تخصص‌های حسین کولانی">
-                <span>Architecture</span>
-                <span>AI</span>
-                <span>Backend</span>
+                <span>معماری سامانه‌های توسعه‌پذیر</span>
+                <span>هوش مصنوعی و قابلیت‌های هوشمند</span>
+                <span>طراحی و توسعه سیستم‌های تخصصی</span>
               </div>
             </div>
           </article>
@@ -198,10 +214,10 @@
             </svg>
           </div>
           <div class="specialists-copy">
-            <h3>شبکه متخصصان</h3>
+            <h3>شبکه تخصص‌های مکمل</h3>
             <p>
-              برای پروژه‌هایی که به تخصص‌های مکمل نیاز دارند، افراد مناسب را
-              متناسب با نیاز واقعی پروژه کنار هم قرار می‌دهیم.
+              برای هر پروژه، تخصص‌های مکمل فقط در جایی به تیم اضافه می‌شوند
+              که واقعاً لازم باشند.
             </p>
           </div>
           <div class="specialist-chips" role="group" aria-label="تخصص‌های شبکه همکاران">
@@ -446,10 +462,10 @@
 .product-preview img {
   display: block;
   width: 100%;
+  height: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  background: #f8f3ef;
 }
 
 .product-preview figcaption {

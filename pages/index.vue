@@ -1,5 +1,15 @@
+<script setup lang="ts">
+usePageSeo({
+  title: "NexaStudio | طراحی و توسعه محصول دیجیتال و هوش مصنوعی",
+  description:
+    "NexaStudio استودیوی طراحی و توسعه محصول دیجیتال است؛ از سامانه‌های اختصاصی و فروشگاه اینترنتی تا هوش مصنوعی، جستجوی هوشمند، سئو و توسعه مستمر.",
+  path: "/",
+  image: "/images/hero/desktop-hero.webp",
+});
+</script>
+
 <template>
-  <main class="landing-page">
+  <main id="main-content" class="landing-page" tabindex="-1">
     <SiteHeader />
     <section class="hero-shell">
       <HeroSection />
@@ -8,8 +18,5 @@
     <ProjectsSection />
     <WhyUsSection />
     <TeamSection />
-    <!-- <ContactSection /> -->
-  </main>
+</main>
 </template>
-
-<!-- GitHub write test -->

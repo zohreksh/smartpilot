@@ -1,8 +1,24 @@
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import { reactive, ref } from "vue";
+
+usePageSeo({
+  title: "تماس و شروع همکاری | NexaStudio",
+  description:
+    "برای طراحی و توسعه محصول دیجیتال، سامانه اختصاصی، هوش مصنوعی، جستجوی هوشمند، سئو یا توسعه محصول موجود با NexaStudio تماس بگیرید.",
+  path: "/contact",
+  image: "/images/hero/contact-hero.webp",
+});
 
 const heroSrc = ref("/images/hero/contact-hero.webp");
 let heroRetryCount = 0;
+
+const projectBrief = reactive({
+  fullName: "",
+  contactWay: "",
+  businessName: "",
+  projectType: "",
+  message: "",
+});
 
 useHead({
   link: [
@@ -10,7 +26,6 @@ useHead({
       rel: "preload",
       as: "image",
       href: "/images/hero/contact-hero.webp",
-      type: "image/webp",
       fetchpriority: "high",
     },
   ],
@@ -28,16 +43,45 @@ const recoverHeroImage = () => {
     heroSrc.value = "/images/hero/contact-hero1.webp";
   }
 };
+
+const submitProjectBrief = () => {
+  const lines = [
+    "سلام، برای بررسی یک پروژه با NexaStudio پیام می‌دهم.",
+    "",
+    `نام: ${projectBrief.fullName}`,
+    `راه ارتباطی: ${projectBrief.contactWay}`,
+    projectBrief.businessName
+      ? `کسب‌وکار: ${projectBrief.businessName}`
+      : null,
+    `موضوع پروژه: ${projectBrief.projectType}`,
+    "",
+    "شرح مسئله / هدف:",
+    projectBrief.message,
+  ].filter(Boolean);
+
+  const url = `https://wa.me/989379407868?text=${encodeURIComponent(
+    lines.join("\n"),
+  )}`;
+
+  if (import.meta.client) {
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+};
 </script>
 
 <template>
-  <main class="contact-page">
+  <main id="main-content" class="contact-page" tabindex="-1">
     <SiteHeader />
 
     <section class="contact-hero">
+      <h1 class="sr-only">
+        شروع همکاری با NexaStudio برای طراحی و توسعه محصول دیجیتال
+      </h1>
       <img
         :src="heroSrc"
         alt="شروع همکاری و تبدیل ایده به محصول"
+        width="1672"
+        height="799"
         loading="eager"
         decoding="async"
         fetchpriority="high"
@@ -50,7 +94,7 @@ const recoverHeroImage = () => {
         <div class="contact-channels-heading">
           <span class="section-badge">راه‌های ارتباطی</span>
           <h2 id="contact-channels-title">مستقیم با ما در ارتباط باشید</h2>
-          <p>برای شروع گفتگو می‌توانید تماس بگیرید یا در واتساپ پیام بدهید.</p>
+          <p>برای شروع گفتگو می‌توانید تماس بگیرید، در واتساپ پیام بدهید یا ایمیل ارسال کنید.</p>
         </div>
 
         <div class="contact-channels-grid">
@@ -88,21 +132,23 @@ const recoverHeroImage = () => {
             <span class="channel-action" aria-hidden="true">←</span>
           </a>
 
-          <div class="contact-channel-card channel-disabled" aria-disabled="true">
+          <a
+            class="contact-channel-card"
+            href="mailto:zhr.keshavarz@gmail.com"
+          >
             <span class="channel-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
-                <rect x="4" y="4" width="16" height="16" rx="5" />
-                <circle cx="12" cy="12" r="3.5" />
-                <path d="M17.5 6.8h.01" />
+                <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" />
+                <path d="m5 7 7 5.2L19 7" />
               </svg>
             </span>
             <span class="channel-copy">
-              <small>اینستاگرام</small>
-              <strong>به‌زودی</strong>
-              <span>اکانت رسمی در حال آماده‌سازی است</span>
+              <small>ایمیل</small>
+              <strong dir="ltr">zhr.keshavarz@gmail.com</strong>
+              <span>برای ارسال شرح پروژه، فایل یا جزئیات بیشتر</span>
             </span>
-            <span class="channel-status">به‌زودی</span>
-          </div>
+            <span class="channel-action" aria-hidden="true">←</span>
+          </a>
         </div>
       </div>
     </section>
@@ -119,7 +165,7 @@ const recoverHeroImage = () => {
         </div>
 
         <div class="brief-layout">
-          <form class="project-form" aria-describedby="form-status" @submit.prevent>
+          <form class="project-form" aria-describedby="form-status" @submit.prevent="submitProjectBrief">
             <div class="form-row">
               <div class="field-group">
                 <label for="full-name">نام و نام خانوادگی</label>
@@ -127,8 +173,10 @@ const recoverHeroImage = () => {
                   id="full-name"
                   name="full-name"
                   type="text"
+                  v-model.trim="projectBrief.fullName"
                   autocomplete="name"
                   placeholder="نام شما"
+                  required
                 />
               </div>
 
@@ -137,8 +185,10 @@ const recoverHeroImage = () => {
                 <input
                   id="contact-way"
                   name="contact-way"
+                  v-model.trim="projectBrief.contactWay"
                   type="text"
                   placeholder="ایمیل یا شماره تماس"
+                  required
                 />
               </div>
             </div>
@@ -149,6 +199,7 @@ const recoverHeroImage = () => {
                 <input
                   id="business-name"
                   name="business-name"
+                  v-model.trim="projectBrief.businessName"
                   type="text"
                   autocomplete="organization"
                   placeholder="اختیاری"
@@ -157,7 +208,7 @@ const recoverHeroImage = () => {
 
               <div class="field-group">
                 <label for="project-type">موضوع پروژه</label>
-                <select id="project-type" name="project-type">
+                <select id="project-type" v-model="projectBrief.projectType" name="project-type" required>
                   <option value="">انتخاب کنید</option>
                   <option>طراحی سایت یا فروشگاه</option>
                   <option>توسعه سامانه اختصاصی</option>
@@ -175,17 +226,19 @@ const recoverHeroImage = () => {
               <textarea
                 id="project-message"
                 name="project-message"
+                v-model.trim="projectBrief.message"
                 rows="7"
                 placeholder="مثلاً چه چیزی می‌خواهید بسازید یا در محصول فعلی چه مسئله‌ای دارید؟"
+                required
               ></textarea>
             </div>
 
             <div class="form-footer">
-              <button type="submit" disabled aria-disabled="true">
-                ارسال درخواست
+              <button type="submit">
+                ارسال در واتساپ
               </button>
               <p id="form-status">
-                ارسال آنلاین فرم هنوز به سرویس دریافت پیام متصل نشده است.
+                اطلاعات فرم در سایت ذخیره نمی‌شود؛ با ارسال، پیام آماده‌شده در واتساپ باز می‌شود.
               </p>
             </div>
           </form>
@@ -361,6 +414,7 @@ const recoverHeroImage = () => {
 .contact-hero img {
   display: block;
   width: 100%;
+  height: auto;
   max-height: 600px;
 }
 
@@ -471,21 +525,6 @@ a.contact-channel-card:hover {
   color: var(--accent);
   font-size: 20px;
   font-weight: 700;
-}
-
-.channel-disabled {
-  opacity: 0.72;
-  background: #faf7f4;
-}
-
-.channel-status {
-  padding: 4px 9px;
-  border-radius: 999px;
-  background: #f0ebe6;
-  color: #8a7769;
-  font-size: 11.5px;
-  font-weight: 700;
-  white-space: nowrap;
 }
 
 .section-badge {
@@ -624,16 +663,30 @@ a.contact-channel-card:hover {
 
 .form-footer button {
   flex: none;
-  min-width: 150px;
+  min-width: 168px;
   min-height: 48px;
-  border: 0;
+  border: 1px solid rgba(126, 66, 35, 0.24);
   border-radius: 999px;
-  background: #d9c8bb;
+  background: linear-gradient(135deg, #c17a42, #96502d);
   color: #fff;
   font: inherit;
   font-size: 15.5px;
   font-weight: 800;
-  cursor: not-allowed;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(155, 84, 45, 0.16);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-footer button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 13px 28px rgba(155, 84, 45, 0.22);
+}
+
+.form-footer button:focus-visible {
+  outline: 3px solid rgba(184, 107, 53, 0.24);
+  outline-offset: 3px;
 }
 
 .form-footer p {

@@ -1,18 +1,15 @@
 <script setup>
-useHead({
+usePageSeo({
   title: "نمونه‌کارها و محصولات واقعی | NexaStudio",
-  meta: [
-    {
-      name: "description",
-      content:
-        "نمونه‌کارهای واقعی NexaStudio شامل شیدانه و HEVIX؛ تجربه طراحی و توسعه محصول، هوش مصنوعی، جستجوی هوشمند، سئوی اتومات، داده، کاتالوگ و توسعه اختصاصی.",
-    },
-  ],
+  description:
+    "نمونه‌کارهای واقعی NexaStudio شامل شیدانه و HEVIX؛ معماری و توسعه محصول، هوش مصنوعی، جستجوی هوشمند، سئو، داده و سامانه‌های اختصاصی.",
+  path: "/projects",
+  image: "/images/projects/shidane.webp",
 });
 </script>
 
 <template>
-  <main class="projects-page">
+  <main id="main-content" class="projects-page" tabindex="-1">
     <SiteHeader />
 
     <section class="projects-hero">
@@ -50,7 +47,11 @@ useHead({
               <img
                 src="/images/projects/shidane.webp"
                 alt="نمای کامل محصول شیدانه"
+                width="1659"
+                height="948"
                 loading="eager"
+                decoding="async"
+                fetchpriority="high"
               />
               <span class="project-label">
                 <small>Beauty Commerce</small>
@@ -62,7 +63,10 @@ useHead({
               <img
                 src="/images/projects/hevix.webp"
                 alt="نمای کامل محصول HEVIX"
+                width="1659"
+                height="948"
                 loading="eager"
+                decoding="async"
               />
               <span class="project-label">
                 <small>Industrial Commerce</small>
@@ -108,7 +112,10 @@ useHead({
             <img
               src="/images/projects/shidane.webp"
               alt="نمای کامل پلتفرم شیدانه"
+              width="1659"
+              height="948"
               loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="case-stamp">
@@ -135,6 +142,19 @@ useHead({
             <span>مدیریت کاتالوگ و دیتا</span>
             <span>گزارشات و توسعه مستمر</span>
           </div>
+
+          <a
+            class="case-live-link"
+            href="https://shidane.ir"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="مشاهده وب‌سایت شیدانه در تب جدید"
+          >
+            <span>مشاهده وب‌سایت شیدانه</span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M7 5h8v8M15 5l-9 9" />
+            </svg>
+          </a>
 
           <div class="case-detail-grid">
             <article>
@@ -182,6 +202,19 @@ useHead({
             <span>توسعه مستمر</span>
           </div>
 
+          <a
+            class="case-live-link"
+            href="https://hevix.ir"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="مشاهده وب‌سایت HEVIX در تب جدید"
+          >
+            <span>مشاهده وب‌سایت HEVIX</span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M7 5h8v8M15 5l-9 9" />
+            </svg>
+          </a>
+
           <div class="case-detail-grid">
             <article>
               <small>Architecture</small>
@@ -211,7 +244,10 @@ useHead({
             <img
               src="/images/projects/hevix.webp"
               alt="نمای کامل پلتفرم HEVIX"
+              width="1659"
+              height="948"
               loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="case-stamp hevix-stamp">
@@ -642,6 +678,40 @@ useHead({
   background: #fff;
   color: #667085;
   font-size: 11.5px;
+}
+
+.case-live-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 9px 13px;
+  border: 1px solid rgba(184, 107, 53, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 249, 245, 0.82);
+  color: #9f5a34;
+  font-size: 13.5px;
+  font-weight: 800;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.case-live-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184, 107, 53, 0.42);
+  background: #fff7f1;
+}
+
+.case-live-link svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .case-detail-grid {

@@ -1,15 +1,12 @@
 <script setup>
 import { ref } from "vue";
 
-useHead({
+usePageSeo({
   title: "توسعه هوش مصنوعی و خدمات محصول دیجیتال | NexaStudio",
-  meta: [
-    {
-      name: "description",
-      content:
-        "توسعه هوش مصنوعی، جستجوی هوشمند، مشاور و Agentهای اختصاصی، سئوی اتومات، سامانه‌های اختصاصی، طراحی وب و فروشگاه، مدیریت و ورود داده‌های اولیه، گزارشات و پشتیبانی مستمر توسط NexaStudio.",
-    },
-  ],
+  description:
+    "توسعه هوش مصنوعی، جستجوی هوشمند، Agent، سئوی اتومات، سامانه‌های اختصاصی، فروشگاه اینترنتی، تحلیل داده و پشتیبانی مستمر توسط NexaStudio.",
+  path: "/services",
+  image: "/images/projects/shidane1.webp",
 });
 
 const shidaneProofSrc = ref("/images/projects/shidane1.webp");
@@ -48,7 +45,7 @@ const recoverProofImage = (image) => {
 </script>
 
 <template>
-  <main class="services-page">
+  <main id="main-content" class="services-page" tabindex="-1">
     <SiteHeader />
 
     <section class="services-hero">
@@ -512,6 +509,8 @@ const recoverProofImage = (image) => {
             <img
               :src="shidaneProofSrc"
               alt="پیش‌نمایش محصول شیدانه"
+              width="1659"
+              height="948"
               loading="lazy"
               decoding="async"
               @error="recoverProofImage('shidane')"
@@ -527,6 +526,8 @@ const recoverProofImage = (image) => {
             <img
               :src="hevixProofSrc"
               alt="پیش‌نمایش محصول هویکس"
+              width="1659"
+              height="948"
               loading="lazy"
               decoding="async"
               @error="recoverProofImage('hevix')"
@@ -1433,10 +1434,10 @@ const recoverProofImage = (image) => {
 .proof-products img {
   display: block;
   width: 100%;
+  height: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  background: #f8f3ef;
 }
 
 .proof-products figcaption {

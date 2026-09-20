@@ -24,7 +24,7 @@
         <article class="team-card member-card">
           <div class="member-layout">
             <div class="team-image-wrap">
-              <img src="/images/team/zohreh.webp" alt="زهره کشاورز" />
+              <img src="/images/team/zohreh.webp" alt="زهره کشاورز" width="1140" height="1280" loading="lazy" decoding="async" />
             </div>
             <div class="member-content">
               <h3>زهره کشاورز</h3>
@@ -44,7 +44,7 @@
         <article class="team-card member-card">
           <div class="member-layout">
             <div class="team-image-wrap">
-              <img src="/images/team/hossein.webp" alt="حسین کولانی" />
+              <img src="/images/team/hossein.webp" alt="حسین کولانی" width="1080" height="1280" loading="lazy" decoding="async" />
             </div>
             <div class="member-content">
               <h3>حسین کولانی</h3>

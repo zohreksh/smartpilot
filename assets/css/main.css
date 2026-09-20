@@ -27,6 +27,59 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.skip-link {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  z-index: 9999;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #101c32;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  transform: translateY(-160%);
+  transition: transform 0.18s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid rgba(184, 107, 53, 0.34);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .container {
   width: min(1240px, 92%);
   margin: auto;
