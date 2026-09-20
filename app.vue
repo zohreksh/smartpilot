@@ -1,14 +1,57 @@
+<script setup lang="ts">
+const config = useRuntimeConfig();
+const requestUrl = useRequestURL();
+
+const configuredBase = String(config.public.siteUrl || "").trim();
+const requestBase = `${requestUrl.protocol}//${requestUrl.host}`;
+const siteUrl = (configuredBase || requestBase).replace(/\/$/, "");
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "NexaStudio",
+  url: siteUrl,
+  email: "mailto:zhr.keshavarz@gmail.com",
+  telephone: "+989379407868",
+  founder: [
+    {
+      "@type": "Person",
+      name: "زهره کشاورز",
+    },
+    {
+      "@type": "Person",
+      name: "حسین کولانی",
+    },
+  ],
+};
+
+const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "NexaStudio",
+  url: siteUrl,
+  inLanguage: "fa-IR",
+};
+
+useHead({
+  script: [
+    {
+      key: "nexastudio-organization-schema",
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(organizationSchema),
+    },
+    {
+      key: "nexastudio-website-schema",
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(webSiteSchema),
+    },
+  ],
+});
+</script>
+
 <template>
   <div>
     <NuxtPage />
     <SiteFooter />
   </div>
 </template>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap');
-:root{font-family:Vazirmatn,Tahoma,sans-serif;color:#102033;background:#fffaf6}
-*{box-sizing:border-box}
-body{margin:0}
-a{text-decoration:none;color:inherit}
-</style>
