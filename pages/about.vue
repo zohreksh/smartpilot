@@ -161,8 +161,8 @@ usePageSeo({
           <span class="section-badge">سازندگان NexaStudio</span>
           <h2>مسئول معماری و کیفیت محصول، خودمان هستیم.</h2>
           <p>
-            NexaStudio توسط دو معمار و توسعه‌دهنده ساخته شده و برای پروژه‌های
-            بزرگ‌تر، تیم متناسب با مسئله شکل می‌گیرد.
+            هسته معماری و توسعه را خودمان هدایت می‌کنیم و برای تخصص‌های مکمل،
+            تیم متناسب با نیاز واقعی هر پروژه شکل می‌گیرد.
           </p>
         </div>
 
@@ -172,13 +172,16 @@ usePageSeo({
               <img src="/images/team/zohreh.webp" alt="زهره کشاورز" width="1140" height="1280" loading="lazy" decoding="async" />
             </div>
             <div class="founder-content">
-              <span class="founder-role">معمار و توسعه‌دهنده</span>
+              <span class="founder-role">معمار محصول و توسعه‌دهنده</span>
               <h3>زهره کشاورز</h3>
-              <p>تمرکز بر محصول، تجربه کاربری، مسیر توسعه و رشد دیجیتال.</p>
+              <p>
+                تمرکز بر تبدیل نیاز کسب‌وکار به تجربه کاربری، جریان محصول و
+                مسیر رشد قابل اجرا.
+              </p>
               <div class="skill-chips" role="group" aria-label="تخصص‌های زهره کشاورز">
-                <span>Product</span>
-                <span>UX</span>
-                <span>Growth</span>
+                <span>معماری تجربه و جریان محصول</span>
+                <span>طراحی مسیر توسعه و اولویت‌بندی</span>
+                <span>رشد و بهینه‌سازی محصول</span>
               </div>
             </div>
           </article>
@@ -188,13 +191,16 @@ usePageSeo({
               <img src="/images/team/hossein.webp" alt="حسین کولانی" width="1080" height="1280" loading="lazy" decoding="async" />
             </div>
             <div class="founder-content">
-              <span class="founder-role">معمار و توسعه‌دهنده</span>
+              <span class="founder-role">معمار نرم‌افزار و توسعه‌دهنده</span>
               <h3>حسین کولانی</h3>
-              <p>تمرکز بر معماری نرم‌افزار، هوش مصنوعی و سیستم‌های اختصاصی.</p>
+              <p>
+                تمرکز بر معماری فنی، سامانه‌های اختصاصی و ادغام قابلیت‌های
+                هوش مصنوعی در محصول.
+              </p>
               <div class="skill-chips" role="group" aria-label="تخصص‌های حسین کولانی">
-                <span>Architecture</span>
-                <span>AI</span>
-                <span>Backend</span>
+                <span>معماری سامانه‌های توسعه‌پذیر</span>
+                <span>هوش مصنوعی و قابلیت‌های هوشمند</span>
+                <span>طراحی و توسعه سیستم‌های تخصصی</span>
               </div>
             </div>
           </article>
@@ -208,10 +214,10 @@ usePageSeo({
             </svg>
           </div>
           <div class="specialists-copy">
-            <h3>شبکه متخصصان</h3>
+            <h3>شبکه تخصص‌های مکمل</h3>
             <p>
-              برای پروژه‌هایی که به تخصص‌های مکمل نیاز دارند، افراد مناسب را
-              متناسب با نیاز واقعی پروژه کنار هم قرار می‌دهیم.
+              برای هر پروژه، تخصص‌های مکمل فقط در جایی به تیم اضافه می‌شوند
+              که واقعاً لازم باشند.
             </p>
           </div>
           <div class="specialist-chips" role="group" aria-label="تخصص‌های شبکه همکاران">
