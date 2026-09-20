@@ -509,6 +509,8 @@ const recoverProofImage = (image) => {
             <img
               :src="shidaneProofSrc"
               alt="پیش‌نمایش محصول شیدانه"
+              width="1659"
+              height="948"
               loading="lazy"
               decoding="async"
               @error="recoverProofImage('shidane')"
@@ -524,6 +526,8 @@ const recoverProofImage = (image) => {
             <img
               :src="hevixProofSrc"
               alt="پیش‌نمایش محصول هویکس"
+              width="1659"
+              height="948"
               loading="lazy"
               decoding="async"
               @error="recoverProofImage('hevix')"
