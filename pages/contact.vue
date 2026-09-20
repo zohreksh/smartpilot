@@ -26,7 +26,6 @@ useHead({
       rel: "preload",
       as: "image",
       href: "/images/hero/contact-hero.webp",
-      type: "image/webp",
       fetchpriority: "high",
     },
   ],
@@ -81,6 +80,8 @@ const submitProjectBrief = () => {
       <img
         :src="heroSrc"
         alt="شروع همکاری و تبدیل ایده به محصول"
+        width="1672"
+        height="799"
         loading="eager"
         decoding="async"
         fetchpriority="high"
@@ -413,6 +414,7 @@ const submitProjectBrief = () => {
 .contact-hero img {
   display: block;
   width: 100%;
+  height: auto;
   max-height: 600px;
 }
 
