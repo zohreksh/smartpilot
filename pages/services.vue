@@ -1,3 +1,41 @@
+<script setup>
+import { ref } from "vue";
+
+const shidaneProofSrc = ref("/images/projects/shidane1.webp");
+const hevixProofSrc = ref("/images/projects/hevix1.webp");
+
+let shidaneRetryCount = 0;
+let hevixRetryCount = 0;
+
+const recoverProofImage = (image) => {
+  if (image === "shidane") {
+    if (shidaneRetryCount === 0) {
+      shidaneRetryCount = 1;
+      shidaneProofSrc.value = "/images/projects/shidane1.webp?retry=1";
+      return;
+    }
+
+    if (shidaneRetryCount === 1) {
+      shidaneRetryCount = 2;
+      shidaneProofSrc.value = "/images/projects/shidane.webp";
+    }
+
+    return;
+  }
+
+  if (hevixRetryCount === 0) {
+    hevixRetryCount = 1;
+    hevixProofSrc.value = "/images/projects/hevix1.webp?retry=1";
+    return;
+  }
+
+  if (hevixRetryCount === 1) {
+    hevixRetryCount = 2;
+    hevixProofSrc.value = "/images/projects/hevix.webp";
+  }
+};
+</script>
+
 <template>
   <main class="services-page">
     <SiteHeader />
@@ -379,14 +417,26 @@
 
         <div class="proof-products">
           <figure>
-            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" loading="lazy" />
+            <img
+              :src="shidaneProofSrc"
+              alt="پیش‌نمایش محصول شیدانه"
+              loading="lazy"
+              decoding="async"
+              @error="recoverProofImage('shidane')"
+            />
             <figcaption>
               <strong>شیدانه</strong>
               <span>فروشگاه و پلتفرم هوشمند زیبایی</span>
             </figcaption>
           </figure>
           <figure>
-            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" loading="lazy" />
+            <img
+              :src="hevixProofSrc"
+              alt="پیش‌نمایش محصول هویکس"
+              loading="lazy"
+              decoding="async"
+              @error="recoverProofImage('hevix')"
+            />
             <figcaption>
               <strong>HEVIX</strong>
               <span>پلتفرم تخصصی قطعات و تجهیزات</span>
