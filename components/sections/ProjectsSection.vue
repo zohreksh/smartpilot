@@ -30,13 +30,18 @@
 
 <style scoped>
 .projects-section {
-  text-align: center;
+  position: relative;
   overflow: hidden;
+  padding: 78px 0 82px;
+  border-bottom: 1px solid rgba(220, 226, 232, 0.78);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(112, 136, 164, 0.07), transparent 24%),
+    linear-gradient(180deg, #fff 0%, #fbfcfd 100%);
+  text-align: center;
 }
 
-.projects-section .container {
-  max-width: 100%;
-  padding: 0;
+.projects-heading {
+  margin-bottom: 34px;
 }
 
 .projects-grid {
@@ -44,7 +49,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   direction: ltr;
-  width: 100%;
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  padding-inline: 18px;
 }
 
 .project-image {
@@ -77,6 +84,14 @@
 }
 
 @media (max-width: 768px) {
+  .projects-section {
+    padding: 60px 0 64px;
+  }
+
+  .projects-heading {
+    margin-bottom: 28px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 20px;
