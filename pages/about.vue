@@ -10,9 +10,7 @@ usePageSeo({
 
 <template>
   <main id="main-content" class="about-page" tabindex="-1">
-    <SiteHeader />
-
-    <section class="about-hero">
+<section class="about-hero">
       <div class="container about-hero-inner">
         <div class="about-content">
           <span class="about-badge">درباره NexaStudio</span>
