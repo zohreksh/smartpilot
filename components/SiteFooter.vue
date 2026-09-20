@@ -68,7 +68,7 @@
           <span class="footer-column-title">دسترسی سریع</span>
           <NuxtLink to="/">خانه</NuxtLink>
           <NuxtLink to="/services">خدمات ما</NuxtLink>
-          <NuxtLink to="/#projects">نمونه کارها</NuxtLink>
+          <NuxtLink to="/projects">نمونه کارها</NuxtLink>
           <NuxtLink to="/about">درباره ما</NuxtLink>
           <NuxtLink to="/contact">تماس با ما</NuxtLink>
         </nav>
