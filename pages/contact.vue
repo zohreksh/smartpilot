@@ -3,44 +3,10 @@
     <SiteHeader />
 
     <section class="contact-hero">
-      <div class="container contact-hero-inner">
-        <div class="hero-copy">
-          <span class="contact-badge">شروع همکاری</span>
-          <h1>
-            درباره مسئله‌ای که می‌خواهید حل کنید
-            <strong>با ما صحبت کنید</strong>
-          </h1>
-          <p class="hero-lead">
-            لازم نیست قبل از تماس، راه‌حل فنی را بدانید. کافی است وضعیت فعلی،
-            هدف کسب‌وکار و چیزی که می‌خواهید بهتر شود را توضیح دهید تا مسیر
-            مناسب را با هم مشخص کنیم.
-          </p>
-
-          <div class="hero-actions">
-            <a class="primary-action" href="#project-brief">شرح پروژه</a>
-            <NuxtLink class="secondary-action" to="/services">مشاهده خدمات</NuxtLink>
-          </div>
-
-          <div class="hero-highlights" role="group" aria-label="نحوه شروع همکاری">
-            <span>بررسی اولیه مسئله</span>
-            <i aria-hidden="true"></i>
-            <span>انتخاب مسیر مناسب</span>
-            <i aria-hidden="true"></i>
-            <span>بدون شروع عجولانه توسعه</span>
-          </div>
-        </div>
-
-        <figure class="hero-visual">
-          <img
-            src="/images/hero/contact-hero1.webp"
-            alt="شروع گفتگو برای طراحی و توسعه محصول دیجیتال"
-          />
-          <figcaption>
-            <span>از ایده مبهم تا مسیر روشن</span>
-            <strong>اول مسئله را می‌فهمیم، بعد راهکار را می‌سازیم.</strong>
-          </figcaption>
-        </figure>
-      </div>
+      <img
+        src="/images/hero/contact-hero.webp"
+        alt="شروع همکاری و تبدیل ایده به محصول"
+      />
     </section>
 
     <section id="project-brief" class="project-brief-section">
@@ -307,167 +273,13 @@
 }
 
 .contact-hero {
-  position: relative;
-  padding: 82px 0 76px;
+  padding: 0 0 25px;
 }
 
-.contact-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto;
-  height: 440px;
-  background:
-    radial-gradient(circle at 78% 18%, rgba(184, 107, 53, 0.1), transparent 34%),
-    radial-gradient(circle at 15% 25%, rgba(16, 28, 50, 0.05), transparent 28%);
-  pointer-events: none;
-}
-
-.contact-hero-inner {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
-  gap: 60px;
-  align-items: center;
-}
-
-.hero-copy {
-  max-width: 680px;
-  text-align: right;
-}
-
-.contact-badge,
-.section-badge {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  border: 1px solid #d86b4a;
-  border-radius: 999px;
-  background: #fff7f4;
-  color: #c56839;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.contact-badge {
-  padding: 6px 18px;
-}
-
-.hero-copy h1 {
-  max-width: 690px;
-  margin: 18px 0 20px;
-  color: var(--text);
-  font-size: clamp(40px, 4.5vw, 60px);
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-}
-
-.hero-copy h1 strong {
-  display: block;
-  color: var(--accent);
-}
-
-.hero-lead {
-  max-width: 630px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.95;
-}
-
-.hero-actions,
-.contact-links-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.hero-actions {
-  margin-top: 30px;
-}
-
-.primary-action,
-.secondary-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 800;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.primary-action {
-  background: linear-gradient(135deg, #c17a42, #9b542d);
-  color: #fff;
-  box-shadow: 0 12px 30px rgba(155, 84, 45, 0.18);
-}
-
-.secondary-action {
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.76);
-  color: var(--text);
-}
-
-.primary-action:hover,
-.secondary-action:hover {
-  transform: translateY(-2px);
-}
-
-.hero-highlights {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 9px;
-  margin-top: 28px;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.hero-highlights i {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-.hero-visual {
-  overflow: hidden;
-  margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.hero-visual img {
+.contact-hero img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center;
-}
-
-.hero-visual figcaption {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 17px 20px 20px;
-  text-align: right;
-}
-
-.hero-visual figcaption span {
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 800;
-}
-
-.hero-visual figcaption strong {
-  color: var(--text);
-  font-size: 15px;
-  line-height: 1.7;
+  max-height: 600px;
 }
 
 .project-brief-section,
@@ -831,10 +643,6 @@
 }
 
 @media (max-width: 1080px) {
-  .contact-hero-inner {
-    gap: 36px;
-  }
-
   .brief-layout {
     grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
   }
@@ -845,24 +653,6 @@
 }
 
 @media (max-width: 820px) {
-  .contact-hero {
-    padding: 56px 0 62px;
-  }
-
-  .contact-hero-inner {
-    grid-template-columns: 1fr;
-    gap: 34px;
-  }
-
-  .hero-copy {
-    max-width: 720px;
-  }
-
-  .hero-visual {
-    width: min(100%, 650px);
-    margin: 0 auto;
-  }
-
   .brief-layout {
     grid-template-columns: 1fr;
   }
@@ -882,43 +672,6 @@
 }
 
 @media (max-width: 600px) {
-  .contact-hero {
-    padding: 44px 0 50px;
-  }
-
-  .hero-copy h1 {
-    margin-top: 16px;
-    font-size: clamp(32px, 9.5vw, 42px);
-    line-height: 1.5;
-  }
-
-  .hero-lead {
-    font-size: 15.5px;
-    line-height: 1.9;
-  }
-
-  .hero-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 24px;
-  }
-
-  .primary-action,
-  .secondary-action {
-    min-width: 0;
-    padding-inline: 14px;
-    font-size: 13px;
-  }
-
-  .hero-highlights {
-    margin-top: 22px;
-  }
-
-  .hero-visual {
-    border-radius: 20px;
-  }
-
   .project-brief-section,
   .fit-section,
   .next-step-section {
@@ -1027,19 +780,8 @@
 }
 
 @media (max-width: 390px) {
-  .hero-actions,
   .contact-links-actions {
     grid-template-columns: 1fr;
-  }
-
-  .hero-highlights {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-
-  .hero-highlights i {
-    display: none;
   }
 }
 </style>
