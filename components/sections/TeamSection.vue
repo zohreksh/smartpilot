@@ -37,7 +37,15 @@
                 ><span>طراحی مسیر توسعه و اولویت‌بندی</span
                 ><span>رشد و بهینه‌سازی محصول</span>
               </div>
-              <span class="profile-link">پروفایل حرفه‌ای</span>
+              <a
+                class="profile-link"
+                href="https://www.linkedin.com/in/zohre-keshavarz-2a3221bb"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="پروفایل LinkedIn زهره کشاورز"
+              >
+                پروفایل حرفه‌ای
+              </a>
             </div>
           </div>
         </article>
@@ -57,7 +65,15 @@
                 ><span>هوش مصنوعی و قابلیت‌های هوشمند</span
                 ><span>طراحی و توسعه سیستم‌های تخصصی</span>
               </div>
-              <span class="profile-link">پروفایل حرفه‌ای</span>
+              <a
+                class="profile-link"
+                href="https://www.linkedin.com/in/hossien-kolani-720103bb"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="پروفایل LinkedIn حسین کولانی"
+              >
+                پروفایل حرفه‌ای
+              </a>
             </div>
           </div>
         </article>
