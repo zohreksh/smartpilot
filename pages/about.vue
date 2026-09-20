@@ -1,3 +1,13 @@
+<script setup lang="ts">
+usePageSeo({
+  title: "درباره NexaStudio | تیم معماری و توسعه محصول دیجیتال",
+  description:
+    "درباره NexaStudio، رویکرد ما به معماری و توسعه محصول، تجربه ساخت شیدانه و HEVIX و تیمی که مسئولیت فنی و کیفیت محصول را مستقیم هدایت می‌کند.",
+  path: "/about",
+  image: "/images/projects/shidane.webp",
+});
+</script>
+
 <template>
   <main class="about-page">
     <SiteHeader />
