@@ -1,15 +1,19 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue";
 
+const config = useRuntimeConfig();
+
 usePageSeo({
   title: "تماس و شروع همکاری | SmartPilot",
   description:
     "برای طراحی و توسعه محصول دیجیتال، سامانه اختصاصی، هوش مصنوعی، جستجوی هوشمند، سئو یا توسعه محصول موجود با SmartPilot تماس بگیرید.",
   path: "/contact",
-  image: "/images/hero/contact-hero.jpg",
+  image: `${config.app.baseURL}images/hero/contact-hero.jpg`,
 });
 
-const heroSrc = ref("/images/hero/contact-hero.jpg");
+const heroSrc = ref(
+  `${config.app.baseURL}images/hero/contact-hero.jpg`
+);
 let heroRetryCount = 0;
 
 const projectBrief = reactive({
@@ -25,7 +29,7 @@ useHead({
     {
       rel: "preload",
       as: "image",
-      href: "/images/hero/contact-hero.jpg",
+      href: `${config.app.baseURL}images/hero/contact-hero.jpg`,
       fetchpriority: "high",
     },
   ],
@@ -34,13 +38,13 @@ useHead({
 const recoverHeroImage = () => {
   if (heroRetryCount === 0) {
     heroRetryCount = 1;
-    heroSrc.value = "/images/hero/contact-hero.jpg?retry=1";
+    heroSrc.value = `${config.app.baseURL}images/hero/contact-hero.jpg?retry=1`;
     return;
   }
 
   if (heroRetryCount === 1) {
     heroRetryCount = 2;
-    heroSrc.value = "/images/hero/contact-hero1.webp";
+    heroSrc.value = `${config.app.baseURL}images/hero/contact-hero1.webp`;
   }
 };
 
