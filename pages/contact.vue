@@ -2,7 +2,7 @@
   <main class="contact-page">
     <SiteHeader />
 
-    <section class="contact-hero container">
+    <section class="contact-hero container-fluid">
       <div class="hero-banner">
         <img
           src="/images/hero/contact-hero.webp"
@@ -55,18 +55,19 @@
   padding: 0 28px;
 }
 .contact-hero {
-  padding: 32px 28px 50px;
+  /* padding: 32px 28px 50px; */
 }
 .hero-banner {
   width: 100%;
   overflow: hidden;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   box-shadow: 0 18px 45px rgba(80, 50, 20, 0.08);
 }
 .hero-banner img {
   display: block;
   width: 100%;
   height: auto;
+  max-height: 550px;
 }
 .process {
   padding-bottom: 45px;
