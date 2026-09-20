@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "",
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://smartpilot.ir",
     },
   },
 
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
         lang: "fa",
         dir: "rtl",
       },
-      title: "NexaStudio | طراحی و توسعه محصول دیجیتال",
+      title: "SmartPilot | طراحی محصول دیجیتال و راهکارهای هوشمند",
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "manifest", href: "/site.webmanifest" },
