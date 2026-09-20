@@ -317,7 +317,7 @@
   border-radius: 999px;
   background: #fff7f4;
   color: #c56839;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -361,7 +361,7 @@
   min-height: 48px;
   padding: 12px 24px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
@@ -390,12 +390,12 @@
   gap: 10px;
   margin-top: 28px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13.5px;
 }
 
 .hero-proof strong {
   color: var(--text);
-  font-size: 13px;
+  font-size: 14.5px;
 }
 
 .hero-proof i {
@@ -462,12 +462,12 @@
 
 .product-preview figcaption strong {
   color: var(--text);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .product-preview figcaption span {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13.5px;
 }
 
 .preview-primary {
@@ -511,7 +511,7 @@
   max-width: 680px;
   margin: 0 auto;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.9;
 }
 
@@ -552,7 +552,7 @@
 
 .proof-copy > span {
   color: var(--accent);
-  font-size: 12px;
+  font-size: 13.5px;
   font-weight: 800;
   letter-spacing: 0.02em;
 }
@@ -566,7 +566,7 @@
 .proof-copy p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.85;
 }
 
@@ -621,7 +621,7 @@
 .thinking-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14.5px;
   line-height: 1.9;
 }
 
@@ -670,7 +670,7 @@
   border-radius: 999px;
   background: #fff3ed;
   color: #bd7448;
-  font-size: 12px;
+  font-size: 13.5px;
   font-weight: 700;
 }
 
@@ -683,7 +683,7 @@
 .founder-content p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -708,7 +708,7 @@
   border-radius: 999px;
   background: #faf7f4;
   color: #667085;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
@@ -742,7 +742,7 @@
   max-width: 620px;
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14.5px;
   line-height: 1.8;
 }
 
@@ -793,7 +793,7 @@
   border-radius: 50%;
   background: var(--bg);
   color: var(--accent);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 800;
   box-shadow: 0 0 0 8px rgba(252, 248, 244, 0.94);
 }
@@ -807,7 +807,7 @@
 .process-item p {
   margin: 0;
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 14px;
   line-height: 1.85;
 }
 
@@ -903,7 +903,7 @@
   }
 
   .about-lead {
-    font-size: 15.5px;
+    font-size: 16.5px;
     line-height: 1.9;
   }
 
@@ -918,7 +918,7 @@
   .secondary-action {
     min-width: 0;
     padding-inline: 14px;
-    font-size: 13px;
+    font-size: 14.5px;
   }
 
   .hero-proof {
@@ -962,7 +962,7 @@
   }
 
   .section-heading p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .proof-card {
@@ -996,12 +996,12 @@
   }
 
   .founder-content p {
-    font-size: 12.5px;
+    font-size: 14px;
     line-height: 1.75;
   }
 
   .founder-role {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .skill-chips {
@@ -1012,7 +1012,7 @@
   .skill-chips span {
     min-height: 25px;
     padding: 3px 8px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .specialists-panel {
