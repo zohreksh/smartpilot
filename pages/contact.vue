@@ -9,6 +9,68 @@
       />
     </section>
 
+    <section class="contact-channels-section" aria-labelledby="contact-channels-title">
+      <div class="container">
+        <div class="contact-channels-heading">
+          <span class="section-badge">راه‌های ارتباطی</span>
+          <h2 id="contact-channels-title">مستقیم با ما در ارتباط باشید</h2>
+          <p>برای شروع گفتگو می‌توانید تماس بگیرید یا در واتساپ پیام بدهید.</p>
+        </div>
+
+        <div class="contact-channels-grid">
+          <a class="contact-channel-card" href="tel:+989379407868">
+            <span class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7.4 4.5 9.6 8c.3.5.2 1-.2 1.4l-1.2 1.2c1.2 2.4 2.8 4 5.2 5.2l1.2-1.2c.4-.4.9-.5 1.4-.2l3.5 2.2c.5.3.7.9.5 1.4-.5 1.3-1.7 2.2-3.1 2.2C10.3 20.2 3.8 13.7 3.8 7.1c0-1.4.9-2.6 2.2-3.1.5-.2 1.1 0 1.4.5Z" />
+              </svg>
+            </span>
+            <span class="channel-copy">
+              <small>تماس تلفنی</small>
+              <strong dir="ltr">0937 940 7868</strong>
+              <span>برای گفتگوی مستقیم درباره پروژه</span>
+            </span>
+            <span class="channel-action" aria-hidden="true">←</span>
+          </a>
+
+          <a
+            class="contact-channel-card"
+            href="https://wa.me/989379407868"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 11.7A8 8 0 0 1 8.2 18.8L4 20l1.2-4.1A8 8 0 1 1 20 11.7Z" />
+                <path d="M8.2 8.3c.5 2.8 2.7 5 5.5 5.5M8.3 8.2l1.4 2-1 1.1M13.7 13.8l-2-1.4-1.1 1" />
+              </svg>
+            </span>
+            <span class="channel-copy">
+              <small>واتساپ</small>
+              <strong dir="ltr">0937 940 7868</strong>
+              <span>برای ارسال پیام و توضیح اولیه پروژه</span>
+            </span>
+            <span class="channel-action" aria-hidden="true">←</span>
+          </a>
+
+          <div class="contact-channel-card channel-disabled" aria-disabled="true">
+            <span class="channel-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4" y="4" width="16" height="16" rx="5" />
+                <circle cx="12" cy="12" r="3.5" />
+                <path d="M17.5 6.8h.01" />
+              </svg>
+            </span>
+            <span class="channel-copy">
+              <small>اینستاگرام</small>
+              <strong>به‌زودی</strong>
+              <span>اکانت رسمی در حال آماده‌سازی است</span>
+            </span>
+            <span class="channel-status">به‌زودی</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="project-brief" class="project-brief-section">
       <div class="container">
         <div class="section-heading">
@@ -280,6 +342,130 @@
   display: block;
   width: 100%;
   max-height: 600px;
+}
+
+.contact-channels-section {
+  padding: 26px 0 54px;
+}
+
+.contact-channels-heading {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.contact-channels-heading h2 {
+  margin: 12px 0 6px;
+  color: var(--text);
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.5;
+}
+
+.contact-channels-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.contact-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.contact-channel-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+  min-height: 128px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgba(16, 28, 50, 0.045);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.contact-channel-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(184, 107, 53, 0.36);
+  box-shadow: 0 16px 38px rgba(16, 28, 50, 0.07);
+}
+
+.channel-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #faece4;
+  color: var(--accent);
+}
+
+.channel-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.channel-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+  text-align: right;
+}
+
+.channel-copy small {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.channel-copy strong {
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.channel-copy strong[dir="ltr"] {
+  width: fit-content;
+  direction: ltr;
+  unicode-bidi: isolate;
+  letter-spacing: 0.02em;
+}
+
+.channel-copy span {
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.7;
+}
+
+.channel-action {
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.channel-disabled {
+  opacity: 0.72;
+  background: #faf7f4;
+}
+
+.channel-status {
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #f0ebe6;
+  color: #8a7769;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .section-badge {
@@ -702,6 +888,22 @@
 }
 
 @media (max-width: 820px) {
+  .contact-channels-grid {
+    gap: 12px;
+  }
+
+  .contact-channel-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    min-height: 0;
+    padding: 17px;
+  }
+
+  .channel-action,
+  .channel-status {
+    grid-column: 2;
+    justify-self: start;
+  }
+
   .brief-layout {
     grid-template-columns: 1fr;
   }
@@ -721,6 +923,33 @@
 }
 
 @media (max-width: 600px) {
+  .contact-channels-section {
+    padding: 20px 0 46px;
+  }
+
+  .contact-channels-heading {
+    margin-bottom: 20px;
+  }
+
+  .contact-channels-heading h2 {
+    font-size: 26px;
+  }
+
+  .contact-channels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-channel-card {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    padding: 18px;
+  }
+
+  .channel-action,
+  .channel-status {
+    grid-column: auto;
+    justify-self: auto;
+  }
+
   .project-brief-section,
   .fit-section,
   .next-step-section {
