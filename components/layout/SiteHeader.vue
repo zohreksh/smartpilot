@@ -13,7 +13,7 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <header class="site-header">
+  <header class="site-header" @keydown.esc="closeMenu">
     <div class="container premium-header">
       <NuxtLink class="brand-mark" to="/" aria-label="NexaStudio - صفحه اصلی" @click="closeMenu">
         <span class="brand-symbol" aria-hidden="true">
@@ -58,7 +58,12 @@ const closeMenu = () => {
     </div>
 
     <div v-if="isMenuOpen" class="mobile-menu-shell">
-      <nav id="mobile-navigation" class="mobile-nav container" aria-label="ناوبری موبایل">
+      <nav
+        id="mobile-navigation"
+        class="mobile-nav container"
+        aria-label="ناوبری موبایل"
+        @keydown.esc="closeMenu"
+      >
         <NuxtLink to="/" @click="closeMenu">خانه</NuxtLink>
         <NuxtLink to="/services" @click="closeMenu">خدمات ما</NuxtLink>
         <NuxtLink to="/projects" @click="closeMenu">نمونه کارها</NuxtLink>
