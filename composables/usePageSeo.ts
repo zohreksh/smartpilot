@@ -18,7 +18,7 @@ export const usePageSeo = (options: PageSeoOptions) => {
       : `/${options.path.replace(/^\/+|\/+$/g, "")}`;
   const canonicalUrl =
     normalizedPath === "/" ? `${baseUrl}/` : `${baseUrl}${normalizedPath}`;
-  const imagePath = options.image || "/images/hero/desktop-hero.webp";
+  const imagePath = options.image || "/images/og/nexastudio-og.webp";
   const imageUrl = new URL(imagePath, `${baseUrl}/`).toString();
 
   useSeoMeta({

@@ -63,17 +63,6 @@
               </svg>
             </a>
 
-            <span
-              class="footer-icon-action is-disabled"
-              aria-label="اینستاگرام، به‌زودی"
-              title="اینستاگرام - به‌زودی"
-            >
-              <svg class="contact-icon instagram-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <rect x="4" y="4" width="16" height="16" rx="5" />
-                <circle cx="12" cy="12" r="3.5" />
-                <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none" />
-              </svg>
-            </span>
           </div>
         </div>
 
@@ -252,17 +241,6 @@
   color: #fff;
 }
 
-.footer-icon-action.is-disabled {
-  cursor: default;
-  opacity: 0.42;
-}
-
-.footer-icon-action.is-disabled:hover {
-  transform: none;
-  border-color: rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.04);
-  color: #d9a06f;
-}
 
 .contact-icon {
   width: 20px;
@@ -380,25 +358,79 @@
 
 @media (max-width: 460px) {
   .site-footer {
-    padding-top: 42px;
+    padding: 30px 0 16px;
   }
 
   .footer-main {
-    gap: 30px;
+    gap: 22px;
+    padding: 0 4px 24px;
   }
 
-  .footer-links {
-    grid-template-columns: 1fr;
-    gap: 26px;
+  .footer-brand-symbol {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+  }
+
+  .footer-brand-symbol svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-brand strong {
+    font-size: 17px;
+  }
+
+  .footer-brand-copy {
+    margin-top: 12px;
+    font-size: 13.5px;
+    line-height: 1.75;
   }
 
   .footer-contact-icons {
-    gap: 8px;
+    gap: 7px;
+    margin-top: 14px;
+  }
+
+  .footer-icon-action {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+  }
+
+  .footer-nav-column {
+    gap: 7px;
+  }
+
+  .footer-column-title {
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    font-size: 12.5px;
+  }
+
+  .footer-nav-column a {
+    font-size: 13px;
+    line-height: 1.55;
   }
 
   .footer-bottom {
-    flex-direction: column;
-    gap: 4px;
+    padding-top: 13px;
+    font-size: 10.5px;
+  }
+
+  .footer-bottom > span:last-child {
+    display: none;
   }
 }
 </style>

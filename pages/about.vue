@@ -10,9 +10,7 @@ usePageSeo({
 
 <template>
   <main id="main-content" class="about-page" tabindex="-1">
-    <SiteHeader />
-
-    <section class="about-hero">
+<section class="about-hero">
       <div class="container about-hero-inner">
         <div class="about-content">
           <span class="about-badge">درباره NexaStudio</span>
@@ -43,14 +41,14 @@ usePageSeo({
           <div class="visual-glow visual-glow-one" aria-hidden="true"></div>
           <div class="visual-glow visual-glow-two" aria-hidden="true"></div>
           <figure class="product-preview preview-primary">
-            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" width="1659" height="948" decoding="async" />
+            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" width="1659" height="948" loading="eager" fetchpriority="high" />
             <figcaption>
               <strong>شیدانه</strong>
               <span>فروشگاه و پلتفرم هوشمند زیبایی</span>
             </figcaption>
           </figure>
           <figure class="product-preview preview-secondary">
-            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" width="1659" height="948" decoding="async" />
+            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" width="1659" height="948" loading="eager" />
             <figcaption>
               <strong>HEVIX</strong>
               <span>پلتفرم تخصصی قطعات و تجهیزات</span>
@@ -183,6 +181,15 @@ usePageSeo({
                 <span>طراحی مسیر توسعه و اولویت‌بندی</span>
                 <span>رشد و بهینه‌سازی محصول</span>
               </div>
+              <a
+                class="founder-profile-link"
+                href="https://www.linkedin.com/in/zohre-keshavarz-2a3221bb"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="پروفایل LinkedIn زهره کشاورز"
+              >
+                پروفایل LinkedIn
+              </a>
             </div>
           </article>
 
@@ -202,6 +209,15 @@ usePageSeo({
                 <span>هوش مصنوعی و قابلیت‌های هوشمند</span>
                 <span>طراحی و توسعه سیستم‌های تخصصی</span>
               </div>
+              <a
+                class="founder-profile-link"
+                href="https://www.linkedin.com/in/hossien-kolani-720103bb"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="پروفایل LinkedIn حسین کولانی"
+              >
+                پروفایل LinkedIn
+              </a>
             </div>
           </article>
         </div>
@@ -462,10 +478,7 @@ usePageSeo({
 .product-preview img {
   display: block;
   width: 100%;
-  height: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
 }
 
 .product-preview figcaption {
@@ -726,6 +739,30 @@ usePageSeo({
   color: #667085;
   font-size: 14px;
   line-height: 1.4;
+}
+
+.founder-profile-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  color: #9f5a34;
+  font-size: 13.5px;
+  font-weight: 800;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.founder-profile-link::after {
+  content: "←";
+  font-size: 14px;
+}
+
+.founder-profile-link:hover {
+  color: #7f4325;
+  transform: translateX(-2px);
 }
 
 .specialists-panel {

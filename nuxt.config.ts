@@ -20,6 +20,10 @@ export default defineNuxtConfig({
         dir: "rtl",
       },
       title: "NexaStudio | طراحی و توسعه محصول دیجیتال",
+      link: [
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "manifest", href: "/site.webmanifest" },
+      ],
       meta: [
         { charset: "utf-8" },
         {
@@ -31,6 +35,19 @@ export default defineNuxtConfig({
           content: "#07111f",
         },
       ],
+    },
+  },
+
+  routeRules: {
+    "/**": {
+      headers: {
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+        "Content-Security-Policy":
+          "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' ws: wss:;",
+      },
     },
   },
 

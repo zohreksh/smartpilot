@@ -6,10 +6,10 @@ usePageSeo({
   description:
     "برای طراحی و توسعه محصول دیجیتال، سامانه اختصاصی، هوش مصنوعی، جستجوی هوشمند، سئو یا توسعه محصول موجود با NexaStudio تماس بگیرید.",
   path: "/contact",
-  image: "/images/hero/contact-hero.webp",
+  image: "/images/hero/contact-hero.jpg",
 });
 
-const heroSrc = ref("/images/hero/contact-hero.webp");
+const heroSrc = ref("/images/hero/contact-hero.jpg");
 let heroRetryCount = 0;
 
 const projectBrief = reactive({
@@ -25,7 +25,7 @@ useHead({
     {
       rel: "preload",
       as: "image",
-      href: "/images/hero/contact-hero.webp",
+      href: "/images/hero/contact-hero.jpg",
       fetchpriority: "high",
     },
   ],
@@ -34,7 +34,7 @@ useHead({
 const recoverHeroImage = () => {
   if (heroRetryCount === 0) {
     heroRetryCount = 1;
-    heroSrc.value = "/images/hero/contact-hero.webp?retry=1";
+    heroSrc.value = "/images/hero/contact-hero.jpg?retry=1";
     return;
   }
 
@@ -71,9 +71,7 @@ const submitProjectBrief = () => {
 
 <template>
   <main id="main-content" class="contact-page" tabindex="-1">
-    <SiteHeader />
-
-    <section class="contact-hero">
+<section class="contact-hero">
       <h1 class="sr-only">
         شروع همکاری با NexaStudio برای طراحی و توسعه محصول دیجیتال
       </h1>
