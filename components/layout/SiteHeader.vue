@@ -15,22 +15,19 @@ const closeMenu = () => {
 <template>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand-mark" href="#" @click="closeMenu">
+      <NuxtLink class="brand-mark" to="/" @click="closeMenu">
         <span class="brand-icon"></span>
         <span class="brand-copy">
           <strong>NexaStudio</strong>
         </span>
-      </a>
+      </NuxtLink>
 
-      <nav class="header-nav desktop-nav">
-        <nuxt-link to="/"> خانه</nuxt-link>
-
-        <nuxt-link to="/services">خدمات ما</nuxt-link>
-
-        <a href="#projects">نمونه کارها</a>
-        <nuxt-link to="/about">درباره ما</nuxt-link>
-        
-         <nuxt-link to="/contact">تماس با ما</nuxt-link>
+      <nav class="header-nav desktop-nav" aria-label="ناوبری اصلی">
+        <NuxtLink to="/">خانه</NuxtLink>
+        <NuxtLink to="/services">خدمات ما</NuxtLink>
+        <NuxtLink to="/#projects">نمونه کارها</NuxtLink>
+        <NuxtLink to="/about">درباره ما</NuxtLink>
+        <NuxtLink to="/contact">تماس با ما</NuxtLink>
       </nav>
 
       <span class="header-spacer" aria-hidden="true"></span>
@@ -38,7 +35,9 @@ const closeMenu = () => {
       <button
         class="mobile-menu-button"
         type="button"
-        aria-label="باز کردن منو"
+        :aria-label="isMenuOpen ? 'بستن منو' : 'باز کردن منو'"
+        :aria-expanded="isMenuOpen"
+        aria-controls="mobile-navigation"
         @click="toggleMenu"
       >
         <span></span>
@@ -47,12 +46,17 @@ const closeMenu = () => {
       </button>
     </div>
 
-    <nav v-if="isMenuOpen" class="mobile-nav">
-      <a href="#" @click="closeMenu">خانه</a>
-      <a href="#services" @click="closeMenu">خدمات ما</a>
-      <a href="#projects" @click="closeMenu">نمونه کارها</a>
-      <a href="/about" @click="closeMenu">درباره ما</a>
-      <a href="#contact" @click="closeMenu">تماس با ما</a>
+    <nav
+      v-if="isMenuOpen"
+      id="mobile-navigation"
+      class="mobile-nav"
+      aria-label="ناوبری موبایل"
+    >
+      <NuxtLink to="/" @click="closeMenu">خانه</NuxtLink>
+      <NuxtLink to="/services" @click="closeMenu">خدمات ما</NuxtLink>
+      <NuxtLink to="/#projects" @click="closeMenu">نمونه کارها</NuxtLink>
+      <NuxtLink to="/about" @click="closeMenu">درباره ما</NuxtLink>
+      <NuxtLink to="/contact" @click="closeMenu">تماس با ما</NuxtLink>
     </nav>
   </header>
 </template>
@@ -71,6 +75,11 @@ const closeMenu = () => {
 .mobile-menu-button,
 .mobile-nav {
   display: none;
+}
+
+.header-nav :deep(.router-link-active),
+.mobile-nav :deep(.router-link-active) {
+  color: var(--accent);
 }
 
 .mobile-menu-button span {
@@ -109,7 +118,9 @@ const closeMenu = () => {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    padding: 16px;
+    padding: 16px max(4%, 20px) 20px;
+    border-top: 1px solid rgba(234, 223, 215, 0.7);
+    background: rgba(252, 248, 244, 0.98);
   }
 }
 </style>
