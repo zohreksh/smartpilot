@@ -380,25 +380,79 @@
 
 @media (max-width: 460px) {
   .site-footer {
-    padding-top: 42px;
+    padding: 30px 0 16px;
   }
 
   .footer-main {
-    gap: 30px;
+    gap: 22px;
+    padding: 0 4px 24px;
   }
 
-  .footer-links {
-    grid-template-columns: 1fr;
-    gap: 26px;
+  .footer-brand-symbol {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+  }
+
+  .footer-brand-symbol svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-brand strong {
+    font-size: 17px;
+  }
+
+  .footer-brand-copy {
+    margin-top: 12px;
+    font-size: 13.5px;
+    line-height: 1.75;
   }
 
   .footer-contact-icons {
-    gap: 8px;
+    gap: 7px;
+    margin-top: 14px;
+  }
+
+  .footer-icon-action {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .contact-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+  }
+
+  .footer-nav-column {
+    gap: 7px;
+  }
+
+  .footer-column-title {
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    font-size: 12.5px;
+  }
+
+  .footer-nav-column a {
+    font-size: 13px;
+    line-height: 1.55;
   }
 
   .footer-bottom {
-    flex-direction: column;
-    gap: 4px;
+    padding-top: 13px;
+    font-size: 10.5px;
+  }
+
+  .footer-bottom > span:last-child {
+    display: none;
   }
 }
 </style>
