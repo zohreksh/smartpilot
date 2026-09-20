@@ -257,21 +257,6 @@
       </div>
     </section>
 
-    <section class="about-cta-section">
-      <div class="container">
-        <div class="about-cta-panel">
-          <div>
-            <span class="cta-kicker">شروع همکاری</span>
-            <h2>یک مسئله یا ایده برای ساخت دارید؟</h2>
-            <p>
-              قبل از شروع توسعه، درباره نیاز، معماری و مسیر مناسب محصول با هم
-              صحبت می‌کنیم.
-            </p>
-          </div>
-          <NuxtLink class="cta-button" to="/contact">درخواست مشاوره</NuxtLink>
-        </div>
-      </div>
-    </section>
   </main>
 </template>
 
@@ -358,8 +343,7 @@
 }
 
 .primary-action,
-.secondary-action,
-.cta-button {
+.secondary-action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -371,8 +355,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.primary-action,
-.cta-button {
+.primary-action {
   background: linear-gradient(135deg, #c17a42, #9b542d);
   color: #fff;
   box-shadow: 0 12px 30px rgba(155, 84, 45, 0.18);
@@ -385,8 +368,7 @@
 }
 
 .primary-action:hover,
-.secondary-action:hover,
-.cta-button:hover {
+.secondary-action:hover {
   transform: translateY(-2px);
 }
 
@@ -817,47 +799,6 @@
   line-height: 1.85;
 }
 
-.about-cta-section {
-  padding: 26px 0 78px;
-  background: rgba(255, 255, 255, 0.48);
-}
-
-.about-cta-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  padding: 34px 38px;
-  border-radius: 26px;
-  background: #101c32;
-  color: #fff;
-  box-shadow: 0 20px 50px rgba(16, 28, 50, 0.14);
-}
-
-.cta-kicker {
-  color: #e2a06f;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.about-cta-panel h2 {
-  margin: 7px 0 6px;
-  color: #fff;
-  font-size: clamp(25px, 3vw, 34px);
-}
-
-.about-cta-panel p {
-  max-width: 660px;
-  margin: 0;
-  color: #c8d0dc;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.cta-button {
-  flex: none;
-  min-width: 158px;
-}
 
 @media (max-width: 1080px) {
   .about-hero-inner {
@@ -1109,21 +1050,6 @@
     margin: 2px 0 5px;
   }
 
-  .about-cta-section {
-    padding: 18px 0 56px;
-  }
-
-  .about-cta-panel {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-    padding: 26px 22px;
-    border-radius: 22px;
-  }
-
-  .cta-button {
-    width: 100%;
-  }
 }
 
 @media (max-width: 390px) {
