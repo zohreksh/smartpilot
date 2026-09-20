@@ -173,7 +173,7 @@
 
 .footer-eyebrow {
   color: #dda173;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 800;
 }
 
@@ -191,7 +191,7 @@
   max-width: 650px;
   margin: 0;
   color: #aeb9c7;
-  font-size: 13px;
+  font-size: 14.5px;
   line-height: 1.9;
 }
 
@@ -212,7 +212,7 @@
   gap: 8px;
   padding: 11px 20px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 800;
   transition:
     transform 0.2s ease,
@@ -310,7 +310,7 @@
 
 .footer-brand small {
   color: #8492a3;
-  font-size: 9px;
+  font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.06em;
 }
@@ -319,7 +319,7 @@
   max-width: 360px;
   margin: 18px 0 0;
   color: #929faf;
-  font-size: 12px;
+  font-size: 13.5px;
   line-height: 1.9;
 }
 
@@ -336,7 +336,7 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.035);
   color: #c4ccd6;
-  font-size: 10px;
+  font-size: 11.5px;
 }
 
 .footer-nav-column,
@@ -350,13 +350,13 @@
 .footer-column-title {
   margin-bottom: 5px;
   color: #dda173;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 800;
 }
 
 .footer-nav-column a {
   color: #aeb8c5;
-  font-size: 12px;
+  font-size: 13.5px;
   line-height: 1.6;
   transition:
     color 0.2s ease,
@@ -379,12 +379,12 @@
 
 .footer-contact-row span {
   color: #788698;
-  font-size: 9px;
+  font-size: 10.5px;
 }
 
 .footer-contact-row strong {
   color: #cbd3dd;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 650;
 }
 
@@ -400,7 +400,7 @@
   padding: 18px 6px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.075);
   color: #697789;
-  font-size: 10px;
+  font-size: 11.5px;
 }
 
 .footer-bottom-dot {
