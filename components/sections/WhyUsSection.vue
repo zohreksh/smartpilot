@@ -1,11 +1,14 @@
 <template>
   <section class="section why-section">
     <div class="container">
-      <div claSmartPilotection-heading why-heading">
+      <div class="home-section-heading why-heading">
         <span class="home-section-kicker">چرا SmartPilot</span>
-        <h2 class="home-section-title">مهندسی محصول، فراتر از تحویل یک پروژه</h2>
+        <h2 class="home-section-title">
+          مهندسی محصول، فراتر از تحویل یک پروژه
+        </h2>
         <p class="home-section-description">
-          مسئله کسب‌وکار، تجربه کاربر و معماری فنی را هم‌زمان می‌بینیم تا محصول بعد از انتشار هم قابل توسعه و قابل نگهداری بماند.
+          مسئله کسب‌وکار، تجربه کاربر و معماری فنی را هم‌زمان می‌بینیم تا محصول
+          بعد از انتشار هم قابل توسعه و قابل نگهداری بماند.
         </p>
         <span class="home-section-rule" aria-hidden="true"></span>
       </div>
@@ -13,24 +16,34 @@
         <article class="why-card">
           <div class="why-icon">♧</div>
           <h3>تفکر محصول‌محور</h3>
-          <p>قبل از انتخاب تکنولوژی، مسئله، کاربر و اثری را که محصول باید ایجاد کند روشن می‌کنیم.</p>
+          <p>
+            قبل از انتخاب تکنولوژی، مسئله، کاربر و اثری را که محصول باید ایجاد
+            کند روشن می‌کنیم.
+          </p>
         </article>
         <article class="why-card">
           <div class="why-icon">▰</div>
           <h3>تمرکز بر اثر واقعی</h3>
           <p>
-            هر قابلیت باید به تجربه بهتر، اصطکاک کمتر یا عملیات ساده‌تر در کسب‌وکار منجر شود.
+            هر قابلیت باید به تجربه بهتر، اصطکاک کمتر یا عملیات ساده‌تر در
+            کسب‌وکار منجر شود.
           </p>
         </article>
         <article class="why-card">
           <div class="why-icon">◆</div>
           <h3>معماری برای توسعه آینده</h3>
-          <p>ساختار فنی را طوری می‌سازیم که قابلیت‌های بعدی به بازسازی پرهزینه تبدیل نشوند.</p>
+          <p>
+            ساختار فنی را طوری می‌سازیم که قابلیت‌های بعدی به بازسازی پرهزینه
+            تبدیل نشوند.
+          </p>
         </article>
         <article class="why-card">
           <div class="why-icon">✦</div>
           <h3>همراهی پس از انتشار</h3>
-          <p>انتشار پایان کار نیست؛ پایش، اصلاح و توسعه بعدی بخشی از چرخه محصول است.</p>
+          <p>
+            انتشار پایان کار نیست؛ پایش، اصلاح و توسعه بعدی بخشی از چرخه محصول
+            است.
+          </p>
         </article>
       </div>
     </div>
@@ -43,7 +56,11 @@
   padding: 78px 0 82px;
   border-bottom: 1px solid rgba(215, 223, 230, 0.82);
   background:
-    radial-gradient(circle at 86% 12%, rgba(112, 136, 164, 0.08), transparent 23%),
+    radial-gradient(
+      circle at 86% 12%,
+      rgba(112, 136, 164, 0.08),
+      transparent 23%
+    ),
     linear-gradient(180deg, #f7fafc 0%, #f9fbfd 100%);
   text-align: center;
 }
@@ -70,7 +87,11 @@
   border: 1px solid rgba(226, 211, 199, 0.92);
   border-radius: 22px;
   background:
-    radial-gradient(circle at 50% 0%, rgba(184, 107, 53, 0.07), transparent 32%),
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(184, 107, 53, 0.07),
+      transparent 32%
+    ),
     linear-gradient(150deg, #fff 0%, #fffaf6 100%);
   box-shadow:
     0 14px 34px rgba(16, 28, 50, 0.05),
@@ -90,19 +111,39 @@
   left: 28px;
   height: 3px;
   border-radius: 0 0 999px 999px;
-  background: linear-gradient(90deg, transparent, rgba(184, 107, 53, 0.5), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(184, 107, 53, 0.5),
+    transparent
+  );
 }
 
 .why-card:nth-child(2)::before {
-  background: linear-gradient(90deg, transparent, rgba(112, 136, 164, 0.55), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(112, 136, 164, 0.55),
+    transparent
+  );
 }
 
 .why-card:nth-child(3)::before {
-  background: linear-gradient(90deg, transparent, rgba(118, 104, 144, 0.5), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(118, 104, 144, 0.5),
+    transparent
+  );
 }
 
 .why-card:nth-child(4)::before {
-  background: linear-gradient(90deg, transparent, rgba(92, 130, 104, 0.5), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(92, 130, 104, 0.5),
+    transparent
+  );
 }
 
 .why-card:hover {
