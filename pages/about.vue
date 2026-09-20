@@ -21,7 +21,7 @@
             <NuxtLink class="secondary-action" to="/contact">شروع همکاری</NuxtLink>
           </div>
 
-          <div class="hero-proof" aria-label="محصولات ساخته‌شده توسط NexaStudio">
+          <div class="hero-proof" role="group" aria-label="محصولات ساخته‌شده توسط NexaStudio">
             <span>محصولات واقعی</span>
             <strong>شیدانه</strong>
             <i aria-hidden="true"></i>
@@ -29,7 +29,7 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="پیش‌نمایش محصولات شیدانه و هویکس">
+        <div class="hero-visual">
           <div class="visual-glow visual-glow-one" aria-hidden="true"></div>
           <div class="visual-glow visual-glow-two" aria-hidden="true"></div>
           <figure class="product-preview preview-primary">
@@ -165,7 +165,7 @@
               <span class="founder-role">معمار و توسعه‌دهنده</span>
               <h3>زهره کشاورز</h3>
               <p>تمرکز بر محصول، تجربه کاربری، مسیر توسعه و رشد دیجیتال.</p>
-              <div class="skill-chips" aria-label="تخصص‌های زهره کشاورز">
+              <div class="skill-chips" role="group" aria-label="تخصص‌های زهره کشاورز">
                 <span>Product</span>
                 <span>UX</span>
                 <span>Growth</span>
@@ -181,7 +181,7 @@
               <span class="founder-role">معمار و توسعه‌دهنده</span>
               <h3>حسین کولانی</h3>
               <p>تمرکز بر معماری نرم‌افزار، هوش مصنوعی و سیستم‌های اختصاصی.</p>
-              <div class="skill-chips" aria-label="تخصص‌های حسین کولانی">
+              <div class="skill-chips" role="group" aria-label="تخصص‌های حسین کولانی">
                 <span>Architecture</span>
                 <span>AI</span>
                 <span>Backend</span>
@@ -204,7 +204,7 @@
               متناسب با نیاز واقعی پروژه کنار هم قرار می‌دهیم.
             </p>
           </div>
-          <div class="specialist-chips" aria-label="تخصص‌های شبکه همکاران">
+          <div class="specialist-chips" role="group" aria-label="تخصص‌های شبکه همکاران">
             <span>UI/UX</span>
             <span>Frontend</span>
             <span>Backend</span>
@@ -279,7 +279,7 @@
 .about-page {
   direction: rtl;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: clip;
   background: var(--bg);
   color: var(--text);
 }
@@ -523,6 +523,7 @@
 
 .proof-section {
   padding-top: 58px;
+  scroll-margin-top: 110px;
 }
 
 .proof-grid {
