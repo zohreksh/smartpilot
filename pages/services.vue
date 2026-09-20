@@ -82,6 +82,9 @@ const recoverProofImage = (image) => {
         </div>
 
         <div class="ai-visual" aria-label="حوزه‌های اصلی توسعه هوش مصنوعی">
+          <span class="visual-chip chip-one" aria-hidden="true">AI</span>
+          <span class="visual-chip chip-two" aria-hidden="true">DATA</span>
+          <span class="visual-chip chip-three" aria-hidden="true">SEARCH</span>
           <div class="ai-core">
             <span>Nexa AI</span>
             <strong>Intelligence Layer</strong>
@@ -226,7 +229,7 @@ const recoverProofImage = (image) => {
         </div>
 
         <div class="service-list">
-          <article class="service-row service-featured">
+          <article class="service-row service-featured service-ai-card">
             <div class="service-number">01</div>
             <div class="service-title">
               <span>Artificial Intelligence</span>
@@ -290,7 +293,7 @@ const recoverProofImage = (image) => {
             </div>
           </article>
 
-          <article class="service-row service-seo">
+          <article class="service-row service-seo service-seo-card">
             <div class="service-number">04</div>
             <div class="service-title">
               <span>Automated SEO</span>
@@ -312,7 +315,7 @@ const recoverProofImage = (image) => {
             </div>
           </article>
 
-          <article class="service-row">
+          <article class="service-row service-data-card">
             <div class="service-number">05</div>
             <div class="service-title">
               <span>Data Onboarding & Catalog</span>
@@ -335,7 +338,7 @@ const recoverProofImage = (image) => {
             </div>
           </article>
 
-          <article class="service-row">
+          <article class="service-row service-report-card">
             <div class="service-number">06</div>
             <div class="service-title">
               <span>Reporting & BI</span>
@@ -538,14 +541,15 @@ const recoverProofImage = (image) => {
   min-height: 100vh;
   overflow-x: clip;
   direction: rtl;
-  background: var(--bg);
+  background:
+    linear-gradient(180deg, #fcf8f4 0%, #fffdfa 48%, #fcf8f4 100%);
   color: var(--text);
 }
 
 .services-hero {
   position: relative;
   overflow: hidden;
-  padding: 82px 0 88px;
+  padding: 88px 0 96px;
 }
 
 .services-hero::before {
@@ -553,8 +557,22 @@ const recoverProofImage = (image) => {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 78% 26%, rgba(184, 107, 53, 0.11), transparent 30%),
-    radial-gradient(circle at 14% 12%, rgba(16, 28, 50, 0.055), transparent 26%);
+    radial-gradient(circle at 82% 20%, rgba(184, 107, 53, 0.16), transparent 27%),
+    radial-gradient(circle at 70% 72%, rgba(223, 170, 128, 0.12), transparent 24%),
+    radial-gradient(circle at 11% 18%, rgba(71, 93, 126, 0.07), transparent 25%);
+  pointer-events: none;
+}
+
+.services-hero::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: -95px;
+  bottom: -150px;
+  border: 1px solid rgba(184, 107, 53, 0.14);
+  border-radius: 50%;
+  box-shadow: 0 0 0 46px rgba(184, 107, 53, 0.025);
   pointer-events: none;
 }
 
@@ -562,13 +580,13 @@ const recoverProofImage = (image) => {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(430px, 0.96fr);
-  gap: 72px;
+  grid-template-columns: minmax(0, 1.02fr) minmax(440px, 0.98fr);
+  gap: 78px;
   align-items: center;
 }
 
 .hero-copy {
-  max-width: 700px;
+  max-width: 710px;
 }
 
 .hero-eyebrow,
@@ -576,26 +594,28 @@ const recoverProofImage = (image) => {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  border: 1px solid #d86b4a;
+  border: 1px solid rgba(196, 102, 63, 0.55);
   border-radius: 999px;
-  background: #fff7f4;
+  background: rgba(255, 247, 244, 0.92);
   color: #b45f35;
   font-size: 13px;
   font-weight: 800;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .hero-eyebrow {
-  padding: 6px 17px;
+  padding: 7px 18px;
   direction: ltr;
+  letter-spacing: 0.02em;
 }
 
 .hero-copy h1 {
-  max-width: 760px;
-  margin: 18px 0 20px;
+  max-width: 780px;
+  margin: 20px 0 20px;
   color: var(--text);
-  font-size: clamp(42px, 4.9vw, 66px);
-  line-height: 1.37;
-  letter-spacing: -0.025em;
+  font-size: clamp(43px, 5vw, 68px);
+  line-height: 1.36;
+  letter-spacing: -0.028em;
 }
 
 .hero-copy h1 strong {
@@ -604,18 +624,18 @@ const recoverProofImage = (image) => {
 }
 
 .hero-lead {
-  max-width: 670px;
+  max-width: 680px;
   margin: 0;
   color: var(--muted);
   font-size: 17px;
-  line-height: 1.95;
+  line-height: 2;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 11px;
-  margin-top: 30px;
+  margin-top: 31px;
 }
 
 .primary-action,
@@ -623,8 +643,8 @@ const recoverProofImage = (image) => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 49px;
-  padding: 12px 23px;
+  min-height: 50px;
+  padding: 12px 24px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 800;
@@ -632,15 +652,16 @@ const recoverProofImage = (image) => {
 }
 
 .primary-action {
-  background: linear-gradient(135deg, #c17a42, #96502d);
+  background: linear-gradient(135deg, #c97d45, #95502d);
   color: #fff;
-  box-shadow: 0 12px 28px rgba(155, 84, 45, 0.2);
+  box-shadow: 0 14px 30px rgba(155, 84, 45, 0.22);
 }
 
 .secondary-action {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.82);
   color: var(--text);
+  box-shadow: 0 8px 22px rgba(16, 28, 50, 0.04);
 }
 
 .primary-action:hover,
@@ -653,7 +674,7 @@ const recoverProofImage = (image) => {
   align-items: center;
   flex-wrap: wrap;
   gap: 9px;
-  margin-top: 26px;
+  margin-top: 28px;
   color: var(--muted);
   font-size: 11.5px;
 }
@@ -667,27 +688,75 @@ const recoverProofImage = (image) => {
 
 .ai-visual {
   position: relative;
-  min-height: 510px;
+  min-height: 525px;
+  border-radius: 34px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 252, 249, 0.72)),
+    linear-gradient(90deg, rgba(184, 107, 53, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(184, 107, 53, 0.055) 1px, transparent 1px);
+  background-size: auto, 32px 32px, 32px 32px;
+  border: 1px solid rgba(230, 214, 202, 0.78);
+  box-shadow:
+    0 24px 55px rgba(16, 28, 50, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.ai-visual::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 1px dashed rgba(184, 107, 53, 0.13);
+  border-radius: 28px;
+}
+
+.visual-chip {
+  position: absolute;
+  z-index: 5;
+  padding: 5px 9px;
+  border: 1px solid rgba(184, 107, 53, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  color: #a9653d;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 8px 18px rgba(16, 28, 50, 0.045);
+}
+
+.chip-one {
+  top: 24px;
+  right: 30px;
+}
+
+.chip-two {
+  left: 30px;
+  top: 185px;
+}
+
+.chip-three {
+  right: 54px;
+  bottom: 22px;
 }
 
 .ai-core {
   position: absolute;
   z-index: 3;
-  top: 155px;
+  top: 165px;
   right: 50%;
   display: flex;
-  width: 190px;
-  height: 190px;
+  width: 198px;
+  height: 198px;
   transform: translateX(50%);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(184, 107, 53, 0.32);
+  border: 1px solid rgba(184, 107, 53, 0.34);
   border-radius: 50%;
   background:
-    radial-gradient(circle at 35% 25%, #fff, #fff8f2 58%, #f5e5d9 100%);
+    radial-gradient(circle at 32% 24%, #fff, #fff8f2 56%, #f3dfd0 100%);
   box-shadow:
-    0 28px 60px rgba(16, 28, 50, 0.11),
+    0 30px 66px rgba(16, 28, 50, 0.13),
+    0 0 0 16px rgba(255, 255, 255, 0.46),
     inset 0 1px 0 #fff;
   text-align: center;
 }
@@ -701,11 +770,11 @@ const recoverProofImage = (image) => {
 .ai-core strong {
   margin-top: 5px;
   color: var(--text);
-  font-size: 17px;
+  font-size: 18px;
 }
 
 .ai-core small {
-  margin-top: 5px;
+  margin-top: 6px;
   color: #7c8492;
   font-size: 8.5px;
   direction: ltr;
@@ -715,21 +784,37 @@ const recoverProofImage = (image) => {
   position: absolute;
   z-index: 4;
   display: flex;
-  min-width: 190px;
+  min-width: 194px;
   align-items: center;
   gap: 10px;
-  padding: 13px 14px;
-  border: 1px solid rgba(234, 223, 215, 0.95);
-  border-radius: 17px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 13px 32px rgba(16, 28, 50, 0.07);
+  padding: 14px 15px;
+  border: 1px solid rgba(234, 223, 215, 0.94);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 15px 34px rgba(16, 28, 50, 0.075);
+}
+
+.ai-node:nth-of-type(1) {
+  background: linear-gradient(135deg, #fff, #fff5ee);
+}
+
+.ai-node:nth-of-type(2) {
+  background: linear-gradient(135deg, #fff, #f4f8fb);
+}
+
+.ai-node:nth-of-type(3) {
+  background: linear-gradient(135deg, #fff, #f8f6fd);
+}
+
+.ai-node:nth-of-type(4) {
+  background: linear-gradient(135deg, #fff, #f3faf6);
 }
 
 .ai-node > span {
   display: inline-flex;
   flex: none;
-  width: 33px;
-  height: 33px;
+  width: 34px;
+  height: 34px;
   align-items: center;
   justify-content: center;
   border-radius: 11px;
@@ -756,23 +841,23 @@ const recoverProofImage = (image) => {
 }
 
 .node-advisor {
-  top: 46px;
-  right: 10px;
+  top: 52px;
+  right: 22px;
 }
 
 .node-search {
-  top: 70px;
-  left: 0;
+  top: 78px;
+  left: 18px;
 }
 
 .node-agent {
-  right: 5px;
-  bottom: 42px;
+  right: 20px;
+  bottom: 48px;
 }
 
 .node-data {
-  left: 14px;
-  bottom: 58px;
+  left: 28px;
+  bottom: 64px;
 }
 
 .visual-ring {
@@ -783,34 +868,35 @@ const recoverProofImage = (image) => {
 }
 
 .ring-one {
-  width: 400px;
-  height: 400px;
-  top: 54px;
+  width: 405px;
+  height: 405px;
+  top: 58px;
   right: 50%;
   transform: translateX(50%);
 }
 
 .ring-two {
-  width: 300px;
-  height: 300px;
-  top: 104px;
+  width: 302px;
+  height: 302px;
+  top: 109px;
   right: 50%;
   transform: translateX(50%);
   border-style: dashed;
 }
 
 .ai-services-section {
-  padding: 82px 0;
-  border-top: 1px solid rgba(234, 223, 215, 0.7);
-  border-bottom: 1px solid rgba(234, 223, 215, 0.7);
+  padding: 88px 0;
+  border-top: 1px solid rgba(234, 223, 215, 0.72);
+  border-bottom: 1px solid rgba(234, 223, 215, 0.72);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.64), rgba(255, 249, 245, 0.72));
+    radial-gradient(circle at 86% 12%, rgba(202, 126, 72, 0.07), transparent 24%),
+    linear-gradient(180deg, #fffefd 0%, #fff8f2 100%);
   scroll-margin-top: 110px;
 }
 
 .section-heading {
-  max-width: 830px;
-  margin: 0 auto 38px;
+  max-width: 840px;
+  margin: 0 auto 42px;
   text-align: center;
 }
 
@@ -840,38 +926,73 @@ const recoverProofImage = (image) => {
 
 .ai-grid {
   display: grid;
-  grid-template-columns: minmax(340px, 0.92fr) minmax(0, 1.08fr);
-  gap: 18px;
+  grid-template-columns: minmax(350px, 0.93fr) minmax(0, 1.07fr);
+  gap: 20px;
 }
 
 .ai-side-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 20px;
 }
 
 .ai-feature {
+  position: relative;
+  overflow: hidden;
   min-width: 0;
-  padding: 24px;
+  padding: 25px;
   border: 1px solid var(--line);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 12px 32px rgba(16, 28, 50, 0.04);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 34px rgba(16, 28, 50, 0.045);
+}
+
+.ai-feature::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 86px;
+  height: 4px;
+  border-radius: 0 0 0 999px;
+  background: #c77a43;
+}
+
+.ai-side-grid .ai-feature:nth-child(1)::before {
+  background: #7088a4;
+}
+
+.ai-side-grid .ai-feature:nth-child(2)::before {
+  background: #8a7aa8;
+}
+
+.ai-side-grid .ai-feature:nth-child(3)::before {
+  background: #6f947b;
 }
 
 .ai-feature-main {
   display: flex;
-  min-height: 445px;
+  min-height: 448px;
   flex-direction: column;
-  padding: 30px;
+  padding: 31px;
   border-color: rgba(184, 107, 53, 0.36);
   background:
-    radial-gradient(circle at 92% 6%, rgba(184, 107, 53, 0.1), transparent 27%),
-    #fff;
+    radial-gradient(circle at 88% 8%, rgba(184, 107, 53, 0.13), transparent 28%),
+    linear-gradient(145deg, #fff, #fff9f4);
+  box-shadow: 0 20px 44px rgba(184, 107, 53, 0.07);
 }
 
-.ai-side-grid .ai-feature:last-child {
+.ai-side-grid .ai-feature:nth-child(1) {
+  background: linear-gradient(145deg, #fff, #f7fafc);
+}
+
+.ai-side-grid .ai-feature:nth-child(2) {
+  background: linear-gradient(145deg, #fff, #faf8fd);
+}
+
+.ai-side-grid .ai-feature:nth-child(3) {
   grid-column: 1 / -1;
+  background: linear-gradient(145deg, #fff, #f5faf7);
 }
 
 .feature-top {
@@ -901,7 +1022,7 @@ const recoverProofImage = (image) => {
 }
 
 .ai-feature-main h3 {
-  font-size: 27px;
+  font-size: 28px;
 }
 
 .ai-feature p {
@@ -953,58 +1074,125 @@ const recoverProofImage = (image) => {
   padding: 5px 9px;
   border: 1px solid #eee2d9;
   border-radius: 999px;
-  background: #faf7f4;
+  background: rgba(250, 247, 244, 0.9);
   color: #667085;
   font-size: 9.5px;
   line-height: 1.4;
 }
 
 .all-services-section {
-  padding: 84px 0;
+  padding: 90px 0;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(101, 131, 161, 0.06), transparent 22%),
+    #fcf8f4;
   scroll-margin-top: 110px;
 }
 
 .service-list {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  background: var(--surface);
-  box-shadow: 0 16px 46px rgba(16, 28, 50, 0.045);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .service-row {
+  position: relative;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: 72px minmax(220px, 0.75fr) minmax(0, 1.25fr);
-  gap: 26px;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 10px 16px;
   align-items: start;
-  padding: 30px 32px;
-  border-bottom: 1px solid var(--line);
-  transition: background 0.2s ease;
+  min-width: 0;
+  min-height: 292px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 23px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 32px rgba(16, 28, 50, 0.04);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
 }
 
-.service-row:last-child {
-  border-bottom: 0;
+.service-row::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: -60px;
+  bottom: -70px;
+  border-radius: 50%;
+  background: rgba(184, 107, 53, 0.04);
 }
 
 .service-row:hover {
-  background: #fffbf8;
+  transform: translateY(-4px);
+  border-color: rgba(184, 107, 53, 0.26);
+  box-shadow: 0 18px 42px rgba(16, 28, 50, 0.075);
 }
 
-.service-featured {
+.service-ai-card {
+  grid-column: 1 / -1;
+  min-height: 240px;
+  grid-template-columns: 58px minmax(230px, 0.72fr) minmax(0, 1.28fr);
+  gap: 22px;
+  align-items: center;
+  border-color: rgba(184, 107, 53, 0.34);
   background:
-    linear-gradient(90deg, rgba(184, 107, 53, 0.055), rgba(255, 255, 255, 0));
+    radial-gradient(circle at 92% 12%, rgba(184, 107, 53, 0.12), transparent 25%),
+    linear-gradient(135deg, #fffaf6, #fff);
+  box-shadow: 0 18px 42px rgba(184, 107, 53, 0.07);
 }
 
-.service-seo {
+.service-seo-card {
   background:
-    linear-gradient(90deg, rgba(215, 237, 230, 0.32), rgba(255, 255, 255, 0));
+    linear-gradient(145deg, #fff, #f5faf7);
+  border-color: rgba(111, 148, 123, 0.26);
+}
+
+.service-data-card {
+  background:
+    linear-gradient(145deg, #fff, #f7f5fb);
+  border-color: rgba(138, 122, 168, 0.22);
+}
+
+.service-report-card {
+  background:
+    linear-gradient(145deg, #fff, #f5f8fb);
+  border-color: rgba(112, 136, 164, 0.22);
 }
 
 .service-number {
-  color: #cfb7a7;
-  font-size: 12px;
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #faece4;
+  color: var(--accent);
+  font-size: 10px;
   font-weight: 800;
   direction: ltr;
+}
+
+.service-seo-card .service-number {
+  background: #edf5ef;
+  color: #5c8268;
+}
+
+.service-data-card .service-number {
+  background: #f1eef8;
+  color: #766890;
+}
+
+.service-report-card .service-number {
+  background: #eef3f8;
+  color: #657f9c;
+}
+
+.service-title {
+  min-width: 0;
 }
 
 .service-title span {
@@ -1021,8 +1209,17 @@ const recoverProofImage = (image) => {
   line-height: 1.6;
 }
 
+.service-body {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.service-ai-card .service-body {
+  grid-column: auto;
+}
+
 .service-body p {
-  max-width: 690px;
+  max-width: 700px;
   margin: 0;
   color: var(--muted);
   font-size: 12.8px;
@@ -1033,20 +1230,22 @@ const recoverProofImage = (image) => {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 14px;
+  margin-top: 15px;
 }
 
 .engagement-section {
-  padding: 82px 0;
+  padding: 88px 0;
   border-top: 1px solid rgba(234, 223, 215, 0.72);
   border-bottom: 1px solid rgba(234, 223, 215, 0.72);
-  background: rgba(255, 255, 255, 0.5);
+  background:
+    radial-gradient(circle at 84% 20%, rgba(184, 107, 53, 0.07), transparent 26%),
+    rgba(255, 255, 255, 0.68);
 }
 
 .engagement-layout {
   display: grid;
   grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
-  gap: 60px;
+  gap: 62px;
   align-items: center;
 }
 
@@ -1080,20 +1279,42 @@ const recoverProofImage = (image) => {
 }
 
 .engagement-options article {
+  position: relative;
+  overflow: hidden;
   display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  gap: 15px;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 16px;
   align-items: center;
-  padding: 18px 20px;
+  padding: 19px 21px;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 19px;
   background: var(--surface);
+  box-shadow: 0 10px 26px rgba(16, 28, 50, 0.035);
+}
+
+.engagement-options article::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  border-radius: 999px;
+  background: #d9b299;
+}
+
+.engagement-options article:nth-child(2)::after {
+  background: #b86b35;
+}
+
+.engagement-options article:nth-child(3)::after {
+  background: #7088a4;
 }
 
 .engagement-options article > span {
   display: inline-flex;
-  width: 43px;
-  height: 43px;
+  width: 44px;
+  height: 44px;
   align-items: center;
   justify-content: center;
   border-radius: 14px;
@@ -1116,12 +1337,15 @@ const recoverProofImage = (image) => {
 }
 
 .engagement-highlight {
-  border-color: rgba(184, 107, 53, 0.35) !important;
-  background: #fff9f5 !important;
+  border-color: rgba(184, 107, 53, 0.36) !important;
+  background: linear-gradient(145deg, #fff, #fff8f2) !important;
+  box-shadow: 0 14px 32px rgba(184, 107, 53, 0.06) !important;
 }
 
 .process-section {
-  padding: 82px 0;
+  padding: 88px 0;
+  background:
+    linear-gradient(180deg, #fcf8f4 0%, #fffdfb 100%);
 }
 
 .process-list {
@@ -1137,11 +1361,11 @@ const recoverProofImage = (image) => {
 .process-list::before {
   content: "";
   position: absolute;
-  top: 26px;
+  top: 27px;
   right: 9%;
   left: 9%;
   height: 1px;
-  background: var(--line);
+  background: linear-gradient(90deg, transparent, #dac8bb 16%, #dac8bb 84%, transparent);
 }
 
 .process-list li {
@@ -1152,22 +1376,39 @@ const recoverProofImage = (image) => {
 
 .process-list li > span {
   display: inline-flex;
-  width: 52px;
-  height: 52px;
+  width: 54px;
+  height: 54px;
   align-items: center;
   justify-content: center;
   border: 1px solid #decfc4;
   border-radius: 50%;
-  background: var(--bg);
+  background: linear-gradient(145deg, #fff, #f9ede4);
   color: var(--accent);
   font-size: 11px;
   font-weight: 800;
-  box-shadow: 0 0 0 8px var(--bg);
+  box-shadow:
+    0 0 0 8px var(--bg),
+    0 10px 24px rgba(16, 28, 50, 0.04);
+}
+
+.process-list li:nth-child(2) > span {
+  background: linear-gradient(145deg, #fff, #f0f4f8);
+  color: #657f9c;
+}
+
+.process-list li:nth-child(3) > span {
+  background: linear-gradient(145deg, #fff, #f3f0f8);
+  color: #766890;
+}
+
+.process-list li:nth-child(4) > span {
+  background: linear-gradient(145deg, #fff, #eef6f0);
+  color: #5c8268;
 }
 
 .process-list strong {
   display: block;
-  margin-top: 17px;
+  margin-top: 18px;
   color: var(--text);
   font-size: 16px;
 }
@@ -1180,32 +1421,49 @@ const recoverProofImage = (image) => {
 }
 
 .proof-section {
-  padding: 82px 0 90px;
+  padding: 90px 0 100px;
   border-top: 1px solid rgba(234, 223, 215, 0.72);
-  background: rgba(255, 255, 255, 0.48);
+  background:
+    radial-gradient(circle at 14% 15%, rgba(112, 136, 164, 0.07), transparent 24%),
+    rgba(255, 255, 255, 0.62);
 }
 
 .proof-layout {
   display: grid;
-  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
-  gap: 52px;
+  grid-template-columns: minmax(300px, 0.68fr) minmax(0, 1.32fr);
+  gap: 58px;
   align-items: center;
 }
 
 .proof-products {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 15px;
+  position: relative;
+  min-height: 430px;
   direction: ltr;
 }
 
 .proof-products figure {
+  position: absolute;
   overflow: hidden;
+  width: 58%;
   margin: 0;
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: 25px;
   background: var(--surface);
-  box-shadow: 0 15px 36px rgba(16, 28, 50, 0.055);
+  box-shadow: 0 22px 48px rgba(16, 28, 50, 0.095);
+}
+
+.proof-products figure:first-child {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotate(-1.2deg);
+}
+
+.proof-products figure:last-child {
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transform: rotate(1.2deg);
 }
 
 .proof-products img {
@@ -1222,6 +1480,7 @@ const recoverProofImage = (image) => {
   gap: 2px;
   padding: 14px 15px 17px;
   direction: rtl;
+  background: rgba(255, 255, 255, 0.97);
 }
 
 .proof-products figcaption span {
@@ -1245,8 +1504,8 @@ const recoverProofImage = (image) => {
 
 @media (max-width: 1080px) {
   .hero-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(390px, 0.9fr);
-    gap: 36px;
+    grid-template-columns: minmax(0, 1fr) minmax(400px, 0.92fr);
+    gap: 40px;
   }
 
   .ai-grid {
@@ -1257,25 +1516,24 @@ const recoverProofImage = (image) => {
     min-height: 0;
   }
 
-  .service-row {
-    grid-template-columns: 58px minmax(200px, 0.7fr) minmax(0, 1.3fr);
-    gap: 20px;
+  .service-ai-card {
+    grid-template-columns: 52px minmax(200px, 0.7fr) minmax(0, 1.3fr);
   }
 
   .engagement-layout,
   .proof-layout {
-    gap: 34px;
+    gap: 38px;
   }
 }
 
 @media (max-width: 820px) {
   .services-hero {
-    padding: 58px 0 66px;
+    padding: 62px 0 70px;
   }
 
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 30px;
   }
 
   .hero-copy {
@@ -1283,8 +1541,8 @@ const recoverProofImage = (image) => {
   }
 
   .ai-visual {
-    width: min(100%, 620px);
-    min-height: 470px;
+    width: min(100%, 640px);
+    min-height: 490px;
     margin: 0 auto;
   }
 
@@ -1292,15 +1550,21 @@ const recoverProofImage = (image) => {
     grid-template-columns: 1fr;
   }
 
-  .ai-side-grid .ai-feature:last-child {
+  .ai-side-grid .ai-feature:nth-child(3) {
     grid-column: auto;
   }
 
-  .service-row {
-    grid-template-columns: 44px minmax(0, 1fr);
-    gap: 14px;
+  .service-list {
+    grid-template-columns: 1fr;
   }
 
+  .service-ai-card {
+    grid-column: auto;
+    grid-template-columns: 46px minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .service-ai-card .service-body,
   .service-body {
     grid-column: 2;
   }
@@ -1315,6 +1579,10 @@ const recoverProofImage = (image) => {
     max-width: 720px;
   }
 
+  .proof-products {
+    min-height: 390px;
+  }
+
   .process-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 18px;
@@ -1327,7 +1595,7 @@ const recoverProofImage = (image) => {
 
 @media (max-width: 600px) {
   .services-hero {
-    padding: 46px 0 54px;
+    padding: 48px 0 58px;
   }
 
   .hero-copy h1 {
@@ -1357,6 +1625,14 @@ const recoverProofImage = (image) => {
     min-height: 0;
     grid-template-columns: 1fr;
     gap: 10px;
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  .ai-visual::before,
+  .visual-chip,
+  .visual-ring {
+    display: none;
   }
 
   .ai-core {
@@ -1367,7 +1643,8 @@ const recoverProofImage = (image) => {
     height: auto;
     min-height: 132px;
     transform: none;
-    border-radius: 22px;
+    border-radius: 19px;
+    box-shadow: 0 10px 26px rgba(16, 28, 50, 0.07);
   }
 
   .ai-node {
@@ -1377,20 +1654,16 @@ const recoverProofImage = (image) => {
     width: 100%;
   }
 
-  .visual-ring {
-    display: none;
-  }
-
   .ai-services-section,
   .all-services-section,
   .engagement-section,
   .process-section,
   .proof-section {
-    padding: 58px 0;
+    padding: 60px 0;
   }
 
   .section-heading {
-    margin-bottom: 28px;
+    margin-bottom: 29px;
   }
 
   .section-heading h2,
@@ -1415,19 +1688,22 @@ const recoverProofImage = (image) => {
     font-size: 22px;
   }
 
-  .service-list {
-    border-radius: 20px;
-  }
-
-  .service-row {
+  .service-row,
+  .service-ai-card {
     grid-template-columns: 1fr;
-    gap: 7px;
+    min-height: 0;
+    gap: 8px;
     padding: 23px 20px;
   }
 
-  .service-number,
+  .service-ai-card .service-body,
   .service-body {
     grid-column: auto;
+  }
+
+  .service-number {
+    width: 38px;
+    height: 38px;
   }
 
   .service-title h3 {
@@ -1477,8 +1753,20 @@ const recoverProofImage = (image) => {
   }
 
   .proof-products {
+    display: grid;
+    min-height: 0;
     grid-template-columns: 1fr;
+    gap: 14px;
     direction: rtl;
+  }
+
+  .proof-products figure,
+  .proof-products figure:first-child,
+  .proof-products figure:last-child {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    transform: none;
   }
 }
 
