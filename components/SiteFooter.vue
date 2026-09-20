@@ -56,25 +56,6 @@
             هوشمند با تمرکز بر رشد واقعی کسب‌وکار.
           </p>
 
-          <div class="footer-contact-pills">
-            <a href="tel:+989379407868" dir="ltr">
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M8.2 3.5 6.4 4.1a2 2 0 0 0-1.3 2.3c1.1 6.1 5.9 10.9 12 12a2 2 0 0 0 2.3-1.3l.6-1.8a1.5 1.5 0 0 0-.8-1.8l-2.6-1.2a1.5 1.5 0 0 0-1.8.4l-1.1 1.3a12.2 12.2 0 0 1-3.8-3.8l1.3-1.1a1.5 1.5 0 0 0 .4-1.8L10 4.3a1.5 1.5 0 0 0-1.8-.8Z" />
-              </svg>
-              <span>0937 940 7868</span>
-            </a>
-            <a
-              href="https://wa.me/989379407868"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z" />
-                <path d="M8.7 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 1.9 2.6 2.5.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.6.6-1.5.8-2.4.6-1-.2-2.3-.7-3.9-2.1-1.4-1.2-2.3-2.7-2.6-3.7-.3-.9 0-2 .3-2.5l.8-1.6Z" />
-              </svg>
-              <span>WhatsApp</span>
-            </a>
-          </div>
         </div>
 
         <nav class="footer-nav-column" aria-label="دسترسی سریع">
@@ -95,38 +76,44 @@
           <NuxtLink to="/services">پشتیبانی مستمر</NuxtLink>
         </div>
 
-        <div class="footer-social-column">
-          <span class="footer-column-title">ارتباط</span>
-
-          <a class="footer-contact-row" href="tel:+989379407868">
-            <span class="footer-contact-row-head">
+        <div class="footer-social-column" aria-label="راه‌های ارتباط">
+          <div class="footer-contact-icons">
+            <a
+              class="footer-icon-action"
+              href="tel:+989379407868"
+              aria-label="تماس تلفنی با NexaStudio"
+              title="تماس تلفنی"
+            >
               <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M8.2 3.5 6.4 4.1a2 2 0 0 0-1.3 2.3c1.1 6.1 5.9 10.9 12 12a2 2 0 0 0 2.3-1.3l.6-1.8a1.5 1.5 0 0 0-.8-1.8l-2.6-1.2a1.5 1.5 0 0 0-1.8.4l-1.1 1.3a12.2 12.2 0 0 1-3.8-3.8l1.3-1.1a1.5 1.5 0 0 0 .4-1.8L10 4.3a1.5 1.5 0 0 0-1.8-.8Z" />
               </svg>
-              تماس تلفنی
-            </span>
-            <strong dir="ltr">0937 940 7868</strong>
-          </a>
+            </a>
 
-          <a
-            class="footer-contact-row"
-            href="https://wa.me/989379407868"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="footer-contact-row-head">
+            <a
+              class="footer-icon-action"
+              href="https://wa.me/989379407868"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ارسال پیام در واتساپ"
+              title="واتساپ"
+            >
               <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z" />
                 <path d="M8.7 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 1.9 2.6 2.5.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.6.6-1.5.8-2.4.6-1-.2-2.3-.7-3.9-2.1-1.4-1.2-2.3-2.7-2.6-3.7-.3-.9 0-2 .3-2.5l.8-1.6Z" />
               </svg>
-              واتساپ
-            </span>
-            <strong>ارسال پیام</strong>
-          </a>
+            </a>
 
-          <div class="footer-contact-row is-disabled" aria-disabled="true">
-            <span>اینستاگرام</span>
-            <strong>به‌زودی</strong>
+            <span
+              class="footer-icon-action is-disabled"
+              aria-label="اینستاگرام، به‌زودی"
+              title="اینستاگرام - به‌زودی"
+            >
+              <svg class="contact-icon instagram-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="16" rx="5" />
+                <circle cx="12" cy="12" r="3.5" />
+                <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none" />
+              </svg>
+            </span>
           </div>
         </div>
       </div>
@@ -380,73 +367,53 @@
   color: #dda173;
 }
 
-.footer-contact-pills {
+.footer-contact-icons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 18px;
+  align-items: center;
+  gap: 10px;
 }
 
-.footer-contact-pills a {
-  padding: 6px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.035);
-  color: #c4ccd6;
-  font-size: 11.5px;
-}
-
-.footer-nav-column,
-.footer-social-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 11px;
-}
-
-.footer-column-title {
-  margin-bottom: 5px;
-  color: #dda173;
-  font-size: 12.5px;
-  font-weight: 800;
-}
-
-.footer-nav-column a {
-  color: #aeb8c5;
-  font-size: 13.5px;
-  line-height: 1.6;
+.footer-icon-action {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #d9a06f;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
   transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
-.footer-nav-column a:hover {
+.footer-icon-action:hover {
+  transform: translateY(-2px);
+  border-color: rgba(221, 161, 115, 0.38);
+  background: rgba(255, 255, 255, 0.075);
   color: #fff;
-  transform: translateX(-3px);
 }
 
-.footer-contact-row {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap: 2px;
-  padding: 9px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+.footer-icon-action .contact-icon {
+  width: 20px;
+  height: 20px;
 }
 
-.footer-contact-row span {
-  color: #788698;
-  font-size: 10.5px;
+.footer-icon-action.is-disabled {
+  cursor: default;
+  opacity: 0.45;
 }
 
-.footer-contact-row strong {
-  color: #cbd3dd;
-  font-size: 12.5px;
-  font-weight: 650;
-}
-
-.footer-contact-row.is-disabled {
-  opacity: 0.55;
+.footer-icon-action.is-disabled:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.11);
+  background: rgba(255, 255, 255, 0.045);
+  color: #d9a06f;
 }
 
 .footer-bottom {
@@ -474,13 +441,7 @@
 
   .footer-social-column {
     grid-column: 2 / -1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: end;
-  }
-
-  .footer-social-column .footer-column-title {
-    grid-column: 1 / -1;
+    align-self: end;
   }
 }
 
@@ -514,7 +475,6 @@
 
   .footer-social-column {
     grid-column: 1 / -1;
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .footer-bottom {
