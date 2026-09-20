@@ -184,63 +184,122 @@
   line-height: 1.8;
   margin-top: 12px;
 }
+.member-card {
+  padding: 24px 20px 20px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(184, 107, 53, 0.09), transparent 31%),
+    linear-gradient(160deg, #fff 0%, #fffaf7 100%);
+}
+
+.member-card:nth-child(3) {
+  background:
+    radial-gradient(circle at 50% 18%, rgba(112, 136, 164, 0.09), transparent 31%),
+    linear-gradient(160deg, #fff 0%, #f9fbfd 100%);
+}
+
 .member-layout {
   display: flex;
-  gap: 12px;
-  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
 }
+
 .member-content {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
   padding-top: 0;
 }
+
 .team-image-wrap {
+  position: relative;
   display: flex;
-  width: 110px;
-  height: 110px;
-  flex-shrink: 0;
+  width: 128px;
+  height: 128px;
+  flex: none;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border: 1px solid rgba(226, 211, 199, 0.9);
-  border-radius: 20px;
+  border: 1px solid rgba(221, 204, 191, 0.96);
+  border-radius: 30px;
   background: #f8f3ef;
-  box-shadow: 0 10px 24px rgba(16, 28, 50, 0.07);
+  box-shadow:
+    0 16px 30px rgba(16, 28, 50, 0.09),
+    0 0 0 7px rgba(255, 255, 255, 0.68);
 }
+
+.member-card:nth-child(3) .team-image-wrap {
+  border-color: rgba(190, 204, 218, 0.96);
+}
+
 .team-image-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+.member-content h3 {
+  margin: 0 0 6px;
+  color: #101c32;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
 .job-title {
   display: inline-flex;
-  margin: 0 0 6px;
-  padding: 4px 10px;
+  margin: 0;
+  padding: 5px 11px;
   border: 1px solid rgba(189, 116, 72, 0.14);
   border-radius: 999px;
-  background: rgba(255, 243, 237, 0.86);
+  background: rgba(255, 243, 237, 0.88);
   color: #bd7448 !important;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
 }
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 6px;
-  list-style: none;
+  width: 100%;
+  margin: 13px 0 12px;
   padding: 0;
-  margin: 8px 0;
+  list-style: none;
 }
+
 .skills-list span {
-  padding: 4px 9px;
+  padding: 5px 9px;
   border: 1px solid rgba(232, 221, 213, 0.92);
   border-radius: 999px;
-  background: rgba(250, 247, 244, 0.86);
+  background: rgba(250, 247, 244, 0.88);
   color: #667085;
-  font-size: 11.5px;
+  font-size: 10.5px;
   line-height: 1.4;
 }
+
 .profile-link {
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  padding-top: 11px;
   color: #0f2240;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.profile-link::after {
+  content: "←";
+  color: #b86b35;
+  font-size: 13px;
 }
 .specialties {
   display: flex;
@@ -266,41 +325,33 @@
   .team-grid {
     grid-template-columns: 1fr;
   }
+  .member-card {
+    min-height: 0;
+    padding: 22px 18px 18px;
+  }
+
   .member-layout {
-    align-items: center;
-    gap: 30px;
+    gap: 13px;
   }
+
   .team-image-wrap {
-    flex: 0 0 40%;
-    width: 40%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    border-radius: 16px;
+    width: 118px;
+    height: 118px;
+    border-radius: 26px;
   }
-  .member-content {
-    flex: 0 0 60%;
-    width: 60%;
-    min-width: 0;
-    padding-top: 15px;
-  }
+
   .member-content h3 {
-    font-size: 17px;
-    white-space: nowrap;
+    font-size: 18px;
   }
-  .job-title {
-    font-size: 11px;
-    padding: 3px 8px;
-  }
+
   .skills-list {
-    gap: 4px;
-    margin: 6px 0;
+    gap: 5px;
+    margin: 11px 0 10px;
   }
+
   .skills-list span {
-    font-size: 11px;
-    padding: 3px 7px;
-  }
-  .profile-link {
-    font-size: 11px;
+    font-size: 10.5px;
+    padding: 4px 8px;
   }
   .section-header h2 {
     font-size: 26px;
