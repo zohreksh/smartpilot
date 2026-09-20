@@ -5,29 +5,29 @@
         <div class="service-icon">⌘</div>
         <div class="floating-service-content">
           <h3>توسعه اختصاصی</h3>
-          <p>ساخت سامانه‌ها و محصولات دیجیتال اختصاصی متناسب با نیاز کسب‌وکار شما</p>
+          <p>طراحی و توسعه سامانه‌هایی که بر اساس فرایند واقعی کسب‌وکار شما ساخته می‌شوند</p>
         </div>
       </article>
       <article class="floating-service-card">
         <div class="service-icon">✦</div>
         <div class="floating-service-content">
           <h3>هوش مصنوعی</h3>
-          <p>راهکارهای هوشمند برای اتوماسیون، تحلیل داده و رشد سریع‌تر</p>
+          <p>هوش مصنوعی متصل به داده و عملیات؛ از جستجوی هوشمند تا Agent و اتوماسیون</p>
         </div>
       </article>
       <article class="floating-service-card">
         <div class="service-icon">◉</div>
         <div class="floating-service-content">
           <h3>سئو و رشد ارگانیک</h3>
-          <p>بهینه‌سازی ساختار سایت برای دیده‌شدن و جذب مشتری واقعی</p>
+          <p>سئوی فنی و ساختاری برای دیده‌شدن پایدار و رشد ارگانیک محصول</p>
         </div>
       </article>
     </div>
 
     <div class="services-heading home-section-heading container">
       <span class="services-badge home-section-kicker">خدمات ما</span>
-      <h2 class="home-section-title">راهکارهای کامل برای دنیای دیجیتال</h2>
-      <p class="home-section-description">از ایده و معماری تا ساخت، هوشمندسازی و رشد، یک مسیر یکپارچه برای محصول شما.</p>
+      <h2 class="home-section-title">از ایده تا محصولی که آماده رشد باشد</h2>
+      <p class="home-section-description">طراحی، توسعه، هوشمندسازی و رشد را در یک مسیر مهندسی‌شده و قابل ادامه کنار هم می‌گذاریم.</p>
       <span class="home-section-rule" aria-hidden="true"></span>
     </div>
 
@@ -36,32 +36,32 @@
         <div class="service-icon">⌘</div>
         <div class="service-content">
           <h3>طراحی وب سایت و فروشگاه اینترنتی</h3>
-          <p>طراحی مدرن، کاربرپسند و فروش‌محور</p>
-          <NuxtLink to="/services">اطلاعات بیشتر</NuxtLink>
+          <p>تجربه کاربری، عملکرد فنی و مسیر تبدیل را از ابتدا کنار هم طراحی می‌کنیم</p>
+          <NuxtLink to="/services">مشاهده جزئیات</NuxtLink>
         </div>
       </article>
       <article class="service-card">
         <div class="service-icon">◈</div>
         <div class="service-content">
           <h3>توسعه سامانه‌های اختصاصی</h3>
-          <p>راهکارهای اختصاصی برای نیازهای خاص شما</p>
-          <NuxtLink to="/services">اطلاعات بیشتر</NuxtLink>
+          <p>سامانه‌ها و پنل‌هایی متناسب با فرایندها، داده و قواعد واقعی کسب‌وکار</p>
+          <NuxtLink to="/services">مشاهده جزئیات</NuxtLink>
         </div>
       </article>
       <article class="service-card">
         <div class="service-icon">✦</div>
         <div class="service-content">
           <h3>هوش مصنوعی و جستجوی هوشمند</h3>
-          <p>تجربه کاربری بهتر و فروش بیشتر</p>
-          <NuxtLink to="/services">اطلاعات بیشتر</NuxtLink>
+          <p>مشاور هوشمند، جستجوی معنایی و اتوماسیون متصل به داده واقعی</p>
+          <NuxtLink to="/services">مشاهده جزئیات</NuxtLink>
         </div>
       </article>
       <article class="service-card">
         <div class="service-icon">◉</div>
         <div class="service-content">
           <h3>پشتیبانی و رشد مستمر</h3>
-          <p>همراه شما در تمام مراحل</p>
-          <NuxtLink to="/services">اطلاعات بیشتر</NuxtLink>
+          <p>پایش، بهبود و توسعه مستمر محصول پس از انتشار</p>
+          <NuxtLink to="/services">مشاهده جزئیات</NuxtLink>
         </div>
       </article>
     </div>
