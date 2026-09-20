@@ -1,8 +1,15 @@
 <template>
   <section class="section projects-section" id="projects">
-    <div class="container">
-      <h2>محصولات واقعی، نتایج واقعی</h2>
-      <div class="projects-grid">
+    <div class="home-section-heading projects-heading container">
+      <span class="home-section-kicker">نمونه‌کارها</span>
+      <h2 class="home-section-title">محصولات واقعی، نه فقط طرح‌های نمایشی</h2>
+      <p class="home-section-description">
+        شیدانه و HEVIX دو محصول واقعی از دو بازار متفاوت‌اند؛ هر دو با معماری، توسعه و مسیر رشد قابل ادامه.
+      </p>
+      <span class="home-section-rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="projects-grid">
         <div class="project-image shidane-project">
           <img
             src="/images/projects/shidane.webp"
@@ -17,7 +24,6 @@
             loading="lazy"
           />
         </div>
-      </div>
     </div>
   </section>
 </template>
