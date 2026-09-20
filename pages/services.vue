@@ -616,7 +616,7 @@ const recoverProofImage = (image) => {
   border-radius: 999px;
   background: rgba(255, 247, 244, 0.92);
   color: #b45f35;
-  font-size: 13px;
+  font-size: 15.5px;
   font-weight: 800;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
@@ -645,7 +645,7 @@ const recoverProofImage = (image) => {
   max-width: 680px;
   margin: 0;
   color: var(--muted);
-  font-size: 15.5px;
+  font-size: 16.5px;
   line-height: 1.95;
 }
 
@@ -664,7 +664,7 @@ const recoverProofImage = (image) => {
   min-height: 50px;
   padding: 12px 24px;
   border-radius: 999px;
-  font-size: 13px;
+  font-size: 15.5px;
   font-weight: 800;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -694,7 +694,7 @@ const recoverProofImage = (image) => {
   gap: 9px;
   margin-top: 28px;
   color: var(--muted);
-  font-size: 11.5px;
+  font-size: 14px;
 }
 
 .hero-meta i {
@@ -755,14 +755,14 @@ const recoverProofImage = (image) => {
 
 .ai-core > span {
   color: var(--accent);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 800;
 }
 
 .ai-core strong {
   margin-top: 4px;
   color: var(--text);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.2;
   direction: ltr;
 }
@@ -770,7 +770,7 @@ const recoverProofImage = (image) => {
 .ai-core small {
   margin-top: 4px;
   color: var(--muted);
-  font-size: 7.5px;
+  font-size: 12.5px;
   direction: ltr;
 }
 
@@ -801,7 +801,7 @@ const recoverProofImage = (image) => {
   border-radius: 9px;
   background: #faece4;
   color: var(--accent);
-  font-size: 8.5px;
+  font-size: 11.5px;
   font-weight: 800;
 }
 
@@ -812,7 +812,7 @@ const recoverProofImage = (image) => {
 .ai-node strong {
   display: block;
   color: var(--text);
-  font-size: 10.5px;
+  font-size: 15px;
   line-height: 1.3;
   direction: ltr;
   text-align: right;
@@ -822,7 +822,7 @@ const recoverProofImage = (image) => {
   display: block;
   margin-top: 2px;
   color: var(--muted);
-  font-size: 8.5px;
+  font-size: 11.5px;
   line-height: 1.4;
 }
 
@@ -850,7 +850,7 @@ const recoverProofImage = (image) => {
   max-width: 390px;
   margin: 12px auto 0;
   color: var(--muted);
-  font-size: 10.5px;
+  font-size: 15px;
   line-height: 1.7;
   text-align: center;
 }
@@ -886,7 +886,7 @@ const recoverProofImage = (image) => {
   max-width: 730px;
   margin: 0 auto;
   color: var(--muted);
-  font-size: 14.5px;
+  font-size: 16px;
   line-height: 1.95;
 }
 
@@ -975,13 +975,13 @@ const recoverProofImage = (image) => {
 
 .feature-top span {
   color: var(--accent);
-  font-size: 10px;
+  font-size: 11.5px;
   font-weight: 800;
 }
 
 .feature-top small {
   color: #9a8b80;
-  font-size: 9px;
+  font-size: 15px;
   direction: ltr;
 }
 
@@ -999,12 +999,12 @@ const recoverProofImage = (image) => {
 .ai-feature p {
   margin: 0;
   color: var(--muted);
-  font-size: 12.8px;
+  font-size: 14.5px;
   line-height: 1.9;
 }
 
 .ai-feature-main p {
-  font-size: 14px;
+  font-size: 15.5px;
 }
 
 .ai-feature ul {
@@ -1019,7 +1019,7 @@ const recoverProofImage = (image) => {
   position: relative;
   padding-right: 17px;
   color: #566174;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .ai-feature li::before {
@@ -1047,7 +1047,7 @@ const recoverProofImage = (image) => {
   border-radius: 999px;
   background: rgba(250, 247, 244, 0.9);
   color: #667085;
-  font-size: 9.5px;
+  font-size: 12.5px;
   line-height: 1.4;
 }
 
@@ -1139,7 +1139,7 @@ const recoverProofImage = (image) => {
   border-radius: 13px;
   background: #faece4;
   color: var(--accent);
-  font-size: 10px;
+  font-size: 11.5px;
   font-weight: 800;
   direction: ltr;
 }
@@ -1165,7 +1165,7 @@ const recoverProofImage = (image) => {
 
 .service-title span {
   color: var(--accent);
-  font-size: 9.5px;
+  font-size: 12.5px;
   font-weight: 800;
   direction: ltr;
 }
@@ -1186,7 +1186,7 @@ const recoverProofImage = (image) => {
   max-width: 700px;
   margin: 0;
   color: var(--muted);
-  font-size: 12.8px;
+  font-size: 14.5px;
   line-height: 1.9;
 }
 
@@ -1225,7 +1225,7 @@ const recoverProofImage = (image) => {
 .proof-copy p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15.5px;
   line-height: 1.95;
 }
 
@@ -1233,7 +1233,7 @@ const recoverProofImage = (image) => {
   display: inline-flex;
   margin-top: 21px;
   color: var(--accent);
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -1284,19 +1284,19 @@ const recoverProofImage = (image) => {
   border-radius: 14px;
   background: #faece4;
   color: var(--accent);
-  font-size: 10px;
+  font-size: 11.5px;
   font-weight: 800;
 }
 
 .engagement-options strong {
   color: var(--text);
-  font-size: 14.5px;
+  font-size: 16px;
 }
 
 .engagement-options p {
   margin: 3px 0 0;
   color: var(--muted);
-  font-size: 11.5px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -1348,7 +1348,7 @@ const recoverProofImage = (image) => {
   border-radius: 50%;
   background: linear-gradient(145deg, #fff, #f9ede4);
   color: var(--accent);
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 800;
   box-shadow:
     0 0 0 8px var(--bg),
@@ -1380,7 +1380,7 @@ const recoverProofImage = (image) => {
 .process-list p {
   margin: 6px 0 0;
   color: var(--muted);
-  font-size: 11.5px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
@@ -1450,7 +1450,7 @@ const recoverProofImage = (image) => {
 
 .proof-products figcaption span {
   color: var(--accent);
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 800;
   direction: ltr;
   text-align: right;
@@ -1458,12 +1458,12 @@ const recoverProofImage = (image) => {
 
 .proof-products figcaption strong {
   color: var(--text);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .proof-products figcaption small {
   color: var(--muted);
-  font-size: 10.5px;
+  font-size: 15px;
   line-height: 1.65;
 }
 
@@ -1571,7 +1571,7 @@ const recoverProofImage = (image) => {
   }
 
   .hero-lead {
-    font-size: 15.5px;
+    font-size: 16.5px;
     line-height: 1.9;
   }
 
@@ -1584,7 +1584,7 @@ const recoverProofImage = (image) => {
   .secondary-action {
     min-width: 0;
     padding-inline: 12px;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .ai-visual {
@@ -1612,11 +1612,11 @@ const recoverProofImage = (image) => {
   }
 
   .ai-node strong {
-    font-size: 9.5px;
+    font-size: 12.5px;
   }
 
   .ai-node small {
-    font-size: 7.7px;
+    font-size: 9px;
   }
 
   .ai-services-section,
@@ -1640,7 +1640,7 @@ const recoverProofImage = (image) => {
   .section-heading p,
   .engagement-copy p,
   .proof-copy p {
-    font-size: 13.5px;
+    font-size: 15px;
   }
 
   .ai-feature,
@@ -1675,7 +1675,7 @@ const recoverProofImage = (image) => {
   }
 
   .service-body p {
-    font-size: 12.5px;
+    font-size: 14px;
   }
 
   .process-list {
@@ -1750,15 +1750,15 @@ const recoverProofImage = (image) => {
   .ai-node > span {
     width: 22px;
     height: 22px;
-    font-size: 7.5px;
+    font-size: 12.5px;
   }
 
   .ai-node strong {
-    font-size: 8.6px;
+    font-size: 10px;
   }
 
   .ai-node small {
-    font-size: 7px;
+    font-size: 9px;
   }
 
   .hero-actions {
