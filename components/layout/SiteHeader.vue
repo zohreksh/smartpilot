@@ -207,10 +207,6 @@ const closeMenu = () => {
     padding-inline: 10px;
     font-size: 13.5px;
   }
-
-  .header-cta {
-    padding-inline: 15px;
-  }
 }
 
 @media (max-width: 820px) {
