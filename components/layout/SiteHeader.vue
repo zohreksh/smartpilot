@@ -36,13 +36,6 @@ const closeMenu = () => {
         <NuxtLink to="/contact">تماس با ما</NuxtLink>
       </nav>
 
-      <NuxtLink class="header-cta desktop-cta" to="/contact">
-        <span>شروع همکاری</span>
-        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
-          <path d="M14 10H6M9 7l-3 3 3 3" />
-        </svg>
-      </NuxtLink>
-
       <button
         class="mobile-menu-button"
         type="button"
@@ -70,10 +63,6 @@ const closeMenu = () => {
         <NuxtLink to="/about" @click="closeMenu">درباره ما</NuxtLink>
         <NuxtLink to="/contact" @click="closeMenu">تماس با ما</NuxtLink>
 
-        <NuxtLink class="mobile-contact-cta" to="/contact" @click="closeMenu">
-          شروع همکاری
-          <span aria-hidden="true">←</span>
-        </NuxtLink>
       </nav>
     </div>
   </header>
@@ -203,44 +192,6 @@ const closeMenu = () => {
   box-shadow: 0 3px 12px rgba(16, 28, 50, 0.06);
 }
 
-.header-cta {
-  display: inline-flex;
-  justify-self: end;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  min-height: 46px;
-  padding: 10px 18px;
-  border: 1px solid rgba(126, 66, 35, 0.24);
-  border-radius: 999px;
-  background: linear-gradient(135deg, #c17a42, #96502d);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 800;
-  box-shadow:
-    0 10px 24px rgba(155, 84, 45, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.header-cta:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    0 13px 30px rgba(155, 84, 45, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.22);
-}
-
-.header-cta svg {
-  width: 18px;
-  height: 18px;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
 .mobile-menu-button,
 .mobile-menu-shell {
   display: none;
@@ -248,7 +199,7 @@ const closeMenu = () => {
 
 @media (max-width: 1050px) {
   .premium-header {
-    grid-template-columns: minmax(175px, 1fr) auto minmax(150px, 0.8fr);
+    grid-template-columns: minmax(175px, 1fr) auto minmax(175px, 1fr);
     gap: 14px;
   }
 
@@ -275,8 +226,7 @@ const closeMenu = () => {
     border-radius: 19px;
   }
 
-  .desktop-nav,
-  .desktop-cta {
+  .desktop-nav {
     display: none;
   }
 
@@ -345,7 +295,7 @@ const closeMenu = () => {
     box-shadow: 0 18px 38px rgba(16, 28, 50, 0.1);
   }
 
-  .mobile-nav > a:not(.mobile-contact-cta) {
+  .mobile-nav > a {
     padding: 11px 12px;
     border-radius: 12px;
     color: #566174;
@@ -354,25 +304,11 @@ const closeMenu = () => {
     text-align: center;
   }
 
-  .mobile-nav > a.router-link-active:not(.mobile-contact-cta) {
+  .mobile-nav > a.router-link-active {
     background: #fff2e9;
     color: #9b542d;
   }
 
-  .mobile-contact-cta {
-    display: flex;
-    grid-column: 1 / -1;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    min-height: 44px;
-    margin-top: 2px;
-    border-radius: 13px;
-    background: #101c32;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 800;
-  }
 }
 
 @media (max-width: 430px) {
@@ -389,8 +325,5 @@ const closeMenu = () => {
     grid-template-columns: 1fr;
   }
 
-  .mobile-contact-cta {
-    grid-column: auto;
-  }
 }
 </style>
