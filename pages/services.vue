@@ -82,9 +82,7 @@ const recoverProofImage = (image) => {
         </div>
 
         <div class="ai-visual" aria-label="حوزه‌های اصلی توسعه هوش مصنوعی">
-          <span class="visual-chip chip-one" aria-hidden="true">AI</span>
-          <span class="visual-chip chip-two" aria-hidden="true">DATA</span>
-          <span class="visual-chip chip-three" aria-hidden="true">SEARCH</span>
+          <span class="ai-watermark" aria-hidden="true">AI</span>
           <div class="ai-core">
             <span>Nexa AI</span>
             <strong>Intelligence Layer</strong>
@@ -700,94 +698,90 @@ const recoverProofImage = (image) => {
 .ai-visual {
   position: relative;
   min-height: 525px;
-  border-radius: 34px;
-  background:
-    linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 252, 249, 0.72)),
-    linear-gradient(90deg, rgba(184, 107, 53, 0.055) 1px, transparent 1px),
-    linear-gradient(rgba(184, 107, 53, 0.055) 1px, transparent 1px);
-  background-size: auto, 32px 32px, 32px 32px;
-  border: 1px solid rgba(230, 214, 202, 0.78);
-  box-shadow:
-    0 24px 55px rgba(16, 28, 50, 0.07),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  isolation: isolate;
 }
 
 .ai-visual::before {
   content: "";
   position: absolute;
-  inset: 22px;
-  border: 1px dashed rgba(184, 107, 53, 0.13);
-  border-radius: 28px;
+  z-index: -2;
+  width: 410px;
+  height: 410px;
+  top: 54px;
+  right: 50%;
+  transform: translateX(50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(184, 107, 53, 0.12) 0%, rgba(184, 107, 53, 0.05) 34%, transparent 70%);
+  filter: blur(2px);
 }
 
-.visual-chip {
+.ai-visual::after {
+  content: "";
   position: absolute;
-  z-index: 5;
-  padding: 5px 9px;
-  border: 1px solid rgba(184, 107, 53, 0.16);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.84);
-  color: #a9653d;
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  box-shadow: 0 8px 18px rgba(16, 28, 50, 0.045);
+  z-index: -1;
+  width: 310px;
+  height: 310px;
+  top: 104px;
+  right: 50%;
+  transform: translateX(50%);
+  border: 1px dashed rgba(184, 107, 53, 0.18);
+  border-radius: 50%;
 }
 
-.chip-one {
-  top: 24px;
-  right: 30px;
-}
-
-.chip-two {
-  left: 30px;
-  top: 185px;
-}
-
-.chip-three {
-  right: 54px;
-  bottom: 22px;
+.ai-watermark {
+  position: absolute;
+  z-index: -1;
+  top: 34px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(184, 107, 53, 0.07);
+  font-size: 138px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.08em;
+  direction: ltr;
+  user-select: none;
 }
 
 .ai-core {
   position: absolute;
   z-index: 3;
-  top: 165px;
+  top: 164px;
   right: 50%;
   display: flex;
-  width: 198px;
-  height: 198px;
+  width: 188px;
+  height: 188px;
   transform: translateX(50%);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(184, 107, 53, 0.34);
+  border: 1px solid rgba(184, 107, 53, 0.28);
   border-radius: 50%;
   background:
-    radial-gradient(circle at 32% 24%, #fff, #fff8f2 56%, #f3dfd0 100%);
+    radial-gradient(circle at 34% 26%, rgba(255, 255, 255, 0.98), rgba(255, 248, 242, 0.9) 58%, rgba(243, 223, 208, 0.82) 100%);
   box-shadow:
-    0 30px 66px rgba(16, 28, 50, 0.13),
-    0 0 0 16px rgba(255, 255, 255, 0.46),
-    inset 0 1px 0 #fff;
+    0 24px 54px rgba(16, 28, 50, 0.11),
+    0 0 0 10px rgba(255, 255, 255, 0.35);
   text-align: center;
 }
 
 .ai-core span {
   color: var(--accent);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
 }
 
 .ai-core strong {
   margin-top: 5px;
   color: var(--text);
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .ai-core small {
-  margin-top: 6px;
+  margin-top: 5px;
   color: #7c8492;
-  font-size: 8.5px;
+  font-size: 8px;
   direction: ltr;
 }
 
@@ -795,43 +789,29 @@ const recoverProofImage = (image) => {
   position: absolute;
   z-index: 4;
   display: flex;
-  min-width: 194px;
+  min-width: 182px;
   align-items: center;
   gap: 10px;
-  padding: 14px 15px;
-  border: 1px solid rgba(234, 223, 215, 0.94);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 15px 34px rgba(16, 28, 50, 0.075);
-}
-
-.ai-node:nth-of-type(1) {
-  background: linear-gradient(135deg, #fff, #fff5ee);
-}
-
-.ai-node:nth-of-type(2) {
-  background: linear-gradient(135deg, #fff, #f4f8fb);
-}
-
-.ai-node:nth-of-type(3) {
-  background: linear-gradient(135deg, #fff, #f8f6fd);
-}
-
-.ai-node:nth-of-type(4) {
-  background: linear-gradient(135deg, #fff, #f3faf6);
+  padding: 11px 12px;
+  border: 1px solid rgba(226, 211, 199, 0.72);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 9px 24px rgba(16, 28, 50, 0.045);
 }
 
 .ai-node > span {
   display: inline-flex;
   flex: none;
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   align-items: center;
   justify-content: center;
-  border-radius: 11px;
-  background: #faece4;
+  border-radius: 50%;
+  background: rgba(250, 236, 228, 0.88);
   color: var(--accent);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
 }
 
@@ -843,56 +823,57 @@ const recoverProofImage = (image) => {
 
 .ai-node strong {
   color: var(--text);
-  font-size: 12.5px;
+  font-size: 11.5px;
 }
 
 .ai-node small {
   color: var(--muted);
-  font-size: 9.5px;
+  font-size: 8.8px;
 }
 
 .node-advisor {
-  top: 52px;
-  right: 22px;
+  top: 56px;
+  right: 14px;
 }
 
 .node-search {
-  top: 78px;
-  left: 18px;
+  top: 92px;
+  left: 8px;
 }
 
 .node-agent {
-  right: 20px;
-  bottom: 48px;
+  right: 10px;
+  bottom: 60px;
 }
 
 .node-data {
-  left: 28px;
-  bottom: 64px;
+  left: 18px;
+  bottom: 76px;
 }
 
 .visual-ring {
   position: absolute;
-  z-index: 0;
-  border: 1px solid rgba(184, 107, 53, 0.15);
+  z-index: -1;
+  border: 1px solid rgba(184, 107, 53, 0.1);
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .ring-one {
-  width: 405px;
-  height: 405px;
-  top: 58px;
+  width: 430px;
+  height: 430px;
+  top: 44px;
   right: 50%;
   transform: translateX(50%);
 }
 
 .ring-two {
-  width: 302px;
-  height: 302px;
-  top: 109px;
+  width: 350px;
+  height: 350px;
+  top: 84px;
   right: 50%;
   transform: translateX(50%);
-  border-style: dashed;
+  border-color: rgba(112, 136, 164, 0.1);
 }
 
 .ai-services-section {
@@ -1632,7 +1613,8 @@ const recoverProofImage = (image) => {
   }
 
   .ai-visual::before,
-  .visual-chip,
+  .ai-visual::after,
+  .ai-watermark,
   .visual-ring {
     display: none;
   }
@@ -1645,7 +1627,10 @@ const recoverProofImage = (image) => {
     height: auto;
     min-height: 132px;
     transform: none;
-    border-radius: 19px;
+    border-radius: 50%;
+    max-width: 160px;
+    min-height: 160px;
+    margin: 0 auto;
     box-shadow: 0 10px 26px rgba(16, 28, 50, 0.07);
   }
 
