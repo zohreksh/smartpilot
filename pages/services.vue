@@ -1,15 +1,12 @@
 <script setup>
 import { ref } from "vue";
 
-useHead({
+usePageSeo({
   title: "توسعه هوش مصنوعی و خدمات محصول دیجیتال | NexaStudio",
-  meta: [
-    {
-      name: "description",
-      content:
-        "توسعه هوش مصنوعی، جستجوی هوشمند، مشاور و Agentهای اختصاصی، سئوی اتومات، سامانه‌های اختصاصی، طراحی وب و فروشگاه، مدیریت و ورود داده‌های اولیه، گزارشات و پشتیبانی مستمر توسط NexaStudio.",
-    },
-  ],
+  description:
+    "توسعه هوش مصنوعی، جستجوی هوشمند، Agent، سئوی اتومات، سامانه‌های اختصاصی، فروشگاه اینترنتی، تحلیل داده و پشتیبانی مستمر توسط NexaStudio.",
+  path: "/services",
+  image: "/images/projects/shidane1.webp",
 });
 
 const shidaneProofSrc = ref("/images/projects/shidane1.webp");
