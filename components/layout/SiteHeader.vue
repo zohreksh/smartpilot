@@ -156,7 +156,7 @@ const closeMenu = () => {
 
 .brand-copy small {
   color: #8a7769;
-  font-size: 9px;
+  font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.05em;
   white-space: nowrap;
@@ -178,7 +178,7 @@ const closeMenu = () => {
   padding: 9px 13px;
   border-radius: 999px;
   color: #566174;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 650;
   line-height: 1;
   transition:
@@ -210,7 +210,7 @@ const closeMenu = () => {
   border-radius: 999px;
   background: linear-gradient(135deg, #c17a42, #96502d);
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 800;
   box-shadow:
     0 10px 24px rgba(155, 84, 45, 0.2),
@@ -249,7 +249,7 @@ const closeMenu = () => {
 
   .header-nav a {
     padding-inline: 10px;
-    font-size: 12px;
+    font-size: 13.5px;
   }
 
   .header-cta {
@@ -286,7 +286,7 @@ const closeMenu = () => {
   }
 
   .brand-copy small {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   .mobile-menu-button {
@@ -344,7 +344,7 @@ const closeMenu = () => {
     padding: 11px 12px;
     border-radius: 12px;
     color: #566174;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     text-align: center;
   }
@@ -365,7 +365,7 @@ const closeMenu = () => {
     border-radius: 13px;
     background: #101c32;
     color: #fff;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 800;
   }
 }
