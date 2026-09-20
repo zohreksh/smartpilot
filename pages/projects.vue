@@ -47,7 +47,11 @@ usePageSeo({
               <img
                 src="/images/projects/shidane.webp"
                 alt="نمای کامل محصول شیدانه"
+                width="1659"
+                height="948"
                 loading="eager"
+                decoding="async"
+                fetchpriority="high"
               />
               <span class="project-label">
                 <small>Beauty Commerce</small>
@@ -59,7 +63,10 @@ usePageSeo({
               <img
                 src="/images/projects/hevix.webp"
                 alt="نمای کامل محصول HEVIX"
+                width="1659"
+                height="948"
                 loading="eager"
+                decoding="async"
               />
               <span class="project-label">
                 <small>Industrial Commerce</small>
@@ -105,7 +112,10 @@ usePageSeo({
             <img
               src="/images/projects/shidane.webp"
               alt="نمای کامل پلتفرم شیدانه"
+              width="1659"
+              height="948"
               loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="case-stamp">
@@ -208,7 +218,10 @@ usePageSeo({
             <img
               src="/images/projects/hevix.webp"
               alt="نمای کامل پلتفرم HEVIX"
+              width="1659"
+              height="948"
               loading="lazy"
+              decoding="async"
             />
           </div>
           <div class="case-stamp hevix-stamp">
