@@ -1,8 +1,8 @@
 <script setup>
 usePageSeo({
-  title: "نمونه‌کارها و محصولات واقعی | NexaStudio",
+  title: "نمونه‌کارها و محصولات واقعی | SmartPilot",
   description:
-    "نمونه‌کارهای واقعی NexaStudio شامل شیدانه و HEVIX؛ معماری و توسعه محصول، هوش مصنوعی، جستجوی هوشمند، سئو، داده و سامانه‌های اختصاصی.",
+    "نمونه‌کارهای واقعی SmartPilot شامل شیدانه و HEVIX؛ معماری و توسعه محصول، هوش مصنوعی، جستجوی هوشمند، سئو، داده و سامانه‌های اختصاصی.",
   path: "/projects",
   image: "/images/projects/shidane.webp",
 });
@@ -10,7 +10,7 @@ usePageSeo({
 
 <template>
   <main id="main-content" class="projects-page" tabindex="-1">
-<section class="projects-hero">
+    <section class="projects-hero">
       <div class="container">
         <div class="hero-panel">
           <div class="hero-copy">
@@ -29,7 +29,9 @@ usePageSeo({
 
             <div class="hero-actions">
               <a class="primary-action" href="#shidaneh">مشاهده Case Studyها</a>
-              <NuxtLink class="secondary-action" to="/contact">شروع یک پروژه</NuxtLink>
+              <NuxtLink class="secondary-action" to="/contact"
+                >شروع یک پروژه</NuxtLink
+              >
             </div>
 
             <div class="hero-tech">
@@ -40,7 +42,7 @@ usePageSeo({
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="پروژه‌های منتخب NexaStudio">
+          <div class="hero-visual" aria-label="پروژه‌های منتخب SmartPilot">
             <a class="hero-main-project" href="#shidaneh">
               <img
                 src="/images/projects/shidane.webp"
@@ -158,22 +160,34 @@ usePageSeo({
             <article>
               <small>Product</small>
               <strong>تجربه خرید و مدیریت محصول</strong>
-              <p>ساختار فروشگاهی، صفحات محصول و جریان‌های قابل توسعه برای عملیات واقعی.</p>
+              <p>
+                ساختار فروشگاهی، صفحات محصول و جریان‌های قابل توسعه برای عملیات
+                واقعی.
+              </p>
             </article>
             <article>
               <small>Intelligence</small>
               <strong>AI و Smart Search</strong>
-              <p>قابلیت‌های هوشمند برای راهنمایی کاربر و بازیابی بهتر اطلاعات و محصول.</p>
+              <p>
+                قابلیت‌های هوشمند برای راهنمایی کاربر و بازیابی بهتر اطلاعات و
+                محصول.
+              </p>
             </article>
             <article>
               <small>Growth</small>
               <strong>SEO به‌عنوان بخشی از محصول</strong>
-              <p>ساختار فنی و فرآیندهایی که سئو را از یک کار دستی جداگانه خارج می‌کنند.</p>
+              <p>
+                ساختار فنی و فرآیندهایی که سئو را از یک کار دستی جداگانه خارج
+                می‌کنند.
+              </p>
             </article>
             <article>
               <small>Operations</small>
               <strong>داده و ابزارهای مدیریتی</strong>
-              <p>مدیریت اطلاعات، گزارشات و قابلیت‌های عملیاتی برای توسعه مرحله‌ای محصول.</p>
+              <p>
+                مدیریت اطلاعات، گزارشات و قابلیت‌های عملیاتی برای توسعه مرحله‌ای
+                محصول.
+              </p>
             </article>
           </div>
         </div>
@@ -184,11 +198,13 @@ usePageSeo({
       <div class="container case-layout reverse-layout">
         <div class="case-copy">
           <span class="case-kicker">پلتفرم تخصصی قطعات و تجهیزات</span>
-          <h2>HEVIX؛ محصول تخصصی برای بازاری که داده و جستجو در آن تعیین‌کننده‌اند</h2>
+          <h2>
+            HEVIX؛ محصول تخصصی برای بازاری که داده و جستجو در آن تعیین‌کننده‌اند
+          </h2>
           <p class="case-lead">
             HEVIX برای یک بازار تخصصی و کاتالوگ‌محور طراحی شده است؛ جایی که
-            ساختار داده، جستجو، معماری اختصاصی و قابلیت توسعه اهمیت بیشتری از
-            یک قالب فروشگاهی عمومی دارند.
+            ساختار داده، جستجو، معماری اختصاصی و قابلیت توسعه اهمیت بیشتری از یک
+            قالب فروشگاهی عمومی دارند.
           </p>
 
           <div class="case-scope">
@@ -217,22 +233,32 @@ usePageSeo({
             <article>
               <small>Architecture</small>
               <strong>پایه فنی اختصاصی</strong>
-              <p>ساختار محصول برای نیاز بازار تخصصی، نه محدودیت یک قالب آماده.</p>
+              <p>
+                ساختار محصول برای نیاز بازار تخصصی، نه محدودیت یک قالب آماده.
+              </p>
             </article>
             <article>
               <small>Catalog</small>
               <strong>داده و دسته‌بندی تخصصی</strong>
-              <p>مدیریت اطلاعات محصول و ساختاری که برای توسعه کاتالوگ آماده بماند.</p>
+              <p>
+                مدیریت اطلاعات محصول و ساختاری که برای توسعه کاتالوگ آماده
+                بماند.
+              </p>
             </article>
             <article>
               <small>Discovery</small>
               <strong>جستجو و پیدا کردن قطعه</strong>
-              <p>تمرکز روی بازیابی دقیق‌تر اطلاعات در محصولی که تنوع داده بالاست.</p>
+              <p>
+                تمرکز روی بازیابی دقیق‌تر اطلاعات در محصولی که تنوع داده بالاست.
+              </p>
             </article>
             <article>
               <small>Evolution</small>
               <strong>قابل گسترش برای قابلیت‌های بعدی</strong>
-              <p>معماری مرحله‌ای برای اضافه‌شدن عملیات، داده و قابلیت‌های هوشمند آینده.</p>
+              <p>
+                معماری مرحله‌ای برای اضافه‌شدن عملیات، داده و قابلیت‌های هوشمند
+                آینده.
+              </p>
             </article>
           </div>
         </div>
@@ -261,7 +287,9 @@ usePageSeo({
       <div class="container capability-layout">
         <div class="capability-copy">
           <span class="section-badge">آنچه این پروژه‌ها نشان می‌دهند</span>
-          <h2>از یک بازار زیبایی تا یک بازار صنعتی، هسته مهندسی محصول یکی است</h2>
+          <h2>
+            از یک بازار زیبایی تا یک بازار صنعتی، هسته مهندسی محصول یکی است
+          </h2>
           <p>
             نیاز کسب‌وکار را به معماری، تجربه کاربری، داده و قابلیت قابل استفاده
             تبدیل می‌کنیم. فناوری بر اساس مسئله انتخاب می‌شود، نه برعکس.
@@ -272,9 +300,13 @@ usePageSeo({
           <article><span>AI</span><strong>هوش مصنوعی کاربردی</strong></article>
           <article><span>SEARCH</span><strong>جستجوی هوشمند</strong></article>
           <article><span>SEO</span><strong>سئوی اتومات و فنی</strong></article>
-          <article><span>DATA</span><strong>مدیریت و ورود داده</strong></article>
+          <article>
+            <span>DATA</span><strong>مدیریت و ورود داده</strong>
+          </article>
           <article><span>BUILD</span><strong>توسعه اختصاصی</strong></article>
-          <article><span>GROW</span><strong>پشتیبانی و توسعه مستمر</strong></article>
+          <article>
+            <span>GROW</span><strong>پشتیبانی و توسعه مستمر</strong>
+          </article>
         </div>
       </div>
     </section>
@@ -301,7 +333,11 @@ usePageSeo({
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 82% 8%, rgba(184, 107, 53, 0.09), transparent 24%),
+    radial-gradient(
+      circle at 82% 8%,
+      rgba(184, 107, 53, 0.09),
+      transparent 24%
+    ),
     linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 42%);
   pointer-events: none;
 }
@@ -319,8 +355,16 @@ usePageSeo({
   border: 1px solid rgba(226, 211, 199, 0.92);
   border-radius: 32px;
   background:
-    radial-gradient(circle at 84% 18%, rgba(184, 107, 53, 0.12), transparent 26%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(255, 249, 245, 0.95));
+    radial-gradient(
+      circle at 84% 18%,
+      rgba(184, 107, 53, 0.12),
+      transparent 26%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(255, 249, 245, 0.95)
+    );
   box-shadow:
     0 24px 58px rgba(16, 28, 50, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -561,13 +605,21 @@ usePageSeo({
 
 .case-shidaneh {
   background:
-    radial-gradient(circle at 12% 10%, rgba(205, 126, 81, 0.08), transparent 24%),
+    radial-gradient(
+      circle at 12% 10%,
+      rgba(205, 126, 81, 0.08),
+      transparent 24%
+    ),
     rgba(255, 255, 255, 0.58);
 }
 
 .case-hevix {
   background:
-    radial-gradient(circle at 88% 12%, rgba(87, 126, 164, 0.09), transparent 26%),
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(87, 126, 164, 0.09),
+      transparent 26%
+    ),
     #fcf8f4;
 }
 

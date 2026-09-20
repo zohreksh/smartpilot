@@ -4,7 +4,7 @@ import { ref } from "vue";
 const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
+  isMenuOpen.valueSmartPilotOpen.value;
 };
 
 const closeMenu = () => {
@@ -15,7 +15,12 @@ const closeMenu = () => {
 <template>
   <header class="site-header" @keydown.esc="closeMenu">
     <div class="container premium-header">
-      <NuxtLink class="brand-mark" to="/" aria-label="NexaStudio - صفحه اصلی" @click="closeMenu">
+      <NuxtLink
+        class="brand-mark"
+        to="/"
+        aria-label="SmartPilot - صفحه اصلی"
+        @click="closeMenu"
+      >
         <span class="brand-symbol" aria-hidden="true">
           <svg viewBox="0 0 40 40" fill="none">
             <path d="M10.5 28.5V11.5L20 22l9.5-10.5v17" />
@@ -23,7 +28,7 @@ const closeMenu = () => {
           </svg>
         </span>
         <span class="brand-copy">
-          <strong>NexaStudio</strong>
+          <strong>SmartPilot</strong>
           <small>Digital Product Studio</small>
         </span>
       </NuxtLink>
@@ -62,7 +67,6 @@ const closeMenu = () => {
         <NuxtLink to="/projects" @click="closeMenu">نمونه کارها</NuxtLink>
         <NuxtLink to="/about" @click="closeMenu">درباره ما</NuxtLink>
         <NuxtLink to="/contact" @click="closeMenu">تماس با ما</NuxtLink>
-
       </nav>
     </div>
   </header>
@@ -91,8 +95,11 @@ const closeMenu = () => {
   padding: 8px 10px 8px 12px;
   border: 1px solid rgba(226, 211, 199, 0.88);
   border-radius: 22px;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(255, 250, 246, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.94),
+    rgba(255, 250, 246, 0.9)
+  );
   box-shadow:
     0 14px 40px rgba(16, 28, 50, 0.07),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -115,8 +122,7 @@ const closeMenu = () => {
   height: 46px;
   border: 1px solid rgba(184, 107, 53, 0.3);
   border-radius: 15px;
-  background:
-    linear-gradient(145deg, #fffaf6 0%, #f5e4d7 100%);
+  background: linear-gradient(145deg, #fffaf6 0%, #f5e4d7 100%);
   color: #9e542d;
   box-shadow:
     0 8px 20px rgba(155, 84, 45, 0.1),
@@ -304,7 +310,6 @@ const closeMenu = () => {
     background: #fff2e9;
     color: #9b542d;
   }
-
 }
 
 @media (max-width: 430px) {
@@ -320,6 +325,5 @@ const closeMenu = () => {
   .mobile-nav {
     grid-template-columns: 1fr;
   }
-
 }
 </style>

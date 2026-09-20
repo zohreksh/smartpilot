@@ -9,7 +9,7 @@ const siteUrl = (configuredBase || requestBase).replace(/\/$/, "");
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "NexaStudio",
+  name: "SmartPilot",
   url: siteUrl,
   email: "zhr.keshavarz@gmail.com",
   telephone: "+989379407868",
@@ -38,7 +38,7 @@ const organizationSchema = {
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "NexaStudio",
+  name: "SmartPilot",
   url: siteUrl,
   inLanguage: "fa-IR",
 };
@@ -46,12 +46,12 @@ const webSiteSchema = {
 useHead({
   script: [
     {
-      key: "nexastudio-organization-schema",
+      key: "SmartPilot-organization-schema",
       type: "application/ld+json",
       innerHTML: JSON.stringify(organizationSchema),
     },
     {
-      key: "nexastudio-website-schema",
+      key: "SmartPilot-website-schema",
       type: "application/ld+json",
       innerHTML: JSON.stringify(webSiteSchema),
     },

@@ -2,9 +2,9 @@
 import { reactive, ref } from "vue";
 
 usePageSeo({
-  title: "تماس و شروع همکاری | NexaStudio",
+  title: "تماس و شروع همکاری | SmartPilot",
   description:
-    "برای طراحی و توسعه محصول دیجیتال، سامانه اختصاصی، هوش مصنوعی، جستجوی هوشمند، سئو یا توسعه محصول موجود با NexaStudio تماس بگیرید.",
+    "برای طراحی و توسعه محصول دیجیتال، سامانه اختصاصی، هوش مصنوعی، جستجوی هوشمند، سئو یا توسعه محصول موجود با SmartPilot تماس بگیرید.",
   path: "/contact",
   image: "/images/hero/contact-hero.jpg",
 });
@@ -46,13 +46,11 @@ const recoverHeroImage = () => {
 
 const submitProjectBrief = () => {
   const lines = [
-    "سلام، برای بررسی یک پروژه با NexaStudio پیام می‌دهم.",
+    "سلام، برای بررسی یک پروژه با SmartPilot پیام می‌دهم.",
     "",
     `نام: ${projectBrief.fullName}`,
     `راه ارتباطی: ${projectBrief.contactWay}`,
-    projectBrief.businessName
-      ? `کسب‌وکار: ${projectBrief.businessName}`
-      : null,
+    projectBrief.businessName ? `کسب‌وکار: ${projectBrief.businessName}` : null,
     `موضوع پروژه: ${projectBrief.projectType}`,
     "",
     "شرح مسئله / هدف:",
@@ -71,9 +69,9 @@ const submitProjectBrief = () => {
 
 <template>
   <main id="main-content" class="contact-page" tabindex="-1">
-<section class="contact-hero">
+    <section class="contact-hero">
       <h1 class="sr-only">
-        شروع همکاری با NexaStudio برای طراحی و توسعه محصول دیجیتال
+        شروع همکاری با SmartPilot برای طراحی و توسعه محصول دیجیتال
       </h1>
       <img
         :src="heroSrc"
@@ -87,19 +85,27 @@ const submitProjectBrief = () => {
       />
     </section>
 
-    <section class="contact-channels-section" aria-labelledby="contact-channels-title">
+    <section
+      class="contact-channels-section"
+      aria-labelledby="contact-channels-title"
+    >
       <div class="container">
         <div class="contact-channels-heading">
           <span class="section-badge">راه‌های ارتباطی</span>
           <h2 id="contact-channels-title">مستقیم با ما در ارتباط باشید</h2>
-          <p>برای شروع گفتگو می‌توانید تماس بگیرید، در واتساپ پیام بدهید یا ایمیل ارسال کنید.</p>
+          <p>
+            برای شروع گفتگو می‌توانید تماس بگیرید، در واتساپ پیام بدهید یا ایمیل
+            ارسال کنید.
+          </p>
         </div>
 
         <div class="contact-channels-grid">
           <a class="contact-channel-card" href="tel:+989379407868">
             <span class="channel-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
-                <path d="M7.4 4.5 9.6 8c.3.5.2 1-.2 1.4l-1.2 1.2c1.2 2.4 2.8 4 5.2 5.2l1.2-1.2c.4-.4.9-.5 1.4-.2l3.5 2.2c.5.3.7.9.5 1.4-.5 1.3-1.7 2.2-3.1 2.2C10.3 20.2 3.8 13.7 3.8 7.1c0-1.4.9-2.6 2.2-3.1.5-.2 1.1 0 1.4.5Z" />
+                <path
+                  d="M7.4 4.5 9.6 8c.3.5.2 1-.2 1.4l-1.2 1.2c1.2 2.4 2.8 4 5.2 5.2l1.2-1.2c.4-.4.9-.5 1.4-.2l3.5 2.2c.5.3.7.9.5 1.4-.5 1.3-1.7 2.2-3.1 2.2C10.3 20.2 3.8 13.7 3.8 7.1c0-1.4.9-2.6 2.2-3.1.5-.2 1.1 0 1.4.5Z"
+                />
               </svg>
             </span>
             <span class="channel-copy">
@@ -118,8 +124,12 @@ const submitProjectBrief = () => {
           >
             <span class="channel-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
-                <path d="M20 11.7A8 8 0 0 1 8.2 18.8L4 20l1.2-4.1A8 8 0 1 1 20 11.7Z" />
-                <path d="M8.2 8.3c.5 2.8 2.7 5 5.5 5.5M8.3 8.2l1.4 2-1 1.1M13.7 13.8l-2-1.4-1.1 1" />
+                <path
+                  d="M20 11.7A8 8 0 0 1 8.2 18.8L4 20l1.2-4.1A8 8 0 1 1 20 11.7Z"
+                />
+                <path
+                  d="M8.2 8.3c.5 2.8 2.7 5 5.5 5.5M8.3 8.2l1.4 2-1 1.1M13.7 13.8l-2-1.4-1.1 1"
+                />
               </svg>
             </span>
             <span class="channel-copy">
@@ -130,10 +140,7 @@ const submitProjectBrief = () => {
             <span class="channel-action" aria-hidden="true">←</span>
           </a>
 
-          <a
-            class="contact-channel-card"
-            href="mailto:zhr.keshavarz@gmail.com"
-          >
+          <a class="contact-channel-card" href="mailto:zhr.keshavarz@gmail.com">
             <span class="channel-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" />
@@ -163,7 +170,11 @@ const submitProjectBrief = () => {
         </div>
 
         <div class="brief-layout">
-          <form class="project-form" aria-describedby="form-status" @submit.prevent="submitProjectBrief">
+          <form
+            class="project-form"
+            aria-describedby="form-status"
+            @submit.prevent="submitProjectBrief"
+          >
             <div class="form-row">
               <div class="field-group">
                 <label for="full-name">نام و نام خانوادگی</label>
@@ -206,7 +217,12 @@ const submitProjectBrief = () => {
 
               <div class="field-group">
                 <label for="project-type">موضوع پروژه</label>
-                <select id="project-type" v-model="projectBrief.projectType" name="project-type" required>
+                <select
+                  id="project-type"
+                  v-model="projectBrief.projectType"
+                  name="project-type"
+                  required
+                >
                   <option value="">انتخاب کنید</option>
                   <option>طراحی سایت یا فروشگاه</option>
                   <option>توسعه سامانه اختصاصی</option>
@@ -232,11 +248,10 @@ const submitProjectBrief = () => {
             </div>
 
             <div class="form-footer">
-              <button type="submit">
-                ارسال در واتساپ
-              </button>
+              <button type="submit">ارسال در واتساپ</button>
               <p id="form-status">
-                اطلاعات فرم در سایت ذخیره نمی‌شود؛ با ارسال، پیام آماده‌شده در واتساپ باز می‌شود.
+                اطلاعات فرم در سایت ذخیره نمی‌شود؛ با ارسال، پیام آماده‌شده در
+                واتساپ باز می‌شود.
               </p>
             </div>
           </form>
@@ -270,7 +285,9 @@ const submitProjectBrief = () => {
               </li>
               <li>
                 <strong>محدودیت مهم</strong>
-                <span>زمان، سیستم موجود، داده، بودجه یا وابستگی خاصی دارید؟</span>
+                <span
+                  >زمان، سیستم موجود، داده، بودجه یا وابستگی خاصی دارید؟</span
+                >
               </li>
             </ul>
 
@@ -321,8 +338,12 @@ const submitProjectBrief = () => {
           <article class="fit-card">
             <div class="line-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 3l1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Z" />
-                <path d="m18 14 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14Z" />
+                <path
+                  d="M12 3l1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Z"
+                />
+                <path
+                  d="m18 14 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14Z"
+                />
               </svg>
             </div>
             <h3>می‌خواهید AI را کاربردی وارد محصول کنید</h3>
@@ -392,7 +413,6 @@ const submitProjectBrief = () => {
         </ol>
       </div>
     </section>
-
   </main>
 </template>
 
@@ -457,7 +477,10 @@ const submitProjectBrief = () => {
   border-radius: 20px;
   background: var(--surface);
   box-shadow: 0 12px 32px rgba(16, 28, 50, 0.045);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 a.contact-channel-card:hover {
@@ -537,7 +560,6 @@ a.contact-channel-card:hover {
   font-size: 15.5px;
   font-weight: 700;
 }
-
 
 .project-brief-section,
 .fit-section,
@@ -625,7 +647,9 @@ a.contact-channel-card:hover {
   font: inherit;
   font-size: 14.5px;
   line-height: 1.7;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .field-group input,
@@ -870,7 +894,6 @@ a.contact-channel-card:hover {
   line-height: 1.85;
 }
 
-
 @media (max-width: 1080px) {
   .brief-layout {
     grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
@@ -1032,7 +1055,5 @@ a.contact-channel-card:hover {
   .step-item h3 {
     margin: 2px 0 5px;
   }
-
 }
-
 </style>

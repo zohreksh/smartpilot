@@ -6,7 +6,11 @@
     <div class="container footer-shell">
       <div class="footer-main">
         <div class="footer-brand-column">
-          <NuxtLink class="footer-brand" to="/" aria-label="NexaStudio - صفحه اصلی">
+          <NuxtLink
+            class="footer-brand"
+            to="/"
+            aria-label="SmartPilot - صفحه اصلی"
+          >
             <span class="footer-brand-symbol" aria-hidden="true">
               <svg viewBox="0 0 40 40" fill="none">
                 <path d="M10.5 28.5V11.5L20 22l9.5-10.5v17" />
@@ -15,7 +19,7 @@
             </span>
 
             <span class="footer-brand-text">
-              <strong>NexaStudio</strong>
+              <strong>SmartPilot</strong>
               <small>Digital Product Studio</small>
             </span>
           </NuxtLink>
@@ -29,11 +33,18 @@
             <a
               class="footer-icon-action"
               href="tel:+989379407868"
-              aria-label="تماس تلفنی با NexaStudio"
+              aria-label="تماس تلفنی با SmartPilot"
               title="تماس تلفنی"
             >
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M8.2 3.5 6.4 4.1a2 2 0 0 0-1.3 2.3c1.1 6.1 5.9 10.9 12 12a2 2 0 0 0 2.3-1.3l.6-1.8a1.5 1.5 0 0 0-.8-1.8l-2.6-1.2a1.5 1.5 0 0 0-1.8.4l-1.1 1.3a12.2 12.2 0 0 1-3.8-3.8l1.3-1.1a1.5 1.5 0 0 0 .4-1.8L10 4.3a1.5 1.5 0 0 0-1.8-.8Z" />
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8.2 3.5 6.4 4.1a2 2 0 0 0-1.3 2.3c1.1 6.1 5.9 10.9 12 12a2 2 0 0 0 2.3-1.3l.6-1.8a1.5 1.5 0 0 0-.8-1.8l-2.6-1.2a1.5 1.5 0 0 0-1.8.4l-1.1 1.3a12.2 12.2 0 0 1-3.8-3.8l1.3-1.1a1.5 1.5 0 0 0 .4-1.8L10 4.3a1.5 1.5 0 0 0-1.8-.8Z"
+                />
               </svg>
             </a>
 
@@ -45,24 +56,37 @@
               aria-label="ارسال پیام در واتساپ"
               title="واتساپ"
             >
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z" />
-                <path d="M8.7 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 1.9 2.6 2.5.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.6.6-1.5.8-2.4.6-1-.2-2.3-.7-3.9-2.1-1.4-1.2-2.3-2.7-2.6-3.7-.3-.9 0-2 .3-2.5l.8-1.6Z" />
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"
+                />
+                <path
+                  d="M8.7 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 1.9 2.6 2.5.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.6.6-1.5.8-2.4.6-1-.2-2.3-.7-3.9-2.1-1.4-1.2-2.3-2.7-2.6-3.7-.3-.9 0-2 .3-2.5l.8-1.6Z"
+                />
               </svg>
             </a>
 
             <a
               class="footer-icon-action"
               href="mailto:zhr.keshavarz@gmail.com"
-              aria-label="ارسال ایمیل به NexaStudio"
+              aria-label="ارسال ایمیل به SmartPilot"
               title="ایمیل"
             >
-              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg
+                class="contact-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
                 <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" />
                 <path d="m5 7 7 5.2L19 7" />
               </svg>
             </a>
-
           </div>
         </div>
 
@@ -88,7 +112,7 @@
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 NexaStudio</span>
+        <span>© 2026 SmartPilot</span>
         <span class="footer-bottom-dot" aria-hidden="true"></span>
         <span>محصول دیجیتال، مهندسی‌شده برای رشد</span>
       </div>
@@ -103,8 +127,16 @@
   width: 100%;
   padding: 54px 0 24px;
   background:
-    radial-gradient(circle at 88% 8%, rgba(184, 107, 53, 0.17), transparent 29%),
-    radial-gradient(circle at 8% 100%, rgba(74, 95, 128, 0.11), transparent 30%),
+    radial-gradient(
+      circle at 88% 8%,
+      rgba(184, 107, 53, 0.17),
+      transparent 29%
+    ),
+    radial-gradient(
+      circle at 8% 100%,
+      rgba(74, 95, 128, 0.11),
+      transparent 30%
+    ),
     linear-gradient(155deg, #07111f 0%, #0a1828 54%, #07131f 100%);
   color: #fff;
   direction: rtl;
@@ -240,7 +272,6 @@
   background: rgba(221, 161, 115, 0.1);
   color: #fff;
 }
-
 
 .contact-icon {
   width: 20px;

@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
-      NUXT_PUBLIC_SITE_URL: https://nexastudio.example.invalid
+      NUXT_PUBLIC_SITE_URL: https://SmartPilot.example.invalid
 
     steps:
       - name: Checkout

@@ -2,9 +2,9 @@
 import { ref } from "vue";
 
 usePageSeo({
-  title: "توسعه هوش مصنوعی و خدمات محصول دیجیتال | NexaStudio",
+  title: "توسعه هوش مصنوعی و خدمات محصول دیجیتال | SmartPilot",
   description:
-    "توسعه هوش مصنوعی، جستجوی هوشمند، Agent، سئوی اتومات، سامانه‌های اختصاصی، فروشگاه اینترنتی، تحلیل داده و پشتیبانی مستمر توسط NexaStudio.",
+    "توسعه هوش مصنوعی، جستجوی هوشمند، Agent، سئوی اتومات، سامانه‌های اختصاصی، فروشگاه اینترنتی، تحلیل داده و پشتیبانی مستمر توسط SmartPilot.",
   path: "/services",
   image: "/images/projects/shidane1.webp",
 });
@@ -46,7 +46,7 @@ const recoverProofImage = (image) => {
 
 <template>
   <main id="main-content" class="services-page" tabindex="-1">
-<section class="services-hero">
+    <section class="services-hero">
       <div class="container hero-layout">
         <div class="hero-copy">
           <span class="hero-eyebrow">AI-first Digital Product Studio</span>
@@ -64,7 +64,9 @@ const recoverProofImage = (image) => {
 
           <div class="hero-actions">
             <a class="primary-action" href="#ai-services">خدمات هوش مصنوعی</a>
-            <NuxtLink class="secondary-action" to="/contact">بررسی پروژه شما</NuxtLink>
+            <NuxtLink class="secondary-action" to="/contact"
+              >بررسی پروژه شما</NuxtLink
+            >
           </div>
 
           <div class="hero-meta" role="group" aria-label="ویژگی‌های همکاری">
@@ -76,7 +78,10 @@ const recoverProofImage = (image) => {
           </div>
         </div>
 
-        <div class="ai-visual" aria-label="نمودار حوزه‌های اصلی توسعه هوش مصنوعی">
+        <div
+          class="ai-visual"
+          aria-label="نمودار حوزه‌های اصلی توسعه هوش مصنوعی"
+        >
           <div class="ai-diagram">
             <svg class="diagram-links" viewBox="0 0 420 340" aria-hidden="true">
               <line x1="210" y1="170" x2="315" y2="76" />
@@ -86,7 +91,7 @@ const recoverProofImage = (image) => {
             </svg>
 
             <div class="ai-core">
-              <span>Nexa AI</span>
+              <span>SmartPilot AI</span>
               <strong>Intelligence</strong>
               <small>Product Layer</small>
             </div>
@@ -125,7 +130,8 @@ const recoverProofImage = (image) => {
           </div>
 
           <p class="ai-diagram-caption">
-            یک لایه هوشمندی مشترک که به داده، جستجو، عملیات و تجربه کاربر متصل می‌شود.
+            یک لایه هوشمندی مشترک که به داده، جستجو، عملیات و تجربه کاربر متصل
+            می‌شود.
           </p>
         </div>
       </div>
@@ -134,7 +140,7 @@ const recoverProofImage = (image) => {
     <section id="ai-services" class="ai-services-section">
       <div class="container">
         <div class="section-heading ai-heading">
-          <span class="section-badge">اولویت اول NexaStudio</span>
+          <span class="section-badge">اولویت اول SmartPilot</span>
           <h2>توسعه هوش مصنوعی متصل به محصول، داده و عملیات واقعی</h2>
           <p>
             هدف ما اضافه‌کردن یک چت‌بات تزئینی نیست. AI باید زمان، هزینه یا
@@ -225,8 +231,8 @@ const recoverProofImage = (image) => {
           <span class="section-badge">همه خدمات</span>
           <h2>از AI تا ساخت، راه‌اندازی و رشد محصول</h2>
           <p>
-            خدمات می‌توانند مستقل انتخاب شوند یا در قالب یک مسیر یکپارچه کنار
-            هم قرار بگیرند. چیزی را که برای پروژه لازم نیست، تحمیل نمی‌کنیم.
+            خدمات می‌توانند مستقل انتخاب شوند یا در قالب یک مسیر یکپارچه کنار هم
+            قرار بگیرند. چیزی را که برای پروژه لازم نیست، تحمیل نمی‌کنیم.
           </p>
         </div>
 
@@ -370,9 +376,9 @@ const recoverProofImage = (image) => {
             </div>
             <div class="service-body">
               <p>
-                سرویس‌ها و سیستم‌های پراکنده را به هم متصل می‌کنیم، ورود
-                اطلاعات تکراری را کم می‌کنیم و فرآیندهای دستی را به Workflow
-                قابل کنترل تبدیل می‌کنیم.
+                سرویس‌ها و سیستم‌های پراکنده را به هم متصل می‌کنیم، ورود اطلاعات
+                تکراری را کم می‌کنیم و فرآیندهای دستی را به Workflow قابل کنترل
+                تبدیل می‌کنیم.
               </p>
               <div class="service-tags">
                 <span>API Integration</span>
@@ -494,11 +500,11 @@ const recoverProofImage = (image) => {
           <h2>خدماتی که ارائه می‌دهیم، در محصول واقعی تجربه شده‌اند</h2>
           <p>
             شیدانه و هویکس فقط نمونه‌کار بصری نیستند. تجربه معماری، جستجوی
-            هوشمند، SEO، کاتالوگ، گزارشات، عملیات و توسعه مستمر این محصولات،
-            پشت تصمیم‌های فنی ما قرار دارد.
+            هوشمند، SEO، کاتالوگ، گزارشات، عملیات و توسعه مستمر این محصولات، پشت
+            تصمیم‌های فنی ما قرار دارد.
           </p>
           <NuxtLink class="text-link" to="/about">
-            بیشتر درباره NexaStudio ←
+            بیشتر درباره SmartPilot ←
           </NuxtLink>
         </div>
 
@@ -547,8 +553,7 @@ const recoverProofImage = (image) => {
   min-height: 100vh;
   overflow-x: clip;
   direction: rtl;
-  background:
-    linear-gradient(180deg, #fcf8f4 0%, #fffdfa 48%, #fcf8f4 100%);
+  background: linear-gradient(180deg, #fcf8f4 0%, #fffdfa 48%, #fcf8f4 100%);
   color: var(--text);
 }
 
@@ -563,8 +568,16 @@ const recoverProofImage = (image) => {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 82% 20%, rgba(184, 107, 53, 0.16), transparent 27%),
-    radial-gradient(circle at 70% 72%, rgba(223, 170, 128, 0.12), transparent 24%),
+    radial-gradient(
+      circle at 82% 20%,
+      rgba(184, 107, 53, 0.16),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 70% 72%,
+      rgba(223, 170, 128, 0.12),
+      transparent 24%
+    ),
     radial-gradient(circle at 11% 18%, rgba(71, 93, 126, 0.07), transparent 25%);
   pointer-events: none;
 }
@@ -595,8 +608,16 @@ const recoverProofImage = (image) => {
   border: 1px solid rgba(226, 211, 199, 0.92);
   border-radius: 32px;
   background:
-    radial-gradient(circle at 84% 18%, rgba(184, 107, 53, 0.12), transparent 27%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(255, 249, 245, 0.95));
+    radial-gradient(
+      circle at 84% 18%,
+      rgba(184, 107, 53, 0.12),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(255, 249, 245, 0.95)
+    );
   box-shadow:
     0 24px 58px rgba(16, 28, 50, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -665,7 +686,9 @@ const recoverProofImage = (image) => {
   border-radius: 999px;
   font-size: 15.5px;
   font-weight: 800;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .primary-action {
@@ -744,8 +767,12 @@ const recoverProofImage = (image) => {
   justify-content: center;
   border: 1px solid rgba(184, 107, 53, 0.3);
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 35% 28%, #fff, #fff7f1 62%, #f2dfd1 100%);
+  background: radial-gradient(
+    circle at 35% 28%,
+    #fff,
+    #fff7f1 62%,
+    #f2dfd1 100%
+  );
   box-shadow:
     0 18px 42px rgba(16, 28, 50, 0.09),
     0 0 0 10px rgba(255, 255, 255, 0.34);
@@ -859,7 +886,11 @@ const recoverProofImage = (image) => {
   border-top: 1px solid rgba(234, 223, 215, 0.72);
   border-bottom: 1px solid rgba(234, 223, 215, 0.72);
   background:
-    radial-gradient(circle at 86% 12%, rgba(202, 126, 72, 0.07), transparent 24%),
+    radial-gradient(
+      circle at 86% 12%,
+      rgba(202, 126, 72, 0.07),
+      transparent 24%
+    ),
     linear-gradient(180deg, #fffefd 0%, #fff8f2 100%);
   scroll-margin-top: 110px;
 }
@@ -947,7 +978,11 @@ const recoverProofImage = (image) => {
   padding: 31px;
   border-color: rgba(184, 107, 53, 0.36);
   background:
-    radial-gradient(circle at 88% 8%, rgba(184, 107, 53, 0.13), transparent 28%),
+    radial-gradient(
+      circle at 88% 8%,
+      rgba(184, 107, 53, 0.13),
+      transparent 28%
+    ),
     linear-gradient(145deg, #fff, #fff9f4);
   box-shadow: 0 20px 44px rgba(184, 107, 53, 0.07);
 }
@@ -1053,7 +1088,11 @@ const recoverProofImage = (image) => {
 .all-services-section {
   padding: 90px 0;
   background:
-    radial-gradient(circle at 10% 15%, rgba(101, 131, 161, 0.06), transparent 22%),
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(101, 131, 161, 0.06),
+      transparent 22%
+    ),
     #fcf8f4;
   scroll-margin-top: 110px;
 }
@@ -1106,26 +1145,27 @@ const recoverProofImage = (image) => {
 .service-ai-card {
   border-color: rgba(184, 107, 53, 0.34);
   background:
-    radial-gradient(circle at 92% 12%, rgba(184, 107, 53, 0.12), transparent 25%),
+    radial-gradient(
+      circle at 92% 12%,
+      rgba(184, 107, 53, 0.12),
+      transparent 25%
+    ),
     linear-gradient(135deg, #fffaf6, #fff);
   box-shadow: 0 18px 42px rgba(184, 107, 53, 0.07);
 }
 
 .service-seo-card {
-  background:
-    linear-gradient(145deg, #fff, #f5faf7);
+  background: linear-gradient(145deg, #fff, #f5faf7);
   border-color: rgba(111, 148, 123, 0.26);
 }
 
 .service-data-card {
-  background:
-    linear-gradient(145deg, #fff, #f7f5fb);
+  background: linear-gradient(145deg, #fff, #f7f5fb);
   border-color: rgba(138, 122, 168, 0.22);
 }
 
 .service-report-card {
-  background:
-    linear-gradient(145deg, #fff, #f5f8fb);
+  background: linear-gradient(145deg, #fff, #f5f8fb);
   border-color: rgba(112, 136, 164, 0.22);
 }
 
@@ -1201,7 +1241,11 @@ const recoverProofImage = (image) => {
   border-top: 1px solid rgba(234, 223, 215, 0.72);
   border-bottom: 1px solid rgba(234, 223, 215, 0.72);
   background:
-    radial-gradient(circle at 84% 20%, rgba(184, 107, 53, 0.07), transparent 26%),
+    radial-gradient(
+      circle at 84% 20%,
+      rgba(184, 107, 53, 0.07),
+      transparent 26%
+    ),
     rgba(255, 255, 255, 0.68);
 }
 
@@ -1307,8 +1351,7 @@ const recoverProofImage = (image) => {
 
 .process-section {
   padding: 88px 0;
-  background:
-    linear-gradient(180deg, #fcf8f4 0%, #fffdfb 100%);
+  background: linear-gradient(180deg, #fcf8f4 0%, #fffdfb 100%);
 }
 
 .process-list {
@@ -1328,7 +1371,13 @@ const recoverProofImage = (image) => {
   right: 9%;
   left: 9%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #dac8bb 16%, #dac8bb 84%, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #dac8bb 16%,
+    #dac8bb 84%,
+    transparent
+  );
 }
 
 .process-list li {
@@ -1387,7 +1436,11 @@ const recoverProofImage = (image) => {
   padding: 90px 0 100px;
   border-top: 1px solid rgba(234, 223, 215, 0.72);
   background:
-    radial-gradient(circle at 14% 15%, rgba(112, 136, 164, 0.07), transparent 24%),
+    radial-gradient(
+      circle at 14% 15%,
+      rgba(112, 136, 164, 0.07),
+      transparent 24%
+    ),
     rgba(255, 255, 255, 0.62);
 }
 

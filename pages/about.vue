@@ -1,8 +1,8 @@
 <script setup lang="ts">
 usePageSeo({
-  title: "درباره NexaStudio | تیم معماری و توسعه محصول دیجیتال",
+  title: "درباره SmartPilot | تیم معماری و توسعه محصول دیجیتال",
   description:
-    "درباره NexaStudio، رویکرد ما به معماری و توسعه محصول، تجربه ساخت شیدانه و HEVIX و تیمی که مسئولیت فنی و کیفیت محصول را مستقیم هدایت می‌کند.",
+    "درباره SmartPilot، رویکرد ما به معماری و توسعه محصول، تجربه ساخت شیدانه و HEVIX و تیمی که مسئولیت فنی و کیفیت محصول را مستقیم هدایت می‌کند.",
   path: "/about",
   image: "/images/projects/shidane.webp",
 });
@@ -10,26 +10,34 @@ usePageSeo({
 
 <template>
   <main id="main-content" class="about-page" tabindex="-1">
-<section class="about-hero">
+    <section class="about-hero">
       <div class="container about-hero-inner">
         <div class="about-content">
-          <span class="about-badge">درباره NexaStudio</span>
+          <span class="about-badge">درباره SmartPilot</span>
           <h1>
             ما محصولات دیجیتال می‌سازیم؛
             <strong>از ایده تا محصول واقعی</strong>
           </h1>
           <p class="about-lead">
-            NexaStudio یک استودیوی مهندسی محصول است. از معماری و توسعه تا هوش
+            SmartPilot یک استودیوی مهندسی محصول است. از معماری و توسعه تا هوش
             مصنوعی، جستجوی هوشمند، سئو و رشد محصول، راهکارهایی می‌سازیم که در
             دنیای واقعی استفاده شوند و قابل توسعه باقی بمانند.
           </p>
 
           <div class="hero-actions">
-            <a class="primary-action" href="#about-projects">مشاهده محصولات ما</a>
-            <NuxtLink class="secondary-action" to="/contact">شروع همکاری</NuxtLink>
+            <a class="primary-action" href="#about-projects"
+              >مشاهده محصولات ما</a
+            >
+            <NuxtLink class="secondary-action" to="/contact"
+              >شروع همکاری</NuxtLink
+            >
           </div>
 
-          <div class="hero-proof" role="group" aria-label="محصولات ساخته‌شده توسط NexaStudio">
+          <div
+            class="hero-proof"
+            role="group"
+            aria-label="محصولات ساخته‌شده توسط SmartPilot"
+          >
             <span>محصولات واقعی</span>
             <strong>شیدانه</strong>
             <i aria-hidden="true"></i>
@@ -41,14 +49,27 @@ usePageSeo({
           <div class="visual-glow visual-glow-one" aria-hidden="true"></div>
           <div class="visual-glow visual-glow-two" aria-hidden="true"></div>
           <figure class="product-preview preview-primary">
-            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" width="1659" height="948" loading="eager" fetchpriority="high" />
+            <img
+              src="/images/projects/shidane1.webp"
+              alt="پیش‌نمایش محصول شیدانه"
+              width="1659"
+              height="948"
+              loading="eager"
+              fetchpriority="high"
+            />
             <figcaption>
               <strong>شیدانه</strong>
               <span>فروشگاه و پلتفرم هوشمند زیبایی</span>
             </figcaption>
           </figure>
           <figure class="product-preview preview-secondary">
-            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" width="1659" height="948" loading="eager" />
+            <img
+              src="/images/projects/hevix1.webp"
+              alt="پیش‌نمایش محصول هویکس"
+              width="1659"
+              height="948"
+              loading="eager"
+            />
             <figcaption>
               <strong>HEVIX</strong>
               <span>پلتفرم تخصصی قطعات و تجهیزات</span>
@@ -72,23 +93,42 @@ usePageSeo({
         <div class="proof-grid">
           <article class="proof-card">
             <div class="proof-image">
-              <img src="/images/projects/shidane.webp" alt="نمای پروژه شیدانه" width="1659" height="948" loading="lazy" decoding="async" />
+              <img
+                src="/images/projects/shidane.webp"
+                alt="نمای پروژه شیدانه"
+                width="1659"
+                height="948"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="proof-copy">
               <span>Shidaneh</span>
               <h3>فروشگاه و پلتفرم هوشمند زیبایی</h3>
-              <p>تجربه واقعی ساخت محصول، تجارت الکترونیک، سئو و قابلیت‌های هوشمند.</p>
+              <p>
+                تجربه واقعی ساخت محصول، تجارت الکترونیک، سئو و قابلیت‌های
+                هوشمند.
+              </p>
             </div>
           </article>
 
           <article class="proof-card">
             <div class="proof-image">
-              <img src="/images/projects/hevix.webp" alt="نمای پروژه هویکس" width="1659" height="948" loading="lazy" decoding="async" />
+              <img
+                src="/images/projects/hevix.webp"
+                alt="نمای پروژه هویکس"
+                width="1659"
+                height="948"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="proof-copy">
               <span>HEVIX</span>
               <h3>پلتفرم تخصصی قطعات و تجهیزات</h3>
-              <p>زیرساخت محصول، جستجو، داده و توسعه اختصاصی برای یک بازار تخصصی.</p>
+              <p>
+                زیرساخت محصول، جستجو، داده و توسعه اختصاصی برای یک بازار تخصصی.
+              </p>
             </div>
           </article>
         </div>
@@ -115,7 +155,10 @@ usePageSeo({
               </svg>
             </div>
             <h3>تفکر محصول</h3>
-            <p>قبل از نوشتن کد، مسئله کسب‌وکار و نیاز واقعی کاربر را روشن می‌کنیم.</p>
+            <p>
+              قبل از نوشتن کد، مسئله کسب‌وکار و نیاز واقعی کاربر را روشن
+              می‌کنیم.
+            </p>
           </article>
 
           <article class="thinking-card">
@@ -125,18 +168,28 @@ usePageSeo({
               </svg>
             </div>
             <h3>معماری مهندسی‌شده</h3>
-            <p>محصول را طوری طراحی می‌کنیم که توسعه آینده به بازسازی پرهزینه تبدیل نشود.</p>
+            <p>
+              محصول را طوری طراحی می‌کنیم که توسعه آینده به بازسازی پرهزینه
+              تبدیل نشود.
+            </p>
           </article>
 
           <article class="thinking-card">
             <div class="line-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 3l1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Z" />
-                <path d="m18 14 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14Z" />
+                <path
+                  d="M12 3l1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Z"
+                />
+                <path
+                  d="m18 14 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14Z"
+                />
               </svg>
             </div>
             <h3>هوشمندی کاربردی</h3>
-            <p>هوش مصنوعی را فقط جایی وارد محصول می‌کنیم که ارزش قابل لمس ایجاد کند.</p>
+            <p>
+              هوش مصنوعی را فقط جایی وارد محصول می‌کنیم که ارزش قابل لمس ایجاد
+              کند.
+            </p>
           </article>
 
           <article class="thinking-card">
@@ -147,7 +200,10 @@ usePageSeo({
               </svg>
             </div>
             <h3>رشد مستمر</h3>
-            <p>انتشار پایان کار نیست؛ داده، بازخورد و رفتار کاربر مسیر بعدی محصول را می‌سازند.</p>
+            <p>
+              انتشار پایان کار نیست؛ داده، بازخورد و رفتار کاربر مسیر بعدی محصول
+              را می‌سازند.
+            </p>
           </article>
         </div>
       </div>
@@ -156,7 +212,7 @@ usePageSeo({
     <section class="about-section founders-section">
       <div class="container">
         <div class="section-heading">
-          <span class="section-badge">سازندگان NexaStudio</span>
+          <span class="section-badge">سازندگان SmartPilot</span>
           <h2>مسئول معماری و کیفیت محصول، خودمان هستیم.</h2>
           <p>
             هسته معماری و توسعه را خودمان هدایت می‌کنیم و برای تخصص‌های مکمل،
@@ -167,16 +223,27 @@ usePageSeo({
         <div class="founders-grid">
           <article class="founder-card">
             <div class="founder-image">
-              <img src="/images/team/zohreh.webp" alt="زهره کشاورز" width="1140" height="1280" loading="lazy" decoding="async" />
+              <img
+                src="/images/team/zohreh.webp"
+                alt="زهره کشاورز"
+                width="1140"
+                height="1280"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="founder-content">
               <span class="founder-role">معمار محصول و توسعه‌دهنده</span>
               <h3>زهره کشاورز</h3>
               <p>
-                تمرکز بر تبدیل نیاز کسب‌وکار به تجربه کاربری، جریان محصول و
-                مسیر رشد قابل اجرا.
+                تمرکز بر تبدیل نیاز کسب‌وکار به تجربه کاربری، جریان محصول و مسیر
+                رشد قابل اجرا.
               </p>
-              <div class="skill-chips" role="group" aria-label="تخصص‌های زهره کشاورز">
+              <div
+                class="skill-chips"
+                role="group"
+                aria-label="تخصص‌های زهره کشاورز"
+              >
                 <span>معماری تجربه و جریان محصول</span>
                 <span>طراحی مسیر توسعه و اولویت‌بندی</span>
                 <span>رشد و بهینه‌سازی محصول</span>
@@ -195,16 +262,27 @@ usePageSeo({
 
           <article class="founder-card">
             <div class="founder-image">
-              <img src="/images/team/hossein.webp" alt="حسین کولانی" width="1080" height="1280" loading="lazy" decoding="async" />
+              <img
+                src="/images/team/hossein.webp"
+                alt="حسین کولانی"
+                width="1080"
+                height="1280"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="founder-content">
               <span class="founder-role">معمار نرم‌افزار و توسعه‌دهنده</span>
               <h3>حسین کولانی</h3>
               <p>
-                تمرکز بر معماری فنی، سامانه‌های اختصاصی و ادغام قابلیت‌های
-                هوش مصنوعی در محصول.
+                تمرکز بر معماری فنی، سامانه‌های اختصاصی و ادغام قابلیت‌های هوش
+                مصنوعی در محصول.
               </p>
-              <div class="skill-chips" role="group" aria-label="تخصص‌های حسین کولانی">
+              <div
+                class="skill-chips"
+                role="group"
+                aria-label="تخصص‌های حسین کولانی"
+              >
                 <span>معماری سامانه‌های توسعه‌پذیر</span>
                 <span>هوش مصنوعی و قابلیت‌های هوشمند</span>
                 <span>طراحی و توسعه سیستم‌های تخصصی</span>
@@ -225,18 +303,26 @@ usePageSeo({
         <div class="specialists-panel">
           <div class="line-icon specialists-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none">
-              <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM16.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
-              <path d="M3 19c.5-3.2 2.2-5 5-5s4.5 1.8 5 5M13 14.5c.8-1 1.9-1.5 3.5-1.5 2.5 0 4 1.6 4.5 4.5" />
+              <path
+                d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM16.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+              />
+              <path
+                d="M3 19c.5-3.2 2.2-5 5-5s4.5 1.8 5 5M13 14.5c.8-1 1.9-1.5 3.5-1.5 2.5 0 4 1.6 4.5 4.5"
+              />
             </svg>
           </div>
           <div class="specialists-copy">
             <h3>شبکه تخصص‌های مکمل</h3>
             <p>
-              برای هر پروژه، تخصص‌های مکمل فقط در جایی به تیم اضافه می‌شوند
-              که واقعاً لازم باشند.
+              برای هر پروژه، تخصص‌های مکمل فقط در جایی به تیم اضافه می‌شوند که
+              واقعاً لازم باشند.
             </p>
           </div>
-          <div class="specialist-chips" role="group" aria-label="تخصص‌های شبکه همکاران">
+          <div
+            class="specialist-chips"
+            role="group"
+            aria-label="تخصص‌های شبکه همکاران"
+          >
             <span>UI/UX</span>
             <span>Frontend</span>
             <span>Backend</span>
@@ -253,7 +339,9 @@ usePageSeo({
         <div class="section-heading">
           <span class="section-badge">فرآیند همکاری</span>
           <h2>از مسئله تا محصول</h2>
-          <p>مسیر همکاری روشن است و قبل از توسعه، تصمیم‌های اصلی مشخص می‌شوند.</p>
+          <p>
+            مسیر همکاری روشن است و قبل از توسعه، تصمیم‌های اصلی مشخص می‌شوند.
+          </p>
         </div>
 
         <ol class="process-list">
@@ -261,34 +349,45 @@ usePageSeo({
             <span class="process-number">01</span>
             <div>
               <h3>شناخت مسئله</h3>
-              <p>هدف کسب‌وکار، کاربران، محدودیت‌ها و ارزش مورد انتظار را مشخص می‌کنیم.</p>
+              <p>
+                هدف کسب‌وکار، کاربران، محدودیت‌ها و ارزش مورد انتظار را مشخص
+                می‌کنیم.
+              </p>
             </div>
           </li>
           <li class="process-item">
             <span class="process-number">02</span>
             <div>
               <h3>طراحی محصول و معماری</h3>
-              <p>مسیر محصول، تجربه کاربری و زیرساخت فنی را قبل از توسعه هم‌راستا می‌کنیم.</p>
+              <p>
+                مسیر محصول، تجربه کاربری و زیرساخت فنی را قبل از توسعه هم‌راستا
+                می‌کنیم.
+              </p>
             </div>
           </li>
           <li class="process-item">
             <span class="process-number">03</span>
             <div>
               <h3>ساخت، تست و انتشار</h3>
-              <p>توسعه مرحله‌ای، کنترل کیفیت و تحویل قابل استفاده به‌جای خروجی نمایشی.</p>
+              <p>
+                توسعه مرحله‌ای، کنترل کیفیت و تحویل قابل استفاده به‌جای خروجی
+                نمایشی.
+              </p>
             </div>
           </li>
           <li class="process-item">
             <span class="process-number">04</span>
             <div>
               <h3>رشد و توسعه مستمر</h3>
-              <p>پس از انتشار، داده و بازخورد واقعی مبنای تصمیم‌های بعدی محصول می‌شوند.</p>
+              <p>
+                پس از انتشار، داده و بازخورد واقعی مبنای تصمیم‌های بعدی محصول
+                می‌شوند.
+              </p>
             </div>
           </li>
         </ol>
       </div>
     </section>
-
   </main>
 </template>
 
@@ -311,7 +410,11 @@ usePageSeo({
   position: absolute;
   inset: 0 0 auto;
   height: 420px;
-  background: radial-gradient(circle at 78% 20%, rgba(184, 107, 53, 0.1), transparent 34%);
+  background: radial-gradient(
+    circle at 78% 20%,
+    rgba(184, 107, 53, 0.1),
+    transparent 34%
+  );
   pointer-events: none;
 }
 
@@ -328,8 +431,16 @@ usePageSeo({
   border: 1px solid rgba(226, 211, 199, 0.92);
   border-radius: 32px;
   background:
-    radial-gradient(circle at 82% 18%, rgba(184, 107, 53, 0.11), transparent 27%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(255, 249, 245, 0.95));
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(184, 107, 53, 0.11),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.97),
+      rgba(255, 249, 245, 0.95)
+    );
   box-shadow:
     0 24px 58px rgba(16, 28, 50, 0.08),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -395,7 +506,10 @@ usePageSeo({
   border-radius: 999px;
   font-size: 16px;
   font-weight: 800;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .primary-action {
@@ -864,7 +978,6 @@ usePageSeo({
   line-height: 1.85;
 }
 
-
 @media (max-width: 1080px) {
   .about-hero-inner {
     gap: 34px;
@@ -1122,7 +1235,6 @@ usePageSeo({
   .process-item h3 {
     margin: 2px 0 5px;
   }
-
 }
 
 @media (max-width: 390px) {

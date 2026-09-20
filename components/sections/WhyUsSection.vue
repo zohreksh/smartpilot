@@ -1,8 +1,8 @@
 <template>
   <section class="section why-section">
     <div class="container">
-      <div class="home-section-heading why-heading">
-        <span class="home-section-kicker">چرا NexaStudio</span>
+      <div claSmartPilotection-heading why-heading">
+        <span class="home-section-kicker">چرا SmartPilot</span>
         <h2 class="home-section-title">مهندسی محصول، فراتر از تحویل یک پروژه</h2>
         <p class="home-section-description">
           مسئله کسب‌وکار، تجربه کاربر و معماری فنی را هم‌زمان می‌بینیم تا محصول بعد از انتشار هم قابل توسعه و قابل نگهداری بماند.
