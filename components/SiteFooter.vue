@@ -45,9 +45,13 @@
         </div>
 
         <div class="footer-social-column" aria-label="راه‌های ارتباط">
-          <span class="footer-column-title">ارتباط</span>
+          <div class="footer-contact-heading">
+            <span class="footer-column-title">ارتباط</span>
+            <span class="footer-contact-rule" aria-hidden="true"></span>
+          </div>
 
-          <div class="footer-contact-icons">
+          <div class="footer-contact-dock">
+            <div class="footer-contact-icons">
             <a
               class="footer-icon-action"
               href="tel:+989379407868"
@@ -96,6 +100,7 @@
                 <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none" />
               </svg>
             </span>
+            </div>
           </div>
         </div>
       </div>
@@ -263,6 +268,45 @@
   min-width: 210px;
 }
 
+.footer-contact-heading {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-contact-rule {
+  width: 42px;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(221, 161, 115, 0.55), transparent);
+}
+
+.footer-contact-dock {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(221, 161, 115, 0.12), transparent 48%),
+    rgba(255, 255, 255, 0.028);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.footer-contact-dock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 18px;
+  left: 18px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(221, 161, 115, 0.5), transparent);
+}
+
 .contact-icon {
   width: 16px;
   height: 16px;
@@ -278,42 +322,49 @@
 
 
 .footer-contact-icons {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 10px;
-  margin-top: 2px;
+  gap: 8px;
 }
 
 .footer-icon-action {
   display: inline-flex;
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   flex: none;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.045);
-  color: #d9a06f;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #d8a170;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.055),
+    0 6px 16px rgba(0, 0, 0, 0.08);
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
     background 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .footer-icon-action:hover {
-  transform: translateY(-2px);
-  border-color: rgba(221, 161, 115, 0.38);
-  background: rgba(255, 255, 255, 0.075);
+  transform: translateY(-3px);
+  border-color: rgba(221, 161, 115, 0.42);
+  background: rgba(221, 161, 115, 0.12);
   color: #fff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 10px 22px rgba(0, 0, 0, 0.14);
 }
 
 .footer-icon-action .contact-icon {
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
 }
 
 .footer-icon-action.is-disabled {
@@ -401,8 +452,14 @@
     grid-column: auto;
   }
 
+  .footer-contact-dock {
+    width: 100%;
+    max-width: 250px;
+  }
+
   .footer-contact-icons {
-    gap: 9px;
+    justify-content: space-between;
+    gap: 8px;
   }
 
   .footer-bottom-dot {
