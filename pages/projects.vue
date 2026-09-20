@@ -314,7 +314,7 @@ useHead({
 .hero-kicker {
   display: inline-flex;
   color: #a9653d;
-  font-size: 15px;
+  font-size: 12.5px;
   font-weight: 800;
   letter-spacing: 0.12em;
 }
@@ -392,7 +392,7 @@ useHead({
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.7);
   color: #6c7482;
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 700;
   direction: ltr;
 }
@@ -452,14 +452,14 @@ useHead({
 
 .project-label small {
   color: var(--accent);
-  font-size: 11.5px;
+  font-size: 10px;
   font-weight: 800;
   direction: ltr;
 }
 
 .project-label strong {
   color: var(--text);
-  font-size: 15px;
+  font-size: 13.5px;
 }
 
 .hero-project-count {
@@ -504,7 +504,7 @@ useHead({
   border-radius: 12px;
   background: #faece4;
   color: var(--accent);
-  font-size: 15px;
+  font-size: 10.5px;
   font-weight: 800;
 }
 
@@ -585,7 +585,7 @@ useHead({
 
 .case-stamp > span {
   color: var(--accent);
-  font-size: 15px;
+  font-size: 10.5px;
   font-weight: 800;
 }
 
@@ -595,7 +595,7 @@ useHead({
 
 .case-stamp small {
   color: var(--muted);
-  font-size: 15px;
+  font-size: 10.5px;
   direction: ltr;
   text-align: right;
 }
@@ -611,7 +611,7 @@ useHead({
 
 .case-kicker {
   color: var(--accent);
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 800;
 }
 
@@ -660,7 +660,7 @@ useHead({
 
 .case-detail-grid small {
   color: var(--accent);
-  font-size: 15px;
+  font-size: 10.5px;
   font-weight: 800;
   direction: ltr;
 }
