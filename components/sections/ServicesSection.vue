@@ -36,7 +36,7 @@
         <div class="service-content">
           <h3>طراحی وب سایت و فروشگاه اینترنتی</h3>
           <p>طراحی مدرن، کاربرپسند و فروش‌محور</p>
-          <a href="#">اطلاعات بیشتر</a>
+          <NuxtLink to="/services">اطلاعات بیشتر</NuxtLink>
         </div>
       </article>
       <article class="service-card">
@@ -44,7 +44,7 @@
         <div class="service-content">
           <h3>توسعه سامانه‌های اختصاصی</h3>
           <p>راهکارهای اختصاصی برای نیازهای خاص شما</p>
-          <a href="#">اطلاعات بیشتر</a>
+          <NuxtLink to="/services">اطلاعات بیشتر</NuxtLink>
         </div>
       </article>
       <article class="service-card">
@@ -52,7 +52,7 @@
         <div class="service-content">
           <h3>هوش مصنوعی و جستجوی هوشمند</h3>
           <p>تجربه کاربری بهتر و فروش بیشتر</p>
-          <a href="#">اطلاعات بیشتر</a>
+          <NuxtLink to="/services">اطلاعات بیشتر</NuxtLink>
         </div>
       </article>
       <article class="service-card">
@@ -60,7 +60,7 @@
         <div class="service-content">
           <h3>پشتیبانی و رشد مستمر</h3>
           <p>همراه شما در تمام مراحل</p>
-          <a href="#">اطلاعات بیشتر</a>
+          <NuxtLink to="/services">اطلاعات بیشتر</NuxtLink>
         </div>
       </article>
     </div>
