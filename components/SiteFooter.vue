@@ -13,7 +13,8 @@
                 <path d="M13.5 31h13" />
               </svg>
             </span>
-            <span>
+
+            <span class="footer-brand-text">
               <strong>NexaStudio</strong>
               <small>Digital Product Studio</small>
             </span>
@@ -24,34 +25,7 @@
             هوشمند با تمرکز بر رشد واقعی کسب‌وکار.
           </p>
 
-        </div>
-
-        <nav class="footer-nav-column" aria-label="دسترسی سریع">
-          <span class="footer-column-title">دسترسی سریع</span>
-          <NuxtLink to="/">خانه</NuxtLink>
-          <NuxtLink to="/services">خدمات ما</NuxtLink>
-          <NuxtLink to="/projects">نمونه کارها</NuxtLink>
-          <NuxtLink to="/about">درباره ما</NuxtLink>
-          <NuxtLink to="/contact">تماس با ما</NuxtLink>
-        </nav>
-
-        <div class="footer-nav-column">
-          <span class="footer-column-title">تمرکز ما</span>
-          <NuxtLink to="/services">طراحی محصول دیجیتال</NuxtLink>
-          <NuxtLink to="/services">توسعه اختصاصی</NuxtLink>
-          <NuxtLink to="/services">هوش مصنوعی</NuxtLink>
-          <NuxtLink to="/services">سئو و رشد</NuxtLink>
-          <NuxtLink to="/services">پشتیبانی مستمر</NuxtLink>
-        </div>
-
-        <div class="footer-social-column" aria-label="راه‌های ارتباط">
-          <div class="footer-contact-heading">
-            <span class="footer-column-title">ارتباط</span>
-            <span class="footer-contact-rule" aria-hidden="true"></span>
-          </div>
-
-          <div class="footer-contact-dock">
-            <div class="footer-contact-icons">
+          <div class="footer-contact-icons" aria-label="راه‌های ارتباط">
             <a
               class="footer-icon-action"
               href="tel:+989379407868"
@@ -100,7 +74,26 @@
                 <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none" />
               </svg>
             </span>
-            </div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <nav class="footer-nav-column" aria-label="دسترسی سریع">
+            <span class="footer-column-title">دسترسی سریع</span>
+            <NuxtLink to="/">خانه</NuxtLink>
+            <NuxtLink to="/services">خدمات ما</NuxtLink>
+            <NuxtLink to="/projects">نمونه کارها</NuxtLink>
+            <NuxtLink to="/about">درباره ما</NuxtLink>
+            <NuxtLink to="/contact">تماس با ما</NuxtLink>
+          </nav>
+
+          <div class="footer-nav-column">
+            <span class="footer-column-title">تمرکز ما</span>
+            <NuxtLink to="/services">طراحی محصول دیجیتال</NuxtLink>
+            <NuxtLink to="/services">توسعه اختصاصی</NuxtLink>
+            <NuxtLink to="/services">هوش مصنوعی</NuxtLink>
+            <NuxtLink to="/services">سئو و رشد</NuxtLink>
+            <NuxtLink to="/services">پشتیبانی مستمر</NuxtLink>
           </div>
         </div>
       </div>
@@ -119,10 +112,10 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 52px 0 24px;
+  padding: 54px 0 24px;
   background:
-    radial-gradient(circle at 88% 8%, rgba(184, 107, 53, 0.18), transparent 29%),
-    radial-gradient(circle at 8% 100%, rgba(74, 95, 128, 0.12), transparent 30%),
+    radial-gradient(circle at 88% 8%, rgba(184, 107, 53, 0.17), transparent 29%),
+    radial-gradient(circle at 8% 100%, rgba(74, 95, 128, 0.11), transparent 30%),
     linear-gradient(155deg, #07111f 0%, #0a1828 54%, #07131f 100%);
   color: #fff;
   direction: rtl;
@@ -132,23 +125,22 @@
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
-  filter: blur(2px);
 }
 
 .footer-glow-one {
   width: 360px;
   height: 360px;
-  top: -210px;
-  right: -80px;
-  border: 1px solid rgba(226, 160, 111, 0.12);
+  top: -220px;
+  right: -90px;
+  border: 1px solid rgba(226, 160, 111, 0.11);
 }
 
 .footer-glow-two {
   width: 260px;
   height: 260px;
-  bottom: -170px;
-  left: -60px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  bottom: -175px;
+  left: -65px;
+  border: 1px solid rgba(255, 255, 255, 0.055);
 }
 
 .footer-shell {
@@ -158,50 +150,46 @@
 
 .footer-main {
   display: grid;
-  grid-template-columns:
-    minmax(300px, 1.35fr)
-    minmax(150px, 0.65fr)
-    minmax(180px, 0.75fr)
-    minmax(210px, 0.8fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(380px, 0.85fr);
   align-items: start;
-  gap: 36px;
-  padding: 0 6px 36px;
+  gap: 88px;
+  padding: 0 8px 40px;
 }
 
 .footer-brand-column {
-  max-width: 390px;
+  max-width: 540px;
 }
 
 .footer-brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
 }
 
 .footer-brand-symbol {
   display: inline-flex;
+  width: 50px;
+  height: 50px;
   flex: none;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgba(221, 161, 115, 0.25);
+  border: 1px solid rgba(221, 161, 115, 0.24);
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.055);
+  background: rgba(255, 255, 255, 0.05);
   color: #dda173;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .footer-brand-symbol svg {
-  width: 31px;
-  height: 31px;
+  width: 32px;
+  height: 32px;
   stroke: currentColor;
   stroke-width: 1.9;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-.footer-brand > span:last-child {
+.footer-brand-text {
   display: flex;
   flex-direction: column;
   gap: 1px;
@@ -211,7 +199,7 @@
 
 .footer-brand strong {
   color: #fff;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 800;
 }
 
@@ -223,16 +211,77 @@
 }
 
 .footer-brand-copy {
-  max-width: 360px;
-  margin: 18px 0 0;
-  color: #929faf;
-  font-size: 13.5px;
-  line-height: 1.9;
+  max-width: 500px;
+  margin: 19px 0 0;
+  color: #9ba7b6;
+  font-size: 14px;
+  line-height: 1.95;
 }
 
+.footer-contact-icons {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 9px;
+  margin-top: 22px;
+}
 
-.footer-nav-column,
-.footer-social-column {
+.footer-icon-action {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #d9a06f;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.055);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.footer-icon-action:hover {
+  transform: translateY(-2px);
+  border-color: rgba(221, 161, 115, 0.38);
+  background: rgba(221, 161, 115, 0.1);
+  color: #fff;
+}
+
+.footer-icon-action.is-disabled {
+  cursor: default;
+  opacity: 0.42;
+}
+
+.footer-icon-action.is-disabled:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #d9a06f;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 54px;
+  padding-top: 4px;
+}
+
+.footer-nav-column {
   display: flex;
   min-width: 0;
   flex-direction: column;
@@ -241,18 +290,30 @@
 }
 
 .footer-column-title {
+  position: relative;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  padding-bottom: 9px;
   color: #dda173;
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 800;
   line-height: 1.5;
+}
+
+.footer-column-title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 1px;
+  background: rgba(221, 161, 115, 0.42);
 }
 
 .footer-nav-column a {
   display: inline-flex;
   color: #aeb8c5;
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.75;
   transition:
     color 0.2s ease,
@@ -264,151 +325,34 @@
   transform: translateX(-3px);
 }
 
-.footer-social-column {
-  min-width: 210px;
-}
-
-.footer-contact-heading {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer-contact-rule {
-  width: 42px;
-  height: 1px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(221, 161, 115, 0.55), transparent);
-}
-
-.footer-contact-dock {
-  position: relative;
-  overflow: hidden;
-  width: fit-content;
-  padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.085);
-  border-radius: 20px;
-  background:
-    radial-gradient(circle at 20% 0%, rgba(221, 161, 115, 0.12), transparent 48%),
-    rgba(255, 255, 255, 0.028);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.055),
-    0 14px 30px rgba(0, 0, 0, 0.12);
-}
-
-.footer-contact-dock::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 18px;
-  left: 18px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(221, 161, 115, 0.5), transparent);
-}
-
-.contact-icon {
-  width: 16px;
-  height: 16px;
-  flex: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-
-
-
-
-.footer-contact-icons {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer-icon-action {
-  display: inline-flex;
-  width: 46px;
-  height: 46px;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.04);
-  color: #d8a170;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.055),
-    0 6px 16px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease,
-    color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.footer-icon-action:hover {
-  transform: translateY(-3px);
-  border-color: rgba(221, 161, 115, 0.42);
-  background: rgba(221, 161, 115, 0.12);
-  color: #fff;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    0 10px 22px rgba(0, 0, 0, 0.14);
-}
-
-.footer-icon-action .contact-icon {
-  width: 21px;
-  height: 21px;
-}
-
-.footer-icon-action.is-disabled {
-  cursor: default;
-  opacity: 0.45;
-}
-
-.footer-icon-action.is-disabled:hover {
-  transform: none;
-  border-color: rgba(255, 255, 255, 0.11);
-  background: rgba(255, 255, 255, 0.045);
-  color: #d9a06f;
-}
-
 .footer-bottom {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 9px;
-  padding: 18px 6px 0;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 19px 8px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.075);
-  color: #697789;
+  color: #6f7c8d;
   font-size: 11.5px;
 }
 
 .footer-bottom-dot {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: #a6653d;
+  display: none;
 }
 
 @media (max-width: 980px) {
   .footer-main {
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 34px 28px;
+    grid-template-columns: 1fr;
+    gap: 38px;
   }
 
   .footer-brand-column {
-    grid-column: 1 / -1;
+    max-width: 680px;
   }
 
-  .footer-social-column {
-    min-width: 0;
+  .footer-links {
+    width: min(100%, 620px);
+    gap: 38px;
   }
 }
 
@@ -417,22 +361,19 @@
     padding-top: 46px;
   }
 
-      .footer-main {
+  .footer-main {
+    gap: 34px;
+    padding-bottom: 34px;
+  }
+
+  .footer-links {
     grid-template-columns: 1fr 1fr;
-    gap: 34px 24px;
-    padding-top: 0;
-  }
-
-  .footer-brand-column {
-    grid-column: 1 / -1;
-  }
-
-  .footer-social-column {
-    grid-column: auto;
+    gap: 30px 24px;
   }
 
   .footer-bottom {
     flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
   }
 }
@@ -442,28 +383,17 @@
     padding-top: 42px;
   }
 
-      .footer-main {
-    grid-template-columns: 1fr;
+  .footer-main {
     gap: 30px;
   }
 
-  .footer-brand-column,
-  .footer-social-column {
-    grid-column: auto;
-  }
-
-  .footer-contact-dock {
-    width: 100%;
-    max-width: 250px;
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 26px;
   }
 
   .footer-contact-icons {
-    justify-content: space-between;
     gap: 8px;
-  }
-
-  .footer-bottom-dot {
-    display: none;
   }
 
   .footer-bottom {
