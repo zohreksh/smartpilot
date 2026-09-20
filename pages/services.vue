@@ -46,9 +46,7 @@ const recoverProofImage = (image) => {
 
 <template>
   <main id="main-content" class="services-page" tabindex="-1">
-    <SiteHeader />
-
-    <section class="services-hero">
+<section class="services-hero">
       <div class="container hero-layout">
         <div class="hero-copy">
           <span class="hero-eyebrow">AI-first Digital Product Studio</span>
