@@ -282,6 +282,55 @@
   max-height: 600px;
 }
 
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 18px;
+  border: 1px solid #d86b4a;
+  border-radius: 999px;
+  background: #fff7f4;
+  color: #c56839;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-links-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.primary-action,
+.secondary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-action {
+  background: linear-gradient(135deg, #c17a42, #9b542d);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(155, 84, 45, 0.18);
+}
+
+.secondary-action {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--text);
+}
+
+.primary-action:hover,
+.secondary-action:hover {
+  transform: translateY(-2px);
+}
+
 .project-brief-section,
 .fit-section,
 .next-step-section {
