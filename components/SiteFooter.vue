@@ -4,38 +4,6 @@
     <div class="footer-glow footer-glow-two" aria-hidden="true"></div>
 
     <div class="container footer-shell">
-      <section class="footer-cta">
-        <div class="footer-cta-copy">
-          <span class="footer-eyebrow">یک پروژه، یک مسئله، یا فقط یک ایده اولیه</span>
-          <h2>بیایید درباره چیزی که می‌خواهید بسازید صحبت کنیم.</h2>
-          <p>
-            از بررسی اولیه تا طراحی مسیر فنی، قبل از شروع توسعه تصویر روشنی از
-            مسئله و قدم بعدی می‌سازیم.
-          </p>
-        </div>
-
-        <div class="footer-cta-actions">
-          <NuxtLink class="footer-primary-action" to="/contact">
-            شروع گفتگو
-            <span aria-hidden="true">←</span>
-          </NuxtLink>
-          <a
-            class="footer-secondary-action"
-            href="https://wa.me/989379407868"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z" />
-              <path d="M8.7 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 1.9 2.6 2.5.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.6.6-1.5.8-2.4.6-1-.2-2.3-.7-3.9-2.1-1.4-1.2-2.3-2.7-2.6-3.7-.3-.9 0-2 .3-2.5l.8-1.6Z" />
-            </svg>
-            پیام در واتساپ
-          </a>
-        </div>
-      </section>
-
-      <div class="footer-divider"></div>
-
       <div class="footer-main">
         <div class="footer-brand-column">
           <NuxtLink class="footer-brand" to="/" aria-label="NexaStudio - صفحه اصلی">
@@ -77,6 +45,8 @@
         </div>
 
         <div class="footer-social-column" aria-label="راه‌های ارتباط">
+          <span class="footer-column-title">ارتباط</span>
+
           <div class="footer-contact-icons">
             <a
               class="footer-icon-action"
@@ -100,6 +70,18 @@
               <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z" />
                 <path d="M8.7 8.3c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3 0 .5-.1.7l-.6.7c-.2.2-.1.4 0 .6.6 1.1 1.5 1.9 2.6 2.5.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.6.6-1.5.8-2.4.6-1-.2-2.3-.7-3.9-2.1-1.4-1.2-2.3-2.7-2.6-3.7-.3-.9 0-2 .3-2.5l.8-1.6Z" />
+              </svg>
+            </a>
+
+            <a
+              class="footer-icon-action"
+              href="mailto:zhr.keshavarz@gmail.com"
+              aria-label="ارسال ایمیل به NexaStudio"
+              title="ایمیل"
+            >
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" />
+                <path d="m5 7 7 5.2L19 7" />
               </svg>
             </a>
 
@@ -132,7 +114,7 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 74px 0 24px;
+  padding: 52px 0 24px;
   background:
     radial-gradient(circle at 88% 8%, rgba(184, 107, 53, 0.18), transparent 29%),
     radial-gradient(circle at 8% 100%, rgba(74, 95, 128, 0.12), transparent 30%),
@@ -169,107 +151,11 @@
   z-index: 1;
 }
 
-.footer-cta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 48px;
-  padding: 0 6px 42px;
-}
-
-.footer-cta-copy {
-  max-width: 720px;
-  text-align: right;
-}
-
-.footer-eyebrow {
-  color: #dda173;
-  font-size: 12.5px;
-  font-weight: 800;
-}
-
-.footer-cta h2 {
-  max-width: 710px;
-  margin: 10px 0 8px;
-  color: #fff;
-  font-size: clamp(28px, 3.3vw, 42px);
-  font-weight: 800;
-  line-height: 1.5;
-  letter-spacing: -0.015em;
-}
-
-.footer-cta p {
-  max-width: 650px;
-  margin: 0;
-  color: #aeb9c7;
-  font-size: 14.5px;
-  line-height: 1.9;
-}
-
-.footer-cta-actions {
-  display: flex;
-  flex: none;
-  flex-direction: column;
-  gap: 9px;
-  min-width: 185px;
-}
-
-.footer-primary-action,
-.footer-secondary-action {
-  display: inline-flex;
-  min-height: 48px;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 11px 20px;
-  border-radius: 999px;
-  font-size: 14.5px;
-  font-weight: 800;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
-.footer-primary-action {
-  border: 1px solid rgba(255, 190, 140, 0.28);
-  background: linear-gradient(135deg, #c17a42, #96502d);
-  color: #fff;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.footer-secondary-action {
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.035);
-  color: #d4dbe4;
-}
-
-.footer-primary-action:hover,
-.footer-secondary-action:hover {
-  transform: translateY(-2px);
-}
-
-.footer-secondary-action:hover {
-  border-color: rgba(255, 255, 255, 0.26);
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.footer-divider {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.14) 18%,
-    rgba(255, 255, 255, 0.14) 82%,
-    transparent
-  );
-}
-
 .footer-main {
   display: grid;
   grid-template-columns: minmax(300px, 1.5fr) repeat(3, minmax(145px, 0.65fr));
   gap: 42px;
-  padding: 42px 6px 36px;
+  padding: 0 6px 36px;
 }
 
 .footer-brand-column {
@@ -345,32 +231,16 @@
   stroke-linejoin: round;
 }
 
-.footer-contact-pills a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
 
-.footer-contact-pills .contact-icon {
-  color: #dda173;
-}
 
-.footer-contact-row-head {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
 
-.footer-contact-row-head .contact-icon {
-  width: 15px;
-  height: 15px;
-  color: #dda173;
-}
 
 .footer-contact-icons {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
+  margin-top: 2px;
 }
 
 .footer-icon-action {
@@ -447,26 +317,13 @@
 
 @media (max-width: 720px) {
   .site-footer {
-    padding-top: 56px;
+    padding-top: 46px;
   }
 
-  .footer-cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 26px;
-    padding-bottom: 34px;
-  }
-
-  .footer-cta-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-width: 0;
-  }
-
-  .footer-main {
+      .footer-main {
     grid-template-columns: 1fr 1fr;
     gap: 34px 24px;
-    padding-top: 34px;
+    padding-top: 0;
   }
 
   .footer-brand-column {
@@ -485,18 +342,10 @@
 
 @media (max-width: 460px) {
   .site-footer {
-    padding-top: 48px;
+    padding-top: 42px;
   }
 
-  .footer-cta h2 {
-    font-size: 27px;
-  }
-
-  .footer-cta-actions {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-main {
+      .footer-main {
     grid-template-columns: 1fr;
     gap: 30px;
   }
