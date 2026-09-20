@@ -70,7 +70,7 @@ const submitProjectBrief = () => {
 </script>
 
 <template>
-  <main class="contact-page">
+  <main id="main-content" class="contact-page" tabindex="-1">
     <SiteHeader />
 
     <section class="contact-hero">
