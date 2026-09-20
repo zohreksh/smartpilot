@@ -45,7 +45,7 @@ const recoverProofImage = (image) => {
 </script>
 
 <template>
-  <main class="services-page">
+  <main id="main-content" class="services-page" tabindex="-1">
     <SiteHeader />
 
     <section class="services-hero">
