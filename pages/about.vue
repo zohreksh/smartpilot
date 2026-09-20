@@ -436,8 +436,9 @@
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
+  object-position: center;
+  background: #f8f3ef;
 }
 
 .product-preview figcaption {
