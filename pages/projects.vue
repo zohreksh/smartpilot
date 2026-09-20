@@ -143,6 +143,19 @@ usePageSeo({
             <span>گزارشات و توسعه مستمر</span>
           </div>
 
+          <a
+            class="case-live-link"
+            href="https://shidane.ir"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="مشاهده وب‌سایت شیدانه در تب جدید"
+          >
+            <span>مشاهده وب‌سایت شیدانه</span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M7 5h8v8M15 5l-9 9" />
+            </svg>
+          </a>
+
           <div class="case-detail-grid">
             <article>
               <small>Product</small>
@@ -188,6 +201,19 @@ usePageSeo({
             <span>SEO فنی</span>
             <span>توسعه مستمر</span>
           </div>
+
+          <a
+            class="case-live-link"
+            href="https://hevix.ir"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="مشاهده وب‌سایت HEVIX در تب جدید"
+          >
+            <span>مشاهده وب‌سایت HEVIX</span>
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M7 5h8v8M15 5l-9 9" />
+            </svg>
+          </a>
 
           <div class="case-detail-grid">
             <article>
@@ -652,6 +678,40 @@ usePageSeo({
   background: #fff;
   color: #667085;
   font-size: 11.5px;
+}
+
+.case-live-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 9px 13px;
+  border: 1px solid rgba(184, 107, 53, 0.24);
+  border-radius: 12px;
+  background: rgba(255, 249, 245, 0.82);
+  color: #9f5a34;
+  font-size: 13.5px;
+  font-weight: 800;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.case-live-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184, 107, 53, 0.42);
+  background: #fff7f1;
+}
+
+.case-live-link svg {
+  width: 17px;
+  height: 17px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .case-detail-grid {
