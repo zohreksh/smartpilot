@@ -11,33 +11,43 @@
       </div>
     </section>
 
-    <section class="process container">
-      <div class="section-heading">
-        <h2>مسیر همکاری ما</h2>
-        <p>فرآیندی شفاف برای تبدیل یک ایده به محصول.</p>
-      </div>
-      <div class="steps">
-        <article>
-          <span>01</span>
-          <h3>ارسال مسئله</h3>
-          <p>نیازها و اهداف کسب‌وکار را بررسی می‌کنیم.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>طراحی مسیر</h3>
-          <p>راهکار، معماری و مسیر اجرای مناسب مشخص می‌شود.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>ساخت محصول</h3>
-          <p>توسعه با تمرکز روی کیفیت و رشدپذیری انجام می‌شود.</p>
-        </article>
-      </div>
-    </section>
+    <section class="contact-section container">
+      <div class="contact-grid">
+        <article class="contact-card message-card">
+          <h2>برای ما پیام بگذارید</h2>
+          <p>چند خط درباره نیاز یا ایده‌تان بنویسید. به‌زودی با شما تماس می‌گیریم.</p>
 
-    <section class="contact-final container">
-      <h2>آماده شروع هستید؟</h2>
-      <a href="mailto:info@nexastudio.ir">info@nexastudio.ir</a>
+          <form class="contact-form">
+            <div class="form-row">
+              <input placeholder="نام و نام خانوادگی" />
+              <input placeholder="ایمیل" />
+            </div>
+            <input placeholder="نام شرکت (اختیاری)" />
+            <textarea placeholder="محتوای پیام شما"></textarea>
+            <button type="button">ارسال پیام</button>
+          </form>
+        </article>
+
+        <article class="contact-card info-card">
+          <h2>راه‌های ارتباط با ما</h2>
+          <p>از هر راهی که راحت‌تر هستید با ما در ارتباط باشید.</p>
+
+          <div class="contact-item">
+            <strong>ایمیل</strong>
+            <span>hello@studio.com</span>
+          </div>
+
+          <div class="contact-item">
+            <strong>تلفن</strong>
+            <span>+98 21 0000 0000</span>
+          </div>
+
+          <div class="contact-item">
+            <strong>ساعات پاسخگویی</strong>
+            <span>شنبه تا پنجشنبه، ۹ صبح تا ۶ عصر</span>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 </template>
@@ -49,91 +59,122 @@
   min-height: 100vh;
   color: #111827;
 }
+
 .container {
   max-width: 1120px;
   margin: auto;
   padding: 0 28px;
 }
+
 .contact-hero {
-  /* padding: 32px 28px 50px; */
+  padding: 0 28px 45px;
 }
+
 .hero-banner {
   width: 100%;
   overflow: hidden;
-  /* border-radius: 30px; */
   box-shadow: 0 18px 45px rgba(80, 50, 20, 0.08);
 }
+
 .hero-banner img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 550px;
 }
-.process {
-  padding-bottom: 45px;
+
+.contact-section {
+  padding-bottom: 50px;
 }
-.section-heading {
-  margin-bottom: 25px;
-}
-.section-heading h2 {
-  font-size: 30px;
-  color: #2f3a45;
-}
-.section-heading p {
-  color: #667085;
-}
-.steps {
+
+.contact-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: 1.25fr 0.85fr;
+  gap: 24px;
 }
-.steps article {
-  background: #fff;
+
+.contact-card {
+  background: #fffaf5;
   border: 1px solid #ead8c7;
-  border-radius: 24px;
-  padding: 24px;
+  border-radius: 28px;
+  padding: 34px;
 }
-.steps span {
-  color: #d95f00;
-  font-size: 25px;
-  font-weight: 800;
+
+.contact-card h2 {
+  color: #243044;
+  font-size: 28px;
+  margin-bottom: 12px;
 }
-.steps h3 {
-  color: #2f3a45;
-}
-.steps p {
+
+.contact-card p {
   color: #667085;
   line-height: 2;
 }
-.contact-final {
-  background: #222a33;
-  border-radius: 30px;
-  padding: 30px 38px;
-  margin-bottom: 45px;
+
+.contact-form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
 }
-.contact-final h2 {
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+input,
+textarea {
+  border: 1px solid #e5ddd4;
+  background: #fff;
+  border-radius: 14px;
+  padding: 15px;
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+button {
+  background: #d95f00;
   color: #fff;
+  border: 0;
+  border-radius: 14px;
+  padding: 16px;
+  font-family: inherit;
+  cursor: pointer;
 }
-.contact-final a {
-  color: #ffb27a;
-  font-weight: 700;
+
+.contact-item {
+  padding: 18px 0;
+  border-bottom: 1px solid #ead8c7;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
+
+.contact-item strong {
+  color: #243044;
+}
+
+.contact-item span {
+  color: #667085;
+}
+
 @media (max-width: 800px) {
-  .contact-hero {
-    padding: 20px 16px 35px;
-  }
-  .hero-banner {
-    border-radius: 20px;
-  }
-  .steps {
+  .contact-grid,
+  .form-row {
     grid-template-columns: 1fr;
   }
-  .contact-final {
-    flex-direction: column;
-    align-items: flex-start;
+
+  .contact-hero {
+    padding: 0 16px 30px;
+  }
+
+  .contact-card {
+    padding: 24px;
   }
 }
 </style>
