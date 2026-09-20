@@ -1,7 +1,14 @@
 <template>
   <section class="section why-section">
     <div class="container">
-      <h2>چرا NexaStudio؟</h2>
+      <div class="home-section-heading why-heading">
+        <span class="home-section-kicker">چرا NexaStudio</span>
+        <h2 class="home-section-title">مهندسی محصول، فراتر از تحویل یک پروژه</h2>
+        <p class="home-section-description">
+          تصمیم‌های فنی، تجربه کاربر و مسیر رشد را کنار هم می‌بینیم تا محصول بعد از انتشار هم قابل توسعه بماند.
+        </p>
+        <span class="home-section-rule" aria-hidden="true"></span>
+      </div>
       <div class="why-grid">
         <article class="why-card">
           <div class="why-icon">♧</div>
