@@ -51,6 +51,7 @@ useHead({
 
 <template>
   <div>
+    <a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
     <NuxtPage />
     <SiteFooter />
   </div>
