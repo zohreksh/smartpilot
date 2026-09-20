@@ -9,12 +9,16 @@
     </div>
 
     <picture>
-      <source media="(max-width: 767px)" srcset="/images/hero/mobile-hero.webp" />
+      <source media="(max-width: 767px)" srcset="/images/hero/mobile-hero.webp" width="1024" height="1536" />
       <img
         class="hero-image-only"
         src="/images/hero/desktop-hero.webp"
         alt="طراحی و توسعه محصول دیجیتال توسط NexaStudio"
+        width="1916"
+        height="821"
         loading="eager"
+        decoding="async"
+        fetchpriority="high"
       />
     </picture>
   </section>
