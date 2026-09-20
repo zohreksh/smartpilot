@@ -82,47 +82,37 @@ const recoverProofImage = (image) => {
         </div>
 
         <div class="ai-visual" aria-label="حوزه‌های اصلی توسعه هوش مصنوعی">
-          <span class="ai-watermark" aria-hidden="true">AI</span>
-          <div class="ai-core">
+          <div class="ai-visual-heading">
             <span>Nexa AI</span>
             <strong>Intelligence Layer</strong>
-            <small>Search · Advisory · Automation</small>
+            <p>هوش مصنوعی به‌عنوان یک لایه واقعی در محصول، نه یک قابلیت جداافتاده.</p>
           </div>
 
-          <article class="ai-node node-advisor">
-            <span>01</span>
-            <div>
+          <div class="ai-capability-grid">
+            <article class="ai-capability">
+              <span>01</span>
               <strong>AI Advisor</strong>
               <small>مشاور و دستیار هوشمند</small>
-            </div>
-          </article>
+            </article>
 
-          <article class="ai-node node-search">
-            <span>02</span>
-            <div>
+            <article class="ai-capability">
+              <span>02</span>
               <strong>Smart Search</strong>
               <small>جستجوی معنایی و بازیابی</small>
-            </div>
-          </article>
+            </article>
 
-          <article class="ai-node node-agent">
-            <span>03</span>
-            <div>
+            <article class="ai-capability">
+              <span>03</span>
               <strong>AI Agents</strong>
               <small>اتوماسیون و عملیات</small>
-            </div>
-          </article>
+            </article>
 
-          <article class="ai-node node-data">
-            <span>04</span>
-            <div>
+            <article class="ai-capability">
+              <span>04</span>
               <strong>AI + Data</strong>
               <small>تحلیل، گزارش و تصمیم‌یار</small>
-            </div>
-          </article>
-
-          <div class="visual-ring ring-one" aria-hidden="true"></div>
-          <div class="visual-ring ring-two" aria-hidden="true"></div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -578,11 +568,11 @@ const recoverProofImage = (image) => {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(440px, 0.98fr);
-  gap: 58px;
+  grid-template-columns: minmax(0, 1.16fr) minmax(360px, 0.84fr);
+  gap: 48px;
   align-items: center;
-  min-height: 600px;
-  padding: 44px 42px;
+  min-height: 520px;
+  padding: 42px 44px;
   overflow: hidden;
   border: 1px solid rgba(226, 211, 199, 0.92);
   border-radius: 32px;
@@ -622,7 +612,7 @@ const recoverProofImage = (image) => {
   max-width: 780px;
   margin: 20px 0 20px;
   color: var(--text);
-  font-size: clamp(43px, 5vw, 68px);
+  font-size: clamp(40px, 4.4vw, 60px);
   line-height: 1.36;
   letter-spacing: -0.028em;
 }
@@ -636,8 +626,8 @@ const recoverProofImage = (image) => {
   max-width: 680px;
   margin: 0;
   color: var(--muted);
-  font-size: 17px;
-  line-height: 2;
+  font-size: 15.5px;
+  line-height: 1.95;
 }
 
 .hero-actions {
@@ -697,183 +687,84 @@ const recoverProofImage = (image) => {
 
 .ai-visual {
   position: relative;
-  min-height: 525px;
-  isolation: isolate;
-}
-
-.ai-visual::before {
-  content: "";
-  position: absolute;
-  z-index: -2;
-  width: 410px;
-  height: 410px;
-  top: 54px;
-  right: 50%;
-  transform: translateX(50%);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, rgba(184, 107, 53, 0.12) 0%, rgba(184, 107, 53, 0.05) 34%, transparent 70%);
-  filter: blur(2px);
-}
-
-.ai-visual::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 310px;
-  height: 310px;
-  top: 104px;
-  right: 50%;
-  transform: translateX(50%);
-  border: 1px dashed rgba(184, 107, 53, 0.18);
-  border-radius: 50%;
-}
-
-.ai-watermark {
-  position: absolute;
-  z-index: -1;
-  top: 34px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgba(184, 107, 53, 0.07);
-  font-size: 138px;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.08em;
-  direction: ltr;
-  user-select: none;
-}
-
-.ai-core {
-  position: absolute;
-  z-index: 3;
-  top: 164px;
-  right: 50%;
+  align-self: stretch;
   display: flex;
-  width: 188px;
-  height: 188px;
-  transform: translateX(50%);
+  min-width: 0;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  border: 1px solid rgba(184, 107, 53, 0.28);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 34% 26%, rgba(255, 255, 255, 0.98), rgba(255, 248, 242, 0.9) 58%, rgba(243, 223, 208, 0.82) 100%);
-  box-shadow:
-    0 24px 54px rgba(16, 28, 50, 0.11),
-    0 0 0 10px rgba(255, 255, 255, 0.35);
-  text-align: center;
+  padding-right: 38px;
+  border-right: 1px solid rgba(218, 200, 187, 0.78);
 }
 
-.ai-core span {
+.ai-visual-heading {
+  max-width: 360px;
+  margin-bottom: 24px;
+}
+
+.ai-visual-heading > span {
+  display: inline-flex;
   color: var(--accent);
   font-size: 10px;
   font-weight: 800;
-}
-
-.ai-core strong {
-  margin-top: 5px;
-  color: var(--text);
-  font-size: 17px;
-}
-
-.ai-core small {
-  margin-top: 5px;
-  color: #7c8492;
-  font-size: 8px;
+  letter-spacing: 0.08em;
   direction: ltr;
 }
 
-.ai-node {
-  position: absolute;
-  z-index: 4;
-  display: flex;
-  min-width: 182px;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 12px;
-  border: 1px solid rgba(226, 211, 199, 0.72);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.68);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 9px 24px rgba(16, 28, 50, 0.045);
+.ai-visual-heading strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 27px;
+  line-height: 1.35;
+  direction: ltr;
+  text-align: right;
 }
 
-.ai-node > span {
-  display: inline-flex;
-  flex: none;
-  width: 30px;
-  height: 30px;
-  align-items: center;
+.ai-visual-heading p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.8;
+}
+
+.ai-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgba(218, 200, 187, 0.82);
+  border-right: 1px solid rgba(218, 200, 187, 0.82);
+}
+
+.ai-capability {
+  position: relative;
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
   justify-content: center;
-  border-radius: 50%;
-  background: rgba(250, 236, 228, 0.88);
-  color: var(--accent);
+  padding: 17px 18px;
+  border-left: 1px solid rgba(218, 200, 187, 0.82);
+  border-bottom: 1px solid rgba(218, 200, 187, 0.82);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.ai-capability > span {
+  color: rgba(184, 107, 53, 0.68);
   font-size: 9px;
   font-weight: 800;
+  direction: ltr;
 }
 
-.ai-node div {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-
-.ai-node strong {
+.ai-capability strong {
+  margin-top: 5px;
   color: var(--text);
-  font-size: 11.5px;
+  font-size: 13px;
+  line-height: 1.45;
 }
 
-.ai-node small {
+.ai-capability small {
+  margin-top: 3px;
   color: var(--muted);
-  font-size: 8.8px;
-}
-
-.node-advisor {
-  top: 56px;
-  right: 14px;
-}
-
-.node-search {
-  top: 92px;
-  left: 8px;
-}
-
-.node-agent {
-  right: 10px;
-  bottom: 60px;
-}
-
-.node-data {
-  left: 18px;
-  bottom: 76px;
-}
-
-.visual-ring {
-  position: absolute;
-  z-index: -1;
-  border: 1px solid rgba(184, 107, 53, 0.1);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.ring-one {
-  width: 430px;
-  height: 430px;
-  top: 44px;
-  right: 50%;
-  transform: translateX(50%);
-}
-
-.ring-two {
-  width: 350px;
-  height: 350px;
-  top: 84px;
-  right: 50%;
-  transform: translateX(50%);
-  border-color: rgba(112, 136, 164, 0.1);
+  font-size: 9.5px;
+  line-height: 1.55;
 }
 
 .ai-services-section {
@@ -1490,8 +1381,8 @@ const recoverProofImage = (image) => {
 
 @media (max-width: 1080px) {
   .hero-layout {
-    grid-template-columns: minmax(0, 1fr) minmax(400px, 0.92fr);
-    gap: 34px;
+    grid-template-columns: minmax(0, 1.12fr) minmax(330px, 0.88fr);
+    gap: 32px;
     padding: 38px 32px;
   }
 
@@ -1526,9 +1417,14 @@ const recoverProofImage = (image) => {
   }
 
   .ai-visual {
-    width: min(100%, 640px);
-    min-height: 490px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 28px 0 0;
+    border-top: 1px solid rgba(218, 200, 187, 0.78);
+    border-right: 0;
+  }
+
+  .ai-visual-heading {
+    max-width: 640px;
   }
 
   .ai-side-grid {
@@ -1604,41 +1500,24 @@ const recoverProofImage = (image) => {
   }
 
   .ai-visual {
-    display: grid;
-    min-height: 0;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    padding-top: 24px;
+  }
+
+  .ai-visual-heading {
+    margin-bottom: 18px;
+  }
+
+  .ai-visual-heading strong {
+    font-size: 23px;
+  }
+
+  .ai-capability-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ai-capability {
+    min-height: 96px;
     padding: 14px;
-    border-radius: 22px;
-  }
-
-  .ai-visual::before,
-  .ai-visual::after,
-  .ai-watermark,
-  .visual-ring {
-    display: none;
-  }
-
-  .ai-core {
-    position: relative;
-    top: auto;
-    right: auto;
-    width: 100%;
-    height: auto;
-    min-height: 132px;
-    transform: none;
-    border-radius: 50%;
-    max-width: 160px;
-    min-height: 160px;
-    margin: 0 auto;
-    box-shadow: 0 10px 26px rgba(16, 28, 50, 0.07);
-  }
-
-  .ai-node {
-    position: relative;
-    inset: auto;
-    min-width: 0;
-    width: 100%;
   }
 
   .ai-services-section,
@@ -1757,6 +1636,11 @@ const recoverProofImage = (image) => {
 }
 
 @media (max-width: 390px) {
+  .ai-capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+
   .hero-actions {
     grid-template-columns: 1fr;
   }
