@@ -183,6 +183,15 @@ usePageSeo({
                 <span>طراحی مسیر توسعه و اولویت‌بندی</span>
                 <span>رشد و بهینه‌سازی محصول</span>
               </div>
+              <a
+                class="founder-profile-link"
+                href="https://www.linkedin.com/in/zohre-keshavarz-2a3221bb"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="پروفایل LinkedIn زهره کشاورز"
+              >
+                پروفایل LinkedIn
+              </a>
             </div>
           </article>
 
@@ -202,6 +211,15 @@ usePageSeo({
                 <span>هوش مصنوعی و قابلیت‌های هوشمند</span>
                 <span>طراحی و توسعه سیستم‌های تخصصی</span>
               </div>
+              <a
+                class="founder-profile-link"
+                href="https://www.linkedin.com/in/hossien-kolani-720103bb"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="پروفایل LinkedIn حسین کولانی"
+              >
+                پروفایل LinkedIn
+              </a>
             </div>
           </article>
         </div>
@@ -723,6 +741,30 @@ usePageSeo({
   color: #667085;
   font-size: 14px;
   line-height: 1.4;
+}
+
+.founder-profile-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  color: #9f5a34;
+  font-size: 13.5px;
+  font-weight: 800;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.founder-profile-link::after {
+  content: "←";
+  font-size: 14px;
+}
+
+.founder-profile-link:hover {
+  color: #7f4325;
+  transform: translateX(-2px);
 }
 
 .specialists-panel {
