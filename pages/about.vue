@@ -462,11 +462,10 @@ usePageSeo({
 .product-preview img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  background: #f8f3ef;
 }
 
 .product-preview figcaption {
