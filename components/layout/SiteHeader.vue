@@ -192,7 +192,7 @@ const closeMenu = () => {
   background: rgba(255, 255, 255, 0.86);
 }
 
-.header-nav :deep(.router-link-active) {
+.header-nav a.router-link-active {
   color: #9b542d;
   background: #fff;
   box-shadow: 0 3px 12px rgba(16, 28, 50, 0.06);
@@ -349,7 +349,7 @@ const closeMenu = () => {
     text-align: center;
   }
 
-  .mobile-nav > :deep(.router-link-active):not(.mobile-contact-cta) {
+  .mobile-nav > a.router-link-active:not(.mobile-contact-cta) {
     background: #fff2e9;
     color: #9b542d;
   }
