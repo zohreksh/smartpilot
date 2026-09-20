@@ -31,7 +31,7 @@ const closeMenu = () => {
       <nav class="header-nav desktop-nav" aria-label="ناوبری اصلی">
         <NuxtLink to="/">خانه</NuxtLink>
         <NuxtLink to="/services">خدمات ما</NuxtLink>
-        <NuxtLink to="/#projects">نمونه کارها</NuxtLink>
+        <NuxtLink to="/projects">نمونه کارها</NuxtLink>
         <NuxtLink to="/about">درباره ما</NuxtLink>
         <NuxtLink to="/contact">تماس با ما</NuxtLink>
       </nav>
@@ -61,7 +61,7 @@ const closeMenu = () => {
       <nav id="mobile-navigation" class="mobile-nav container" aria-label="ناوبری موبایل">
         <NuxtLink to="/" @click="closeMenu">خانه</NuxtLink>
         <NuxtLink to="/services" @click="closeMenu">خدمات ما</NuxtLink>
-        <NuxtLink to="/#projects" @click="closeMenu">نمونه کارها</NuxtLink>
+        <NuxtLink to="/projects" @click="closeMenu">نمونه کارها</NuxtLink>
         <NuxtLink to="/about" @click="closeMenu">درباره ما</NuxtLink>
         <NuxtLink to="/contact" @click="closeMenu">تماس با ما</NuxtLink>
 
