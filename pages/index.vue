@@ -10,8 +10,7 @@ usePageSeo({
 
 <template>
   <main id="main-content" class="landing-page" tabindex="-1">
-    <SiteHeader />
-    <section class="hero-shell">
+<section class="hero-shell">
       <HeroSection />
     </section>
     <ServicesSection />
