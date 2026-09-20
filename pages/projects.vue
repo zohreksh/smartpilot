@@ -1,13 +1,10 @@
 <script setup>
-useHead({
+usePageSeo({
   title: "نمونه‌کارها و محصولات واقعی | NexaStudio",
-  meta: [
-    {
-      name: "description",
-      content:
-        "نمونه‌کارهای واقعی NexaStudio شامل شیدانه و HEVIX؛ تجربه طراحی و توسعه محصول، هوش مصنوعی، جستجوی هوشمند، سئوی اتومات، داده، کاتالوگ و توسعه اختصاصی.",
-    },
-  ],
+  description:
+    "نمونه‌کارهای واقعی NexaStudio شامل شیدانه و HEVIX؛ معماری و توسعه محصول، هوش مصنوعی، جستجوی هوشمند، سئو، داده و سامانه‌های اختصاصی.",
+  path: "/projects",
+  image: "/images/projects/shidane.webp",
 });
 </script>
 
