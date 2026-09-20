@@ -71,26 +71,24 @@
   </section>
 </template>
 <style scoped>
+.team-section {
+  position: relative;
+  padding: 78px 0 84px;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(184, 107, 53, 0.07), transparent 24%),
+    linear-gradient(180deg, #fffaf6 0%, #fcf8f4 100%);
+}
+
 .seciton-padding {
-  padding-bottom: 20px;
+  padding-bottom: 84px;
 }
+
 .section-header {
-  text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
+
 .section-badge {
-  display: inline-block;
-  border: 1px solid #d86b4a;
-  color: #d86b4a;
-  border-radius: 999px;
-  padding: 5px 20px;
-}
-.section-header h2 {
-  font-size: 32px;
-  margin: 16px 0;
-}
-.section-header p {
-  color: #6c7588;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 .team-grid {
   display: grid;
@@ -353,8 +351,16 @@
     font-size: 10.5px;
     padding: 4px 8px;
   }
-  .section-header h2 {
-    font-size: 26px;
+  .team-section {
+    padding: 60px 0 64px;
+  }
+
+  .seciton-padding {
+    padding-bottom: 64px;
+  }
+
+  .section-header {
+    margin-bottom: 28px;
   }
 }
 </style>
