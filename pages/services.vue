@@ -549,7 +549,7 @@ const recoverProofImage = (image) => {
 .services-hero {
   position: relative;
   overflow: hidden;
-  padding: 88px 0 96px;
+  padding: 20px 0 60px;
 }
 
 .services-hero::before {
@@ -581,8 +581,19 @@ const recoverProofImage = (image) => {
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(440px, 0.98fr);
-  gap: 78px;
+  gap: 58px;
   align-items: center;
+  min-height: 600px;
+  padding: 44px 42px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 211, 199, 0.92);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(184, 107, 53, 0.12), transparent 27%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(255, 249, 245, 0.95));
+  box-shadow:
+    0 24px 58px rgba(16, 28, 50, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .hero-copy {
@@ -1499,7 +1510,8 @@ const recoverProofImage = (image) => {
 @media (max-width: 1080px) {
   .hero-layout {
     grid-template-columns: minmax(0, 1fr) minmax(400px, 0.92fr);
-    gap: 40px;
+    gap: 34px;
+    padding: 38px 32px;
   }
 
   .ai-grid {
@@ -1518,12 +1530,14 @@ const recoverProofImage = (image) => {
 
 @media (max-width: 820px) {
   .services-hero {
-    padding: 62px 0 70px;
+    padding: 16px 0 52px;
   }
 
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 28px;
+    min-height: 0;
+    padding: 32px;
   }
 
   .hero-copy {
@@ -1578,7 +1592,12 @@ const recoverProofImage = (image) => {
 
 @media (max-width: 600px) {
   .services-hero {
-    padding: 48px 0 58px;
+    padding: 12px 0 46px;
+  }
+
+  .hero-layout {
+    padding: 24px 20px 22px;
+    border-radius: 24px;
   }
 
   .hero-copy h1 {
