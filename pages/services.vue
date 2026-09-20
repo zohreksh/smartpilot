@@ -1,321 +1,456 @@
+<script setup>
+import { ref } from "vue";
+
+useHead({
+  title: "توسعه هوش مصنوعی و خدمات محصول دیجیتال | NexaStudio",
+  meta: [
+    {
+      name: "description",
+      content:
+        "توسعه هوش مصنوعی، جستجوی هوشمند، مشاور و Agentهای اختصاصی، سئوی اتومات، سامانه‌های اختصاصی، طراحی وب و فروشگاه، مدیریت و ورود داده‌های اولیه، گزارشات و پشتیبانی مستمر توسط NexaStudio.",
+    },
+  ],
+});
+
+const shidaneProofSrc = ref("/images/projects/shidane1.webp");
+const hevixProofSrc = ref("/images/projects/hevix1.webp");
+
+let shidaneRetryCount = 0;
+let hevixRetryCount = 0;
+
+const recoverProofImage = (image) => {
+  if (image === "shidane") {
+    if (shidaneRetryCount === 0) {
+      shidaneRetryCount = 1;
+      shidaneProofSrc.value = "/images/projects/shidane1.webp?retry=1";
+      return;
+    }
+
+    if (shidaneRetryCount === 1) {
+      shidaneRetryCount = 2;
+      shidaneProofSrc.value = "/images/projects/shidane.webp";
+    }
+
+    return;
+  }
+
+  if (hevixRetryCount === 0) {
+    hevixRetryCount = 1;
+    hevixProofSrc.value = "/images/projects/hevix1.webp?retry=1";
+    return;
+  }
+
+  if (hevixRetryCount === 1) {
+    hevixRetryCount = 2;
+    hevixProofSrc.value = "/images/projects/hevix.webp";
+  }
+};
+</script>
+
 <template>
   <main class="services-page">
     <SiteHeader />
 
     <section class="services-hero">
-      <div class="container services-hero-inner">
+      <div class="container hero-layout">
         <div class="hero-copy">
-          <span class="services-badge">خدمات NexaStudio</span>
+          <span class="hero-eyebrow">AI-first Digital Product Studio</span>
+
           <h1>
-            از یک نیاز مشخص تا
-            <strong>محصولی که واقعاً کار می‌کند</strong>
+            هوش مصنوعی را
+            <strong>به قابلیت واقعی کسب‌وکار تبدیل می‌کنیم</strong>
           </h1>
+
           <p class="hero-lead">
-            طراحی، توسعه و رشد محصولات دیجیتال را به‌صورت یک مسیر یکپارچه جلو
-            می‌بریم؛ از وب‌سایت و فروشگاه تا سامانه‌های اختصاصی، قابلیت‌های
-            هوشمند، سئو، داده و پشتیبانی مستمر.
+            از مشاور و جستجوی هوشمند تا Agent، اتوماسیون و تحلیل داده؛ و هرجا
+            لازم باشد محصول، سامانه، سایت، فروشگاه، سئو و زیرساخت عملیاتی را هم
+            در همان مسیر طراحی و توسعه می‌دهیم.
           </p>
 
           <div class="hero-actions">
-            <a class="primary-action" href="#service-catalog">مشاهده خدمات</a>
+            <a class="primary-action" href="#ai-services">خدمات هوش مصنوعی</a>
             <NuxtLink class="secondary-action" to="/contact">بررسی پروژه شما</NuxtLink>
           </div>
 
-          <div class="hero-highlights" role="group" aria-label="ویژگی‌های همکاری">
-            <span>طراحی متناسب با کسب‌وکار</span>
+          <div class="hero-meta" role="group" aria-label="ویژگی‌های همکاری">
+            <span>AI کاربردی، نه نمایشی</span>
             <i aria-hidden="true"></i>
             <span>معماری قابل توسعه</span>
             <i aria-hidden="true"></i>
-            <span>همراهی بعد از انتشار</span>
+            <span>اتصال به داده و عملیات واقعی</span>
           </div>
         </div>
 
-        <div class="hero-stack" aria-hidden="true">
-          <article class="stack-card stack-card-main">
-            <div class="stack-icon">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 6h16v12H4zM4 9h16" />
-                <path d="M7 7.5h.01M10 7.5h.01" />
-              </svg>
-            </div>
-            <div>
-              <span>محصول دیجیتال</span>
-              <strong>طراحی و توسعه یکپارچه</strong>
-            </div>
-          </article>
+        <div class="ai-visual" aria-label="نمودار حوزه‌های اصلی توسعه هوش مصنوعی">
+          <div class="ai-diagram">
+            <svg class="diagram-links" viewBox="0 0 420 340" aria-hidden="true">
+              <line x1="210" y1="170" x2="315" y2="76" />
+              <line x1="210" y1="170" x2="105" y2="76" />
+              <line x1="210" y1="170" x2="315" y2="264" />
+              <line x1="210" y1="170" x2="105" y2="264" />
+            </svg>
 
-          <article class="stack-card stack-card-ai">
-            <div class="stack-icon">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M12 3l1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Z" />
-                <path d="m18 14 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14Z" />
-              </svg>
+            <div class="ai-core">
+              <span>Nexa AI</span>
+              <strong>Intelligence</strong>
+              <small>Product Layer</small>
             </div>
-            <div>
-              <span>AI</span>
-              <strong>قابلیت‌های هوشمند کاربردی</strong>
-            </div>
-          </article>
 
-          <article class="stack-card stack-card-growth">
-            <div class="stack-icon">
-              <svg viewBox="0 0 24 24" fill="none">
-                <path d="M4 17 9 12l3 3 7-8" />
-                <path d="M15 7h4v4" />
-              </svg>
-            </div>
-            <div>
-              <span>Growth</span>
-              <strong>سئو، داده و بهبود مستمر</strong>
-            </div>
-          </article>
+            <article class="ai-node node-advisor">
+              <span>01</span>
+              <div>
+                <strong>AI Advisor</strong>
+                <small>مشاور هوشمند</small>
+              </div>
+            </article>
 
-          <div class="stack-orbit stack-orbit-one"></div>
-          <div class="stack-orbit stack-orbit-two"></div>
+            <article class="ai-node node-search">
+              <span>02</span>
+              <div>
+                <strong>Smart Search</strong>
+                <small>جستجوی معنایی</small>
+              </div>
+            </article>
+
+            <article class="ai-node node-agent">
+              <span>03</span>
+              <div>
+                <strong>AI Agents</strong>
+                <small>اتوماسیون عملیات</small>
+              </div>
+            </article>
+
+            <article class="ai-node node-data">
+              <span>04</span>
+              <div>
+                <strong>AI + Data</strong>
+                <small>تحلیل و تصمیم‌یار</small>
+              </div>
+            </article>
+          </div>
+
+          <p class="ai-diagram-caption">
+            یک لایه هوشمندی مشترک که به داده، جستجو، عملیات و تجربه کاربر متصل می‌شود.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="service-catalog" class="service-catalog-section">
+    <section id="ai-services" class="ai-services-section">
       <div class="container">
-        <div class="section-heading">
-          <span class="section-badge">خدمات ما</span>
-          <h2>راهکارهایی که می‌توانند مستقل یا کنار هم اجرا شوند</h2>
+        <div class="section-heading ai-heading">
+          <span class="section-badge">اولویت اول NexaStudio</span>
+          <h2>توسعه هوش مصنوعی متصل به محصول، داده و عملیات واقعی</h2>
           <p>
-            لازم نیست همه‌چیز را از صفر بسازید. بر اساس وضعیت فعلی کسب‌وکار،
-            فقط همان بخش‌هایی را طراحی و اجرا می‌کنیم که بیشترین ارزش را ایجاد
-            می‌کنند.
+            هدف ما اضافه‌کردن یک چت‌بات تزئینی نیست. AI باید زمان، هزینه یا
+            اصطکاک را کم کند، کیفیت تصمیم را بالا ببرد یا تجربه مشتری را بهتر
+            کند.
           </p>
         </div>
 
-        <div class="service-grid">
-          <article class="service-panel">
-            <div class="service-panel-head">
-              <div class="line-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M4 6h16v12H4zM4 9h16" />
-                  <path d="M7 7.5h.01M10 7.5h.01" />
-                </svg>
-              </div>
-              <span class="service-index">01</span>
+        <div class="ai-grid">
+          <article class="ai-feature ai-feature-main">
+            <div class="feature-top">
+              <span>AI / 01</span>
+              <small>Customer Intelligence</small>
             </div>
-            <h3>طراحی وب‌سایت و فروشگاه اینترنتی</h3>
+            <h3>مشاور و دستیار هوشمند</h3>
             <p>
-              طراحی تجربه کاربری، ساختار محتوا و رابطی که با برند، مسیر خرید و
-              اهداف واقعی کسب‌وکار هماهنگ باشد.
+              دستیارهایی که روی داده، کاتالوگ، محتوای واقعی و قواعد کسب‌وکار
+              Ground می‌شوند و کاربر یا تیم داخلی را تا تصمیم و اقدام بعدی
+              همراهی می‌کنند.
             </p>
             <ul>
-              <li>طراحی Responsive و RTL</li>
-              <li>تجربه خرید و مسیر تبدیل</li>
-              <li>زیرساخت مناسب توسعه آینده</li>
+              <li>مشاور خرید و انتخاب محصول</li>
+              <li>دستیار داخلی برای اپراتور و مدیر</li>
+              <li>Grounding روی داده واقعی</li>
+              <li>کنترل دسترسی و پاسخ‌های قابل ممیزی</li>
             </ul>
           </article>
 
-          <article class="service-panel">
-            <div class="service-panel-head">
-              <div class="line-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" />
-                </svg>
+          <div class="ai-side-grid">
+            <article class="ai-feature">
+              <div class="feature-top">
+                <span>AI / 02</span>
+                <small>Retrieval</small>
               </div>
-              <span class="service-index">02</span>
+              <h3>جستجوی هوشمند و معنایی</h3>
+              <p>
+                درک بهتر نیت کاربر و بازیابی دقیق‌تر محصول یا اطلاعات، حتی وقتی
+                عبارت جستجو با متن کاتالوگ یکسان نیست.
+              </p>
+              <div class="feature-tags">
+                <span>Semantic Search</span>
+                <span>Hybrid Retrieval</span>
+                <span>RAG</span>
+              </div>
+            </article>
+
+            <article class="ai-feature">
+              <div class="feature-top">
+                <span>AI / 03</span>
+                <small>Automation</small>
+              </div>
+              <h3>Agent و اتوماسیون هوشمند</h3>
+              <p>
+                خودکارسازی کارهای تکراری و Workflowهای چندمرحله‌ای با ابزارهای
+                محدودشده، مجوز مشخص و Human-in-the-loop.
+              </p>
+              <div class="feature-tags">
+                <span>Agents</span>
+                <span>Workflow</span>
+                <span>Human Review</span>
+              </div>
+            </article>
+
+            <article class="ai-feature">
+              <div class="feature-top">
+                <span>AI / 04</span>
+                <small>Data Intelligence</small>
+              </div>
+              <h3>تحلیل، گزارش و تصمیم‌یار هوشمند</h3>
+              <p>
+                تبدیل داده‌های پراکنده به گزارش، هشدار، تشخیص مسئله و پاسخ‌های
+                قابل استفاده برای تصمیم‌های مدیریتی و عملیاتی.
+              </p>
+              <div class="feature-tags">
+                <span>Analytics</span>
+                <span>Diagnostics</span>
+                <span>Decision Support</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="all-services" class="all-services-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-badge">همه خدمات</span>
+          <h2>از AI تا ساخت، راه‌اندازی و رشد محصول</h2>
+          <p>
+            خدمات می‌توانند مستقل انتخاب شوند یا در قالب یک مسیر یکپارچه کنار
+            هم قرار بگیرند. چیزی را که برای پروژه لازم نیست، تحمیل نمی‌کنیم.
+          </p>
+        </div>
+
+        <div class="service-list">
+          <article class="service-row service-featured service-ai-card">
+            <div class="service-number">01</div>
+            <div class="service-title">
+              <span>Artificial Intelligence</span>
+              <h3>توسعه هوش مصنوعی و قابلیت‌های هوشمند</h3>
             </div>
-            <h3>توسعه سامانه‌های اختصاصی</h3>
-            <p>
-              ساخت پنل، پلتفرم یا فرآیند نرم‌افزاری اختصاصی بر اساس عملیات واقعی
-              شما، نه محدودیت یک قالب آماده.
-            </p>
-            <ul>
-              <li>معماری و توسعه اختصاصی</li>
-              <li>پنل‌های مدیریتی و Workflow</li>
-              <li>اتصال سرویس‌ها و APIها</li>
-            </ul>
+            <div class="service-body">
+              <p>
+                طراحی و توسعه لایه هوشمند برای محصول یا عملیات، از معماری و
+                انتخاب مدل تا اتصال به داده، ابزار و Workflow.
+              </p>
+              <div class="service-tags">
+                <span>AI Advisor</span>
+                <span>Smart Search</span>
+                <span>AI Agents</span>
+                <span>RAG</span>
+                <span>AI Automation</span>
+                <span>AI Analytics</span>
+              </div>
+            </div>
           </article>
 
-          <article class="service-panel">
-            <div class="service-panel-head">
-              <div class="line-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M12 3l1.4 4.1L17.5 8.5l-4.1 1.4L12 14l-1.4-4.1-4.1-1.4 4.1-1.4L12 3Z" />
-                  <path d="m18 14 .8 2.2L21 17l-2.2.8L18 20l-.8-2.2L15 17l2.2-.8L18 14Z" />
-                </svg>
-              </div>
-              <span class="service-index">03</span>
+          <article class="service-row">
+            <div class="service-number">02</div>
+            <div class="service-title">
+              <span>Custom Engineering</span>
+              <h3>سامانه‌ها و پروژه‌های اختصاصی</h3>
             </div>
-            <h3>هوش مصنوعی و قابلیت‌های هوشمند</h3>
-            <p>
-              اضافه‌کردن AI در جایی که تجربه کاربر، سرعت عملیات یا کیفیت تصمیم
-              را واقعاً بهتر کند.
-            </p>
-            <ul>
-              <li>مشاور و دستیار هوشمند</li>
-              <li>جستجوی هوشمند و Semantic</li>
-              <li>اتوماسیون و تحلیل داده</li>
-            </ul>
+            <div class="service-body">
+              <p>
+                ساخت پنل، پلتفرم، سامانه عملیاتی یا پروژه نرم‌افزاری اختصاصی
+                برای نیازهایی که با ابزار و قالب آماده حل نمی‌شوند.
+              </p>
+              <div class="service-tags">
+                <span>معماری نرم‌افزار</span>
+                <span>پنل مدیریتی</span>
+                <span>Workflow</span>
+                <span>قابلیت اختصاصی</span>
+                <span>پروژه‌های غیرسایتی</span>
+              </div>
+            </div>
           </article>
 
-          <article class="service-panel">
-            <div class="service-panel-head">
-              <div class="line-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <circle cx="11" cy="11" r="6" />
-                  <path d="m16 16 4 4M8 11h6M11 8v6" />
-                </svg>
-              </div>
-              <span class="service-index">04</span>
+          <article class="service-row">
+            <div class="service-number">03</div>
+            <div class="service-title">
+              <span>Web & Commerce</span>
+              <h3>طراحی وب‌سایت و فروشگاه اینترنتی</h3>
             </div>
-            <h3>سئو و رشد ارگانیک</h3>
-            <p>
-              بهینه‌سازی فنی و محتوایی برای اینکه محصول شما قابل کشف باشد و
-              ورودی ارگانیک به یک دارایی بلندمدت تبدیل شود.
-            </p>
-            <ul>
-              <li>Technical SEO و ساختار صفحات</li>
-              <li>Schema، Sitemap و Indexability</li>
-              <li>فرآیند محتوا و فرصت‌های جستجو</li>
-            </ul>
+            <div class="service-body">
+              <p>
+                طراحی و توسعه وب‌سایت و فروشگاه با تجربه کاربری متناسب با برند،
+                مسیر تبدیل روشن و زیرساختی که برای توسعه بعدی آماده باشد.
+              </p>
+              <div class="service-tags">
+                <span>UX / UI</span>
+                <span>Responsive & RTL</span>
+                <span>Ecommerce</span>
+                <span>Redesign</span>
+                <span>Conversion</span>
+              </div>
+            </div>
           </article>
 
-          <article class="service-panel">
-            <div class="service-panel-head">
-              <div class="line-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M5 5h14v14H5z" />
-                  <path d="M8 9h8M8 12h8M8 15h5" />
-                </svg>
-              </div>
-              <span class="service-index">05</span>
+          <article class="service-row service-seo service-seo-card">
+            <div class="service-number">04</div>
+            <div class="service-title">
+              <span>Automated SEO</span>
+              <h3>سئوی اتومات و رشد ارگانیک</h3>
             </div>
-            <h3>ورود اطلاعات و مدیریت کاتالوگ</h3>
-            <p>
-              آماده‌سازی و سازمان‌دهی داده‌های محصول برای راه‌اندازی سریع‌تر،
-              جستجوی بهتر و مدیریت دقیق‌تر فروشگاه.
-            </p>
-            <ul>
-              <li>ورود و پاک‌سازی اطلاعات</li>
-              <li>ساختاردهی دسته، برند و ویژگی‌ها</li>
-              <li>آماده‌سازی محتوا و تصاویر محصول</li>
-            </ul>
+            <div class="service-body">
+              <p>
+                سئو را به بخشی از خود محصول تبدیل می‌کنیم تا صفحات، Metadata،
+                Schema و سیگنال‌های فنی در مقیاس و با قواعد مشخص مدیریت شوند.
+              </p>
+              <div class="service-tags">
+                <span>Metadata Automation</span>
+                <span>Schema</span>
+                <span>Sitemap</span>
+                <span>Canonical</span>
+                <span>Indexability</span>
+                <span>Content Workflow</span>
+              </div>
+            </div>
           </article>
 
-          <article class="service-panel">
-            <div class="service-panel-head">
-              <div class="line-icon">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M5 12a7 7 0 0 1 12-4.9L19 9" />
-                  <path d="M19 5v4h-4M19 12a7 7 0 0 1-12 4.9L5 15" />
-                  <path d="M5 19v-4h4" />
-                </svg>
-              </div>
-              <span class="service-index">06</span>
+          <article class="service-row service-data-card">
+            <div class="service-number">05</div>
+            <div class="service-title">
+              <span>Data Onboarding & Catalog</span>
+              <h3>مدیریت و ورود دیتاهای اولیه</h3>
             </div>
-            <h3>پشتیبانی و توسعه مستمر</h3>
-            <p>
-              بعد از انتشار کنار محصول می‌مانیم تا نگهداری، رفع مسئله و توسعه
-              قابلیت‌های بعدی به‌صورت کنترل‌شده انجام شود.
-            </p>
-            <ul>
-              <li>نگهداری و بهینه‌سازی</li>
-              <li>رفع خطا و پایش فنی</li>
-              <li>توسعه مرحله‌ای قابلیت‌های جدید</li>
-            </ul>
+            <div class="service-body">
+              <p>
+                برای راه‌اندازی فروشگاه یا سامانه، داده‌های اولیه را وارد،
+                پاک‌سازی، ساختاردهی و آماده می‌کنیم تا پروژه با دیتای قابل
+                استفاده شروع شود.
+              </p>
+              <div class="service-tags">
+                <span>ورود محصول</span>
+                <span>Data Migration</span>
+                <span>پاک‌سازی داده</span>
+                <span>دسته و برند</span>
+                <span>ویژگی‌ها</span>
+                <span>تصاویر و محتوا</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-row service-report-card">
+            <div class="service-number">06</div>
+            <div class="service-title">
+              <span>Reporting & BI</span>
+              <h3>گزارشات مدیریتی و تحلیل داده</h3>
+            </div>
+            <div class="service-body">
+              <p>
+                داده‌های عملیاتی را به داشبورد، گزارش و شاخص‌هایی تبدیل می‌کنیم
+                که وضعیت فروش، عملیات و نقاط مسئله را قابل مشاهده و تصمیم‌پذیر
+                کنند.
+              </p>
+              <div class="service-tags">
+                <span>Dashboards</span>
+                <span>KPI</span>
+                <span>BI</span>
+                <span>Operational Reports</span>
+                <span>Diagnostics</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-row">
+            <div class="service-number">07</div>
+            <div class="service-title">
+              <span>Integration & Automation</span>
+              <h3>یکپارچه‌سازی، API و اتوماسیون عملیات</h3>
+            </div>
+            <div class="service-body">
+              <p>
+                سرویس‌ها و سیستم‌های پراکنده را به هم متصل می‌کنیم، ورود
+                اطلاعات تکراری را کم می‌کنیم و فرآیندهای دستی را به Workflow
+                قابل کنترل تبدیل می‌کنیم.
+              </p>
+              <div class="service-tags">
+                <span>API Integration</span>
+                <span>Automation</span>
+                <span>Background Jobs</span>
+                <span>Sync</span>
+                <span>External Services</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-row">
+            <div class="service-number">08</div>
+            <div class="service-title">
+              <span>Support & Evolution</span>
+              <h3>پشتیبانی، نگهداری و توسعه مستمر</h3>
+            </div>
+            <div class="service-body">
+              <p>
+                بعد از انتشار محصول را رها نمی‌کنیم. نگهداری، رفع خطا،
+                بهینه‌سازی و توسعه قابلیت‌های بعدی می‌تواند مرحله‌ای و کنترل‌شده
+                ادامه پیدا کند.
+              </p>
+              <div class="service-tags">
+                <span>Maintenance</span>
+                <span>Monitoring</span>
+                <span>Bug Fixing</span>
+                <span>Optimization</span>
+                <span>Feature Growth</span>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <section class="engagement-section">
-      <div class="container">
-        <div class="section-heading">
+      <div class="container engagement-layout">
+        <div class="engagement-copy">
           <span class="section-badge">مدل همکاری</span>
-          <h2>از هر نقطه‌ای که هستید می‌توانیم شروع کنیم</h2>
+          <h2>لازم نیست پروژه از صفر شروع شود</h2>
           <p>
-            همکاری فقط برای پروژه‌های صفر تا صد نیست. می‌توانیم روی یک محصول
-            موجود، یک قابلیت مشخص یا یک مسئله فنی و محصولی متمرکز شویم.
+            می‌توانیم وارد محصول موجود شویم، فقط یک قابلیت AI یا ماژول خاص را
+            بسازیم، یک مسئله فنی را حل کنیم یا مسئولیت توسعه مستمر را بگیریم.
           </p>
+          <NuxtLink class="text-link" to="/contact">
+            درباره وضعیت فعلی پروژه صحبت کنیم ←
+          </NuxtLink>
         </div>
 
-        <div class="engagement-grid">
-          <article class="engagement-card">
-            <span class="engagement-label">شروع از صفر</span>
-            <h3>محصول جدید</h3>
-            <p>
-              از تعریف مسئله و معماری تا طراحی، توسعه و انتشار نسخه قابل استفاده.
-            </p>
-            <div class="engagement-footer">
-              <span>Discovery</span>
-              <span>Architecture</span>
-              <span>Build</span>
+        <div class="engagement-options">
+          <article>
+            <span>01</span>
+            <div>
+              <strong>محصول یا پروژه جدید</strong>
+              <p>Discovery، معماری، طراحی، توسعه و انتشار.</p>
             </div>
           </article>
 
-          <article class="engagement-card featured-card">
-            <span class="engagement-label">توسعه محصول موجود</span>
-            <h3>قابلیت جدید یا بازطراحی</h3>
-            <p>
-              اضافه‌کردن قابلیت‌های اختصاصی، AI، جستجو، گزارشات، SEO یا بهبود UX
-              بدون بازسازی بی‌دلیل کل سیستم.
-            </p>
-            <div class="engagement-footer">
-              <span>Audit</span>
-              <span>Feature</span>
-              <span>Integration</span>
+          <article class="engagement-highlight">
+            <span>02</span>
+            <div>
+              <strong>AI یا قابلیت جدید روی محصول موجود</strong>
+              <p>Audit، طراحی Integration و توسعه کنترل‌شده.</p>
             </div>
           </article>
 
-          <article class="engagement-card">
-            <span class="engagement-label">همراهی بلندمدت</span>
-            <h3>رشد و نگهداری</h3>
-            <p>
-              توسعه تدریجی محصول بر اساس داده، نیاز کاربران و اولویت‌های جدید
-              کسب‌وکار.
-            </p>
-            <div class="engagement-footer">
-              <span>Support</span>
-              <span>Optimization</span>
-              <span>Growth</span>
+          <article>
+            <span>03</span>
+            <div>
+              <strong>رشد و توسعه مستمر</strong>
+              <p>نگهداری، بهینه‌سازی و توسعه بر اساس داده و نیاز جدید.</p>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="capabilities-section">
-      <div class="container capabilities-layout">
-        <div class="capabilities-copy">
-          <span class="section-badge">قابلیت‌های قابل اضافه‌شدن</span>
-          <h2>یک سایت ثابت نمی‌سازیم؛ یک پایه قابل توسعه می‌سازیم.</h2>
-          <p>
-            بسیاری از قابلیت‌ها لازم نیست از روز اول اجرا شوند. محصول می‌تواند
-            با نیاز اصلی شروع شود و بعد بر اساس اولویت کسب‌وکار گسترش پیدا کند.
-          </p>
-          <NuxtLink class="text-link" to="/contact">درباره نیاز پروژه صحبت کنیم ←</NuxtLink>
-        </div>
-
-        <div class="capabilities-grid">
-          <article>
-            <strong>SEO خودکار</strong>
-            <span>ساختار فنی، Metadata، Schema و فرآیندهای مقیاس‌پذیر</span>
-          </article>
-          <article>
-            <strong>مشاور هوشمند</strong>
-            <span>راهنمایی کاربر با استفاده از داده و محتوای واقعی محصول</span>
-          </article>
-          <article>
-            <strong>جستجوی هوشمند</strong>
-            <span>جستجوی معنایی و بازیابی بهتر برای کاتالوگ‌های بزرگ</span>
-          </article>
-          <article>
-            <strong>گزارشات مدیریتی</strong>
-            <span>تبدیل داده‌های عملیاتی به اطلاعات قابل تصمیم‌گیری</span>
-          </article>
-          <article>
-            <strong>اتوماسیون عملیات</strong>
-            <span>کاهش کارهای تکراری و اتصال فرآیندهای پراکنده</span>
-          </article>
-          <article>
-            <strong>قابلیت‌های اختصاصی</strong>
-            <span>هر ویژگی‌ای که مزیت واقعی برای مدل کسب‌وکار شما ایجاد کند</span>
           </article>
         </div>
       </div>
@@ -325,41 +460,33 @@
       <div class="container">
         <div class="section-heading">
           <span class="section-badge">فرآیند اجرا</span>
-          <h2>پروژه را قبل از کدنویسی روشن می‌کنیم</h2>
+          <h2>قبل از توسعه، مسئله و ارزش خروجی را روشن می‌کنیم</h2>
           <p>
-            هدف این است که توسعه با فرضیات مبهم شروع نشود و هر مرحله خروجی
-            قابل بررسی داشته باشد.
+            مخصوصاً در پروژه‌های AI، انتخاب مدل آخرین تصمیم است. ابتدا باید
+            مسئله، داده، محدودیت و معیار موفقیت مشخص شوند.
           </p>
         </div>
 
         <ol class="process-list">
-          <li class="process-item">
-            <span class="process-number">01</span>
-            <div>
-              <h3>شناخت نیاز</h3>
-              <p>مسئله، کاربران، وضعیت فعلی و محدودیت‌های پروژه را مشخص می‌کنیم.</p>
-            </div>
+          <li>
+            <span>01</span>
+            <strong>شناخت مسئله</strong>
+            <p>هدف، کاربر، فرآیند فعلی و محدودیت‌ها مشخص می‌شوند.</p>
           </li>
-          <li class="process-item">
-            <span class="process-number">02</span>
-            <div>
-              <h3>طراحی راهکار</h3>
-              <p>Scope، تجربه کاربری، معماری و اولویت‌های اجرا را تعیین می‌کنیم.</p>
-            </div>
+          <li>
+            <span>02</span>
+            <strong>طراحی راهکار</strong>
+            <p>Scope، معماری، داده و نقاط Integration تعریف می‌شوند.</p>
           </li>
-          <li class="process-item">
-            <span class="process-number">03</span>
-            <div>
-              <h3>ساخت و تست</h3>
-              <p>توسعه مرحله‌ای انجام می‌شود و کیفیت قبل از تحویل بررسی می‌شود.</p>
-            </div>
+          <li>
+            <span>03</span>
+            <strong>ساخت و تست</strong>
+            <p>پیاده‌سازی مرحله‌ای با کنترل کیفیت و تست سناریوهای واقعی.</p>
           </li>
-          <li class="process-item">
-            <span class="process-number">04</span>
-            <div>
-              <h3>انتشار و رشد</h3>
-              <p>محصول منتشر می‌شود و توسعه بعدی بر اساس نیاز واقعی ادامه پیدا می‌کند.</p>
-            </div>
+          <li>
+            <span>04</span>
+            <strong>انتشار و بهبود</strong>
+            <p>پایش نتیجه و توسعه بعدی بر اساس داده و بازخورد واقعی.</p>
           </li>
         </ol>
       </div>
@@ -369,45 +496,47 @@
       <div class="container proof-layout">
         <div class="proof-copy">
           <span class="section-badge">تجربه واقعی محصول</span>
-          <h2>راهکارهایی که پیشنهاد می‌دهیم، در محصولات واقعی تجربه کرده‌ایم.</h2>
+          <h2>خدماتی که ارائه می‌دهیم، در محصول واقعی تجربه شده‌اند</h2>
           <p>
-            شیدانه و هویکس فقط نمونه‌کار تصویری نیستند؛ تجربه ساخت و توسعه آن‌ها
-            مبنای بسیاری از تصمیم‌های معماری، محصول، سئو و قابلیت‌های هوشمند ماست.
+            شیدانه و هویکس فقط نمونه‌کار بصری نیستند. تجربه معماری، جستجوی
+            هوشمند، SEO، کاتالوگ، گزارشات، عملیات و توسعه مستمر این محصولات،
+            پشت تصمیم‌های فنی ما قرار دارد.
           </p>
-          <NuxtLink class="text-link" to="/about">بیشتر درباره NexaStudio ←</NuxtLink>
+          <NuxtLink class="text-link" to="/about">
+            بیشتر درباره NexaStudio ←
+          </NuxtLink>
         </div>
 
         <div class="proof-products">
           <figure>
-            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" loading="lazy" />
+            <img
+              :src="shidaneProofSrc"
+              alt="پیش‌نمایش محصول شیدانه"
+              loading="lazy"
+              decoding="async"
+              @error="recoverProofImage('shidane')"
+            />
             <figcaption>
+              <span>Beauty Commerce</span>
               <strong>شیدانه</strong>
-              <span>فروشگاه و پلتفرم هوشمند زیبایی</span>
+              <small>فروشگاه، جستجوی هوشمند، SEO و قابلیت‌های AI</small>
             </figcaption>
           </figure>
-          <figure>
-            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" loading="lazy" />
-            <figcaption>
-              <strong>HEVIX</strong>
-              <span>پلتفرم تخصصی قطعات و تجهیزات</span>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
 
-    <section class="services-cta-section">
-      <div class="container">
-        <div class="services-cta">
-          <div>
-            <span class="cta-kicker">قدم بعدی</span>
-            <h2>لازم نیست از قبل راه‌حل را بدانید.</h2>
-            <p>
-              مسئله، وضعیت فعلی و هدف کسب‌وکار را بررسی می‌کنیم و مسیر مناسب را
-              پیشنهاد می‌دهیم؛ از یک قابلیت کوچک تا یک محصول کامل.
-            </p>
-          </div>
-          <NuxtLink class="cta-button" to="/contact">درخواست مشاوره</NuxtLink>
+          <figure>
+            <img
+              :src="hevixProofSrc"
+              alt="پیش‌نمایش محصول هویکس"
+              loading="lazy"
+              decoding="async"
+              @error="recoverProofImage('hevix')"
+            />
+            <figcaption>
+              <span>Industrial Commerce</span>
+              <strong>HEVIX</strong>
+              <small>پلتفرم تخصصی، داده، جستجو و توسعه اختصاصی</small>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -419,64 +548,92 @@
   min-height: 100vh;
   overflow-x: clip;
   direction: rtl;
-  background: var(--bg);
+  background:
+    linear-gradient(180deg, #fcf8f4 0%, #fffdfa 48%, #fcf8f4 100%);
   color: var(--text);
 }
 
 .services-hero {
   position: relative;
-  padding: 88px 0 82px;
+  overflow: hidden;
+  padding: 20px 0 60px;
 }
 
 .services-hero::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto;
-  height: 460px;
+  inset: 0;
   background:
-    radial-gradient(circle at 78% 24%, rgba(184, 107, 53, 0.11), transparent 35%),
-    radial-gradient(circle at 18% 12%, rgba(16, 28, 50, 0.05), transparent 28%);
+    radial-gradient(circle at 82% 20%, rgba(184, 107, 53, 0.16), transparent 27%),
+    radial-gradient(circle at 70% 72%, rgba(223, 170, 128, 0.12), transparent 24%),
+    radial-gradient(circle at 11% 18%, rgba(71, 93, 126, 0.07), transparent 25%);
   pointer-events: none;
 }
 
-.services-hero-inner {
+.services-hero::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: -95px;
+  bottom: -150px;
+  border: 1px solid rgba(184, 107, 53, 0.14);
+  border-radius: 50%;
+  box-shadow: 0 0 0 46px rgba(184, 107, 53, 0.025);
+  pointer-events: none;
+}
+
+.hero-layout {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-  gap: 64px;
+  grid-template-columns: minmax(0, 1.16fr) minmax(360px, 0.84fr);
+  gap: 48px;
   align-items: center;
+  min-height: 520px;
+  padding: 42px 44px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 211, 199, 0.92);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 84% 18%, rgba(184, 107, 53, 0.12), transparent 27%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(255, 249, 245, 0.95));
+  box-shadow:
+    0 24px 58px rgba(16, 28, 50, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .hero-copy {
-  max-width: 670px;
-  text-align: right;
+  max-width: 710px;
 }
 
-.services-badge,
+.hero-eyebrow,
 .section-badge {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  border: 1px solid #d86b4a;
+  border: 1px solid rgba(196, 102, 63, 0.55);
   border-radius: 999px;
-  background: #fff7f4;
-  color: #c56839;
-  font-size: 14px;
-  font-weight: 700;
+  background: rgba(255, 247, 244, 0.92);
+  color: #b45f35;
+  font-size: 15.5px;
+  font-weight: 800;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
-.services-badge {
-  padding: 6px 18px;
+.hero-eyebrow {
+  padding: 7px 18px;
+  direction: ltr;
+  letter-spacing: 0.02em;
 }
 
 .hero-copy h1 {
-  margin: 18px 0 20px;
-  max-width: 680px;
+  max-width: 780px;
+  margin: 20px 0 20px;
   color: var(--text);
-  font-size: clamp(40px, 4.6vw, 62px);
-  line-height: 1.4;
-  letter-spacing: -0.02em;
+  font-size: clamp(40px, 4.4vw, 60px);
+  line-height: 1.36;
+  letter-spacing: -0.028em;
 }
 
 .hero-copy h1 strong {
@@ -485,277 +642,390 @@
 }
 
 .hero-lead {
-  max-width: 630px;
+  max-width: 680px;
   margin: 0;
   color: var(--muted);
-  font-size: 17px;
+  font-size: 16.5px;
   line-height: 1.95;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 30px;
+  gap: 11px;
+  margin-top: 31px;
 }
 
 .primary-action,
-.secondary-action,
-.cta-button {
+.secondary-action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
+  min-height: 50px;
   padding: 12px 24px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 15.5px;
   font-weight: 800;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.primary-action,
-.cta-button {
-  background: linear-gradient(135deg, #c17a42, #9b542d);
+.primary-action {
+  background: linear-gradient(135deg, #c97d45, #95502d);
   color: #fff;
-  box-shadow: 0 12px 30px rgba(155, 84, 45, 0.18);
+  box-shadow: 0 14px 30px rgba(155, 84, 45, 0.22);
 }
 
 .secondary-action {
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.82);
   color: var(--text);
+  box-shadow: 0 8px 22px rgba(16, 28, 50, 0.04);
 }
 
 .primary-action:hover,
-.secondary-action:hover,
-.cta-button:hover {
+.secondary-action:hover {
   transform: translateY(-2px);
 }
 
-.hero-highlights {
+.hero-meta {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 9px;
   margin-top: 28px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
 }
 
-.hero-highlights i {
+.hero-meta i {
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background: var(--accent);
 }
 
-.hero-stack {
+.ai-visual {
+  min-width: 0;
+  padding-right: 28px;
+  border-right: 1px solid rgba(218, 200, 187, 0.72);
+}
+
+.ai-diagram {
   position: relative;
-  min-height: 470px;
+  width: min(100%, 420px);
+  aspect-ratio: 420 / 340;
+  margin: 0 auto;
 }
 
-.stack-card {
+.diagram-links {
   position: absolute;
-  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.diagram-links line {
+  stroke: rgba(184, 107, 53, 0.22);
+  stroke-width: 1.2;
+  stroke-dasharray: 4 5;
+}
+
+.ai-core {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
   display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 330px;
-  padding: 18px;
-  border: 1px solid rgba(234, 223, 215, 0.94);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: var(--shadow);
-}
-
-.stack-card-main {
-  top: 70px;
-  right: 10px;
-}
-
-.stack-card-ai {
-  top: 190px;
-  left: 18px;
-}
-
-.stack-card-growth {
-  right: 46px;
-  bottom: 42px;
-}
-
-.stack-icon,
-.line-icon {
-  display: inline-flex;
-  flex: none;
+  width: 142px;
+  height: 142px;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  border: 1px solid rgba(184, 107, 53, 0.3);
   border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 28%, #fff, #fff7f1 62%, #f2dfd1 100%);
+  box-shadow:
+    0 18px 42px rgba(16, 28, 50, 0.09),
+    0 0 0 10px rgba(255, 255, 255, 0.34);
+  text-align: center;
+}
+
+.ai-core > span {
+  color: var(--accent);
+  font-size: 10.5px;
+  font-weight: 800;
+}
+
+.ai-core strong {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.2;
+  direction: ltr;
+}
+
+.ai-core small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10px;
+  direction: ltr;
+}
+
+.ai-node {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  width: 154px;
+  min-height: 62px;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 11px;
+  border: 1px solid rgba(226, 211, 199, 0.82);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  box-shadow: 0 9px 24px rgba(16, 28, 50, 0.045);
+}
+
+.ai-node > span {
+  display: inline-flex;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
   background: #faece4;
   color: var(--accent);
+  font-size: 9.5px;
+  font-weight: 800;
 }
 
-.stack-icon svg,
-.line-icon svg {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.ai-node div {
+  min-width: 0;
 }
 
-.stack-card div:last-child {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+.ai-node strong {
+  display: block;
+  color: var(--text);
+  font-size: 11.5px;
+  line-height: 1.3;
+  direction: ltr;
   text-align: right;
 }
 
-.stack-card span {
+.ai-node small {
+  display: block;
+  margin-top: 2px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 10px;
+  line-height: 1.4;
 }
 
-.stack-card strong {
-  color: var(--text);
-  font-size: 15px;
+.node-advisor {
+  top: 6%;
+  right: 0;
 }
 
-.stack-orbit {
-  position: absolute;
-  z-index: 0;
-  border: 1px solid rgba(184, 107, 53, 0.18);
-  border-radius: 50%;
-  pointer-events: none;
+.node-search {
+  top: 6%;
+  left: 0;
 }
 
-.stack-orbit-one {
-  width: 330px;
-  height: 330px;
-  top: 38px;
-  right: 40px;
+.node-agent {
+  right: 0;
+  bottom: 6%;
 }
 
-.stack-orbit-two {
-  width: 220px;
-  height: 220px;
-  left: 25px;
-  bottom: 30px;
+.node-data {
+  left: 0;
+  bottom: 6%;
 }
 
-.service-catalog-section {
-  padding: 70px 0 80px;
+.ai-diagram-caption {
+  max-width: 390px;
+  margin: 12px auto 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.ai-services-section {
+  padding: 88px 0;
+  border-top: 1px solid rgba(234, 223, 215, 0.72);
+  border-bottom: 1px solid rgba(234, 223, 215, 0.72);
+  background:
+    radial-gradient(circle at 86% 12%, rgba(202, 126, 72, 0.07), transparent 24%),
+    linear-gradient(180deg, #fffefd 0%, #fff8f2 100%);
   scroll-margin-top: 110px;
 }
 
 .section-heading {
-  max-width: 790px;
-  margin: 0 auto 36px;
+  max-width: 840px;
+  margin: 0 auto 42px;
   text-align: center;
 }
 
 .section-badge {
-  padding: 5px 18px;
-}
-
-.section-heading h2,
-.capabilities-copy h2,
-.proof-copy h2 {
-  color: var(--text);
-  line-height: 1.45;
+  padding: 5px 17px;
 }
 
 .section-heading h2 {
   margin: 14px 0 10px;
-  font-size: clamp(30px, 3.4vw, 42px);
-}
-
-.section-heading p,
-.capabilities-copy p,
-.proof-copy p {
-  color: var(--muted);
-  line-height: 1.9;
+  color: var(--text);
+  font-size: clamp(30px, 3.5vw, 44px);
+  line-height: 1.45;
 }
 
 .section-heading p {
-  max-width: 700px;
+  max-width: 730px;
   margin: 0 auto;
-  font-size: 15px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.95;
 }
 
-.service-grid {
+.ai-heading h2 {
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.ai-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: minmax(350px, 0.93fr) minmax(0, 1.07fr);
+  gap: 20px;
 }
 
-.service-panel {
-  display: flex;
-  flex-direction: column;
+.ai-side-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ai-feature {
+  position: relative;
+  overflow: hidden;
   min-width: 0;
-  min-height: 330px;
-  padding: 24px;
+  padding: 25px;
   border: 1px solid var(--line);
-  border-radius: 22px;
-  background: var(--surface);
-  text-align: right;
-  box-shadow: 0 12px 34px rgba(16, 28, 50, 0.045);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 34px rgba(16, 28, 50, 0.045);
 }
 
-.service-panel:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 42px rgba(16, 28, 50, 0.08);
+.ai-feature::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 86px;
+  height: 4px;
+  border-radius: 0 0 0 999px;
+  background: #c77a43;
 }
 
-.service-panel-head {
+.ai-side-grid .ai-feature:nth-child(1)::before {
+  background: #7088a4;
+}
+
+.ai-side-grid .ai-feature:nth-child(2)::before {
+  background: #8a7aa8;
+}
+
+.ai-side-grid .ai-feature:nth-child(3)::before {
+  background: #6f947b;
+}
+
+.ai-feature-main {
+  display: flex;
+  min-height: 448px;
+  flex-direction: column;
+  padding: 31px;
+  border-color: rgba(184, 107, 53, 0.36);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(184, 107, 53, 0.13), transparent 28%),
+    linear-gradient(145deg, #fff, #fff9f4);
+  box-shadow: 0 20px 44px rgba(184, 107, 53, 0.07);
+}
+
+.ai-side-grid .ai-feature:nth-child(1) {
+  background: linear-gradient(145deg, #fff, #f7fafc);
+}
+
+.ai-side-grid .ai-feature:nth-child(2) {
+  background: linear-gradient(145deg, #fff, #faf8fd);
+}
+
+.ai-side-grid .ai-feature:nth-child(3) {
+  grid-column: 1 / -1;
+  background: linear-gradient(145deg, #fff, #f5faf7);
+}
+
+.feature-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 
-.service-index {
-  color: #c8b7aa;
-  font-size: 12px;
+.feature-top span {
+  color: var(--accent);
+  font-size: 11.5px;
   font-weight: 800;
 }
 
-.service-panel h3 {
-  margin: 18px 0 8px;
+.feature-top small {
+  color: #9a8b80;
+  font-size: 10.5px;
+  direction: ltr;
+}
+
+.ai-feature h3 {
+  margin: 19px 0 8px;
   color: var(--text);
   font-size: 20px;
   line-height: 1.55;
 }
 
-.service-panel > p {
+.ai-feature-main h3 {
+  font-size: 28px;
+}
+
+.ai-feature p {
   margin: 0;
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 14.5px;
   line-height: 1.9;
 }
 
-.service-panel ul {
+.ai-feature-main p {
+  font-size: 15.5px;
+}
+
+.ai-feature ul {
   display: grid;
-  gap: 8px;
+  gap: 10px;
   margin: auto 0 0;
-  padding: 20px 0 0;
+  padding: 24px 0 0;
   list-style: none;
 }
 
-.service-panel li {
+.ai-feature li {
   position: relative;
   padding-right: 17px;
   color: #566174;
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 15px;
 }
 
-.service-panel li::before {
+.ai-feature li::before {
   content: "";
   position: absolute;
-  top: 0.75em;
+  top: 0.7em;
   right: 0;
   width: 6px;
   height: 6px;
@@ -763,141 +1033,290 @@
   background: var(--accent);
 }
 
-.engagement-section {
-  padding: 76px 0;
-  border-top: 1px solid rgba(234, 223, 215, 0.72);
-  border-bottom: 1px solid rgba(234, 223, 215, 0.72);
-  background: rgba(255, 255, 255, 0.48);
+.feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 18px;
 }
 
-.engagement-grid {
+.feature-tags span,
+.service-tags span {
+  padding: 5px 9px;
+  border: 1px solid #eee2d9;
+  border-radius: 999px;
+  background: rgba(250, 247, 244, 0.9);
+  color: #667085;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.all-services-section {
+  padding: 90px 0;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(101, 131, 161, 0.06), transparent 22%),
+    #fcf8f4;
+  scroll-margin-top: 110px;
+}
+
+.service-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: 18px;
 }
 
-.engagement-card {
-  min-height: 255px;
+.service-row {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 10px 16px;
+  align-items: start;
+  min-width: 0;
+  min-height: 292px;
+  height: 100%;
   padding: 26px;
   border: 1px solid var(--line);
-  border-radius: 22px;
-  background: var(--surface);
-  text-align: right;
+  border-radius: 23px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 32px rgba(16, 28, 50, 0.04);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
 }
 
-.featured-card {
-  border-color: rgba(184, 107, 53, 0.38);
-  background: #fff9f5;
-  box-shadow: 0 16px 38px rgba(184, 107, 53, 0.08);
+.service-row::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: -60px;
+  bottom: -70px;
+  border-radius: 50%;
+  background: rgba(184, 107, 53, 0.04);
 }
 
-.engagement-label {
+.service-row:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 107, 53, 0.26);
+  box-shadow: 0 18px 42px rgba(16, 28, 50, 0.075);
+}
+
+.service-ai-card {
+  border-color: rgba(184, 107, 53, 0.34);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(184, 107, 53, 0.12), transparent 25%),
+    linear-gradient(135deg, #fffaf6, #fff);
+  box-shadow: 0 18px 42px rgba(184, 107, 53, 0.07);
+}
+
+.service-seo-card {
+  background:
+    linear-gradient(145deg, #fff, #f5faf7);
+  border-color: rgba(111, 148, 123, 0.26);
+}
+
+.service-data-card {
+  background:
+    linear-gradient(145deg, #fff, #f7f5fb);
+  border-color: rgba(138, 122, 168, 0.22);
+}
+
+.service-report-card {
+  background:
+    linear-gradient(145deg, #fff, #f5f8fb);
+  border-color: rgba(112, 136, 164, 0.22);
+}
+
+.service-number {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #faece4;
   color: var(--accent);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 800;
+  direction: ltr;
 }
 
-.engagement-card h3 {
-  margin: 9px 0 8px;
+.service-seo-card .service-number {
+  background: #edf5ef;
+  color: #5c8268;
+}
+
+.service-data-card .service-number {
+  background: #f1eef8;
+  color: #766890;
+}
+
+.service-report-card .service-number {
+  background: #eef3f8;
+  color: #657f9c;
+}
+
+.service-title {
+  min-width: 0;
+}
+
+.service-title span {
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 800;
+  direction: ltr;
+}
+
+.service-title h3 {
+  margin: 5px 0 0;
   color: var(--text);
-  font-size: 22px;
+  font-size: 19px;
+  line-height: 1.6;
 }
 
-.engagement-card p {
+.service-body {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.service-body p {
+  max-width: 700px;
   margin: 0;
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 14.5px;
   line-height: 1.9;
 }
 
-.engagement-footer {
+.service-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 24px;
+  gap: 6px;
+  margin-top: 15px;
 }
 
-.engagement-footer span {
-  padding: 5px 10px;
-  border: 1px solid #eee2d9;
-  border-radius: 999px;
-  background: #faf7f4;
-  color: #667085;
-  font-size: 10.5px;
+.engagement-section {
+  padding: 88px 0;
+  border-top: 1px solid rgba(234, 223, 215, 0.72);
+  border-bottom: 1px solid rgba(234, 223, 215, 0.72);
+  background:
+    radial-gradient(circle at 84% 20%, rgba(184, 107, 53, 0.07), transparent 26%),
+    rgba(255, 255, 255, 0.68);
 }
 
-.capabilities-section {
-  padding: 82px 0;
-}
-
-.capabilities-layout {
+.engagement-layout {
   display: grid;
-  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
-  gap: 54px;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
+  gap: 62px;
   align-items: center;
 }
 
-.capabilities-copy {
-  text-align: right;
-}
-
-.capabilities-copy h2 {
+.engagement-copy h2,
+.proof-copy h2 {
   margin: 14px 0 12px;
-  font-size: clamp(30px, 3.1vw, 40px);
+  color: var(--text);
+  font-size: clamp(30px, 3.2vw, 41px);
+  line-height: 1.5;
 }
 
-.capabilities-copy p {
+.engagement-copy p,
+.proof-copy p {
   margin: 0;
-  font-size: 14px;
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.95;
 }
 
 .text-link {
   display: inline-flex;
-  margin-top: 22px;
+  margin-top: 21px;
   color: var(--accent);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 800;
 }
 
-.capabilities-grid {
+.engagement-options {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 12px;
 }
 
-.capabilities-grid article {
-  min-width: 0;
-  padding: 18px;
+.engagement-options article {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 19px 21px;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 19px;
   background: var(--surface);
-  text-align: right;
+  box-shadow: 0 10px 26px rgba(16, 28, 50, 0.035);
 }
 
-.capabilities-grid strong {
-  display: block;
-  margin-bottom: 5px;
+.engagement-options article::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  border-radius: 999px;
+  background: #d9b299;
+}
+
+.engagement-options article:nth-child(2)::after {
+  background: #b86b35;
+}
+
+.engagement-options article:nth-child(3)::after {
+  background: #7088a4;
+}
+
+.engagement-options article > span {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #faece4;
+  color: var(--accent);
+  font-size: 11.5px;
+  font-weight: 800;
+}
+
+.engagement-options strong {
   color: var(--text);
-  font-size: 15px;
+  font-size: 16px;
 }
 
-.capabilities-grid span {
+.engagement-options p {
+  margin: 3px 0 0;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.75;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.engagement-highlight {
+  border-color: rgba(184, 107, 53, 0.36) !important;
+  background: linear-gradient(145deg, #fff, #fff8f2) !important;
+  box-shadow: 0 14px 32px rgba(184, 107, 53, 0.06) !important;
 }
 
 .process-section {
-  padding: 76px 0;
-  border-top: 1px solid rgba(234, 223, 215, 0.72);
-  background: rgba(255, 255, 255, 0.48);
+  padding: 88px 0;
+  background:
+    linear-gradient(180deg, #fcf8f4 0%, #fffdfb 100%);
 }
 
 .process-list {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -910,209 +1329,225 @@
   right: 9%;
   left: 9%;
   height: 1px;
-  background: var(--line);
+  background: linear-gradient(90deg, transparent, #dac8bb 16%, #dac8bb 84%, transparent);
 }
 
-.process-item {
+.process-list li {
   position: relative;
   z-index: 1;
-  padding: 0 8px;
   text-align: center;
 }
 
-.process-number {
+.process-list li > span {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   width: 54px;
   height: 54px;
-  border: 1px solid #ddcfc4;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #decfc4;
   border-radius: 50%;
-  background: var(--bg);
+  background: linear-gradient(145deg, #fff, #f9ede4);
   color: var(--accent);
-  font-size: 13px;
-  font-weight: 800;
-  box-shadow: 0 0 0 8px rgba(252, 248, 244, 0.94);
-}
-
-.process-item h3 {
-  margin: 18px 0 7px;
-  color: var(--text);
-  font-size: 17px;
-}
-
-.process-item p {
-  margin: 0;
-  color: var(--muted);
   font-size: 12.5px;
-  line-height: 1.85;
+  font-weight: 800;
+  box-shadow:
+    0 0 0 8px var(--bg),
+    0 10px 24px rgba(16, 28, 50, 0.04);
+}
+
+.process-list li:nth-child(2) > span {
+  background: linear-gradient(145deg, #fff, #f0f4f8);
+  color: #657f9c;
+}
+
+.process-list li:nth-child(3) > span {
+  background: linear-gradient(145deg, #fff, #f3f0f8);
+  color: #766890;
+}
+
+.process-list li:nth-child(4) > span {
+  background: linear-gradient(145deg, #fff, #eef6f0);
+  color: #5c8268;
+}
+
+.process-list strong {
+  display: block;
+  margin-top: 18px;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.process-list p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .proof-section {
-  padding: 76px 0;
+  padding: 90px 0 100px;
+  border-top: 1px solid rgba(234, 223, 215, 0.72);
+  background:
+    radial-gradient(circle at 14% 15%, rgba(112, 136, 164, 0.07), transparent 24%),
+    rgba(255, 255, 255, 0.62);
 }
 
 .proof-layout {
   display: grid;
-  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
-  gap: 48px;
+  grid-template-columns: minmax(300px, 0.68fr) minmax(0, 1.32fr);
+  gap: 58px;
   align-items: center;
 }
 
-.proof-copy {
-  text-align: right;
-}
-
-.proof-copy h2 {
-  margin: 14px 0 12px;
-  font-size: clamp(29px, 3vw, 39px);
-}
-
-.proof-copy p {
-  margin: 0;
-  font-size: 14px;
-}
-
 .proof-products {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  position: relative;
+  min-height: 430px;
   direction: ltr;
 }
 
 .proof-products figure {
+  position: absolute;
   overflow: hidden;
+  width: 58%;
   margin: 0;
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: 25px;
   background: var(--surface);
-  box-shadow: 0 12px 30px rgba(16, 28, 50, 0.05);
+  box-shadow: 0 22px 48px rgba(16, 28, 50, 0.095);
+}
+
+.proof-products figure:first-child {
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotate(-1.2deg);
+}
+
+.proof-products figure:last-child {
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transform: rotate(1.2deg);
 }
 
 .proof-products img {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
+  object-position: center;
+  background: #f8f3ef;
 }
 
 .proof-products figcaption {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 13px 14px 15px;
+  padding: 14px 15px 17px;
   direction: rtl;
+  background: rgba(255, 255, 255, 0.97);
+}
+
+.proof-products figcaption span {
+  color: var(--accent);
+  font-size: 10.5px;
+  font-weight: 800;
+  direction: ltr;
   text-align: right;
 }
 
-.proof-products strong {
+.proof-products figcaption strong {
   color: var(--text);
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.proof-products span {
+.proof-products figcaption small {
   color: var(--muted);
-  font-size: 11px;
-}
-
-.services-cta-section {
-  padding: 20px 0 78px;
-}
-
-.services-cta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 34px;
-  padding: 34px 38px;
-  border-radius: 26px;
-  background: #101c32;
-  color: #fff;
-  box-shadow: 0 20px 50px rgba(16, 28, 50, 0.14);
-}
-
-.cta-kicker {
-  color: #e2a06f;
   font-size: 12px;
-  font-weight: 700;
-}
-
-.services-cta h2 {
-  margin: 7px 0 6px;
-  color: #fff;
-  font-size: clamp(25px, 3vw, 34px);
-}
-
-.services-cta p {
-  max-width: 680px;
-  margin: 0;
-  color: #c8d0dc;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.cta-button {
-  flex: none;
-  min-width: 158px;
+  line-height: 1.65;
 }
 
 @media (max-width: 1080px) {
-  .services-hero-inner {
-    gap: 34px;
+  .hero-layout {
+    grid-template-columns: minmax(0, 1.12fr) minmax(330px, 0.88fr);
+    gap: 32px;
+    padding: 38px 32px;
   }
 
-  .service-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .ai-grid {
+    grid-template-columns: 1fr;
   }
 
-  .capabilities-layout,
+  .ai-feature-main {
+    min-height: 0;
+  }
+
+  .engagement-layout,
   .proof-layout {
-    gap: 34px;
+    gap: 38px;
   }
 }
 
 @media (max-width: 820px) {
   .services-hero {
-    padding: 56px 0 62px;
+    padding: 16px 0 52px;
   }
 
-  .services-hero-inner {
+  .hero-layout {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 28px;
+    min-height: 0;
+    padding: 32px;
   }
 
   .hero-copy {
     max-width: 720px;
   }
 
-  .hero-stack {
-    width: min(100%, 650px);
-    min-height: 390px;
-    margin: 0 auto;
+  .ai-visual {
+    width: 100%;
+    padding: 26px 0 0;
+    border-top: 1px solid rgba(218, 200, 187, 0.72);
+    border-right: 0;
   }
 
-  .engagement-grid {
+  .ai-diagram {
+    width: min(100%, 460px);
+  }
+
+  .ai-side-grid {
     grid-template-columns: 1fr;
   }
 
-  .engagement-card {
-    min-height: 0;
+  .ai-side-grid .ai-feature:nth-child(3) {
+    grid-column: auto;
   }
 
-  .capabilities-layout,
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .service-body {
+    grid-column: 2;
+  }
+
+  .engagement-layout,
   .proof-layout {
     grid-template-columns: 1fr;
   }
 
-  .capabilities-copy,
+  .engagement-copy,
   .proof-copy {
     max-width: 720px;
   }
 
+  .proof-products {
+    min-height: 390px;
+  }
+
   .process-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 18px;
   }
 
   .process-list::before {
@@ -1122,101 +1557,125 @@
 
 @media (max-width: 600px) {
   .services-hero {
-    padding: 44px 0 50px;
+    padding: 12px 0 46px;
+  }
+
+  .hero-layout {
+    padding: 24px 20px 22px;
+    border-radius: 24px;
   }
 
   .hero-copy h1 {
-    margin-top: 16px;
-    font-size: clamp(32px, 9.5vw, 42px);
-    line-height: 1.5;
+    font-size: clamp(33px, 9.8vw, 44px);
+    line-height: 1.48;
   }
 
   .hero-lead {
-    font-size: 15.5px;
+    font-size: 16.5px;
     line-height: 1.9;
   }
 
   .hero-actions {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 24px;
   }
 
   .primary-action,
   .secondary-action {
     min-width: 0;
-    padding-inline: 14px;
-    font-size: 13px;
+    padding-inline: 12px;
+    font-size: 15px;
   }
 
-  .hero-highlights {
-    margin-top: 22px;
+  .ai-visual {
+    padding-top: 20px;
   }
 
-  .hero-stack {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    min-height: 0;
-  }
-
-  .stack-card,
-  .stack-card-main,
-  .stack-card-ai,
-  .stack-card-growth {
-    position: relative;
-    inset: auto;
-    min-width: 0;
+  .ai-diagram {
     width: 100%;
   }
 
-  .stack-orbit {
-    display: none;
+  .ai-core {
+    width: 118px;
+    height: 118px;
   }
 
-  .service-catalog-section,
+  .ai-node {
+    width: 132px;
+    min-height: 56px;
+    padding: 8px 9px;
+  }
+
+  .ai-node > span {
+    width: 25px;
+    height: 25px;
+  }
+
+  .ai-node strong {
+    font-size: 12.5px;
+  }
+
+  .ai-node small {
+    font-size: 9px;
+  }
+
+  .ai-services-section,
+  .all-services-section,
   .engagement-section,
-  .capabilities-section,
   .process-section,
   .proof-section {
-    padding: 56px 0;
+    padding: 60px 0;
   }
 
   .section-heading {
-    margin-bottom: 26px;
+    margin-bottom: 29px;
   }
 
   .section-heading h2,
-  .capabilities-copy h2,
+  .engagement-copy h2,
   .proof-copy h2 {
     font-size: 28px;
   }
 
-  .section-heading p {
-    font-size: 14px;
+  .section-heading p,
+  .engagement-copy p,
+  .proof-copy p {
+    font-size: 15px;
   }
 
-  .service-grid {
+  .ai-feature,
+  .ai-feature-main {
+    padding: 21px;
+    border-radius: 19px;
+  }
+
+  .ai-feature-main h3 {
+    font-size: 22px;
+  }
+
+  .service-row {
     grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .service-panel {
     min-height: 0;
-    padding: 20px;
+    height: auto;
+    gap: 8px;
+    padding: 23px 20px;
   }
 
-  .service-panel h3 {
-    font-size: 18px;
+  .service-body {
+    grid-column: auto;
   }
 
-  .engagement-card {
-    padding: 22px;
+  .service-number {
+    width: 38px;
+    height: 38px;
   }
 
-  .capabilities-grid {
-    grid-template-columns: 1fr;
+  .service-title h3 {
+    font-size: 17px;
+  }
+
+  .service-body p {
+    font-size: 14px;
   }
 
   .process-list {
@@ -1224,69 +1683,95 @@
     gap: 0;
   }
 
-  .process-item {
+  .process-list li {
     display: grid;
-    grid-template-columns: 50px minmax(0, 1fr);
-    gap: 14px;
-    padding: 0 0 28px;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 12px 14px;
+    padding-bottom: 27px;
     text-align: right;
   }
 
-  .process-item:not(:last-child)::after {
+  .process-list li:not(:last-child)::after {
     content: "";
     position: absolute;
-    top: 46px;
-    right: 24px;
+    top: 44px;
+    right: 23px;
     bottom: 0;
     width: 1px;
     background: var(--line);
   }
 
-  .process-number {
-    width: 48px;
-    height: 48px;
+  .process-list li > span {
     grid-row: 1 / span 2;
+    width: 46px;
+    height: 46px;
     box-shadow: none;
   }
 
-  .process-item h3 {
-    margin: 2px 0 5px;
+  .process-list strong {
+    margin-top: 2px;
+  }
+
+  .process-list p {
+    margin-top: 0;
   }
 
   .proof-products {
+    display: grid;
+    min-height: 0;
     grid-template-columns: 1fr;
+    gap: 14px;
     direction: rtl;
   }
 
-  .services-cta-section {
-    padding: 18px 0 56px;
-  }
-
-  .services-cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-    padding: 26px 22px;
-    border-radius: 22px;
-  }
-
-  .cta-button {
+  .proof-products figure,
+  .proof-products figure:first-child,
+  .proof-products figure:last-child {
+    position: relative;
+    inset: auto;
     width: 100%;
+    transform: none;
   }
 }
 
 @media (max-width: 390px) {
+  .ai-core {
+    width: 102px;
+    height: 102px;
+  }
+
+  .ai-node {
+    width: 116px;
+    min-height: 50px;
+    gap: 6px;
+    padding: 7px;
+  }
+
+  .ai-node > span {
+    width: 22px;
+    height: 22px;
+    font-size: 12.5px;
+  }
+
+  .ai-node strong {
+    font-size: 10px;
+  }
+
+  .ai-node small {
+    font-size: 9px;
+  }
+
   .hero-actions {
     grid-template-columns: 1fr;
   }
 
-  .hero-highlights {
+  .hero-meta {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 5px;
   }
 
-  .hero-highlights i {
+  .hero-meta i {
     display: none;
   }
 }

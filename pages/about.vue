@@ -257,21 +257,6 @@
       </div>
     </section>
 
-    <section class="about-cta-section">
-      <div class="container">
-        <div class="about-cta-panel">
-          <div>
-            <span class="cta-kicker">شروع همکاری</span>
-            <h2>یک مسئله یا ایده برای ساخت دارید؟</h2>
-            <p>
-              قبل از شروع توسعه، درباره نیاز، معماری و مسیر مناسب محصول با هم
-              صحبت می‌کنیم.
-            </p>
-          </div>
-          <NuxtLink class="cta-button" to="/contact">درخواست مشاوره</NuxtLink>
-        </div>
-      </div>
-    </section>
   </main>
 </template>
 
@@ -286,7 +271,7 @@
 
 .about-hero {
   position: relative;
-  padding: 88px 0 82px;
+  padding: 20px 0 58px;
 }
 
 .about-hero::before {
@@ -303,8 +288,19 @@
   z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.95fr);
-  gap: 64px;
+  gap: 54px;
   align-items: center;
+  min-height: 570px;
+  padding: 42px 42px;
+  overflow: hidden;
+  border: 1px solid rgba(226, 211, 199, 0.92);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(184, 107, 53, 0.11), transparent 27%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(255, 249, 245, 0.95));
+  box-shadow:
+    0 24px 58px rgba(16, 28, 50, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .about-content {
@@ -321,7 +317,7 @@
   border-radius: 999px;
   background: #fff7f4;
   color: #c56839;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -358,21 +354,19 @@
 }
 
 .primary-action,
-.secondary-action,
-.cta-button {
+.secondary-action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 48px;
   padding: 12px 24px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 800;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.primary-action,
-.cta-button {
+.primary-action {
   background: linear-gradient(135deg, #c17a42, #9b542d);
   color: #fff;
   box-shadow: 0 12px 30px rgba(155, 84, 45, 0.18);
@@ -385,8 +379,7 @@
 }
 
 .primary-action:hover,
-.secondary-action:hover,
-.cta-button:hover {
+.secondary-action:hover {
   transform: translateY(-2px);
 }
 
@@ -397,12 +390,12 @@
   gap: 10px;
   margin-top: 28px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13.5px;
 }
 
 .hero-proof strong {
   color: var(--text);
-  font-size: 13px;
+  font-size: 14.5px;
 }
 
 .hero-proof i {
@@ -454,8 +447,9 @@
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top center;
+  object-fit: contain;
+  object-position: center;
+  background: #f8f3ef;
 }
 
 .product-preview figcaption {
@@ -468,12 +462,12 @@
 
 .product-preview figcaption strong {
   color: var(--text);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .product-preview figcaption span {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13.5px;
 }
 
 .preview-primary {
@@ -517,7 +511,7 @@
   max-width: 680px;
   margin: 0 auto;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.9;
 }
 
@@ -558,7 +552,7 @@
 
 .proof-copy > span {
   color: var(--accent);
-  font-size: 12px;
+  font-size: 13.5px;
   font-weight: 800;
   letter-spacing: 0.02em;
 }
@@ -572,7 +566,7 @@
 .proof-copy p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.85;
 }
 
@@ -627,7 +621,7 @@
 .thinking-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14.5px;
   line-height: 1.9;
 }
 
@@ -676,7 +670,7 @@
   border-radius: 999px;
   background: #fff3ed;
   color: #bd7448;
-  font-size: 12px;
+  font-size: 13.5px;
   font-weight: 700;
 }
 
@@ -689,7 +683,7 @@
 .founder-content p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -714,7 +708,7 @@
   border-radius: 999px;
   background: #faf7f4;
   color: #667085;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
@@ -748,7 +742,7 @@
   max-width: 620px;
   margin: 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14.5px;
   line-height: 1.8;
 }
 
@@ -799,7 +793,7 @@
   border-radius: 50%;
   background: var(--bg);
   color: var(--accent);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 800;
   box-shadow: 0 0 0 8px rgba(252, 248, 244, 0.94);
 }
@@ -813,55 +807,15 @@
 .process-item p {
   margin: 0;
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 14px;
   line-height: 1.85;
 }
 
-.about-cta-section {
-  padding: 26px 0 78px;
-  background: rgba(255, 255, 255, 0.48);
-}
-
-.about-cta-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-  padding: 34px 38px;
-  border-radius: 26px;
-  background: #101c32;
-  color: #fff;
-  box-shadow: 0 20px 50px rgba(16, 28, 50, 0.14);
-}
-
-.cta-kicker {
-  color: #e2a06f;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.about-cta-panel h2 {
-  margin: 7px 0 6px;
-  color: #fff;
-  font-size: clamp(25px, 3vw, 34px);
-}
-
-.about-cta-panel p {
-  max-width: 660px;
-  margin: 0;
-  color: #c8d0dc;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.cta-button {
-  flex: none;
-  min-width: 158px;
-}
 
 @media (max-width: 1080px) {
   .about-hero-inner {
-    gap: 38px;
+    gap: 34px;
+    padding: 38px 32px;
   }
 
   .thinking-grid {
@@ -889,12 +843,14 @@
 
 @media (max-width: 820px) {
   .about-hero {
-    padding: 56px 0 62px;
+    padding: 16px 0 50px;
   }
 
   .about-hero-inner {
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 30px;
+    min-height: 0;
+    padding: 32px;
   }
 
   .about-content {
@@ -932,7 +888,12 @@
 
 @media (max-width: 600px) {
   .about-hero {
-    padding: 44px 0 50px;
+    padding: 12px 0 44px;
+  }
+
+  .about-hero-inner {
+    padding: 24px 20px 22px;
+    border-radius: 24px;
   }
 
   .about-content h1 {
@@ -942,7 +903,7 @@
   }
 
   .about-lead {
-    font-size: 15.5px;
+    font-size: 16.5px;
     line-height: 1.9;
   }
 
@@ -957,7 +918,7 @@
   .secondary-action {
     min-width: 0;
     padding-inline: 14px;
-    font-size: 13px;
+    font-size: 14.5px;
   }
 
   .hero-proof {
@@ -1001,7 +962,7 @@
   }
 
   .section-heading p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .proof-card {
@@ -1035,12 +996,12 @@
   }
 
   .founder-content p {
-    font-size: 12.5px;
+    font-size: 14px;
     line-height: 1.75;
   }
 
   .founder-role {
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .skill-chips {
@@ -1051,7 +1012,7 @@
   .skill-chips span {
     min-height: 25px;
     padding: 3px 8px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .specialists-panel {
@@ -1109,21 +1070,6 @@
     margin: 2px 0 5px;
   }
 
-  .about-cta-section {
-    padding: 18px 0 56px;
-  }
-
-  .about-cta-panel {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-    padding: 26px 22px;
-    border-radius: 22px;
-  }
-
-  .cta-button {
-    width: 100%;
-  }
 }
 
 @media (max-width: 390px) {

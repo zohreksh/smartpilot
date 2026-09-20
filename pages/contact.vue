@@ -1,11 +1,47 @@
+<script setup>
+import { ref } from "vue";
+
+const heroSrc = ref("/images/hero/contact-hero.webp");
+let heroRetryCount = 0;
+
+useHead({
+  link: [
+    {
+      rel: "preload",
+      as: "image",
+      href: "/images/hero/contact-hero.webp",
+      type: "image/webp",
+      fetchpriority: "high",
+    },
+  ],
+});
+
+const recoverHeroImage = () => {
+  if (heroRetryCount === 0) {
+    heroRetryCount = 1;
+    heroSrc.value = "/images/hero/contact-hero.webp?retry=1";
+    return;
+  }
+
+  if (heroRetryCount === 1) {
+    heroRetryCount = 2;
+    heroSrc.value = "/images/hero/contact-hero1.webp";
+  }
+};
+</script>
+
 <template>
   <main class="contact-page">
     <SiteHeader />
 
     <section class="contact-hero">
       <img
-        src="/images/hero/contact-hero.webp"
+        :src="heroSrc"
         alt="شروع همکاری و تبدیل ایده به محصول"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        @error="recoverHeroImage"
       />
     </section>
 
@@ -306,22 +342,6 @@
       </div>
     </section>
 
-    <section class="contact-links-section">
-      <div class="container contact-links-panel">
-        <div>
-          <span class="links-kicker">قبل از شروع گفتگو</span>
-          <h2>می‌خواهید اول بیشتر با روش کار ما آشنا شوید؟</h2>
-          <p>
-            خدمات و تجربه محصولی NexaStudio را ببینید و بعد درباره پروژه خودتان
-            تصمیم بگیرید.
-          </p>
-        </div>
-        <div class="contact-links-actions">
-          <NuxtLink class="primary-action" to="/services">مشاهده خدمات</NuxtLink>
-          <NuxtLink class="secondary-action light-action" to="/about">درباره ما</NuxtLink>
-        </div>
-      </div>
-    </section>
   </main>
 </template>
 
@@ -363,7 +383,7 @@
 .contact-channels-heading p {
   margin: 0;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15.5px;
   line-height: 1.8;
 }
 
@@ -424,7 +444,7 @@ a.contact-channel-card:hover {
 
 .channel-copy small {
   color: var(--accent);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -443,7 +463,7 @@ a.contact-channel-card:hover {
 
 .channel-copy span {
   color: var(--muted);
-  font-size: 11.5px;
+  font-size: 14.5px;
   line-height: 1.7;
 }
 
@@ -463,7 +483,7 @@ a.contact-channel-card:hover {
   border-radius: 999px;
   background: #f0ebe6;
   color: #8a7769;
-  font-size: 10px;
+  font-size: 11.5px;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -477,45 +497,10 @@ a.contact-channel-card:hover {
   border-radius: 999px;
   background: #fff7f4;
   color: #c56839;
-  font-size: 14px;
+  font-size: 15.5px;
   font-weight: 700;
 }
 
-.contact-links-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.primary-action,
-.secondary-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 800;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.primary-action {
-  background: linear-gradient(135deg, #c17a42, #9b542d);
-  color: #fff;
-  box-shadow: 0 12px 30px rgba(155, 84, 45, 0.18);
-}
-
-.secondary-action {
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.76);
-  color: var(--text);
-}
-
-.primary-action:hover,
-.secondary-action:hover {
-  transform: translateY(-2px);
-}
 
 .project-brief-section,
 .fit-section,
@@ -548,7 +533,7 @@ a.contact-channel-card:hover {
   max-width: 700px;
   margin: 0 auto;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.9;
 }
 
@@ -586,7 +571,7 @@ a.contact-channel-card:hover {
 
 .field-group label {
   color: var(--text);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 700;
 }
 
@@ -601,7 +586,7 @@ a.contact-channel-card:hover {
   background: #fff;
   color: var(--text);
   font: inherit;
-  font-size: 13px;
+  font-size: 14.5px;
   line-height: 1.7;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -646,7 +631,7 @@ a.contact-channel-card:hover {
   background: #d9c8bb;
   color: #fff;
   font: inherit;
-  font-size: 14px;
+  font-size: 15.5px;
   font-weight: 800;
   cursor: not-allowed;
 }
@@ -654,7 +639,7 @@ a.contact-channel-card:hover {
 .form-footer p {
   margin: 0;
   color: #8a7769;
-  font-size: 11.5px;
+  font-size: 14.5px;
   line-height: 1.7;
 }
 
@@ -692,7 +677,7 @@ a.contact-channel-card:hover {
 
 .guide-head span {
   color: var(--accent);
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -719,13 +704,13 @@ a.contact-channel-card:hover {
   display: block;
   margin-bottom: 4px;
   color: var(--text);
-  font-size: 13px;
+  font-size: 14.5px;
 }
 
 .guide-list span {
   display: block;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13.5px;
   line-height: 1.75;
 }
 
@@ -735,7 +720,7 @@ a.contact-channel-card:hover {
   border-radius: 14px;
   background: rgba(184, 107, 53, 0.08);
   color: #78563e;
-  font-size: 11.5px;
+  font-size: 14.5px;
   line-height: 1.8;
 }
 
@@ -771,7 +756,7 @@ a.contact-channel-card:hover {
 .fit-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 14px;
   line-height: 1.9;
 }
 
@@ -816,7 +801,7 @@ a.contact-channel-card:hover {
   border-radius: 50%;
   background: var(--bg);
   color: var(--accent);
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 800;
   box-shadow: 0 0 0 8px rgba(252, 248, 244, 0.94);
 }
@@ -830,52 +815,10 @@ a.contact-channel-card:hover {
 .step-item p {
   margin: 0;
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 14px;
   line-height: 1.85;
 }
 
-.contact-links-section {
-  padding: 18px 0 78px;
-  background: rgba(255, 255, 255, 0.48);
-}
-
-.contact-links-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 34px;
-  padding: 34px 38px;
-  border-radius: 26px;
-  background: #101c32;
-  color: #fff;
-  box-shadow: 0 20px 50px rgba(16, 28, 50, 0.14);
-}
-
-.links-kicker {
-  color: #e2a06f;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.contact-links-panel h2 {
-  margin: 7px 0 6px;
-  color: #fff;
-  font-size: clamp(25px, 3vw, 34px);
-}
-
-.contact-links-panel p {
-  max-width: 660px;
-  margin: 0;
-  color: #c8d0dc;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.light-action {
-  border-color: rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
-}
 
 @media (max-width: 1080px) {
   .brief-layout {
@@ -965,7 +908,7 @@ a.contact-channel-card:hover {
   }
 
   .section-heading p {
-    font-size: 14px;
+    font-size: 15.5px;
   }
 
   .project-form,
@@ -1039,27 +982,6 @@ a.contact-channel-card:hover {
     margin: 2px 0 5px;
   }
 
-  .contact-links-section {
-    padding: 18px 0 56px;
-  }
-
-  .contact-links-panel {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 24px;
-    padding: 26px 22px;
-    border-radius: 22px;
-  }
-
-  .contact-links-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
-@media (max-width: 390px) {
-  .contact-links-actions {
-    grid-template-columns: 1fr;
-  }
-}
 </style>
