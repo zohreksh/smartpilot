@@ -10,9 +10,7 @@ usePageSeo({
 
 <template>
   <main id="main-content" class="projects-page" tabindex="-1">
-    <SiteHeader />
-
-    <section class="projects-hero">
+<section class="projects-hero">
       <div class="container">
         <div class="hero-panel">
           <div class="hero-copy">
