@@ -1,13 +1,13 @@
 <template>
   <section class="section team-section seciton-padding">
     <div class="container">
-      <div class="section-header">
-        <span class="section-badge">تیم ما</span>
-        <h2>پشت هر نتیجه خوب، یک تیم خوب است</h2>
-        <p>
-          ما با ترکیب تخصص، تجربه و نگاه آینده‌نگر، زیرساخت محصولات ماندگار
-          می‌سازیم.
+      <div class="section-header home-section-heading">
+        <span class="section-badge home-section-kicker">تیم ما</span>
+        <h2 class="home-section-title">پشت هر محصول خوب، یک تیم مسئول ایستاده است</h2>
+        <p class="home-section-description">
+          معماری، توسعه و کیفیت محصول مستقیماً با ماست و برای نیازهای بزرگ‌تر، شبکه متخصصان متناسب با پروژه شکل می‌گیرد.
         </p>
+        <span class="home-section-rule" aria-hidden="true"></span>
       </div>
       <div class="team-grid">
         <article class="team-card intro-card">
