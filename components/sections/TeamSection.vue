@@ -178,8 +178,8 @@
   margin: 4px 0 6px;
 }
 .team-card p {
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.85;
   color: #6c7588;
 }
 .intro-card strong {
@@ -260,8 +260,8 @@
   max-width: 250px;
   margin: 10px 0 0;
   color: #697386;
-  font-size: 11px;
-  line-height: 1.75;
+  font-size: 13px;
+  line-height: 1.8;
 }
 
 .job-title {
@@ -272,7 +272,7 @@
   border-radius: 999px;
   background: rgba(255, 243, 237, 0.88);
   color: #bd7448 !important;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 700;
 }
 
@@ -293,8 +293,8 @@
   border-radius: 999px;
   background: rgba(250, 247, 244, 0.88);
   color: #667085;
-  font-size: 10.5px;
-  line-height: 1.4;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .profile-link {
@@ -304,7 +304,7 @@
   margin-top: auto;
   padding-top: 11px;
   color: #0f2240;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 700;
 }
 
@@ -325,7 +325,7 @@
   border-radius: 999px;
   background: rgba(255, 243, 237, 0.8);
   color: #a9653d;
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 700;
 }
 @media (max-width: 1023px) {
@@ -362,7 +362,7 @@
   }
 
   .skills-list span {
-    font-size: 10.5px;
+    font-size: 12px;
     padding: 4px 8px;
   }
   .team-section {
