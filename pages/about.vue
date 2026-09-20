@@ -43,14 +43,14 @@ usePageSeo({
           <div class="visual-glow visual-glow-one" aria-hidden="true"></div>
           <div class="visual-glow visual-glow-two" aria-hidden="true"></div>
           <figure class="product-preview preview-primary">
-            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" />
+            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" width="1659" height="948" decoding="async" />
             <figcaption>
               <strong>شیدانه</strong>
               <span>فروشگاه و پلتفرم هوشمند زیبایی</span>
             </figcaption>
           </figure>
           <figure class="product-preview preview-secondary">
-            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" />
+            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" width="1659" height="948" decoding="async" />
             <figcaption>
               <strong>HEVIX</strong>
               <span>پلتفرم تخصصی قطعات و تجهیزات</span>
@@ -74,7 +74,7 @@ usePageSeo({
         <div class="proof-grid">
           <article class="proof-card">
             <div class="proof-image">
-              <img src="/images/projects/shidane.webp" alt="نمای پروژه شیدانه" loading="lazy" />
+              <img src="/images/projects/shidane.webp" alt="نمای پروژه شیدانه" width="1659" height="948" loading="lazy" decoding="async" />
             </div>
             <div class="proof-copy">
               <span>Shidaneh</span>
@@ -85,7 +85,7 @@ usePageSeo({
 
           <article class="proof-card">
             <div class="proof-image">
-              <img src="/images/projects/hevix.webp" alt="نمای پروژه هویکس" loading="lazy" />
+              <img src="/images/projects/hevix.webp" alt="نمای پروژه هویکس" width="1659" height="948" loading="lazy" decoding="async" />
             </div>
             <div class="proof-copy">
               <span>HEVIX</span>
@@ -169,7 +169,7 @@ usePageSeo({
         <div class="founders-grid">
           <article class="founder-card">
             <div class="founder-image">
-              <img src="/images/team/zohreh.webp" alt="زهره کشاورز" loading="lazy" />
+              <img src="/images/team/zohreh.webp" alt="زهره کشاورز" width="1140" height="1280" loading="lazy" decoding="async" />
             </div>
             <div class="founder-content">
               <span class="founder-role">معمار و توسعه‌دهنده</span>
@@ -185,7 +185,7 @@ usePageSeo({
 
           <article class="founder-card">
             <div class="founder-image">
-              <img src="/images/team/hossein.webp" alt="حسین کولانی" loading="lazy" />
+              <img src="/images/team/hossein.webp" alt="حسین کولانی" width="1080" height="1280" loading="lazy" decoding="async" />
             </div>
             <div class="founder-content">
               <span class="founder-role">معمار و توسعه‌دهنده</span>
