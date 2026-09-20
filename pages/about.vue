@@ -41,14 +41,14 @@ usePageSeo({
           <div class="visual-glow visual-glow-one" aria-hidden="true"></div>
           <div class="visual-glow visual-glow-two" aria-hidden="true"></div>
           <figure class="product-preview preview-primary">
-            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" width="1659" height="948" decoding="async" />
+            <img src="/images/projects/shidane1.webp" alt="پیش‌نمایش محصول شیدانه" width="1659" height="948" loading="eager" fetchpriority="high" />
             <figcaption>
               <strong>شیدانه</strong>
               <span>فروشگاه و پلتفرم هوشمند زیبایی</span>
             </figcaption>
           </figure>
           <figure class="product-preview preview-secondary">
-            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" width="1659" height="948" decoding="async" />
+            <img src="/images/projects/hevix1.webp" alt="پیش‌نمایش محصول هویکس" width="1659" height="948" loading="eager" />
             <figcaption>
               <strong>HEVIX</strong>
               <span>پلتفرم تخصصی قطعات و تجهیزات</span>
