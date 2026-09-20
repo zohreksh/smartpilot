@@ -63,17 +63,6 @@
               </svg>
             </a>
 
-            <span
-              class="footer-icon-action is-disabled"
-              aria-label="اینستاگرام، به‌زودی"
-              title="اینستاگرام - به‌زودی"
-            >
-              <svg class="contact-icon instagram-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <rect x="4" y="4" width="16" height="16" rx="5" />
-                <circle cx="12" cy="12" r="3.5" />
-                <circle cx="17.2" cy="6.8" r="0.8" fill="currentColor" stroke="none" />
-              </svg>
-            </span>
           </div>
         </div>
 
@@ -252,17 +241,6 @@
   color: #fff;
 }
 
-.footer-icon-action.is-disabled {
-  cursor: default;
-  opacity: 0.42;
-}
-
-.footer-icon-action.is-disabled:hover {
-  transform: none;
-  border-color: rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.04);
-  color: #d9a06f;
-}
 
 .contact-icon {
   width: 20px;
