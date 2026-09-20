@@ -71,9 +71,7 @@ const submitProjectBrief = () => {
 
 <template>
   <main id="main-content" class="contact-page" tabindex="-1">
-    <SiteHeader />
-
-    <section class="contact-hero">
+<section class="contact-hero">
       <h1 class="sr-only">
         شروع همکاری با NexaStudio برای طراحی و توسعه محصول دیجیتال
       </h1>
