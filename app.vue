@@ -11,16 +11,26 @@ const organizationSchema = {
   "@type": "Organization",
   name: "NexaStudio",
   url: siteUrl,
-  email: "mailto:zhr.keshavarz@gmail.com",
+  email: "zhr.keshavarz@gmail.com",
   telephone: "+989379407868",
+  logo: `${siteUrl}/favicon.svg`,
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+989379407868",
+    email: "zhr.keshavarz@gmail.com",
+    contactType: "customer service",
+    availableLanguage: ["fa"],
+  },
   founder: [
     {
       "@type": "Person",
       name: "زهره کشاورز",
+      sameAs: ["https://www.linkedin.com/in/zohre-keshavarz-2a3221bb"],
     },
     {
       "@type": "Person",
       name: "حسین کولانی",
+      sameAs: ["https://www.linkedin.com/in/hossien-kolani-720103bb"],
     },
   ],
 };
