@@ -29,7 +29,7 @@ jobs:
         run: npm run generate
         env:
           NUXT_PUBLIC_SITE_URL: https://smartpilot.ir
-          NUXT_APP_BASE_URL: /smartpilot/
+          NUXT_APP_BASE_URL: /
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
