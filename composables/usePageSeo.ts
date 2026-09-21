@@ -41,6 +41,26 @@ export const usePageSeo = (options: PageSeoOptions) => {
         href: canonicalUrl,
       },
     ],
+    script: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "SmartPilot",
+          url: baseUrl,
+          description: options.description,
+          areaServed: "Iran",
+          serviceType: [
+            "Software development",
+            "Artificial intelligence solutions",
+            "SEO automation",
+            "Digital product development",
+          ],
+          image: imageUrl,
+        }),
+      },
+    ],
   });
 
   return {
