@@ -7,6 +7,12 @@ usePageSeo({
   image: "/images/projects/hevix.webp",
 });
 
+useBreadcrumbSchema([
+  { name: "خانه", path: "/" },
+  { name: "پروژه‌ها", path: "/projects" },
+  { name: "هویکس", path: "/projects/hevix" },
+]);
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
