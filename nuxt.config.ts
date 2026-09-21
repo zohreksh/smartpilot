@@ -20,15 +20,31 @@ export default defineNuxtConfig({
         lang: "fa",
         dir: "rtl",
       },
-      title: "SmartPilot | طراحی محصول دیجیتال و راهکارهای هوشمند",
+      title: "SmartPilot | طراحی و توسعه محصولات دیجیتال با هوش مصنوعی",
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "manifest", href: "/site.webmanifest" },
+        { rel: "canonical", href: "https://smartpilot.ir" },
       ],
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { name: "theme-color", content: "#07111f" },
+        {
+          name: "description",
+          content:
+            "SmartPilot استودیو طراحی و توسعه محصولات دیجیتال، هوش مصنوعی، اتوماسیون SEO و راهکارهای اختصاصی برای کسب‌وکارها است.",
+        },
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "SmartPilot" },
+        { property: "og:title", content: "SmartPilot | طراحی و توسعه محصولات دیجیتال با هوش مصنوعی" },
+        {
+          property: "og:description",
+          content:
+            "طراحی محصول، توسعه نرم‌افزار اختصاصی، هوش مصنوعی، جستجوی هوشمند و راهکارهای دیجیتال برای رشد کسب‌وکارها.",
+        },
+        { property: "og:url", content: "https://smartpilot.ir" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
     },
   },
