@@ -35,6 +35,22 @@ const organizationSchema = {
   ],
 };
 
+const professionalServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "SmartPilot",
+  url: siteUrl,
+  description:
+    "طراحی و توسعه محصولات دیجیتال، هوش مصنوعی، اتوماسیون، جستجوی هوشمند و سامانه‌های اختصاصی برای کسب‌وکارها.",
+  areaServed: "IR",
+  serviceType: [
+    "AI Development",
+    "Digital Product Development",
+    "Custom Software Development",
+    "SEO Automation",
+  ],
+};
+
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -49,6 +65,11 @@ useHead({
       key: "SmartPilot-organization-schema",
       type: "application/ld+json",
       innerHTML: JSON.stringify(organizationSchema),
+    },
+    {
+      key: "SmartPilot-professional-service-schema",
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(professionalServiceSchema),
     },
     {
       key: "SmartPilot-website-schema",
