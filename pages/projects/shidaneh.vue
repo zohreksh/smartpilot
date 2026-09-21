@@ -7,6 +7,12 @@ usePageSeo({
   image: "/images/projects/shidane.webp",
 });
 
+useBreadcrumbSchema([
+  { name: "خانه", path: "/" },
+  { name: "پروژه‌ها", path: "/projects" },
+  { name: "شیدانه", path: "/projects/shidaneh" },
+]);
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
