@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   },
 
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || "/smartpilot/",
+    baseURL: process.env.NUXT_APP_BASE_URL || "/",
     head: {
       htmlAttrs: {
         lang: "fa",
@@ -22,8 +22,8 @@ export default defineNuxtConfig({
       },
       title: "SmartPilot | طراحی محصول دیجیتال و راهکارهای هوشمند",
       link: [
-        { rel: "icon", type: "image/svg+xml", href: "/smartpilot/favicon.svg" },
-        { rel: "manifest", href: "/smartpilot/site.webmanifest" },
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "manifest", href: "/site.webmanifest" },
       ],
       meta: [
         { charset: "utf-8" },
