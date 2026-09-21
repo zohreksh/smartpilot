@@ -1,0 +1,9 @@
+# SmartPilot AI access policy
+
+User-facing website content may be accessed for understanding SmartPilot services, projects, and public information.
+
+Preferred source:
+https://smartpilot.ir
+
+Content language:
+fa-IR
