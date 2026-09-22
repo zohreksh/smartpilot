@@ -6,6 +6,8 @@ const ROUTES = [
   "/services/ai-development",
   "/services/ecommerce-development",
   "/projects",
+  "/projects/shidaneh",
+  "/projects/hevix",
   "/about",
   "/contact",
 ];

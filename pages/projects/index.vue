@@ -156,6 +156,10 @@ usePageSeo({
             </svg>
           </a>
 
+          <NuxtLink class="case-detail-link" to="/projects/shidaneh">
+            مطالعه کامل Case Study شیدانه
+          </NuxtLink>
+
           <div class="case-detail-grid">
             <article>
               <small>Product</small>
@@ -228,6 +232,10 @@ usePageSeo({
               <path d="M7 5h8v8M15 5l-9 9" />
             </svg>
           </a>
+
+          <NuxtLink class="case-detail-link" to="/projects/hevix">
+            مطالعه کامل Case Study هویکس
+          </NuxtLink>
 
           <div class="case-detail-grid">
             <article>
@@ -762,6 +770,23 @@ usePageSeo({
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.case-detail-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 10px;
+  margin-inline-start: 8px;
+  padding: 9px 13px;
+  color: #9f5a34;
+  font-size: 13.5px;
+  font-weight: 800;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+.case-detail-link:hover {
+  color: #7a4426;
 }
 
 .case-detail-grid {
