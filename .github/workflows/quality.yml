@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
-      NUXT_PUBLIC_SITE_URL: https://smartpilot.example.invalid
+      NUXT_PUBLIC_SITE_URL: https://smartpilot.ir
 
     steps:
       - name: Checkout
