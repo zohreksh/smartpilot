@@ -14,7 +14,7 @@ export const usePageSeo = (options: PageSeoOptions) => {
   const requestBase = `${requestUrl.protocol}//${requestUrl.host}`;
   const baseUrl = (configuredBase || requestBase).replace(/\/$/, "");
   const normalizedPath =
-    options.path === "/" ? "/" : `/${options.path.replace(/^\\/+|\\/+$/g, "")}`;
+    options.path === "/" ? "/" : `/${options.path.replace(/^\/+|\/+$/g, "")}`;
   const canonicalUrl =
     normalizedPath === "/" ? `${baseUrl}/` : `${baseUrl}${normalizedPath}`;
   const imagePath = options.image || "/images/hero/desktop-hero.webp";
