@@ -1,6 +1,16 @@
 import { getRequestURL, setHeader } from "h3";
 
-const ROUTES = ["/", "/services", "/projects", "/about", "/contact"];
+const ROUTES = [
+  "/",
+  "/services",
+  "/services/ai-development",
+  "/services/ecommerce-development",
+  "/projects",
+  "/projects/shidaneh",
+  "/projects/hevix",
+  "/about",
+  "/contact",
+];
 
 const escapeXml = (value: string) =>
   value

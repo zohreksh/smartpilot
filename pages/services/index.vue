@@ -262,6 +262,9 @@ const recoverProofImage = (image) => {
                 <span>AI Automation</span>
                 <span>AI Analytics</span>
               </div>
+              <NuxtLink class="service-detail-link" to="/services/ai-development">
+                جزئیات کامل توسعه هوش مصنوعی
+              </NuxtLink>
             </div>
           </article>
 
@@ -304,6 +307,9 @@ const recoverProofImage = (image) => {
                 <span>Redesign</span>
                 <span>Conversion</span>
               </div>
+              <NuxtLink class="service-detail-link" to="/services/ecommerce-development">
+                جزئیات کامل توسعه فروشگاه اینترنتی
+              </NuxtLink>
             </div>
           </article>
 
@@ -1240,6 +1246,21 @@ const recoverProofImage = (image) => {
   flex-wrap: wrap;
   gap: 6px;
   margin-top: 15px;
+}
+
+.service-detail-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 14px;
+  color: #9f5a34;
+  font-size: 13.5px;
+  font-weight: 800;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+.service-detail-link:hover {
+  color: #7a4426;
 }
 
 .engagement-section {
