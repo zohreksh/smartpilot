@@ -12,10 +12,8 @@ export const usePageSeo = (options: PageSeoOptions) => {
   const configuredBase = String(config.public.siteUrl || "").trim();
   const requestBase = `${requestUrl.protocol}//${requestUrl.host}`;
   const baseUrl = (configuredBase || requestBase).replace(/\/$/, "");
-  const normalizedPath =
-    options.path === "/" ? "/" : `/${options.path.replace(/^\/+|\/+$/g, "")}`;
-  const canonicalUrl =
-    normalizedPath === "/" ? `${baseUrl}/` : `${baseUrl}${normalizedPath}`;
+  const normalizedPath = options.path === "/" ? "/" : `/${options.path.replace(/^\/+|\/+$/g, "")}`;
+  const canonicalUrl = normalizedPath === "/" ? `${baseUrl}/` : `${baseUrl}${normalizedPath}`;
   const imagePath = options.image || "/images/og/nexastudio-og.webp";
   const imageUrl = new URL(imagePath, `${baseUrl}/`).toString();
 
@@ -35,32 +33,7 @@ export const usePageSeo = (options: PageSeoOptions) => {
   });
 
   useHead({
-    link: [
-      {
-        rel: "canonical",
-        href: canonicalUrl,
-      },
-    ],
-    script: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          name: "SmartPilot",
-          url: baseUrl,
-          description: options.description,
-          areaServed: "Iran",
-          serviceType: [
-            "Software development",
-            "Artificial intelligence solutions",
-            "SEO automation",
-            "Digital product development",
-          ],
-          image: imageUrl,
-        }),
-      },
-    ],
+    link: [{ rel: "canonical", href: canonicalUrl }],
   });
 
   return {
