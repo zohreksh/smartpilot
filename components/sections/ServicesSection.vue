@@ -37,7 +37,9 @@
         <div class="service-content">
           <h3>طراحی وب سایت و فروشگاه اینترنتی</h3>
           <p>تجربه کاربری، عملکرد فنی و مسیر تبدیل را از ابتدا کنار هم طراحی می‌کنیم</p>
-          <NuxtLink to="/services">مشاهده جزئیات</NuxtLink>
+          <NuxtLink to="/services/ecommerce-development">
+            جزئیات توسعه فروشگاه اینترنتی
+          </NuxtLink>
         </div>
       </article>
       <article class="service-card">
@@ -45,7 +47,7 @@
         <div class="service-content">
           <h3>توسعه سامانه‌های اختصاصی</h3>
           <p>سامانه‌ها و پنل‌هایی متناسب با فرایندها، داده و قواعد واقعی کسب‌وکار</p>
-          <NuxtLink to="/services">مشاهده جزئیات</NuxtLink>
+          <NuxtLink to="/services">خدمات توسعه اختصاصی</NuxtLink>
         </div>
       </article>
       <article class="service-card">
@@ -53,7 +55,9 @@
         <div class="service-content">
           <h3>هوش مصنوعی و جستجوی هوشمند</h3>
           <p>مشاور هوشمند، جستجوی معنایی و اتوماسیون متصل به داده واقعی</p>
-          <NuxtLink to="/services">مشاهده جزئیات</NuxtLink>
+          <NuxtLink to="/services/ai-development">
+            جزئیات توسعه هوش مصنوعی
+          </NuxtLink>
         </div>
       </article>
       <article class="service-card">
@@ -61,7 +65,7 @@
         <div class="service-content">
           <h3>پشتیبانی و رشد مستمر</h3>
           <p>پایش، بهبود و توسعه مستمر محصول پس از انتشار</p>
-          <NuxtLink to="/services">مشاهده جزئیات</NuxtLink>
+          <NuxtLink to="/services">خدمات رشد و توسعه مستمر</NuxtLink>
         </div>
       </article>
     </div>

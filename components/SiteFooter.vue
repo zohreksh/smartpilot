@@ -102,9 +102,9 @@
 
           <div class="footer-nav-column">
             <span class="footer-column-title">تمرکز ما</span>
-            <NuxtLink to="/services">طراحی محصول دیجیتال</NuxtLink>
+            <NuxtLink to="/services/ecommerce-development">فروشگاه اینترنتی اختصاصی</NuxtLink>
             <NuxtLink to="/services">توسعه اختصاصی</NuxtLink>
-            <NuxtLink to="/services">هوش مصنوعی</NuxtLink>
+            <NuxtLink to="/services/ai-development">هوش مصنوعی</NuxtLink>
             <NuxtLink to="/services">سئو و رشد</NuxtLink>
             <NuxtLink to="/services">پشتیبانی مستمر</NuxtLink>
           </div>
