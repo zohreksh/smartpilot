@@ -1,10 +1,11 @@
 <script setup lang="ts">
-usePageSeo({
+const { baseUrl, canonicalUrl, imageUrl } = usePageSeo({
   title: "طراحی و توسعه پلتفرم تخصصی هویکس | SmartPilot",
   description:
     "مطالعه موردی هویکس؛ توسعه پلتفرم تخصصی قطعات و تجهیزات با معماری اختصاصی، داده ساختاریافته، جستجوی هوشمند و SEO فنی.",
   path: "/projects/hevix",
   image: "/images/projects/hevix.webp",
+  imageAlt: "پلتفرم تخصصی HEVIX",
 });
 
 useBreadcrumbSchema([
@@ -16,13 +17,17 @@ useBreadcrumbSchema([
 const schema = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
+  "@id": `${canonicalUrl}#case-study`,
   name: "HEVIX",
+  url: canonicalUrl,
+  image: imageUrl,
+  inLanguage: "fa-IR",
   description:
     "پلتفرم تخصصی قطعات و تجهیزات توسعه یافته توسط SmartPilot.",
   creator: {
-    "@type": "Organization",
-    name: "SmartPilot",
+    "@id": `${baseUrl}/#organization`,
   },
+  mainEntityOfPage: canonicalUrl,
 };
 
 useHead({
@@ -49,6 +54,11 @@ useHead({
         <li>جستجوی بهتر در داده‌های پیچیده</li>
         <li>زیرساخت آماده توسعه</li>
       </ul>
+      <p>
+        <NuxtLink to="/services/ai-development">
+          مشاهده خدمات توسعه هوش مصنوعی و جستجوی هوشمند
+        </NuxtLink>
+      </p>
     </section>
   </main>
 </template>

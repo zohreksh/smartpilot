@@ -4,7 +4,7 @@ usePageSeo({
   description:
     "SmartPilot استودیوی طراحی و توسعه محصول دیجیتال است؛ از سامانه‌های اختصاصی و فروشگاه اینترنتی تا هوش مصنوعی، جستجوی هوشمند، سئو و توسعه مستمر.",
   path: "/",
-  image: "/images/og/nexastudio-og.webp",
+  image: "/images/hero/desktop-hero.webp",
 });
 </script>
 

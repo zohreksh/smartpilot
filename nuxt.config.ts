@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_APP_BASE_URL || "/",
     head: {
       htmlAttrs: {
-        lang: "fa",
+        lang: "fa-IR",
         dir: "rtl",
       },
       title: "SmartPilot | طراحی و توسعه محصولات دیجیتال با هوش مصنوعی",
@@ -36,13 +36,6 @@ export default defineNuxtConfig({
         },
         { property: "og:type", content: "website" },
         { property: "og:site_name", content: "SmartPilot" },
-        { property: "og:title", content: "SmartPilot | طراحی و توسعه محصولات دیجیتال با هوش مصنوعی" },
-        {
-          property: "og:description",
-          content:
-            "طراحی محصول، توسعه نرم‌افزار اختصاصی، هوش مصنوعی، جستجوی هوشمند و راهکارهای دیجیتال برای رشد کسب‌وکارها.",
-        },
-        { property: "og:url", content: "https://smartpilot.ir" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
     },

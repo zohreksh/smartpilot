@@ -10,7 +10,12 @@
     </div>
 
     <div class="projects-grid">
-        <div class="project-image shidane-project">
+      <NuxtLink
+        class="project-link shidane-project"
+        to="/projects/shidaneh"
+        aria-label="مطالعه Case Study پروژه شیدانه"
+      >
+        <div class="project-image">
           <img
             src="/images/projects/shidane.webp"
             alt="پروژه شیدانه"
@@ -20,7 +25,15 @@
             decoding="async"
           />
         </div>
-        <div class="project-image hevix-project">
+        <span>مطالعه Case Study شیدانه</span>
+      </NuxtLink>
+
+      <NuxtLink
+        class="project-link hevix-project"
+        to="/projects/hevix"
+        aria-label="مطالعه Case Study پروژه HEVIX"
+      >
+        <div class="project-image">
           <img
             src="/images/projects/hevix.webp"
             alt="پروژه HEVIX"
@@ -30,6 +43,8 @@
             decoding="async"
           />
         </div>
+        <span>مطالعه Case Study هویکس</span>
+      </NuxtLink>
     </div>
   </section>
 </template>
@@ -60,6 +75,22 @@
   padding-inline: 18px;
 }
 
+.project-link {
+  display: block;
+  min-width: 0;
+  color: #9f5a34;
+  font-size: 13.5px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.project-link > span {
+  display: inline-flex;
+  margin-top: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .project-image {
   overflow: hidden;
   border-radius: 28px;
@@ -73,6 +104,11 @@
   height: auto;
   object-fit: contain;
   border-radius: 0;
+  transition: transform 0.25s ease;
+}
+
+.project-link:hover .project-image img {
+  transform: scale(1.012);
 }
 
 .shidane-project {
@@ -100,17 +136,11 @@
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
 
   .project-image {
     border-radius: 20px;
-  }
-
-  .project-image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
   }
 }
 
