@@ -491,9 +491,7 @@ const focusLinks = computed(() => isEnglish.value
     display: none;
   }
 }
-</style>
-
-<style scoped>
+/* English layout */
 .site-footer.footer-en { direction: ltr; }
 .footer-en .footer-column-title::after { right: auto; left: 0; }
 .footer-en .footer-brand-copy { line-height: 1.7; }
