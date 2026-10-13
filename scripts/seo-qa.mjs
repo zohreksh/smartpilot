@@ -8,6 +8,7 @@ const siteUrl = String(
 
 const pages = [
   ["/", "index.html"],
+  ["/en", "en/index.html"],
   ["/services", "services/index.html"],
   ["/services/ai-development", "services/ai-development/index.html"],
   ["/services/ecommerce-development", "services/ecommerce-development/index.html"],
@@ -47,6 +48,10 @@ for (const [route, relativePath] of pages) {
   }
 
   const html = read(relativePath);
+  if (route === "/en") {
+    if (!html.includes('lang="en"')) failures.push("/en: html lang must be en");
+    if (!html.includes('dir="ltr"')) failures.push("/en: direction must be ltr");
+  }
   const expectedCanonical = route === "/" ? `${siteUrl}/` : `${siteUrl}${route}`;
 
   if (!/<title>[^<]+<\/title>/i.test(html)) {
@@ -62,6 +67,14 @@ for (const [route, relativePath] of pages) {
     failures.push(
       `${route}: canonical mismatch (expected ${expectedCanonical}, received ${canonical})`,
     );
+  }
+
+  if (route === "/" || route === "/en") {
+    for (const [lang, href] of [["fa-IR", `${siteUrl}/`], ["en", `${siteUrl}/en`]]) {
+      if (!html.includes(`hreflang="${lang}"`) || !html.includes(`href="${href}"`)) {
+        failures.push(`${route}: missing alternate for ${lang}`);
+      }
+    }
   }
 
   const h1Count = (html.match(/<h1(?:\s|>)/gi) || []).length;
