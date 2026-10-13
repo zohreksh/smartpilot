@@ -43,6 +43,7 @@ jobs:
           set -euo pipefail
           for file in \
             .output/public/index.html \
+            .output/public/en/index.html \
             .output/public/services/index.html \
             .output/public/services/ai-development/index.html \
             .output/public/services/ecommerce-development/index.html \
@@ -80,6 +81,7 @@ jobs:
           set -euo pipefail
           for route in \
             / \
+            /en/ \
             /services/ \
             /services/ai-development/ \
             /services/ecommerce-development/ \
