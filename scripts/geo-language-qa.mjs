@@ -36,7 +36,7 @@ async function scenario(name, { country, locale = "fa-IR", manual, initialPath =
     // Let any unexpected late country request settle.
     await page.waitForTimeout(100);
     assert.equal(called, requests, `${name}: GeoIP request count`);
-    if (verify) await verify(page, context);
+    if (verify) await verify(page, context, () => called);
     console.log(`PASS ${name}`);
     checks++;
   } finally {
@@ -65,15 +65,17 @@ try {
       await page.reload({ waitUntil: "networkidle" });
       assert.equal(new URL(page.url()).pathname, "/");
       const cookie = (await page.context().cookies()).find((x) => x.name === "smartpilot_language");
-      assert.equal(JSON.parse(cookie?.value || "null"), "fa");
+      const stored = cookie?.value || "";
+      assert.equal(stored.startsWith('"') ? JSON.parse(stored) : stored, "fa");
     },
   });
   await scenario("GeoIP detection is cached for browser session", {
     country: "IR", expected: "/", requests: 1,
-    verify: async (page) => {
+    verify: async (page, _context, getRequestCount) => {
       await page.reload({ waitUntil: "networkidle" });
       assert.equal(new URL(page.url()).pathname, "/");
       assert.equal(await page.evaluate(() => sessionStorage.getItem("smartpilot_geo_country_v1")), "IR");
+      assert.equal(getRequestCount(), 1, "GeoIP must be cached across reloads in the same session");
     },
   });
   console.log(`GeoIP integration checks passed: ${checks}`);
