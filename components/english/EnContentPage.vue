@@ -89,8 +89,8 @@ withDefaults(defineProps<{
 .en-content-primary,.en-content-outline { display: inline-flex; justify-content: center; align-items: center; gap: 9px; border-radius: 12px; padding: 13px 21px; font-size: 14px; font-weight: 750; min-height: 48px; }
 .en-content-primary { color: #112034; background: #d6a078; }
 .en-content-outline { color: #fff; border: 1px solid rgba(255,255,255,.32); }
-.en-content-hero-image { border-radius: 24px; overflow: hidden; aspect-ratio: 1.44; background: #1b324d; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
-.en-content-hero-image img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.en-content-hero-image { border-radius: 24px; overflow: hidden; aspect-ratio: 1659 / 948; background: #1b324d; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+.en-content-hero-image img { width: 100%; height: 100%; display: block; object-fit: contain; }
 .en-content-hero-art { position: relative; display: grid; place-items: center; min-height: 310px; border-radius: 28px; isolation: isolate; overflow: hidden; border: 1px solid rgba(255,255,255,.18); background: radial-gradient(circle at 40% 40%,rgba(189,117,75,.23),transparent 40%),linear-gradient(145deg,#1f3650,#0e1c2d); }
 .en-content-orbit { position: absolute; border: 1px solid rgba(240,201,168,.26); border-radius: 50%; width: 330px; aspect-ratio: 1; }
 .en-content-orbit.one { transform: translate(-80px,10px); }
