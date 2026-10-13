@@ -46,5 +46,5 @@ for (const file of englishPages) {
 const home = fs.readFileSync(path.join(root, "pages/en/index.vue"), "utf8");
 assert.ok(home.includes('/images/en/smartpilot_digital_product_studio.webp'), "Homepage must display premium SmartPilot hero");
 assert.ok(home.includes('/images/en/smartpilot_digital_studio_showcase.webp'), "Homepage social preview must use English WebP");
-assert.equal((home.match(/<h1(?:\\s|>)/g) || []).length, 1, "English homepage should have one accessible H1");
+assert.equal((home.match(/<h1/g) || []).length, 1, "English homepage should have one accessible H1");
 console.log(`PASS image references and single H1 across ${englishPages.length} English pages`);
