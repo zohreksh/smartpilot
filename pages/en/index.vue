@@ -4,7 +4,7 @@ usePageSeo({
   description: "SmartPilot designs and builds digital products, custom software and practical AI capabilities, from product architecture to continuous improvement.",
   path: "/en",
   locale: "en",
-  image: "/images/og/nexastudio-og.webp",
+  image: "/images/og/smartpilot-en.svg",
   imageAlt: "SmartPilot digital product studio",
 });
 
@@ -73,11 +73,11 @@ useHead({
         </div>
         <div class="en-grid en-grid-two">
           <article class="en-project">
-            <img src="/images/projects/shidane.webp" alt="Shidaneh digital platform project" width="1659" height="948" loading="lazy" />
+            <img src="/images/projects/shidane-en.svg" alt="Shidaneh digital platform project" width="1659" height="948" loading="lazy" />
             <div class="en-project-copy"><h3>Shidaneh</h3><p>A content and commerce platform designed for ongoing improvement.</p><NuxtLink to="/en/projects/shidaneh">Explore case study →</NuxtLink></div>
           </article>
           <article class="en-project">
-            <img src="/images/projects/hevix.webp" alt="HEVIX industrial parts platform project" width="1659" height="948" loading="lazy" />
+            <img src="/images/projects/hevix-en.svg" alt="HEVIX industrial parts platform project" width="1659" height="948" loading="lazy" />
             <div class="en-project-copy"><h3>HEVIX</h3><p>An industrial parts platform with product intelligence and research workflows.</p><NuxtLink to="/en/projects/hevix">Explore case study →</NuxtLink></div>
           </article>
         </div>

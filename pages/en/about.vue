@@ -4,7 +4,7 @@ usePageSeo({
   description: "Meet SmartPilot, a product engineering studio focused on usable digital products, software architecture and practical AI.",
   path: "/en/about",
   locale: "en",
-  image: "/images/og/nexastudio-og.webp",
+  image: "/images/og/smartpilot-en.svg",
 });
 const sections = [
   {
@@ -16,13 +16,13 @@ const sections = [
         "title": "Shidaneh",
         "description": "Beauty commerce, catalog workflows and search.",
         "link": "/en/projects/shidaneh",
-        "image": "/images/projects/shidane.webp"
+        "image": "/images/projects/shidane-en.svg"
       },
       {
         "title": "HEVIX",
         "description": "Industrial products, specialized catalogs and intelligent research.",
         "link": "/en/projects/hevix",
-        "image": "/images/projects/hevix.webp"
+        "image": "/images/projects/hevix-en.svg"
       }
     ]
   },

@@ -4,7 +4,7 @@ usePageSeo({
   description: "Explore real products Shidaneh and HEVIX, built with structured data, intelligent search and maintainable engineering.",
   path: "/en/projects",
   locale: "en",
-  image: "/images/og/nexastudio-og.webp",
+  image: "/images/og/smartpilot-en.svg",
 });
 const sections = [
   {
@@ -16,13 +16,13 @@ const sections = [
         "title": "Shidaneh",
         "description": "Beauty commerce and content with catalogs, product discovery and technical SEO.",
         "link": "/en/projects/shidaneh",
-        "image": "/images/projects/shidane.webp"
+        "image": "/images/projects/shidane-en.svg"
       },
       {
         "title": "HEVIX",
         "description": "Specialized industrial parts platform with structured information and smart search.",
         "link": "/en/projects/hevix",
-        "image": "/images/projects/hevix.webp"
+        "image": "/images/projects/hevix-en.svg"
       }
     ]
   },

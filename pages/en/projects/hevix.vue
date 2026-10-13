@@ -4,7 +4,7 @@ const { baseUrl, canonicalUrl, imageUrl } = usePageSeo({
   description: "HEVIX is a specialized platform for industrial parts catalogs, smart search, data and product research workflows.",
   path: "/en/projects/hevix",
   locale: "en",
-  image: "/images/projects/hevix.webp",
+  image: "/images/projects/hevix-en.svg",
 });
 const sections = [
   {
@@ -67,5 +67,5 @@ useHead({
 </script>
 
 <template>
-  <EnContentPage kicker="CASE STUDY · HEVIX" title="HEVIX: a platform for specialized industrial parts" introduction="A data-centered industrial product with custom workflows, structured catalogs and intelligent product retrieval." hero-image="/images/projects/hevix.webp" hero-image-alt="HEVIX: a platform for specialized industrial parts" :sections="sections" />
+  <EnContentPage kicker="CASE STUDY · HEVIX" title="HEVIX: a platform for specialized industrial parts" introduction="A data-centered industrial product with custom workflows, structured catalogs and intelligent product retrieval." hero-image="/images/projects/hevix-en.svg" hero-image-alt="HEVIX: a platform for specialized industrial parts" :sections="sections" />
 </template>

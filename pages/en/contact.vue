@@ -6,7 +6,7 @@ usePageSeo({
   description: "Contact SmartPilot to discuss custom software, applied AI, e-commerce, intelligent search or improving an existing digital product.",
   path: "/en/contact",
   locale: "en",
-  image: "/images/og/nexastudio-og.webp",
+  image: "/images/og/smartpilot-en.svg",
 });
 
 const brief = reactive({
