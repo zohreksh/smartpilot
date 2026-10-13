@@ -67,6 +67,22 @@ const sections = [
     ]
   }
 ];
+// FAQ copy aligns with the matching Persian service page.
+sections.push({
+  "kicker": "COMMON QUESTIONS",
+  "title": "Frequently asked questions",
+  "description": "A small, testable starting point is often more useful than a large speculative AI project.",
+  "items": [
+    {
+      "title": "Do we need a very large dataset before starting?",
+      "description": "Not necessarily. It depends on the problem. In many cases, connecting to existing trusted knowledge is more important than building a huge new dataset."
+    },
+    {
+      "title": "Can AI be added to an existing product?",
+      "description": "Yes. We first assess interfaces, APIs, data structures and constraints, then add the capability in controlled stages."
+    }
+  ]
+});
 </script>
 
 <template>
