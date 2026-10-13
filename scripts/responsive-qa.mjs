@@ -38,6 +38,11 @@ try {
       reducedMotion: "reduce",
     });
 
+    // Keep screenshots deterministic: simulate an Iranian visitor on the Persian root.
+    await context.route("https://api.country.is/**", (route) =>
+      route.fulfill({ status: 200, contentType: "application/json", body: '{"country":"IR"}' }),
+    );
+
     for (const [routeName, route] of routes) {
       const page = await context.newPage();
       const response = await page.goto(`${baseUrl}${route}`, {
