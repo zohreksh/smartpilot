@@ -3,6 +3,7 @@ import fs from "node:fs/promises";
 
 const routes = [
   ["home", "/"],
+  ["english-home", "/en/"],
   ["services", "/services/"],
   ["projects", "/projects/"],
   ["about", "/about/"],
@@ -54,6 +55,19 @@ try {
       });
 
       await page.waitForLoadState("networkidle");
+
+      if (routeName === "english-home") {
+        const locale = await page.evaluate(() => ({
+          lang: document.documentElement.lang,
+          dir: document.documentElement.dir || document.body.dir,
+        }));
+        if (locale.lang !== "en" || locale.dir !== "ltr") {
+          throw new Error(`${viewportName}/english-home: wrong locale ${JSON.stringify(locale)}`);
+        }
+        if (!(await page.locator('a[hreflang="fa"]').count())) {
+          throw new Error(`${viewportName}/english-home: missing Persian language link`);
+        }
+      }
 
       const layout = await page.evaluate(() => ({
         scrollWidth: document.documentElement.scrollWidth,
