@@ -4,7 +4,7 @@ const { baseUrl, canonicalUrl, imageUrl } = usePageSeo({
   description: "Shidaneh combines custom beauty commerce, catalog management, intelligent search and technical SEO.",
   path: "/en/projects/shidaneh",
   locale: "en",
-  image: "/images/projects/shidane-en.svg",
+  image: "/images/en/shidaneh_beauty_commerce_hero.webp",
 });
 const sections = [
   {
@@ -67,5 +67,5 @@ useHead({
 </script>
 
 <template>
-  <EnContentPage kicker="CASE STUDY · SHIDANEH" title="Shidaneh: beauty commerce designed to evolve" introduction="A commerce and content product focused on shopping experience, structured catalog information, smart search and continued development." hero-image="/images/projects/shidane-en.svg" hero-image-alt="Shidaneh: beauty commerce designed to evolve" :sections="sections" />
+  <EnContentPage kicker="CASE STUDY · SHIDANEH" title="Shidaneh: beauty commerce designed to evolve" introduction="A commerce and content product focused on shopping experience, structured catalog information, smart search and continued development." hero-image="/images/en/shidaneh_beauty_commerce_hero.webp" hero-image-alt="Shidaneh: beauty commerce designed to evolve" :sections="sections" />
 </template>

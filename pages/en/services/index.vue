@@ -4,7 +4,7 @@ usePageSeo({
   description: "SmartPilot develops AI capabilities, custom platforms, online stores, smart search, technical SEO and integrated operational software.",
   path: "/en/services",
   locale: "en",
-  image: "/images/og/smartpilot-en.svg",
+  image: "/images/en/smartpilot_digital_studio_showcase.webp",
 });
 const sections = [
   {

@@ -4,7 +4,7 @@ const { baseUrl, canonicalUrl, imageUrl } = usePageSeo({
   description: "SmartPilot builds custom e-commerce websites with scalable catalogs, technical SEO, intelligent search and effective shopping experiences.",
   path: "/en/services/ecommerce-development",
   locale: "en",
-  image: "/images/og/smartpilot-en.svg",
+  image: "/images/en/smartpilot_digital_studio_showcase.webp",
 });
 const sections = [
   {
@@ -62,7 +62,7 @@ const sections = [
         "title": "Shidaneh — beauty commerce",
         "description": "A commerce and content product with catalog management, search and SEO.",
         "link": "/en/projects/shidaneh",
-        "image": "/images/projects/shidane-en.svg"
+        "image": "/images/en/shidaneh_beauty_commerce_hero.webp"
       }
     ]
   }

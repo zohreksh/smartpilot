@@ -4,7 +4,7 @@ const { baseUrl, canonicalUrl, imageUrl } = usePageSeo({
   description: "SmartPilot designs AI agents, RAG solutions, semantic search and intelligent assistants grounded in real business data.",
   path: "/en/services/ai-development",
   locale: "en",
-  image: "/images/og/smartpilot-en.svg",
+  image: "/images/en/smartpilot_digital_studio_showcase.webp",
 });
 const sections = [
   {
@@ -62,7 +62,7 @@ const sections = [
         "title": "HEVIX — industrial intelligence",
         "description": "Explore a data-centered platform where accurate product search is valuable.",
         "link": "/en/projects/hevix",
-        "image": "/images/projects/hevix-en.svg"
+        "image": "/images/en/hevix_smarter_parts_sourcing_banner.webp"
       }
     ]
   }

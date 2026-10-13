@@ -4,7 +4,7 @@ usePageSeo({
   description: "SmartPilot designs and builds digital products, custom software and practical AI capabilities, from product architecture to continuous improvement.",
   path: "/en",
   locale: "en",
-  image: "/images/og/smartpilot-en.svg",
+  image: "/images/en/smartpilot_digital_studio_showcase.webp",
   imageAlt: "SmartPilot digital product studio",
 });
 
@@ -16,26 +16,33 @@ useHead({
 
 <template>
   <main id="main-content" class="english-home" tabindex="-1">
-    <section class="en-hero">
-      <div class="container en-hero-inner">
-        <div class="en-hero-copy">
+    <section class="en-hero" aria-labelledby="english-home-title">
+      <div class="container en-hero-mobile-intro">
         <span class="en-eyebrow">SMARTPILOT · DIGITAL PRODUCT STUDIO</span>
-        <h1>Digital products, custom software and AI — built for real business needs.</h1>
-        <p>From product strategy and architecture to intelligent features and ongoing improvements, we turn complex ideas into practical solutions.</p>
-        <div class="en-actions">
-          <NuxtLink class="en-primary" to="/en/services">Explore our services</NuxtLink>
-          <NuxtLink class="en-secondary" to="/en/contact">Let's talk</NuxtLink>
-        </div>
-        </div>
-        <div class="en-hero-art" aria-hidden="true">
-          <div class="en-hero-art-ring ring-one"></div>
-          <div class="en-hero-art-ring ring-two"></div>
-          <div class="en-hero-art-center">
-            <span class="en-art-symbol">SP</span>
-            <span class="en-art-arrow">↗</span>
-          </div>
-          <div class="en-hero-art-caption">DESIGN · BUILD · INTELLIGENCE</div>
-        </div>
+        <h1 id="english-home-title">Digital products engineered for meaningful growth.</h1>
+        <p>Custom platforms, intelligent search and practical AI for ambitious businesses.</p>
+      </div>
+
+      <div class="en-hero-visual">
+        <img
+          src="/images/en/smartpilot_digital_product_studio.webp"
+          alt="SmartPilot studio showcase with premium desktop and mobile interfaces for commerce, intelligent search and product engineering"
+          width="1672"
+          height="941"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <NuxtLink class="en-hero-hotspot en-hero-hotspot-work" to="/en/projects" aria-label="Explore SmartPilot projects">
+          <span class="visually-hidden">Explore our projects</span>
+        </NuxtLink>
+        <NuxtLink class="en-hero-hotspot en-hero-hotspot-contact" to="/en/contact" aria-label="Contact SmartPilot">
+          <span class="visually-hidden">Contact SmartPilot</span>
+        </NuxtLink>
+      </div>
+
+      <div class="container en-hero-mobile-actions">
+        <NuxtLink class="en-primary" to="/en/projects">Explore our work <span aria-hidden="true">→</span></NuxtLink>
+        <NuxtLink class="en-secondary" to="/en/contact">Talk to us <span aria-hidden="true">→</span></NuxtLink>
       </div>
     </section>
 
@@ -73,11 +80,11 @@ useHead({
         </div>
         <div class="en-grid en-grid-two">
           <article class="en-project">
-            <img src="/images/projects/shidane-en.svg" alt="Shidaneh digital platform project" width="1659" height="948" loading="lazy" />
+            <img src="/images/en/shidaneh_beauty_commerce_hero.webp" alt="Shidaneh digital platform project" width="1672" height="941" loading="lazy" />
             <div class="en-project-copy"><h3>Shidaneh</h3><p>A content and commerce platform designed for ongoing improvement.</p><NuxtLink to="/en/projects/shidaneh">Explore case study →</NuxtLink></div>
           </article>
           <article class="en-project">
-            <img src="/images/projects/hevix-en.svg" alt="HEVIX industrial parts platform project" width="1659" height="948" loading="lazy" />
+            <img src="/images/en/hevix_smarter_parts_sourcing_banner.webp" alt="HEVIX industrial parts platform project" width="1672" height="941" loading="lazy" />
             <div class="en-project-copy"><h3>HEVIX</h3><p>An industrial parts platform with product intelligence and research workflows.</p><NuxtLink to="/en/projects/hevix">Explore case study →</NuxtLink></div>
           </article>
         </div>
@@ -113,25 +120,34 @@ useHead({
 
 <style scoped>
 .english-home { direction: ltr; color: #101c32; }
-.en-hero { padding: clamp(80px, 10vw, 150px) 0; background: radial-gradient(circle at 75% 15%, rgba(184,107,53,.15), transparent 42%), linear-gradient(135deg, #07111f, #152842); color: white; }
- .en-hero-inner { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(290px,.8fr); align-items: center; gap: clamp(24px,5vw,62px); }
-.en-hero-copy { min-width: 0; }
-.en-hero-art { position: relative; overflow: hidden; min-height: 360px; border-radius: 28px; border: 1px solid rgba(255,255,255,.19); display: grid; place-items: center; background: radial-gradient(circle at 50% 45%,rgba(202,129,78,.26),transparent 42%),linear-gradient(140deg,#213955,#0a182b); box-shadow: 0 18px 60px rgba(0,0,0,.16); isolation: isolate; }
-.en-hero-art-ring { position: absolute; border: 1px solid rgba(232,190,157,.26); width: 300px; aspect-ratio: 1; border-radius: 50%; }
-.ring-one { transform: translate(-55px,-14px); }
-.ring-two { transform: translate(78px,56px) scale(.82); }
-.en-hero-art-center { position: relative; z-index: 1; display: flex; align-items: baseline; }
-.en-art-symbol { font: 900 clamp(84px,9vw,116px)/1 system-ui,sans-serif; letter-spacing: -.12em; color: #fffaf7; }
-.en-art-arrow { margin-left: 12px; font: 700 65px/1 system-ui,sans-serif; color: #d7a67c; }
-.en-hero-art-caption { position: absolute; bottom: 28px; z-index: 1; color: #d7bda5; font: 700 10px/1.6 system-ui,sans-serif; letter-spacing: .18em; }
-
-.en-eyebrow { font-size: 12px; font-weight: 800; color: #c99066; letter-spacing: .14em; }
-.en-hero h1 { max-width: 920px; margin: 18px 0 20px; font-size: clamp(35px, 4.4vw, 58px); line-height: 1.17; letter-spacing: -.035em; }
-.en-hero p { max-width: 710px; color: #c9d2dd; font-size: clamp(16px, 2vw, 20px); line-height: 1.75; }
-.en-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; }
-.en-actions a { padding: 13px 21px; border-radius: 12px; font-weight: 750; font-size: 14px; }
-.en-primary { background: #d39b71; color: #101c32; }
-.en-secondary { border: 1px solid rgba(220,225,233,.45); color: inherit; }
+.en-hero { background: #f8f1e8; }
+.en-hero-mobile-intro,
+.en-hero-mobile-actions { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.en-hero-visual { position: relative; max-width: 1920px; margin-inline: auto; line-height: 0; overflow: hidden; }
+.en-hero-visual img { display: block; width: 100%; height: auto; aspect-ratio: 1672 / 941; object-fit: contain; }
+.en-hero-hotspot { position: absolute; display: block; z-index: 2; border-radius: 14px; }
+.en-hero-hotspot-work { left: 5.25%; top: 75.8%; width: 17.4%; height: 7.4%; }
+.en-hero-hotspot-contact { left: 23.4%; top: 75.8%; width: 11%; height: 7.4%; }
+.en-hero-hotspot:hover { background: rgba(255,255,255,.10); }
+.en-hero-hotspot:focus-visible { outline: 3px solid #96572e; outline-offset: 2px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.en-eyebrow { font-size: 12px; font-weight: 800; color: #985b3b; letter-spacing: .14em; }
+.en-primary, .en-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 21px; border-radius: 12px; font-weight: 750; font-size: 14px; }
+.en-primary { background: #13283c; color: #fff; }
+.en-secondary { border: 1px solid #c2a998; color: #13283c; }
+@media (max-width: 760px) {
+  .en-hero { padding: 0 0 34px; }
+  .en-hero-mobile-intro { position: static; width: auto; height: auto; overflow: visible; clip-path: none; white-space: normal; padding-top: 38px; padding-bottom: 24px; }
+  .en-hero-mobile-intro h1 { max-width: 650px; margin: 13px 0; color: #102339; font-size: clamp(30px, 7vw, 48px); line-height: 1.16; letter-spacing: -.03em; }
+  .en-hero-mobile-intro p { margin: 0; color: #566575; font-size: 16px; line-height: 1.7; }
+  .en-hero-visual { height: clamp(285px, 87vw, 480px); }
+  .en-hero-visual img { width: 100%; height: 100%; object-fit: cover; object-position: 96% center; }
+  .en-hero-hotspot { display: none; }
+  .en-hero-mobile-actions { position: static; width: auto; height: auto; display: flex; flex-wrap: wrap; gap: 12px; overflow: visible; clip-path: none; white-space: normal; padding-top: 22px; }
+}
+@media (max-width: 490px) {
+  .en-hero-mobile-actions a { flex: 1 1 100%; }
+}
 .en-section { padding-top: 84px; padding-bottom: 90px; }
 .en-heading { margin: 0 auto 35px; max-width: 780px; text-align: center; }
 .en-heading h2 { margin: 10px auto; font-size: clamp(30px, 4vw, 43px); line-height: 1.25; }
@@ -157,23 +173,12 @@ useHead({
 .en-contact-actions { justify-content: center; }
 .en-contact .en-secondary { border-color: #a89484; color: #17263b; }
 @media(max-width: 820px) {
-  .en-hero { padding: 68px 0 76px; }
-  .en-hero-inner { grid-template-columns: 1fr; }
-  .en-hero-art { min-height: 210px; }
-  .en-art-symbol { font-size: 78px; }
-  .en-art-arrow { font-size: 50px; }
   .en-section, .en-projects { padding-top: 55px; padding-bottom: 60px; }
   .en-grid-three { grid-template-columns: 1fr; }
   .en-card { padding: 23px; }
 }
 @media(max-width: 640px) {
   .en-grid-two { grid-template-columns: 1fr; }
-  .en-hero h1 { font-size: clamp(33px, 9vw, 46px); }
-  .en-hero p { font-size: 16px; }
-  .en-hero-art { min-height: 165px; }
-  .en-hero-art-ring { width: 200px; }
-  .en-hero-art-caption { bottom: 14px; font-size: 9px; }
-  .en-actions a { width: 100%; text-align: center; }
   .en-contact { padding: 62px 0; }
 }
 </style>
