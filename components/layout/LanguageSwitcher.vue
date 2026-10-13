@@ -16,10 +16,10 @@ const savePreference = (locale: "fa" | "en") => {
 
 <template>
   <nav class="language-switcher" aria-label="Language / زبان">
-    <NuxtLink to="/" hreflang="fa" lang="fa" :aria-current="!isEnglish ? 'page' : undefined" :class="{ active: !isEnglish }" @click="savePreference('fa')">FA</NuxtLink>
+    <NuxtLink to="/" hreflang="fa" lang="fa" :class="{ active: !isEnglish }" @click="savePreference('fa')">FA</NuxtLink>
     <span class="language-divider" aria-hidden="true">/</span>
     <!-- Subpages will get equivalent English routes in the translation phase. -->
-    <NuxtLink to="/en/" hreflang="en" lang="en" :aria-current="isEnglish ? 'page' : undefined" :class="{ active: isEnglish }" @click="savePreference('en')">EN</NuxtLink>
+    <NuxtLink to="/en/" hreflang="en" lang="en" :class="{ active: isEnglish }" @click="savePreference('en')">EN</NuxtLink>
   </nav>
 </template>
 
