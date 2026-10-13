@@ -1,30 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://smartpilot.ir/</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/" />
+  </url>
+  <url>
+    <loc>https://smartpilot.ir/en</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/" />
   </url>
   <url>
     <loc>https://smartpilot.ir/services</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/services" />
+  </url>
+  <url>
+    <loc>https://smartpilot.ir/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/services" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/services" />
   </url>
   <url>
     <loc>https://smartpilot.ir/services/ai-development</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/services/ai-development" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/services/ai-development" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/services/ai-development" />
+  </url>
+  <url>
+    <loc>https://smartpilot.ir/en/services/ai-development</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/services/ai-development" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/services/ai-development" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/services/ai-development" />
   </url>
   <url>
     <loc>https://smartpilot.ir/services/ecommerce-development</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/services/ecommerce-development" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/services/ecommerce-development" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/services/ecommerce-development" />
+  </url>
+  <url>
+    <loc>https://smartpilot.ir/en/services/ecommerce-development</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/services/ecommerce-development" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/services/ecommerce-development" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/services/ecommerce-development" />
   </url>
   <url>
     <loc>https://smartpilot.ir/projects</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/projects" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/projects" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/projects" />
+  </url>
+  <url>
+    <loc>https://smartpilot.ir/en/projects</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/projects" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/projects" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/projects" />
   </url>
   <url>
     <loc>https://smartpilot.ir/projects/shidaneh</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/projects/shidaneh" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/projects/shidaneh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/projects/shidaneh" />
+  </url>
+  <url>
+    <loc>https://smartpilot.ir/en/projects/shidaneh</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/projects/shidaneh" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/projects/shidaneh" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/projects/shidaneh" />
   </url>
   <url>
     <loc>https://smartpilot.ir/projects/hevix</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/projects/hevix" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/projects/hevix" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/projects/hevix" />
+  </url>
+  <url>
+    <loc>https://smartpilot.ir/en/projects/hevix</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/projects/hevix" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/projects/hevix" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/projects/hevix" />
   </url>
   <url>
     <loc>https://smartpilot.ir/about</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/about" />
+  </url>
+  <url>
+    <loc>https://smartpilot.ir/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/about" />
   </url>
   <url>
     <loc>https://smartpilot.ir/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/contact" />
+  </url>
+  <url>
+    <loc>https://smartpilot.ir/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="fa-IR" href="https://smartpilot.ir/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smartpilot.ir/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smartpilot.ir/contact" />
   </url>
 </urlset>

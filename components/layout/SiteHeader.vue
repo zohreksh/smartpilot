@@ -1,5 +1,25 @@
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
+
+const route = useRoute();
+const isEnglish = computed(() => new RegExp("^/en(?:/|$)").test(route.path));
+const navLinks = computed(() =>
+  isEnglish.value
+    ? [
+        { label: "Home", to: "/en/" },
+        { label: "Services", to: "/en/services" },
+        { label: "Projects", to: "/en/projects" },
+        { label: "About", to: "/en/about" },
+        { label: "Contact", to: "/en/contact" },
+      ]
+    : [
+        { label: "خانه", to: "/" },
+        { label: "خدمات ما", to: "/services" },
+        { label: "نمونه کارها", to: "/projects" },
+        { label: "درباره ما", to: "/about" },
+        { label: "تماس با ما", to: "/contact" },
+      ],
+);
 
 const isMenuOpen = ref(false);
 
@@ -17,8 +37,8 @@ const closeMenu = () => {
     <div class="container premium-header">
       <NuxtLink
         class="brand-mark"
-        to="/"
-        aria-label="SmartPilot - صفحه اصلی"
+        :to="isEnglish ? '/en/' : '/'"
+        :aria-label="isEnglish ? 'SmartPilot - Home' : 'SmartPilot - صفحه اصلی'"
         @click="closeMenu"
       >
         <span class="brand-symbol" aria-hidden="true">
@@ -33,40 +53,35 @@ const closeMenu = () => {
         </span>
       </NuxtLink>
 
-      <nav class="header-nav desktop-nav" aria-label="ناوبری اصلی">
-        <NuxtLink to="/">خانه</NuxtLink>
-        <NuxtLink to="/services">خدمات ما</NuxtLink>
-        <NuxtLink to="/projects">نمونه کارها</NuxtLink>
-        <NuxtLink to="/about">درباره ما</NuxtLink>
-        <NuxtLink to="/contact">تماس با ما</NuxtLink>
+      <nav class="header-nav desktop-nav" :aria-label="isEnglish ? 'Main navigation' : 'ناوبری اصلی'">
+        <NuxtLink v-for="link in navLinks" :key="link.to" :to="link.to">{{ link.label }}</NuxtLink>
       </nav>
 
-      <button
-        class="mobile-menu-button"
-        type="button"
-        :class="{ 'is-open': isMenuOpen }"
-        :aria-label="isMenuOpen ? 'بستن منو' : 'باز کردن منو'"
-        :aria-expanded="isMenuOpen"
-        aria-controls="mobile-navigation"
-        @click="toggleMenu"
-      >
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-controls">
+        <LanguageSwitcher />
+        <button
+          class="mobile-menu-button"
+          type="button"
+          :class="{ 'is-open': isMenuOpen }"
+          :aria-label="isEnglish ? (isMenuOpen ? 'Close menu' : 'Open menu') : (isMenuOpen ? 'بستن منو' : 'باز کردن منو')"
+          :aria-expanded="isMenuOpen"
+          aria-controls="mobile-navigation"
+          @click="toggleMenu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
 
     <div v-if="isMenuOpen" class="mobile-menu-shell">
       <nav
         id="mobile-navigation"
         class="mobile-nav container"
-        aria-label="ناوبری موبایل"
+        :aria-label="isEnglish ? 'Mobile navigation' : 'ناوبری موبایل'"
         @keydown.esc="closeMenu"
       >
-        <NuxtLink to="/" @click="closeMenu">خانه</NuxtLink>
-        <NuxtLink to="/services" @click="closeMenu">خدمات ما</NuxtLink>
-        <NuxtLink to="/projects" @click="closeMenu">نمونه کارها</NuxtLink>
-        <NuxtLink to="/about" @click="closeMenu">درباره ما</NuxtLink>
-        <NuxtLink to="/contact" @click="closeMenu">تماس با ما</NuxtLink>
+        <NuxtLink v-for="link in navLinks" :key="link.to" :to="link.to" @click="closeMenu">{{ link.label }}</NuxtLink>
       </nav>
     </div>
   </header>
@@ -198,6 +213,13 @@ const closeMenu = () => {
   box-shadow: 0 3px 12px rgba(16, 28, 50, 0.06);
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 12px;
+}
+
 .mobile-menu-button,
 .mobile-menu-shell {
   display: none;
@@ -230,6 +252,10 @@ const closeMenu = () => {
 
   .desktop-nav {
     display: none;
+  }
+
+  .header-controls {
+    gap: 8px;
   }
 
   .brand-symbol {

@@ -424,3 +424,9 @@ a {
     font-size: 14px;
   }
 }
+
+/* The existing Persian pages remain RTL. English routes opt into LTR. */
+body[dir="ltr"] {
+  direction: ltr;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}

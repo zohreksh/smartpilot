@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { computed } from "vue";
+const route = useRoute();
+const isEnglish = computed(() => route.path === "/en" || route.path.startsWith("/en/"));
+useHead(() => ({
+  htmlAttrs: { lang: isEnglish.value ? "en" : "fa-IR", dir: isEnglish.value ? "ltr" : "rtl" },
+  bodyAttrs: { dir: isEnglish.value ? "ltr" : "rtl" },
+}));
 const config = useRuntimeConfig();
 const requestUrl = useRequestURL();
 
@@ -25,7 +32,7 @@ const organizationSchema = {
     telephone: "+989379407868",
     email: "zhr.keshavarz@gmail.com",
     contactType: "customer service",
-    availableLanguage: ["fa"],
+    availableLanguage: ["fa", "en"],
   },
   founder: [
     {
@@ -47,7 +54,7 @@ const webSiteSchema = {
   "@id": webSiteId,
   name: "SmartPilot",
   url: siteUrl,
-  inLanguage: "fa-IR",
+  inLanguage: ["fa-IR", "en"],
   publisher: {
     "@id": organizationId,
   },
@@ -71,7 +78,7 @@ useHead({
 
 <template>
   <div>
-    <a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
+    <a class="skip-link" href="#main-content">{{ isEnglish ? "Skip to main content" : "رفتن به محتوای اصلی" }}</a>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

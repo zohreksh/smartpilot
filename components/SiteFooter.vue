@@ -1,5 +1,41 @@
+<script setup lang="ts">
+import { computed } from "vue";
+const route = useRoute();
+const isEnglish = computed(() => new RegExp("^/en(?:/|$)").test(route.path));
+const quickLinks = computed(() => isEnglish.value
+  ? [
+      { title: "Home", to: "/en/" },
+      { title: "Services", to: "/en/services" },
+      { title: "Projects", to: "/en/projects" },
+      { title: "About", to: "/en/about" },
+      { title: "Contact", to: "/en/contact" },
+    ]
+  : [
+      { title: "خانه", to: "/" },
+      { title: "خدمات ما", to: "/services" },
+      { title: "نمونه کارها", to: "/projects" },
+      { title: "درباره ما", to: "/about" },
+      { title: "تماس با ما", to: "/contact" },
+    ]);
+const focusLinks = computed(() => isEnglish.value
+  ? [
+      { title: "Custom software", to: "/en/services" },
+      { title: "E-commerce", to: "/en/services" },
+      { title: "Artificial intelligence", to: "/en/services" },
+      { title: "SEO and growth", to: "/en/services" },
+      { title: "Ongoing support", to: "/en/services" },
+    ]
+  : [
+      { title: "فروشگاه اینترنتی اختصاصی", to: "/services/ecommerce-development" },
+      { title: "توسعه اختصاصی", to: "/services" },
+      { title: "هوش مصنوعی", to: "/services/ai-development" },
+      { title: "سئو و رشد", to: "/services" },
+      { title: "پشتیبانی مستمر", to: "/services" },
+    ]);
+</script>
+
 <template>
-  <footer class="site-footer">
+  <footer class="site-footer" :class="{ 'footer-en': isEnglish }">
     <div class="footer-glow footer-glow-one" aria-hidden="true"></div>
     <div class="footer-glow footer-glow-two" aria-hidden="true"></div>
 
@@ -8,8 +44,8 @@
         <div class="footer-brand-column">
           <NuxtLink
             class="footer-brand"
-            to="/"
-            aria-label="SmartPilot - صفحه اصلی"
+            :to="isEnglish ? '/en/' : '/'"
+            :aria-label="isEnglish ? 'SmartPilot - Home' : 'SmartPilot - صفحه اصلی'"
           >
             <span class="footer-brand-symbol" aria-hidden="true">
               <svg viewBox="0 0 40 40" fill="none">
@@ -24,17 +60,16 @@
             </span>
           </NuxtLink>
 
-          <p class="footer-brand-copy">
-            طراحی و توسعه محصولات دیجیتال، سامانه‌های اختصاصی و قابلیت‌های
-            هوشمند با تمرکز بر رشد واقعی کسب‌وکار.
-          </p>
+          <p class="footer-brand-copy">{{ isEnglish
+            ? 'We design and develop digital products, custom platforms and intelligent capabilities built for meaningful business growth.'
+            : 'طراحی و توسعه محصولات دیجیتال، سامانه‌های اختصاصی و قابلیت‌های هوشمند با تمرکز بر رشد واقعی کسب‌وکار.' }}</p>
 
-          <div class="footer-contact-icons" aria-label="راه‌های ارتباط">
+          <div class="footer-contact-icons" :aria-label="isEnglish ? 'Contact options' : 'راه‌های ارتباط'">
             <a
               class="footer-icon-action"
               href="tel:+989379407868"
-              aria-label="تماس تلفنی با SmartPilot"
-              title="تماس تلفنی"
+              :aria-label="isEnglish ? 'Call SmartPilot' : 'تماس تلفنی با SmartPilot'"
+              :title="isEnglish ? 'Phone call' : 'تماس تلفنی'"
             >
               <svg
                 class="contact-icon"
@@ -53,8 +88,8 @@
               href="https://wa.me/989379407868"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="ارسال پیام در واتساپ"
-              title="واتساپ"
+              :aria-label="isEnglish ? 'Send a WhatsApp message' : 'ارسال پیام در واتساپ'"
+              :title="isEnglish ? 'WhatsApp' : 'واتساپ'"
             >
               <svg
                 class="contact-icon"
@@ -74,8 +109,8 @@
             <a
               class="footer-icon-action"
               href="mailto:zhr.keshavarz@gmail.com"
-              aria-label="ارسال ایمیل به SmartPilot"
-              title="ایمیل"
+              :aria-label="isEnglish ? 'Email SmartPilot' : 'ارسال ایمیل به SmartPilot'"
+              :title="isEnglish ? 'Email' : 'ایمیل'"
             >
               <svg
                 class="contact-icon"
@@ -91,22 +126,14 @@
         </div>
 
         <div class="footer-links">
-          <nav class="footer-nav-column" aria-label="دسترسی سریع">
-            <span class="footer-column-title">دسترسی سریع</span>
-            <NuxtLink to="/">خانه</NuxtLink>
-            <NuxtLink to="/services">خدمات ما</NuxtLink>
-            <NuxtLink to="/projects">نمونه کارها</NuxtLink>
-            <NuxtLink to="/about">درباره ما</NuxtLink>
-            <NuxtLink to="/contact">تماس با ما</NuxtLink>
+          <nav class="footer-nav-column" :aria-label="isEnglish ? 'Quick links' : 'دسترسی سریع'">
+            <span class="footer-column-title">{{ isEnglish ? 'Quick links' : 'دسترسی سریع' }}</span>
+            <NuxtLink v-for="link in quickLinks" :key="link.to" :to="link.to">{{ link.title }}</NuxtLink>
           </nav>
 
           <div class="footer-nav-column">
-            <span class="footer-column-title">تمرکز ما</span>
-            <NuxtLink to="/services/ecommerce-development">فروشگاه اینترنتی اختصاصی</NuxtLink>
-            <NuxtLink to="/services">توسعه اختصاصی</NuxtLink>
-            <NuxtLink to="/services/ai-development">هوش مصنوعی</NuxtLink>
-            <NuxtLink to="/services">سئو و رشد</NuxtLink>
-            <NuxtLink to="/services">پشتیبانی مستمر</NuxtLink>
+            <span class="footer-column-title">{{ isEnglish ? 'What we do' : 'تمرکز ما' }}</span>
+            <NuxtLink v-for="link in focusLinks" :key="link.title" :to="link.to">{{ link.title }}</NuxtLink>
           </div>
         </div>
       </div>
@@ -114,7 +141,7 @@
       <div class="footer-bottom">
         <span>© 2026 SmartPilot</span>
         <span class="footer-bottom-dot" aria-hidden="true"></span>
-        <span>محصول دیجیتال، مهندسی‌شده برای رشد</span>
+        <span>{{ isEnglish ? 'Digital products engineered for growth' : 'محصول دیجیتال، مهندسی‌شده برای رشد' }}</span>
       </div>
     </div>
   </footer>
@@ -464,4 +491,8 @@
     display: none;
   }
 }
+/* English layout */
+.site-footer.footer-en { direction: ltr; }
+.footer-en .footer-column-title::after { right: auto; left: 0; }
+.footer-en .footer-brand-copy { line-height: 1.7; }
 </style>

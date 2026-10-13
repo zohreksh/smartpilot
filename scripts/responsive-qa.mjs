@@ -3,6 +3,15 @@ import fs from "node:fs/promises";
 
 const routes = [
   ["home", "/"],
+  ["english-home", "/en/"],
+  ["english-services", "/en/services/"],
+  ["english-ai", "/en/services/ai-development/"],
+  ["english-ecommerce", "/en/services/ecommerce-development/"],
+  ["english-projects", "/en/projects/"],
+  ["english-shidaneh", "/en/projects/shidaneh/"],
+  ["english-hevix", "/en/projects/hevix/"],
+  ["english-about", "/en/about/"],
+  ["english-contact", "/en/contact/"],
   ["services", "/services/"],
   ["projects", "/projects/"],
   ["about", "/about/"],
@@ -29,6 +38,11 @@ try {
       reducedMotion: "reduce",
     });
 
+    // Keep screenshots deterministic: simulate an Iranian visitor on the Persian root.
+    await context.route("https://api.country.is/**", (route) =>
+      route.fulfill({ status: 200, contentType: "application/json", body: '{"country":"IR"}' }),
+    );
+
     for (const [routeName, route] of routes) {
       const page = await context.newPage();
       const response = await page.goto(`${baseUrl}${route}`, {
@@ -54,6 +68,40 @@ try {
       });
 
       await page.waitForLoadState("networkidle");
+
+      if (routeName.startsWith("english-")) {
+        const locale = await page.evaluate(() => ({
+          lang: document.documentElement.lang,
+          dir: document.documentElement.dir || document.body.dir,
+        }));
+        if (locale.lang !== "en" || locale.dir !== "ltr") {
+          throw new Error(`${viewportName}/${routeName}: wrong locale ${JSON.stringify(locale)}`);
+        }
+        if (!(await page.locator('a[hreflang="fa"]').count())) {
+          throw new Error(`${viewportName}/${routeName}: missing Persian language link`);
+        }
+      }
+
+      if (routeName === "english-contact") {
+        await page.locator('form button[type="submit"]').click();
+        if (!(await page.locator('#en-full-name[aria-invalid="true"]').count())) {
+          throw new Error(`${viewportName}: invalid English contact form submitted without validation`);
+        }
+        await page.locator('#en-full-name').fill("Test Customer");
+        await page.locator('#en-contact-way').fill("test@example.com");
+        await page.locator('#en-project-type').selectOption({ label: "Custom software platform" });
+        await page.locator('#en-message').fill("Please help us plan our platform.");
+        await page.evaluate(() => {
+          window.__contactOpenedUrl = "";
+          window.open = (url) => { window.__contactOpenedUrl = String(url); return null; };
+        });
+        await page.locator('form button[type="submit"]').click();
+        const opened = await page.evaluate(() => window.__contactOpenedUrl || "");
+        if (!opened.startsWith("https://wa.me/989379407868?text=") ||
+            !decodeURIComponent(opened).includes("Test Customer")) {
+          throw new Error(`${viewportName}: English contact form did not build the expected WhatsApp URL`);
+        }
+      }
 
       const layout = await page.evaluate(() => ({
         scrollWidth: document.documentElement.scrollWidth,
