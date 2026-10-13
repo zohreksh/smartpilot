@@ -60,17 +60,17 @@ const closeMenu = () => {
       <div class="header-controls">
         <LanguageSwitcher />
         <button
-        class="mobile-menu-button"
-        type="button"
-        :class="{ 'is-open': isMenuOpen }"
-        :aria-label="isEnglish ? (isMenuOpen ? 'Close menu' : 'Open menu') : (isMenuOpen ? 'بستن منو' : 'باز کردن منو')"
-        :aria-expanded="isMenuOpen"
-        aria-controls="mobile-navigation"
-        @click="toggleMenu"
-      >
-        <span></span>
-        <span></span>
-      </button>
+          class="mobile-menu-button"
+          type="button"
+          :class="{ 'is-open': isMenuOpen }"
+          :aria-label="isEnglish ? (isMenuOpen ? 'Close menu' : 'Open menu') : (isMenuOpen ? 'بستن منو' : 'باز کردن منو')"
+          :aria-expanded="isMenuOpen"
+          aria-controls="mobile-navigation"
+          @click="toggleMenu"
+        >
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
 
