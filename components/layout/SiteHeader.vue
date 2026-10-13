@@ -7,10 +7,10 @@ const navLinks = computed(() =>
   isEnglish.value
     ? [
         { label: "Home", to: "/en/" },
-        { label: "Services", to: "/en/#services" },
-        { label: "Projects", to: "/en/#projects" },
-        { label: "About", to: "/en/#about" },
-        { label: "Contact", to: "/en/#contact" },
+        { label: "Services", to: "/en/services" },
+        { label: "Projects", to: "/en/projects" },
+        { label: "About", to: "/en/about" },
+        { label: "Contact", to: "/en/contact" },
       ]
     : [
         { label: "خانه", to: "/" },

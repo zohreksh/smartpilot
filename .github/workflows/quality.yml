@@ -44,6 +44,14 @@ jobs:
           for file in \
             .output/public/index.html \
             .output/public/en/index.html \
+            .output/public/en/services/index.html \
+            .output/public/en/services/ai-development/index.html \
+            .output/public/en/services/ecommerce-development/index.html \
+            .output/public/en/projects/index.html \
+            .output/public/en/projects/shidaneh/index.html \
+            .output/public/en/projects/hevix/index.html \
+            .output/public/en/about/index.html \
+            .output/public/en/contact/index.html \
             .output/public/services/index.html \
             .output/public/services/ai-development/index.html \
             .output/public/services/ecommerce-development/index.html \
@@ -82,6 +90,14 @@ jobs:
           for route in \
             / \
             /en/ \
+            /en/services/ \
+            /en/services/ai-development/ \
+            /en/services/ecommerce-development/ \
+            /en/projects/ \
+            /en/projects/shidaneh/ \
+            /en/projects/hevix/ \
+            /en/about/ \
+            /en/contact/ \
             /services/ \
             /services/ai-development/ \
             /services/ecommerce-development/ \

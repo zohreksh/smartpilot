@@ -5,10 +5,10 @@ const isEnglish = computed(() => new RegExp("^/en(?:/|$)").test(route.path));
 const quickLinks = computed(() => isEnglish.value
   ? [
       { title: "Home", to: "/en/" },
-      { title: "Services", to: "/en/#services" },
-      { title: "Projects", to: "/en/#projects" },
-      { title: "About", to: "/en/#about" },
-      { title: "Contact", to: "/en/#contact" },
+      { title: "Services", to: "/en/services" },
+      { title: "Projects", to: "/en/projects" },
+      { title: "About", to: "/en/about" },
+      { title: "Contact", to: "/en/contact" },
     ]
   : [
       { title: "خانه", to: "/" },
@@ -19,11 +19,11 @@ const quickLinks = computed(() => isEnglish.value
     ]);
 const focusLinks = computed(() => isEnglish.value
   ? [
-      { title: "Custom software", to: "/en/#services" },
-      { title: "E-commerce", to: "/en/#services" },
-      { title: "Artificial intelligence", to: "/en/#services" },
-      { title: "SEO and growth", to: "/en/#services" },
-      { title: "Ongoing support", to: "/en/#services" },
+      { title: "Custom software", to: "/en/services" },
+      { title: "E-commerce", to: "/en/services" },
+      { title: "Artificial intelligence", to: "/en/services" },
+      { title: "SEO and growth", to: "/en/services" },
+      { title: "Ongoing support", to: "/en/services" },
     ]
   : [
       { title: "فروشگاه اینترنتی اختصاصی", to: "/services/ecommerce-development" },

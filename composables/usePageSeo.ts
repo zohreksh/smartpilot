@@ -25,12 +25,20 @@ export const usePageSeo = (options: PageSeoOptions) => {
     options.imageAlt || (locale === "en"
       ? "SmartPilot | Digital product development"
       : "SmartPilot | طراحی و توسعه محصولات دیجیتال");
-  // Only the homepages have both language versions in phase one.
-  const alternates = normalizedPath === "/" || normalizedPath === "/en"
+  // Only the explicit set of published translation pairs may advertise hreflang.
+  const translatedPaths = new Set([
+    "/", "/services", "/services/ai-development", "/services/ecommerce-development",
+    "/projects", "/projects/shidaneh", "/projects/hevix", "/about", "/contact",
+  ]);
+  const sourcePath = normalizedPath === "/en"
+    ? "/"
+    : normalizedPath.startsWith("/en/") ? normalizedPath.slice(3) : normalizedPath;
+  const englishPath = sourcePath === "/" ? "/en" : `/en${sourcePath}`;
+  const alternates = translatedPaths.has(sourcePath)
     ? [
-        { rel: "alternate", hreflang: "fa-IR", href: `${baseUrl}/` },
-        { rel: "alternate", hreflang: "en", href: `${baseUrl}/en` },
-        { rel: "alternate", hreflang: "x-default", href: `${baseUrl}/` },
+        { rel: "alternate", hreflang: "fa-IR", href: `${baseUrl}${sourcePath}` },
+        { rel: "alternate", hreflang: "en", href: `${baseUrl}${englishPath}` },
+        { rel: "alternate", hreflang: "x-default", href: `${baseUrl}${sourcePath}` },
       ]
     : [];
 
