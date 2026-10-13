@@ -1,0 +1,74 @@
+<script setup lang="ts">
+usePageSeo({
+  title: "Applied AI, RAG, Agents & Semantic Search | SmartPilot",
+  description: "SmartPilot designs AI agents, RAG solutions, semantic search and intelligent assistants grounded in real business data.",
+  path: "/en/services/ai-development",
+  locale: "en",
+  image: "/images/og/nexastudio-og.webp",
+});
+const sections = [
+  {
+    "kicker": "AI SOLUTIONS",
+    "title": "What we can build",
+    "description": "Choose the right approach based on your data, users and operational requirements.",
+    "items": [
+      {
+        "title": "AI agents and automation",
+        "description": "Multi-step tasks using controlled tools, defined permissions and appropriate human review."
+      },
+      {
+        "title": "RAG and business knowledge",
+        "description": "Ground language-model answers in documents and data using controlled retrieval."
+      },
+      {
+        "title": "Semantic search",
+        "description": "Improve discovery across complex catalogs and knowledge bases beyond exact words."
+      },
+      {
+        "title": "Product advisors",
+        "description": "Context-aware answers and guidance connected to product data and business rules."
+      }
+    ]
+  },
+  {
+    "kicker": "DELIVERY",
+    "title": "A measured implementation process",
+    "description": "Start small, evaluate quality and scale only where justified.",
+    "items": [
+      {
+        "title": "Discovery",
+        "description": "Identify constraints, privacy requirements and measurable outcomes."
+      },
+      {
+        "title": "Architecture and prototype",
+        "description": "Choose models, retrieval, tools and safeguards for the specific workload."
+      },
+      {
+        "title": "Evaluation and integration",
+        "description": "Test real-world questions and errors, not only curated demos."
+      },
+      {
+        "title": "Controlled rollout",
+        "description": "Monitor outcomes, cost and user feedback."
+      }
+    ]
+  },
+  {
+    "kicker": "CASE STUDY",
+    "title": "Applied AI in the field",
+    "description": "HEVIX combines specialist product data with search and research workflows.",
+    "items": [
+      {
+        "title": "HEVIX — industrial intelligence",
+        "description": "Explore a data-centered platform where accurate product search is valuable.",
+        "link": "/en/projects/hevix",
+        "image": "/images/projects/hevix.webp"
+      }
+    ]
+  }
+];
+</script>
+
+<template>
+  <EnContentPage kicker="APPLIED AI" title="Intelligent capabilities built around your product" introduction="We work with real business data and workflows to develop AI features whose value, quality and cost can be measured."  :sections="sections" />
+</template>
