@@ -67,6 +67,22 @@ const sections = [
     ]
   }
 ];
+// FAQ copy aligns with the matching Persian service page.
+sections.push({
+  "kicker": "COMMON QUESTIONS",
+  "title": "Frequently asked questions",
+  "description": "The right approach depends on catalog complexity, budget, operational processes and future plans.",
+  "items": [
+    {
+      "title": "Is custom e-commerce always better than an off-the-shelf solution?",
+      "description": "No. For simpler requirements, established solutions may be more cost-effective. Custom development is justified when the product or operations need it."
+    },
+    {
+      "title": "Can technical SEO be added after design?",
+      "description": "Some issues can be fixed later, but URL structure, HTML, speed, category architecture and structured data are best considered during design and development."
+    }
+  ]
+});
 </script>
 
 <template>
