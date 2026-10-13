@@ -1,5 +1,5 @@
 <script setup lang="ts">
-usePageSeo({
+const { baseUrl, canonicalUrl, imageUrl } = usePageSeo({
   title: "Custom E-commerce Development | SmartPilot",
   description: "SmartPilot builds custom e-commerce websites with scalable catalogs, technical SEO, intelligent search and effective shopping experiences.",
   path: "/en/services/ecommerce-development",
@@ -83,6 +83,27 @@ sections.push({
     }
   ]
 });
+
+useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Services","path":"/en/services"},{"name":"E-commerce Development","path":"/en/services/ecommerce-development"}]);
+
+useHead({
+  script: [{
+    key: "pages-en-services-ecommerce-development.vue-schema",
+    type: "application/ld+json",
+    innerHTML: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${canonicalUrl}#service`,
+      name: "Custom e-commerce development",
+      url: canonicalUrl,
+      image: imageUrl,
+      inLanguage: "en",
+      serviceType: "Custom e-commerce development",
+      provider: { "@id": `${baseUrl}/#organization` },
+    }),
+  }],
+});
+
 </script>
 
 <template>

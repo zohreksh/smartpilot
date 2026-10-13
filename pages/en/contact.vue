@@ -55,6 +55,9 @@ const submitProjectBrief = () => {
     status.value = "If WhatsApp did not open, please allow pop-ups and try again.";
   }
 };
+
+useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Contact","path":"/en/contact"}]);
+
 </script>
 
 <template>

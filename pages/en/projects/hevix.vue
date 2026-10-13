@@ -1,5 +1,5 @@
 <script setup lang="ts">
-usePageSeo({
+const { baseUrl, canonicalUrl, imageUrl } = usePageSeo({
   title: "HEVIX Industrial Parts Case Study | SmartPilot",
   description: "HEVIX is a specialized platform for industrial parts catalogs, smart search, data and product research workflows.",
   path: "/en/projects/hevix",
@@ -43,6 +43,27 @@ const sections = [
     ]
   }
 ];
+
+useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Projects","path":"/en/projects"},{"name":"HEVIX","path":"/en/projects/hevix"}]);
+
+useHead({
+  script: [{
+    key: "pages-en-projects-hevix.vue-schema",
+    type: "application/ld+json",
+    innerHTML: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "@id": `${canonicalUrl}#case-study`,
+      name: "HEVIX",
+      url: canonicalUrl,
+      image: imageUrl,
+      inLanguage: "en",
+      creator: { "@id": `${baseUrl}/#organization` },
+      mainEntityOfPage: canonicalUrl,
+    }),
+  }],
+});
+
 </script>
 
 <template>

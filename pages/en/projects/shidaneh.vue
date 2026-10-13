@@ -1,5 +1,5 @@
 <script setup lang="ts">
-usePageSeo({
+const { baseUrl, canonicalUrl, imageUrl } = usePageSeo({
   title: "Shidaneh Beauty E-commerce Case Study | SmartPilot",
   description: "Shidaneh combines custom beauty commerce, catalog management, intelligent search and technical SEO.",
   path: "/en/projects/shidaneh",
@@ -43,6 +43,27 @@ const sections = [
     ]
   }
 ];
+
+useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Projects","path":"/en/projects"},{"name":"Shidaneh","path":"/en/projects/shidaneh"}]);
+
+useHead({
+  script: [{
+    key: "pages-en-projects-shidaneh.vue-schema",
+    type: "application/ld+json",
+    innerHTML: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "@id": `${canonicalUrl}#case-study`,
+      name: "Shidaneh",
+      url: canonicalUrl,
+      image: imageUrl,
+      inLanguage: "en",
+      creator: { "@id": `${baseUrl}/#organization` },
+      mainEntityOfPage: canonicalUrl,
+    }),
+  }],
+});
+
 </script>
 
 <template>

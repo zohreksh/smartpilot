@@ -1,5 +1,5 @@
 <script setup lang="ts">
-usePageSeo({
+const { baseUrl, canonicalUrl, imageUrl } = usePageSeo({
   title: "Applied AI, RAG, Agents & Semantic Search | SmartPilot",
   description: "SmartPilot designs AI agents, RAG solutions, semantic search and intelligent assistants grounded in real business data.",
   path: "/en/services/ai-development",
@@ -83,6 +83,27 @@ sections.push({
     }
   ]
 });
+
+useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Services","path":"/en/services"},{"name":"AI Development","path":"/en/services/ai-development"}]);
+
+useHead({
+  script: [{
+    key: "pages-en-services-ai-development.vue-schema",
+    type: "application/ld+json",
+    innerHTML: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `${canonicalUrl}#service`,
+      name: "AI development and intelligent search",
+      url: canonicalUrl,
+      image: imageUrl,
+      inLanguage: "en",
+      serviceType: "AI development and intelligent search",
+      provider: { "@id": `${baseUrl}/#organization` },
+    }),
+  }],
+});
+
 </script>
 
 <template>

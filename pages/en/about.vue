@@ -96,6 +96,9 @@ const sections = [
     ]
   }
 ];
+
+useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"About","path":"/en/about"}]);
+
 </script>
 
 <template>
