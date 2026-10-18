@@ -73,6 +73,7 @@ const recoverProofImage = (image) => {
             <NuxtLink class="secondary-action" to="/contact"
               >بررسی پروژه شما</NuxtLink
             >
+            <NuxtLink class="secondary-action" to="/demo">دموی دستیار خرید</NuxtLink>
           </div>
 
           <div class="hero-meta" role="group" aria-label="ویژگی‌های همکاری">
