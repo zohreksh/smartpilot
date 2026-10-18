@@ -56,5 +56,5 @@ useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Projects","path":"/en
 </script>
 
 <template>
-  <EnContentPage kicker="PROJECTS" title="Working products, not just beautiful screens" introduction="Two very different markets share one core principle: design around actual user needs and keep the software maintainable."  :sections="sections" />
+  <EnContentPage kicker="PROJECTS" title="Working products, not just beautiful screens" introduction="Two very different markets share one core principle: design around actual user needs and keep the software maintainable." hero-image="/images/en/smartpilot_digital_studio_showcase.webp" hero-image-alt="Showcase of the two SmartPilot products: the Shidaneh beauty commerce storefront and the HEVIX industrial parts platform." :sections="sections" />
 </template>

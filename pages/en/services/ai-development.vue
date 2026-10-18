@@ -111,5 +111,5 @@ useHead({
 </script>
 
 <template>
-  <EnContentPage kicker="APPLIED AI" title="Intelligent capabilities built around your product" introduction="We work with real business data and workflows to develop AI features whose value, quality and cost can be measured."  :sections="sections" />
+  <EnContentPage kicker="APPLIED AI" title="Intelligent capabilities built around your product" introduction="We work with real business data and workflows to develop AI features whose value, quality and cost can be measured." hero-image="/images/en/hevix_smarter_parts_sourcing_banner.webp" hero-image-alt="HEVIX industrial parts platform demonstrating applied AI with smarter parts sourcing and intelligent search." :sections="sections" />
 </template>

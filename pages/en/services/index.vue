@@ -91,5 +91,5 @@ useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Services","path":"/en
 </script>
 
 <template>
-  <EnContentPage kicker="SERVICES" title="Software, AI and digital products built for business" introduction="From intelligent search and automation to custom software, e-commerce and growth, we connect useful technology to real operations."  :sections="sections" />
+  <EnContentPage kicker="SERVICES" title="Software, AI and digital products built for business" introduction="From intelligent search and automation to custom software, e-commerce and growth, we connect useful technology to real operations." hero-variant="orbit" :chips="['AI that ships', 'Custom platforms', 'Technical SEO']"  :sections="sections" />
 </template>

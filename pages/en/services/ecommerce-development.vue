@@ -111,5 +111,5 @@ useHead({
 </script>
 
 <template>
-  <EnContentPage kicker="E-COMMERCE" title="Custom commerce built for long-term growth" introduction="Great online stores combine shopping journeys with sound catalog data, manageable operations, SEO and performance."  :sections="sections" />
+  <EnContentPage kicker="E-COMMERCE" title="Custom commerce built for long-term growth" introduction="Great online stores combine shopping journeys with sound catalog data, manageable operations, SEO and performance." hero-image="/images/en/shidaneh_beauty_commerce_hero.webp" hero-image-alt="Shidaneh beauty commerce storefront, a custom e-commerce product with catalog search and shopping journeys." :sections="sections" />
 </template>

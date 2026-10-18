@@ -102,5 +102,5 @@ useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"About","path":"/en/ab
 </script>
 
 <template>
-  <EnContentPage kicker="ABOUT SMARTPILOT" title="Digital products built around real problems" introduction="We connect product thinking, engineering, applied AI, intelligent search and SEO to deliver software that people use and teams can maintain."  :sections="sections" />
+  <EnContentPage kicker="ABOUT SMARTPILOT" title="Digital products built around real problems" introduction="We connect product thinking, engineering, applied AI, intelligent search and SEO to deliver software that people use and teams can maintain." hero-image="/images/en/smartpilot_digital_product_studio.webp" hero-image-alt="The SmartPilot digital product studio: custom software, intelligent search and applied AI for ambitious products, presented on a warm studio desk." :hero-hotspots="[{ label: 'Contact SmartPilot — start your project', to: '/en/contact', left: '5.25%', top: '75.8%', width: '17.4%', height: '7.4%' }, { label: 'Watch our work — explore projects', to: '/en/projects', left: '23.4%', top: '75.8%', width: '11%', height: '7.4%' }]" :sections="sections" />
 </template>

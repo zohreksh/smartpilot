@@ -102,5 +102,5 @@ useHead({
 </script>
 
 <template>
-  <EnContentPage kicker="PRIVACY NOTICE" title="What this site does — and does not do — with your data" introduction="SmartPilot runs on static pages with no accounts and no analytics. A language cookie and an anonymous one-time country check are the only signals involved; here is exactly how they work." hero-image="/images/en/smartpilot_digital_studio_showcase.webp" hero-image-alt="SmartPilot digital product studio" :sections="sections" />
+  <EnContentPage kicker="PRIVACY NOTICE" title="What this site does — and does not do — with your data" introduction="SmartPilot runs on static pages with no accounts and no analytics. A language cookie and an anonymous one-time country check are the only signals involved; here is exactly how they work." :chips="['No accounts', 'No analytics', 'No message storage']" :sections="sections" />
 </template>
