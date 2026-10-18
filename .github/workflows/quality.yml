@@ -49,9 +49,9 @@ jobs:
         run: |
           set -euo pipefail
           for file in \
-            .output/public/index.html \\
+            .output/public/index.html \
             .output/public/demo/index.html \
-            .output/public/en/index.html \\
+            .output/public/en/index.html \
             .output/public/en/demo/index.html \
             .output/public/en/services/index.html \
             .output/public/en/services/ai-development/index.html \
