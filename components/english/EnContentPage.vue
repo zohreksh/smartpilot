@@ -26,29 +26,28 @@ withDefaults(defineProps<{
 
 <template>
   <main id="main-content" class="en-content-page" tabindex="-1">
-    <section class="en-content-hero">
-      <div class="container en-content-hero-grid">
-        <div class="en-content-hero-copy">
-          <span class="en-content-kicker">{{ kicker }}</span>
-          <h1>{{ title }}</h1>
-          <p>{{ introduction }}</p>
-          <div class="en-content-actions">
-            <NuxtLink class="en-content-primary" to="/en/contact">Discuss your project <span aria-hidden="true">→</span></NuxtLink>
-            <NuxtLink class="en-content-outline" to="/en/projects">Explore our work</NuxtLink>
+    <slot name="hero">\n      <section class="en-content-hero">
+        <div class="container en-content-hero-grid">
+          <div class="en-content-hero-copy">
+            <span class="en-content-kicker">{{ kicker }}</span>
+            <h1>{{ title }}</h1>
+            <p>{{ introduction }}</p>
+            <div class="en-content-actions">
+              <NuxtLink class="en-content-primary" to="/en/contact">Discuss your project <span aria-hidden="true">→</span></NuxtLink>
+              <NuxtLink class="en-content-outline" to="/en/projects">Explore our work</NuxtLink>
+            </div>
+          </div>
+          <div v-if="heroImage" class="en-content-hero-image">
+            <img :src="heroImage" :alt="heroImageAlt" width="1672" height="941" decoding="async" loading="eager" />
+          </div>
+          <div v-else class="en-content-hero-art" aria-hidden="true">
+            <span class="en-content-orbit one"></span>
+            <span class="en-content-orbit two"></span>
+            <span class="en-content-art-mark">SP<span>↗</span></span>
+            <span class="en-content-art-tag">DESIGN · ENGINEERING · AI</span>
           </div>
         </div>
-        <div v-if="heroImage" class="en-content-hero-image">
-          <img :src="heroImage" :alt="heroImageAlt" width="1672" height="941" decoding="async" loading="eager" />
-        </div>
-        <div v-else class="en-content-hero-art" aria-hidden="true">
-          <span class="en-content-orbit one"></span>
-          <span class="en-content-orbit two"></span>
-          <span class="en-content-art-mark">SP<span>↗</span></span>
-          <span class="en-content-art-tag">DESIGN · ENGINEERING · AI</span>
-        </div>
-      </div>
-    </section>
-    <section v-for="(section, sectionIndex) in sections" :id="section.id" :key="section.title" class="en-content-section" :class="{ 'en-content-muted': sectionIndex % 2 === 1 }">
+      </section>\n    </slot>\n    <section v-for="(section, sectionIndex) in sections" :id="section.id" :key="section.title" class="en-content-section" :class="{ 'en-content-muted': sectionIndex % 2 === 1 }">
       <div class="container">
         <header class="en-content-section-heading">
           <span v-if="section.kicker" class="en-content-kicker">{{ section.kicker }}</span>
