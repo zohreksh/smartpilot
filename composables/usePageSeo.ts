@@ -27,7 +27,7 @@ export const usePageSeo = (options: PageSeoOptions) => {
       : "SmartPilot | طراحی و توسعه محصولات دیجیتال");
   // Only the explicit set of published translation pairs may advertise hreflang.
   const translatedPaths = new Set([
-    "/", "/services", "/services/ai-development", "/services/ecommerce-development",
+    "/", "/demo", "/services", "/services/ai-development", "/services/ecommerce-development",
     "/projects", "/projects/shidaneh", "/projects/hevix", "/about", "/contact", "/privacy",
   ]);
   const sourcePath = normalizedPath === "/en"
