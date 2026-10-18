@@ -97,6 +97,21 @@ try {
         }
       }
 
+      if (routeName === "english-services") {
+        if (!(await page.locator(".en-services-hero").count())) {
+          throw new Error(`${viewportName}: English services page is missing its custom warm hero`);
+        }
+        if (await page.locator(".en-services-hero h1").count() !== 1) {
+          throw new Error(`${viewportName}: English services hero must have one H1`);
+        }
+        if (await page.locator(".en-service-visual-card").count() !== 3) {
+          throw new Error(`${viewportName}: English services hero must show all three capability cards`);
+        }
+        if (!(await page.locator(".en-services-primary").count())) {
+          throw new Error(`${viewportName}: English services hero is missing its primary action`);
+        }
+      }
+
       if (routeName === "english-contact") {
         if (!(await page.locator(".en-contact-hero-panel").count())) {
           throw new Error(`${viewportName}: English contact page is missing its direct-contact hero panel`);
