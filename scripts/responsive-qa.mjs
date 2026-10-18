@@ -3,6 +3,15 @@ import fs from "node:fs/promises";
 
 const routes = [
   ["home", "/"],
+  ["english-home", "/en/"],
+  ["english-services", "/en/services/"],
+  ["english-ai", "/en/services/ai-development/"],
+  ["english-ecommerce", "/en/services/ecommerce-development/"],
+  ["english-projects", "/en/projects/"],
+  ["english-shidaneh", "/en/projects/shidaneh/"],
+  ["english-hevix", "/en/projects/hevix/"],
+  ["english-about", "/en/about/"],
+  ["english-contact", "/en/contact/"],
   ["services", "/services/"],
   ["projects", "/projects/"],
   ["about", "/about/"],
@@ -28,6 +37,11 @@ try {
       locale: "fa-IR",
       reducedMotion: "reduce",
     });
+
+    // Keep screenshots deterministic: simulate an Iranian visitor on the Persian root.
+    await context.route("https://api.country.is/**", (route) =>
+      route.fulfill({ status: 200, contentType: "application/json", body: '{"country":"IR"}' }),
+    );
 
     for (const [routeName, route] of routes) {
       const page = await context.newPage();
@@ -55,6 +69,79 @@ try {
 
       await page.waitForLoadState("networkidle");
 
+      if (routeName.startsWith("english-")) {
+        const locale = await page.evaluate(() => ({
+          lang: document.documentElement.lang,
+          dir: document.documentElement.dir || document.body.dir,
+        }));
+        if (locale.lang !== "en" || locale.dir !== "ltr") {
+          throw new Error(`${viewportName}/${routeName}: wrong locale ${JSON.stringify(locale)}`);
+        }
+        if (!(await page.locator('a[hreflang="fa"]').count())) {
+          throw new Error(`${viewportName}/${routeName}: missing Persian language link`);
+        }
+      }
+
+      if (routeName === "english-about") {
+        if (!(await page.locator(".en-about-hero").count())) {
+          throw new Error(`${viewportName}: English about page is missing its custom hero`);
+        }
+        if (await page.locator(".en-about-hero h1").count() !== 1) {
+          throw new Error(`${viewportName}: English about hero must have one H1`);
+        }
+        if (await page.locator(".en-about-work-card").count() !== 2) {
+          throw new Error(`${viewportName}: English about hero must show both selected projects`);
+        }
+        if (!(await page.locator('.en-about-hero a[href$="#team"]').count())) {
+          throw new Error(`${viewportName}: English about hero is missing the Meet the team action`);
+        }
+      }
+
+      if (routeName === "english-services") {
+        if (!(await page.locator(".en-services-hero").count())) {
+          throw new Error(`${viewportName}: English services page is missing its custom warm hero`);
+        }
+        if (await page.locator(".en-services-hero h1").count() !== 1) {
+          throw new Error(`${viewportName}: English services hero must have one H1`);
+        }
+        if (await page.locator(".en-service-visual-card").count() !== 3) {
+          throw new Error(`${viewportName}: English services hero must show all three capability cards`);
+        }
+        if (!(await page.locator(".en-services-primary").count())) {
+          throw new Error(`${viewportName}: English services hero is missing its primary action`);
+        }
+      }
+
+      if (routeName === "english-contact") {
+        if (!(await page.locator(".en-contact-hero-panel").count())) {
+          throw new Error(`${viewportName}: English contact page is missing its direct-contact hero panel`);
+        }
+        if (!(await page.locator('.en-contact-hero a[href="#project-brief"]').count())) {
+          throw new Error(`${viewportName}: English contact hero is missing the project-brief action`);
+        }
+        if (!(await page.locator('.en-contact-hero a[href^="mailto:"]').count())) {
+          throw new Error(`${viewportName}: English contact hero is missing direct email`);
+        }
+        await page.locator('form button[type="submit"]').click();
+        if (!(await page.locator('#en-full-name[aria-invalid="true"]').count())) {
+          throw new Error(`${viewportName}: invalid English contact form submitted without validation`);
+        }
+        await page.locator('#en-full-name').fill("Test Customer");
+        await page.locator('#en-contact-way').fill("test@example.com");
+        await page.locator('#en-project-type').selectOption({ label: "Custom software platform" });
+        await page.locator('#en-message').fill("Please help us plan our platform.");
+        await page.evaluate(() => {
+          window.__contactOpenedUrl = "";
+          window.open = (url) => { window.__contactOpenedUrl = String(url); return null; };
+        });
+        await page.locator('form button[type="submit"]').click();
+        const opened = await page.evaluate(() => window.__contactOpenedUrl || "");
+        if (!opened.startsWith("https://wa.me/989379407868?text=") ||
+            !decodeURIComponent(opened).includes("Test Customer")) {
+          throw new Error(`${viewportName}: English contact form did not build the expected WhatsApp URL`);
+        }
+      }
+
       const layout = await page.evaluate(() => ({
         scrollWidth: document.documentElement.scrollWidth,
         clientWidth: document.documentElement.clientWidth,
@@ -74,6 +161,9 @@ try {
           `${viewportName}/${routeName}: broken images: ${layout.brokenImages.join(", ")}`,
         );
       }
+
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.waitForTimeout(150);
 
       await page.screenshot({
         path: `qa-artifacts/${viewportName}-${routeName}.png`,

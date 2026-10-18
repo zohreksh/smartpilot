@@ -1,0 +1,258 @@
+<script setup lang="ts">
+import { reactive, ref } from "vue";
+
+usePageSeo({
+  title: "Contact SmartPilot | Discuss Your Digital Product",
+  description: "Contact SmartPilot to discuss custom software, applied AI, e-commerce, intelligent search or improving an existing digital product.",
+  path: "/en/contact",
+  locale: "en",
+  image: "/images/en/smartpilot_digital_studio_showcase.webp",
+});
+
+const brief = reactive({
+  fullName: "",
+  contactWay: "",
+  businessName: "",
+  projectType: "",
+  message: "",
+});
+const errors = reactive({
+  fullName: "",
+  contactWay: "",
+  projectType: "",
+  message: "",
+});
+const status = ref("Your details are not stored on the site. Submitting opens a prefilled WhatsApp message.");
+
+const validate = () => {
+  errors.fullName = brief.fullName.trim() ? "" : "Please enter your full name.";
+  errors.contactWay = brief.contactWay.trim() ? "" : "Please enter an email address or phone number.";
+  errors.projectType = brief.projectType ? "" : "Please select a project type.";
+  errors.message = brief.message.trim() ? "" : "Please describe your project or goal.";
+  return !Object.values(errors).some(Boolean);
+};
+
+const submitProjectBrief = () => {
+  if (!validate()) {
+    status.value = "Please correct the required fields below.";
+    return;
+  }
+  const lines = [
+    "Hello, I'd like to discuss a project with SmartPilot.",
+    "",
+    `Name: ${brief.fullName.trim()}`,
+    `Contact: ${brief.contactWay.trim()}`,
+    brief.businessName.trim() ? `Business: ${brief.businessName.trim()}` : null,
+    `Project type: ${brief.projectType}`,
+    "",
+    "Problem / objective:",
+    brief.message.trim(),
+  ].filter(Boolean);
+  const url = `https://wa.me/989379407868?text=${encodeURIComponent(lines.join("\n"))}`;
+  if (import.meta.client) {
+    const popup = window.open(url, "_blank", "noopener,noreferrer");
+    // Some browsers return null with noopener even when the tab was opened.
+    status.value = "If WhatsApp did not open, please allow pop-ups and try again.";
+  }
+};
+
+useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Contact","path":"/en/contact"}]);
+
+</script>
+
+<template>
+  <main id="main-content" class="en-contact-page" tabindex="-1">
+    <section class="en-contact-hero" aria-labelledby="en-contact-title">
+      <div class="container en-contact-hero-grid">
+        <div class="en-contact-hero-copy">
+          <div class="en-contact-hero-meta">
+            <span class="en-label">CONTACT SMARTPILOT</span>
+            <span class="en-contact-open"><i aria-hidden="true"></i> Project enquiries welcome</span>
+          </div>
+          <h1 id="en-contact-title">Let's turn your next challenge into a <em>clear plan.</em></h1>
+          <p>Tell us what you want to build, improve or make more effective. We’ll help you find a practical place to start.</p>
+          <div class="en-contact-hero-actions">
+            <a class="en-contact-hero-primary" href="#project-brief">Tell us about your project <span aria-hidden="true">↘</span></a>
+            <a class="en-contact-hero-secondary" href="mailto:zhr.keshavarz@gmail.com">Email us directly <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="en-contact-hero-note"><span aria-hidden="true">↳</span> A clear outline is enough to get started.</div>
+        </div>
+
+        <aside class="en-contact-hero-panel" aria-label="Direct contact options">
+          <div class="en-contact-panel-top"><span>DIRECT CONTACT</span><span>YOUR WAY</span></div>
+          <h2>Prefer to reach us directly?</h2>
+          <p>Choose the channel that works best for you.</p>
+          <a href="mailto:zhr.keshavarz@gmail.com" class="en-contact-method">
+            <span class="en-contact-method-number">01</span>
+            <span class="en-contact-method-copy"><strong>Email</strong><small>zhr.keshavarz@gmail.com</small></span>
+            <span class="en-contact-method-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://wa.me/989379407868" target="_blank" rel="noopener noreferrer" class="en-contact-method">
+            <span class="en-contact-method-number">02</span>
+            <span class="en-contact-method-copy"><strong>WhatsApp</strong><small>Start a conversation</small></span>
+            <span class="en-contact-method-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="tel:+989379407868" class="en-contact-method">
+            <span class="en-contact-method-number">03</span>
+            <span class="en-contact-method-copy"><strong>Phone</strong><small dir="ltr">+98 937 940 7868</small></span>
+            <span class="en-contact-method-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="en-contact-panel-foot"><span aria-hidden="true">✳</span> We usually reply within one business day.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="project-brief" class="en-contact-form-section" aria-labelledby="en-project-brief-title">
+      <div class="container en-contact-form-grid">
+        <div class="en-form-wrap">
+          <span class="en-label">PROJECT BRIEF</span>
+          <h2 id="en-project-brief-title">A few details are enough to get started</h2>
+          <p class="en-form-intro">Your answers are used only to prepare a WhatsApp message. There is no account, backend submission or database storage.</p>
+          <form class="en-project-form" novalidate @submit.prevent="submitProjectBrief" aria-describedby="form-status">
+            <div class="en-form-row">
+              <div class="en-field">
+                <label for="en-full-name">Full name <span aria-hidden="true">*</span></label>
+                <input id="en-full-name" v-model.trim="brief.fullName" name="full-name" type="text" autocomplete="name" required placeholder="Your name" :aria-invalid="!!errors.fullName" aria-describedby="en-full-name-error" />
+                <small id="en-full-name-error" class="en-field-error" role="alert">{{ errors.fullName }}</small>
+              </div>
+              <div class="en-field">
+                <label for="en-contact-way">Contact details <span aria-hidden="true">*</span></label>
+                <input id="en-contact-way" v-model.trim="brief.contactWay" name="contact-way" type="text" required placeholder="Email or phone number" :aria-invalid="!!errors.contactWay" aria-describedby="en-contact-way-error" />
+                <small id="en-contact-way-error" class="en-field-error" role="alert">{{ errors.contactWay }}</small>
+              </div>
+            </div>
+            <div class="en-form-row">
+              <div class="en-field">
+                <label for="en-business-name">Business name (optional)</label>
+                <input id="en-business-name" v-model.trim="brief.businessName" name="business-name" type="text" autocomplete="organization" placeholder="Company or brand" />
+              </div>
+              <div class="en-field">
+                <label for="en-project-type">Project type <span aria-hidden="true">*</span></label>
+                <select id="en-project-type" v-model="brief.projectType" name="project-type" required :aria-invalid="!!errors.projectType" aria-describedby="en-project-type-error">
+                  <option value="">Select a project type</option>
+                  <option>Website or online store</option>
+                  <option>Custom software platform</option>
+                  <option>Artificial intelligence</option>
+                  <option>SEO and organic growth</option>
+                  <option>Improving an existing product</option>
+                  <option>Maintenance and ongoing development</option>
+                  <option>Other</option>
+                </select>
+                <small id="en-project-type-error" class="en-field-error" role="alert">{{ errors.projectType }}</small>
+              </div>
+            </div>
+            <div class="en-field">
+              <label for="en-message">Your problem or goal <span aria-hidden="true">*</span></label>
+              <textarea id="en-message" v-model.trim="brief.message" name="message" rows="6" required placeholder="What would you like to build or improve?" :aria-invalid="!!errors.message" aria-describedby="en-message-error"></textarea>
+              <small id="en-message-error" class="en-field-error" role="alert">{{ errors.message }}</small>
+            </div>
+            <div class="en-form-actions">
+              <button type="submit">Continue in WhatsApp <span aria-hidden="true">→</span></button>
+              <p id="form-status" role="status">{{ status }}</p>
+            </div>
+          </form>
+        </div>
+        <aside class="en-contact-guide">
+          <span class="en-label">A HELPFUL BRIEF</span>
+          <h2>What should you share?</h2>
+          <ul>
+            <li><strong>Current situation</strong><span>What exists today—an idea, website or working product?</span></li>
+            <li><strong>Main challenge</strong><span>What is slow, costly or not working?</span></li>
+            <li><strong>Expected result</strong><span>What should improve after this work?</span></li>
+            <li><strong>Important constraints</strong><span>Timeline, budget, integrations, data or team capacity?</span></li>
+          </ul>
+          <p>You do not need a formal specification. A clear description is enough for an initial conversation.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container en-contact-next">
+      <span class="en-label">NEXT STEPS</span>
+      <h2>How a collaboration begins</h2>
+      <div class="en-contact-grid">
+        <article v-for="step in [
+          ['01','Initial review','We review the problem and your current situation.'],
+          ['02','Short conversation','We clarify goals, important uncertainties and constraints.'],
+          ['03','Suggested direction','We suggest a sensible scope and priorities.'],
+          ['04','Phased delivery','After agreement, design and development start incrementally.']
+        ]" :key="step[0]" class="en-contact-step">
+          <span>{{ step[0] }}</span><h3>{{ step[1] }}</h3><p>{{ step[2] }}</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</template>
+
+<style scoped>
+.en-contact-page { direction: ltr; color: #101c32; }
+.en-contact-hero { position: relative; isolation: isolate; overflow: hidden; padding: 20px 0 58px; color: #14243a; background: #fffdfb; }
+.en-contact-hero::before { content: ""; position: absolute; z-index: 0; width: 56vw; max-width: 850px; aspect-ratio: 1; right: -12vw; top: -24%; border-radius: 50%; background: radial-gradient(circle, rgba(210,166,128,.2), rgba(210,166,128,0) 68%); pointer-events: none; }
+.en-contact-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1.06fr) minmax(340px,.78fr); align-items: center; gap: clamp(35px,4.2vw,58px); min-height: 570px; padding: clamp(30px,4.2vw,54px); overflow: hidden; border: 1px solid rgba(226,211,199,.92); border-radius: 32px; background: radial-gradient(circle at 82% 18%, rgba(184,107,53,.11), transparent 27%), linear-gradient(135deg, rgba(255,255,255,.97), rgba(255,249,245,.95)); box-shadow: 0 24px 58px rgba(16,28,50,.08), inset 0 1px 0 rgba(255,255,255,.9); }
+.en-contact-hero-copy { max-width: 700px; }
+.en-contact-hero-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 15px; }
+.en-contact-hero .en-label { color: #925b3b; letter-spacing: .16em; }
+.en-contact-open { display: inline-flex; align-items: center; gap: 8px; color: #697484; font-size: 11px; font-weight: 650; }
+.en-contact-open i { width: 7px; height: 7px; border-radius: 50%; background: #82c5a1; box-shadow: 0 0 0 4px rgba(130,197,161,.12); }
+.en-contact-hero h1 { max-width: 700px; margin: 23px 0 20px; color: #12233a; font-size: clamp(42px,5vw,69px); letter-spacing: -.055em; line-height: 1.04; font-weight: 750; }
+.en-contact-hero h1 em { color: #a86640; font-style: normal; }
+.en-contact-hero-copy > p { max-width: 590px; margin: 0; color: #5e6877; font-size: clamp(16px,1.25vw,18px); line-height: 1.85; }
+.en-contact-hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.en-contact-hero-primary,.en-contact-hero-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 15px; min-height: 50px; padding: 0 19px; border-radius: 12px; font-size: 13px; font-weight: 750; transition: transform .18s ease, background .18s ease; }
+.en-contact-hero-primary { color: #fffaf5; background: #14253b; box-shadow: 0 8px 20px rgba(20,37,59,.14); }
+.en-contact-hero-primary:hover { transform: translateY(-2px); background: #203a58; }
+.en-contact-hero-secondary { color: #283b50; border: 1px solid #d8c9bb; background: rgba(255,255,255,.42); }
+.en-contact-hero-secondary:hover { transform: translateY(-2px); background: #fff; }
+.en-contact-hero-note { display: flex; align-items: center; gap: 9px; margin-top: 23px; color: #697484; font-size: 12px; }
+.en-contact-hero-note span { color: #a86640; font-size: 18px; }
+.en-contact-hero-panel { position: relative; min-width: 0; padding: clamp(23px,2.7vw,34px); border: 1px solid rgba(226,211,199,.95); border-radius: 23px; color: #17263b; background: rgba(255,255,255,.96); box-shadow: 0 18px 44px rgba(39,38,34,.11); }
+.en-contact-panel-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #a36d4a; font: 800 10px/1.5 system-ui,sans-serif; letter-spacing: .14em; }
+.en-contact-panel-top span:last-child { color: #8a94a0; }
+.en-contact-hero-panel h2 { margin: 18px 0 8px; font-size: clamp(23px,2.3vw,30px); line-height: 1.22; letter-spacing: -.035em; }
+.en-contact-hero-panel > p { margin: 0 0 20px; color: #6a7585; font-size: 13px; line-height: 1.7; }
+.en-contact-method { display: flex; align-items: center; gap: 13px; min-width: 0; padding: 15px 0; border-top: 1px solid #e9e2db; }
+.en-contact-method-number { display: grid; place-items: center; flex: 0 0 35px; width: 35px; height: 35px; border-radius: 10px; color: #a76b45; background: #f5eae0; font: 800 11px/1 system-ui,sans-serif; }
+.en-contact-method-copy { display: flex; flex-direction: column; min-width: 0; gap: 4px; flex: 1; }
+.en-contact-method-copy strong { color: #1a2b40; font-size: 14px; }
+.en-contact-method-copy small { color: #6d7887; font-size: 12px; overflow-wrap: anywhere; }
+.en-contact-method-arrow { color: #9a6b4a; font-size: 17px; transition: transform .18s ease; }
+.en-contact-method:hover .en-contact-method-arrow { transform: translate(2px,-2px); }
+.en-contact-panel-foot { display: flex; align-items: center; gap: 9px; margin-top: 11px; padding-top: 15px; border-top: 1px solid #e9e2db; color: #6c7784; font-size: 11px; line-height: 1.6; }
+.en-contact-panel-foot span { color: #a86b43; }
+.en-contact-next { padding-top: 75px; padding-bottom: 80px; }
+.en-contact-next h2 { font-size: clamp(28px,3.4vw,40px); margin: 12px 0 24px; }
+.en-contact-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,230px),1fr)); gap: 19px; }
+.en-contact-step { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 24px; border: 1px solid #e8ded7; border-radius: 21px; background: radial-gradient(circle at 0% 0%, rgba(184,107,53,.06), transparent 30%), linear-gradient(150deg,#fff 0%,#fffaf6 100%); box-shadow: 0 12px 31px rgba(16,28,50,.045), inset 0 1px 0 rgba(255,255,255,.92); min-width: 0; overflow: hidden; overflow-wrap: anywhere; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+.en-contact-step::before { content: ""; position: absolute; top: 0; right: 26px; left: 26px; height: 3px; border-radius: 0 0 999px 999px; background: linear-gradient(90deg, rgba(184,107,53,0), rgba(184,107,53,.5), rgba(184,107,53,0)); }
+.en-contact-step:hover { transform: translateY(-5px); border-color: rgba(184,107,53,.32); box-shadow: 0 22px 46px rgba(16,28,50,.09), inset 0 1px 0 rgba(255,255,255,.95); }
+.en-contact-form-section { padding: 75px 0; background: #f7f9fb; }
+.en-contact-form-grid { display: grid; grid-template-columns: minmax(0,1.6fr) minmax(260px,.8fr); align-items: start; gap: 34px; }
+.en-form-wrap,.en-contact-guide { padding: 28px; background: #fff; border: 1px solid #e8ded7; border-radius: 23px; min-width: 0; }
+.en-form-wrap h2,.en-contact-guide h2 { font-size: clamp(25px,3vw,34px); line-height: 1.3; margin: 10px 0; }
+.en-form-intro { color: #687487; line-height: 1.75; }
+.en-project-form { margin-top: 26px; display: grid; gap: 15px; }
+.en-form-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 15px; }
+.en-field { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.en-field label { font-weight: 700; font-size: 14px; }
+.en-field input,.en-field select,.en-field textarea { width: 100%; font: inherit; color: #18263b; padding: 12px 14px; border: 1px solid #d3d9df; border-radius: 12px; background: #fff; transition: border-color .2s ease, box-shadow .2s ease; }
+.en-field input:hover,.en-field select:hover,.en-field textarea:hover { border-color: #b0947e; }
+.en-field input:focus,.en-field select:focus,.en-field textarea:focus { border-color: #b86b35; box-shadow: 0 0 0 4px rgba(184,107,53,.14); outline: none; }
+.en-field [aria-invalid="true"] { border-color: #c43b3b; }
+.en-field-error { min-height: 16px; font-size: 12px; color: #b12e2e; }
+.en-form-actions { display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap; }
+.en-form-actions button { border: none; background: linear-gradient(145deg,#16293e,#101c2f); color: white; padding: 13px 20px; min-height: 48px; border-radius: 12px; cursor: pointer; font: 700 14px/1.5 inherit; box-shadow: 0 10px 24px rgba(16,28,50,.16), inset 0 1px 0 rgba(255,255,255,.12); transition: transform .2s ease, box-shadow .2s ease; }
+.en-form-actions button:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(16,28,50,.2); }
+.en-form-actions button:focus-visible { outline: 3px solid rgba(184,107,53,.45); outline-offset: 3px; }
+.en-form-actions p { color: #667185; line-height: 1.7; font-size: 13px; margin: 0; flex: 1; }
+.en-contact-guide ul { padding: 0; list-style: none; }
+.en-contact-guide li { display: flex; flex-direction: column; gap: 5px; margin: 19px 0; }
+.en-contact-guide li span,.en-contact-guide > p { color: #687487; line-height: 1.7; font-size: 14px; }
+.en-contact-next > h2 { margin-bottom: 32px; }
+.en-contact-step > span { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 4px; border: 1px solid rgba(184,107,53,.2); border-radius: 14px; color: #a75c32; background: linear-gradient(145deg,#fff8f3,#f2ded0); box-shadow: inset 0 1px 0 #fff, 0 8px 18px rgba(184,107,53,.08); font-size: 13px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.en-contact-step h3 { margin: 0; font-size: 20px; line-height: 1.35; }
+.en-contact-step p { color: #647185; font-size: 15px; line-height: 1.75; margin: 0; }
+@media(max-width:960px) { .en-contact-hero-grid { grid-template-columns: minmax(0,1fr) minmax(280px,.85fr); gap: 24px; min-height: 520px; padding: 32px; } .en-contact-hero h1 { font-size: clamp(38px,5.2vw,53px); } .en-contact-hero-panel { padding: 22px; } }
+@media(max-width:760px) { .en-contact-hero { padding: 24px 0 42px; } .en-contact-hero-grid { grid-template-columns: 1fr; gap: 30px; min-height: 0; padding: 28px 24px 34px; border-radius: 26px; } .en-contact-hero h1 { max-width: 640px; font-size: clamp(40px,9vw,59px); } .en-contact-hero-copy > p { font-size: 16px; } .en-contact-hero-panel { width: min(100%,560px); margin-inline: auto; } .en-contact-form-grid { grid-template-columns: 1fr; } .en-contact-next,.en-contact-form-section { padding-top: 50px; padding-bottom: 55px; } }
+@media(max-width:570px) { .en-form-row { grid-template-columns: 1fr; } .en-contact-hero-grid { padding: 24px 18px 30px; border-radius: 22px; } .en-form-wrap,.en-contact-guide,.en-contact-step { padding: 20px; } .en-contact-hero-meta { align-items: flex-start; flex-direction: column; gap: 9px; } .en-contact-hero h1 { font-size: clamp(37px,10vw,48px); } .en-contact-hero-actions { align-items: stretch; flex-direction: column; } .en-contact-hero-actions a { width: 100%; } .en-contact-hero-panel { padding: 20px; } } 
+@media(prefers-reduced-motion: reduce) { .en-contact-hero-primary,.en-contact-hero-secondary,.en-contact-method-arrow,.en-contact-step { transition: none; }
+  .en-contact-step:hover { transform: none; } }
+</style>
