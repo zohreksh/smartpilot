@@ -17,6 +17,7 @@ const pages = [
   ["/en/projects/hevix", "en/projects/hevix/index.html"],
   ["/en/about", "en/about/index.html"],
   ["/en/contact", "en/contact/index.html"],
+  ["/en/demo", "en/demo/index.html"],
   ["/privacy", "privacy/index.html"],
   ["/en/privacy", "en/privacy/index.html"],
   ["/services", "services/index.html"],
@@ -27,6 +28,7 @@ const pages = [
   ["/projects/hevix", "projects/hevix/index.html"],
   ["/about", "about/index.html"],
   ["/contact", "contact/index.html"],
+  ["/demo", "demo/index.html"],
 ];
 
 const failures = [];
