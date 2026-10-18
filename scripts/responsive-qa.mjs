@@ -82,7 +82,31 @@ try {
         }
       }
 
+      if (routeName === "english-about") {
+        if (!(await page.locator(".en-about-hero").count())) {
+          throw new Error(`${viewportName}: English about page is missing its custom hero`);
+        }
+        if (await page.locator(".en-about-hero h1").count() !== 1) {
+          throw new Error(`${viewportName}: English about hero must have one H1`);
+        }
+        if (await page.locator(".en-about-work-card").count() !== 2) {
+          throw new Error(`${viewportName}: English about hero must show both selected projects`);
+        }
+        if (!(await page.locator('.en-about-hero a[href$="#team"]').count())) {
+          throw new Error(`${viewportName}: English about hero is missing the Meet the team action`);
+        }
+      }
+
       if (routeName === "english-contact") {
+        if (!(await page.locator(".en-contact-hero-panel").count())) {
+          throw new Error(`${viewportName}: English contact page is missing its direct-contact hero panel`);
+        }
+        if (!(await page.locator('.en-contact-hero a[href="#project-brief"]').count())) {
+          throw new Error(`${viewportName}: English contact hero is missing the project-brief action`);
+        }
+        if (!(await page.locator('.en-contact-hero a[href^="mailto:"]').count())) {
+          throw new Error(`${viewportName}: English contact hero is missing direct email`);
+        }
         await page.locator('form button[type="submit"]').click();
         if (!(await page.locator('#en-full-name[aria-invalid="true"]').count())) {
           throw new Error(`${viewportName}: invalid English contact form submitted without validation`);
