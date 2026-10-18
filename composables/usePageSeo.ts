@@ -28,7 +28,7 @@ export const usePageSeo = (options: PageSeoOptions) => {
   // Only the explicit set of published translation pairs may advertise hreflang.
   const translatedPaths = new Set([
     "/", "/services", "/services/ai-development", "/services/ecommerce-development",
-    "/projects", "/projects/shidaneh", "/projects/hevix", "/about", "/contact",
+    "/projects", "/projects/shidaneh", "/projects/hevix", "/about", "/contact", "/privacy",
   ]);
   const sourcePath = normalizedPath === "/en"
     ? "/"
@@ -38,7 +38,10 @@ export const usePageSeo = (options: PageSeoOptions) => {
     ? [
         { rel: "alternate", hreflang: "fa-IR", href: `${baseUrl}${sourcePath}` },
         { rel: "alternate", hreflang: "en", href: `${baseUrl}${englishPath}` },
-        { rel: "alternate", hreflang: "x-default", href: `${baseUrl}${sourcePath}` },
+        // Visitors matching no language (e.g. French) get the English site,
+        // matching the GeoIP first-visit routing behaviour that sends non-IR
+        // visitors to English.
+        { rel: "alternate", hreflang: "x-default", href: `${baseUrl}${englishPath}` },
       ]
     : [];
 
@@ -53,7 +56,8 @@ export const usePageSeo = (options: PageSeoOptions) => {
     ogUrl: canonicalUrl,
     ogImage: imageUrl,
     ogImageAlt: imageAlt,
-    ogLocale: locale === "en" ? "en_US" : "fa_IR",
+    // en_GB signals the intended international (British) market; fa_IR stays unchanged.
+    ogLocale: locale === "en" ? "en_GB" : "fa_IR",
     twitterCard: "summary_large_image",
     twitterTitle: options.title,
     twitterDescription: options.description,

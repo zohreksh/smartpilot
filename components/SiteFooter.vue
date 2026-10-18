@@ -9,6 +9,7 @@ const quickLinks = computed(() => isEnglish.value
       { title: "Projects", to: "/en/projects" },
       { title: "About", to: "/en/about" },
       { title: "Contact", to: "/en/contact" },
+      { title: "Privacy", to: "/en/privacy" },
     ]
   : [
       { title: "خانه", to: "/" },
@@ -16,6 +17,7 @@ const quickLinks = computed(() => isEnglish.value
       { title: "نمونه کارها", to: "/projects" },
       { title: "درباره ما", to: "/about" },
       { title: "تماس با ما", to: "/contact" },
+      { title: "حریم خصوصی", to: "/privacy" },
     ]);
 const focusLinks = computed(() => isEnglish.value
   ? [

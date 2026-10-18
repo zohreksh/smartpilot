@@ -74,22 +74,23 @@ useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Contact","path":"/en/
       <div class="en-heading">
         <span class="en-label">DIRECT CONTACT</span>
         <h2 id="contact-channels-title">Choose the channel that works for you</h2>
+        <p>We usually reply within one business day.</p>
       </div>
       <div class="en-contact-grid">
-        <a href="tel:+989379407868" class="en-contact-card">
-          <span aria-hidden="true">☎</span>
-          <strong>Phone</strong>
-          <span dir="ltr">+98 937 940 7868</span>
+        <a href="mailto:zhr.keshavarz@gmail.com" class="en-contact-card">
+          <span aria-hidden="true">@</span>
+          <strong>Email</strong>
+          <span>zhr.keshavarz@gmail.com</span>
         </a>
         <a href="https://wa.me/989379407868" target="_blank" rel="noopener noreferrer" class="en-contact-card">
           <span aria-hidden="true">✉</span>
           <strong>WhatsApp</strong>
           <span>Start a conversation</span>
         </a>
-        <a href="mailto:zhr.keshavarz@gmail.com" class="en-contact-card">
-          <span aria-hidden="true">@</span>
-          <strong>Email</strong>
-          <span>zhr.keshavarz@gmail.com</span>
+        <a href="tel:+989379407868" class="en-contact-card">
+          <span aria-hidden="true">☎</span>
+          <strong>Phone</strong>
+          <span dir="ltr">+98 937 940 7868</span>
         </a>
       </div>
     </section>

@@ -19,7 +19,7 @@
 
 No visitor IP is stored in our cookies or browser session storage. Only a two-character country code is retained for the browser session. The third-party GeoIP provider necessarily receives the visitor's IP via the network request; it states it does not log requests. Update your privacy notice before deploying if required.
 
-Provider documentation: https://country.is/ and https://github.com/lineofflight/country. The provider offers a free API with no key, permissive browser CORS, and an infrastructure protection limit. **This is not a contractual SLA:** production monitoring should watch timeouts and loss of availability.
+Provider documentation: https://country.is/ and https://github.com/lineofflight/country. The provider offers a free API with no key, permissive browser CORS, and an infrastructure protection limit. **This is not a contractual SLA:** production monitoring should watch timeouts and loss of availability. The visitor-facing description of this lookup now lives at `/en/privacy`; update that notice whenever routing behaviour changes (for example the third-party endpoint or stored signals).
 
 ## Trade-offs
 - Static hosting means IP detection runs after hydration. International visitors may briefly see prerendered Persian homepage before navigating to English. No server-side IP detection or truly flicker-free redirect is possible without edge hosting or a proxy.

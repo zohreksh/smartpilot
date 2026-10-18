@@ -99,7 +99,7 @@ useHead({
       </div>
       <div class="en-grid en-grid-three">
         <article class="en-card"><h3>Understand the problem</h3><p>Define the actual outcome before choosing tools or implementing features.</p></article>
-        <article class="en-card"><h3>Design for change</h3><p>Favor systems that can grow without expensive rebuilds.</p></article>
+        <article class="en-card"><h3>Design for change</h3><p>Favour systems that can grow without expensive rebuilds.</p></article>
         <article class="en-card"><h3>Keep improving</h3><p>Iterate with clear ownership of quality and long-term maintainability.</p></article>
       </div>
     </section>

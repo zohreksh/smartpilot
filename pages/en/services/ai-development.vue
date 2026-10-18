@@ -80,6 +80,10 @@ sections.push({
     {
       "title": "Can AI be added to an existing product?",
       "description": "Yes. We first assess interfaces, APIs, data structures and constraints, then add the capability in controlled stages."
+    },
+    {
+      "title": "Do you work with clients outside Iran?",
+      "description": "Yes. Discovery, reviews, demos and delivery run over video calls and written documentation, with sessions scheduled around European business hours."
     }
   ]
 });

@@ -80,6 +80,10 @@ sections.push({
     {
       "title": "Can technical SEO be added after design?",
       "description": "Some issues can be fixed later, but URL structure, HTML, speed, category architecture and structured data are best considered during design and development."
+    },
+    {
+      "title": "Do you work with clients outside Iran?",
+      "description": "Yes. Discovery, reviews, demos and delivery run over video calls and written documentation, with sessions scheduled around European business hours."
     }
   ]
 });

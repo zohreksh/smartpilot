@@ -17,6 +17,8 @@ const pages = [
   ["/en/projects/hevix", "en/projects/hevix/index.html"],
   ["/en/about", "en/about/index.html"],
   ["/en/contact", "en/contact/index.html"],
+  ["/privacy", "privacy/index.html"],
+  ["/en/privacy", "en/privacy/index.html"],
   ["/services", "services/index.html"],
   ["/services/ai-development", "services/ai-development/index.html"],
   ["/services/ecommerce-development", "services/ecommerce-development/index.html"],
@@ -47,7 +49,7 @@ const canonicalHref = (html) => {
   return tag?.match(/href=["']([^"']+)["']/i)?.[1] || null;
 };
 
-for (const [route, relativePath] of pages) {
+for (const [route, relativePath, hasTranslationPair = true] of pages) {
   const fullPath = path.join(outputDir, relativePath);
 
   if (!fs.existsSync(fullPath)) {
@@ -77,11 +79,15 @@ for (const [route, relativePath] of pages) {
     );
   }
 
-  const baseRoute = route === "/en" ? "/" : route.startsWith("/en/") ? route.slice(3) : route;
-  const englishRoute = baseRoute === "/" ? "/en" : `/en${baseRoute}`;
-  for (const [lang, href] of [["fa-IR", `${siteUrl}${baseRoute}`], ["en", `${siteUrl}${englishRoute}`]]) {
-    if (!html.includes(`hreflang="${lang}"`) || !html.includes(`href="${href}"`)) {
-      failures.push(`${route}: missing alternate for ${lang}`);
+  // English-only pages (privacy) have no published translation pair yet, so no
+  // alternates are advertised for them.
+  if (hasTranslationPair) {
+    const baseRoute = route === "/en" ? "/" : route.startsWith("/en/") ? route.slice(3) : route;
+    const englishRoute = baseRoute === "/" ? "/en" : `/en${baseRoute}`;
+    for (const [lang, href] of [["fa-IR", `${siteUrl}${baseRoute}`], ["en", `${siteUrl}${englishRoute}`]]) {
+      if (!html.includes(`hreflang="${lang}"`) || !html.includes(`href="${href}"`)) {
+        failures.push(`${route}: missing alternate for ${lang}`);
+      }
     }
   }
 
