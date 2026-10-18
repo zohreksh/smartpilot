@@ -39,6 +39,10 @@ withDefaults(defineProps<{
   <main id="main-content" class="en-content-page" tabindex="-1">
     <!-- Artwork-led hero. Stack: full-bleed artwork on top, slim band below.
          Split: editorial copy left, clean cropped real image right at full height. -->
+    <template v-if="$slots.hero">
+      <slot name="hero" />
+    </template>
+    <template v-else>
     <template v-if="heroImage">
       <section v-if="heroLayout === 'split'" class="en-split-hero">
         <div class="en-split-copy">
@@ -135,6 +139,7 @@ withDefaults(defineProps<{
         <span v-for="chip in chips" :key="chip" class="en-content-chip">{{ chip }}</span>
       </div>
     </section>
+    </template>
     <section v-for="(section, sectionIndex) in sections" :id="section.id" :key="section.title" class="en-content-section" :class="{ 'en-content-muted': sectionIndex % 2 === 1 }">
       <div class="container">
         <header class="en-content-section-heading">
