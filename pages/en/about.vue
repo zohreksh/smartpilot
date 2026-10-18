@@ -8,25 +8,6 @@ usePageSeo({
 });
 const sections = [
   {
-    "kicker": "REAL PRODUCTS",
-    "title": "We have built and developed working platforms",
-    "description": "Shidaneh and HEVIX demonstrate experience in different domains.",
-    "items": [
-      {
-        "title": "Shidaneh",
-        "description": "Beauty commerce, catalog workflows and search.",
-        "link": "/en/projects/shidaneh",
-        "image": "/images/en/shidaneh_beauty_commerce_hero.webp"
-      },
-      {
-        "title": "HEVIX",
-        "description": "Industrial products, specialized catalogs and intelligent research.",
-        "link": "/en/projects/hevix",
-        "image": "/images/en/hevix_smarter_parts_sourcing_banner.webp"
-      }
-    ]
-  },
-  {
     "kicker": "OUR PRINCIPLES",
     "title": "How we build",
     "description": "Technology should serve the problem, not the other way around.",

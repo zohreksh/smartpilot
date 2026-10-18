@@ -147,6 +147,9 @@ try {
         );
       }
 
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.waitForTimeout(150);
+
       await page.screenshot({
         path: `qa-artifacts/${viewportName}-${routeName}.png`,
         fullPage: true,
