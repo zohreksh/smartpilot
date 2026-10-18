@@ -3,6 +3,8 @@ import fs from "node:fs/promises";
 
 const routes = [
   ["home", "/"],
+  ["demo", "/demo/"],
+  ["english-demo", "/en/demo/"],
   ["english-home", "/en/"],
   ["english-services", "/en/services/"],
   ["english-ai", "/en/services/ai-development/"],
@@ -79,6 +81,45 @@ try {
         }
         if (!(await page.locator('a[hreflang="fa"]').count())) {
           throw new Error(`${viewportName}/${routeName}: missing Persian language link`);
+        }
+      }
+
+      if (routeName === "demo" || routeName === "english-demo") {
+        const expectedTitle = routeName === "english-demo" ? "A more helpful way to shop." : "خریدی با راهنمایی بهتر.";
+        if (await page.locator("main.retail-demo h1").innerText() !== expectedTitle) {
+          throw new Error(`${viewportName}/${routeName}: demo title or locale is incorrect`);
+        }
+        if (!(await page.locator(".demo-bottom-note").count())) {
+          throw new Error(`${viewportName}/${routeName}: missing demo-only disclosure`);
+        }
+        await page.screenshot({
+          path: `qa-artifacts/${viewportName}-${routeName}-initial.png`,
+          fullPage: true,
+          animations: "disabled",
+        });
+        await page.locator(".choice-card").nth(1).click();
+        await page.locator(".mode-options button").nth(1).click();
+        await page.locator(".prompt-chips button").first().click();
+        if (await page.locator(".product-card").count() !== 3) {
+          throw new Error(`${viewportName}/${routeName}: expected three sample product recommendations`);
+        }
+        await page.locator(".product-card button").first().click();
+        if (!(await page.locator('[role="dialog"][aria-modal="true"]').count())) {
+          throw new Error(`${viewportName}/${routeName}: product details dialog did not open`);
+        }
+        await page.locator(".modal-close").click();
+        await page.locator(".preview-tabs button").nth(1).click();
+        if (!(await page.locator(".owner-view").count())) {
+          throw new Error(`${viewportName}/${routeName}: seller catalogue view did not open`);
+        }
+        await page.screenshot({
+          path: `qa-artifacts/${viewportName}-${routeName}-interaction.png`,
+          fullPage: true,
+          animations: "disabled",
+        });
+        await page.locator(".workspace-footer button").click();
+        if (!(await page.locator(".empty-products").count())) {
+          throw new Error(`${viewportName}/${routeName}: reset did not restore initial demo state`);
         }
       }
 
