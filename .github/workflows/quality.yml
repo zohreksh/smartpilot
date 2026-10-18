@@ -6,6 +6,7 @@ on:
     branches:
       - main
       - "feature/seo-pages-foundation"
+      - "feature/beauty-fashion-demo-scope"
   workflow_dispatch:
 
 permissions:
@@ -48,8 +49,10 @@ jobs:
         run: |
           set -euo pipefail
           for file in \
-            .output/public/index.html \
-            .output/public/en/index.html \
+            .output/public/index.html \\
+            .output/public/demo/index.html \
+            .output/public/en/index.html \\
+            .output/public/en/demo/index.html \
             .output/public/en/services/index.html \
             .output/public/en/services/ai-development/index.html \
             .output/public/en/services/ecommerce-development/index.html \
