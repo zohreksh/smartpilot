@@ -26,7 +26,8 @@ withDefaults(defineProps<{
 
 <template>
   <main id="main-content" class="en-content-page" tabindex="-1">
-    <slot name="hero">\n      <section class="en-content-hero">
+    <slot name="hero">
+      <section class="en-content-hero">
         <div class="container en-content-hero-grid">
           <div class="en-content-hero-copy">
             <span class="en-content-kicker">{{ kicker }}</span>
@@ -47,7 +48,9 @@ withDefaults(defineProps<{
             <span class="en-content-art-tag">DESIGN · ENGINEERING · AI</span>
           </div>
         </div>
-      </section>\n    </slot>\n    <section v-for="(section, sectionIndex) in sections" :id="section.id" :key="section.title" class="en-content-section" :class="{ 'en-content-muted': sectionIndex % 2 === 1 }">
+      </section>
+    </slot>
+    <section v-for="(section, sectionIndex) in sections" :id="section.id" :key="section.title" class="en-content-section" :class="{ 'en-content-muted': sectionIndex % 2 === 1 }">
       <div class="container">
         <header class="en-content-section-heading">
           <span v-if="section.kicker" class="en-content-kicker">{{ section.kicker }}</span>
