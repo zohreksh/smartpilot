@@ -101,6 +101,8 @@ jobs:
           set -euo pipefail
           for route in \
             / \
+            /demo/ \
+            /en/demo/ \
             /en/ \
             /en/services/ \
             /en/services/ai-development/ \
