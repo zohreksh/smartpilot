@@ -96,6 +96,8 @@ onBeforeUnmount(() => {
       </div>
     </section>
 
+    <RetailDemoCallout />
+
     <section class="en-strip" aria-label="SmartPilot at a glance">
       <div class="container en-strip-grid">
         <article class="en-strip-card">
