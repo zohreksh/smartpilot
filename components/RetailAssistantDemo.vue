@@ -355,7 +355,7 @@ function resetDemo() {
 .demo-page-footer>a:first-child{font-weight:800;color:#34372f}.demo-page-footer span{flex:1}
 .product-modal-backdrop{position:fixed;inset:0;z-index:1000;background:#1f211dc9;display:grid;place-items:center;padding:20px}
 .product-modal{position:relative;width:min(430px,100%);max-height:90vh;overflow:auto;border-radius:16px;background:#fff;padding:24px;text-align:start;box-shadow:0 30px 90px #0003}
-.modal-close{position:absolute;top:13px;right:13px;width:30px;height:30px;border:1px solid #e8e5dd;border-radius:8px;background:#fff;font-size:20px;color:#5c5e55}
+.modal-close{position:absolute;z-index:2;top:13px;right:13px;width:30px;height:30px;border:1px solid #e8e5dd;border-radius:8px;background:#fff;font-size:20px;color:#5c5e55}
 .retail-demo--en .modal-close{right:auto;left:13px}
 .modal-art{height:150px;border-radius:11px;margin-bottom:20px}.modal-art .bottle-shape{transform:scale(1.3)}.modal-art .cloth-shape{transform:scale(1.2)}
 .product-modal h2{font-size:20px;margin:0 0 4px}.modal-kind{font-size:11px;color:#85867c;margin:0 0 10px}.modal-price{font-size:15px;color:#4d5946}.product-modal>p:not(.assistant-kicker):not(.modal-kind):not(.modal-tags){font-size:12px;line-height:1.9;color:#686b62}
