@@ -189,11 +189,26 @@ try {
         brokenImages: Array.from(document.images)
           .filter((img) => img.complete && img.naturalWidth === 0)
           .map((img) => img.currentSrc || img.src),
+        overflowElements: Array.from(document.querySelectorAll("body *"))
+          .map((el) => {
+            const rect = el.getBoundingClientRect();
+            return {
+              tag: el.tagName.toLowerCase(),
+              className: typeof el.className === "string" ? el.className : "",
+              text: (el.innerText || "").trim().slice(0, 70),
+              left: Math.round(rect.left),
+              right: Math.round(rect.right),
+              width: Math.round(rect.width),
+            };
+          })
+          .filter((el) => el.right > window.innerWidth + 2 || el.left < -2)
+          .sort((a, b) => b.right - a.right)
+          .slice(0, 12),
       }));
 
       if (layout.scrollWidth > layout.clientWidth + 2) {
         throw new Error(
-          `${viewportName}/${routeName}: horizontal overflow ${layout.scrollWidth}px > ${layout.clientWidth}px`,
+          `${viewportName}/${routeName}: horizontal overflow ${layout.scrollWidth}px > ${layout.clientWidth}px; elements=${JSON.stringify(layout.overflowElements)}`,
         );
       }
 
