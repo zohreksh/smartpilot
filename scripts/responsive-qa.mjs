@@ -79,7 +79,7 @@ try {
         if (locale.lang !== "en" || locale.dir !== "ltr") {
           throw new Error(`${viewportName}/${routeName}: wrong locale ${JSON.stringify(locale)}`);
         }
-        if (!(await page.locator('a[hreflang="fa"]').count())) {
+        if (!(await page.locator('a[hreflang="fa-IR"]').count())) {
           throw new Error(`${viewportName}/${routeName}: missing Persian language link`);
         }
       }
