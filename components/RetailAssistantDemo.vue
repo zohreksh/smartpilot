@@ -50,7 +50,7 @@ const copy = computed(() => isEnglish.value ? {
   match: "Suggested for your request",
   sellerAction: "Seller contact is a demonstration only.",
   beautyCaution: "For skin concerns, allergies or medical questions, please speak with a qualified professional or the seller. This demo does not provide medical advice.",
-  noMatch: "Try another prompt to explore a different sample recommendation.",
+  noMatch: "These are sample catalogue recommendations. Try another prompt to explore a different need.",
 } : {
   brand: "atelier / smartpilot",
   eyebrow: "یک تجربه برای امتحان‌کردن",
@@ -89,7 +89,7 @@ const copy = computed(() => isEnglish.value ? {
   match: "پیشنهاد برای درخواست شما",
   sellerAction: "تماس با فروشنده در این نسخه صرفاً نمایشی است.",
   beautyCaution: "برای مشکلات پوستی، حساسیت یا پرسش پزشکی با متخصص واجد صلاحیت یا فروشنده مشورت کنید. این دمو توصیه پزشکی ارائه نمی‌کند.",
-  noMatch: "برای دیدن پیشنهاد نمونه دیگر، یکی از پرسش‌های پیشنهادی را انتخاب کنید.",
+  noMatch: "این پیشنهادها از کاتالوگ نمونه هستند؛ برای بررسی نیاز دیگری، پرسش متفاوتی را امتحان کنید.",
 });
 
 const products = computed(() => {
