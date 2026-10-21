@@ -13,8 +13,8 @@ usePageSeo({
     <section class="hero-shell">
       <HeroSection />
     </section>
-    <RetailDemoCallout />
     <ServicesSection />
+    <RetailDemoCallout />
     <ProjectsSection />
     <WhyUsSection />
     <TeamSection />

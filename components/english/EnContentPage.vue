@@ -7,12 +7,22 @@ type ContentCard = {
   image?: string;
   imageAlt?: string;
 };
+type Founder = {
+  name: string;
+  role: string;
+  image: string;
+  description: string;
+  skills: string[];
+  linkedin?: string;
+};
 type ContentSection = {
   id?: string;
   kicker?: string;
   title: string;
   description?: string;
   items?: ContentCard[];
+  /** "founders" = dedicated builders section (side photo, skills, LinkedIn) mirroring the Persian design. */
+  variant?: "default" | "founders";
 };
 withDefaults(defineProps<{
   kicker: string;
@@ -27,12 +37,15 @@ withDefaults(defineProps<{
   teamCards?: Array<{ name: string; role: string; image: string }>;
   /** Clickable overlays aligned with CTAs baked into heroImage (percent box, natural ratio). */
   heroHotspots?: Array<{ label: string; to: string; left: string; top: string; width: string; height: string }>;
+  /** Dedicated "builders" section content (variant: "founders"), mirroring the Persian about page. */
+  founders?: Founder[];
+  specialists?: { title: string; description: string; chips: string[] };
   /** "stack" = artwork full-bleed on top, band below. "split" = copy left, clean cropped image right, full height. */
   heroLayout?: "stack" | "split";
   /** object-position for the split hero image (validated against the source composition). */
   heroPosition?: string;
   sections: ContentSection[];
-}>(), { heroImage: "", heroImageAlt: "", chips: () => [], heroVariant: "art", teamCards: () => [], heroHotspots: () => [], heroLayout: "stack", heroPosition: "" });
+}>(), { heroImage: "", heroImageAlt: "", chips: () => [], heroVariant: "art", teamCards: () => [], heroHotspots: () => [], founders: () => [], heroLayout: "stack", heroPosition: "" });
 </script>
 
 <template>
@@ -147,7 +160,46 @@ withDefaults(defineProps<{
           <h2>{{ section.title }}</h2>
           <p v-if="section.description">{{ section.description }}</p>
         </header>
-        <div v-if="section.items?.length" class="en-content-cards">
+        <div v-if="section.variant === 'founders'" class="en-founders">
+          <div class="en-founders-grid">
+            <article v-for="member in founders" :key="member.name" class="en-founder-card">
+              <div class="en-founder-image">
+                <img :src="member.image" :alt="`Portrait of ${member.name}`" width="1140" height="1280" loading="lazy" decoding="async" />
+              </div>
+              <div class="en-founder-content">
+                <span class="en-founder-role">{{ member.role }}</span>
+                <h3>{{ member.name }}</h3>
+                <p>{{ member.description }}</p>
+                <div class="en-founder-chips" :aria-label="`Skills of ${member.name}`">
+                  <span v-for="skill in member.skills" :key="skill">{{ skill }}</span>
+                </div>
+                <a
+                  v-if="member.linkedin"
+                  class="en-founder-link"
+                  :href="member.linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >LinkedIn profile <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+          <div v-if="specialists" class="en-specialists-panel">
+            <span class="en-specialists-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM16.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                <path d="M3 19c.5-3.2 2.2-5 5-5s4.5 1.8 5 5M13 14.5c.8-1 1.9-1.5 3.5-1.5 2.5 0 4 1.6 4.5 4.5" />
+              </svg>
+            </span>
+            <div class="en-specialists-copy">
+              <h3>{{ specialists.title }}</h3>
+              <p>{{ specialists.description }}</p>
+            </div>
+            <div class="en-specialist-chips" role="group" aria-label="Complementary expertise">
+              <span v-for="chip in specialists.chips" :key="chip">{{ chip }}</span>
+            </div>
+          </div>
+        </div>
+        <div v-else-if="section.items?.length" class="en-content-cards">
           <article v-for="item in section.items" :key="item.title" class="en-content-card">
             <img v-if="item.image" class="en-content-card-image" :src="item.image" :alt="item.imageAlt || item.title" loading="lazy" decoding="async" />
             <div class="en-content-card-copy">
@@ -280,9 +332,47 @@ withDefaults(defineProps<{
 .en-content-card h3 { font-size: 19px; line-height: 1.35; margin: 0 0 11px; }
 .en-content-card p { margin: 0; color: #657186; font-size: 14.5px; line-height: 1.8; }
 .en-content-card-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: #a75f35; font-weight: 800; font-size: 13px; }
-.en-content-card-link::after { content: "→"; font-size: 14px; transition: transform .2s ease; }
+.en-content-card-link::after { content: ""; font-size: 14px; transition: transform .2s ease; }
 .en-content-card:hover .en-content-card-link::after { transform: translateX(3px); }
 .en-content-card-image { display: block; width: 100%; height: auto; aspect-ratio: 1.7; object-fit: cover; }
+.en-founders-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
+.en-founder-card { display: grid; grid-template-columns: 186px minmax(0,1fr); gap: 24px; align-items: center; min-width: 0; padding: 22px; border: 1px solid #e8ded7; border-radius: 24px; background: linear-gradient(150deg,#fff 0%,#fffaf6 100%); box-shadow: 0 12px 34px rgba(16,28,50,.05); }
+.en-founder-image { overflow: hidden; width: 186px; aspect-ratio: 1 / 1; border-radius: 20px; background: #f8f3ef; }
+.en-founder-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.en-founder-role { display: inline-flex; padding: 5px 11px; border-radius: 999px; background: #fff3ed; color: #bd7448; font-size: 13.5px; font-weight: 700; }
+.en-founder-content { min-width: 0; }
+.en-founder-content h3 { margin: 10px 0 6px; color: #13283c; font-size: 22px; }
+.en-founder-content p { margin: 0; color: #66748a; font-size: 16px; line-height: 1.8; }
+.en-founder-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+.en-founder-chips span,
+.en-specialist-chips span { display: inline-flex; align-items: center; min-height: 28px; padding: 4px 10px; border: 1px solid #eee2d9; border-radius: 999px; background: #faf7f4; color: #667085; font-size: 14px; line-height: 1.4; }
+.en-founder-link { display: inline-flex; width: fit-content; align-items: center; gap: 7px; margin-top: 14px; color: #9f5a34; font-size: 13.5px; font-weight: 800; text-decoration: none; transition: color .2s ease, transform .2s ease; }
+.en-founder-link:hover { color: #7f4325; transform: translateX(2px); }
+.en-specialists-panel { display: grid; grid-template-columns: auto minmax(0,1fr) minmax(320px,auto); gap: 20px; align-items: center; margin-top: 22px; padding: 24px; border: 1px solid #eee2d9; border-radius: 22px; background: #fff9f5; }
+.en-specialists-icon { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: #faece4; color: #b86b35; flex: none; }
+.en-specialists-icon svg { width: 24px; height: 24px; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.en-specialists-copy h3 { margin: 0 0 5px; color: #13283c; font-size: 18px; }
+.en-specialists-copy p { margin: 0; color: #66748a; font-size: 14.5px; line-height: 1.8; }
+.en-specialist-chips { display: flex; flex-wrap: wrap; gap: 7px; justify-content: flex-end; }
+@media(max-width:1080px) {
+ .en-founder-card { grid-template-columns: 150px minmax(0,1fr); }
+ .en-founder-image { width: 150px; }
+ .en-specialists-panel { grid-template-columns: auto minmax(0,1fr); }
+ .en-specialist-chips { grid-column: 1 / -1; justify-content: flex-start; }
+}
+@media(max-width:820px) {
+ .en-founders-grid { grid-template-columns: 1fr; }
+}
+@media(max-width:600px) {
+ .en-founder-card { grid-template-columns: 38% minmax(0,1fr); gap: 16px; padding: 16px; border-radius: 20px; }
+ .en-founder-image { width: 100%; border-radius: 16px; }
+ .en-founder-content h3 { font-size: 18px; }
+ .en-founder-content p { font-size: 14px; line-height: 1.75; }
+ .en-specialists-panel { grid-template-columns: 1fr; gap: 14px; padding: 20px; text-align: center; }
+ .en-specialists-icon { margin: 0 auto; }
+ .en-specialists-copy { text-align: center; }
+ .en-specialist-chips { grid-column: auto; justify-content: center; }
+}
 .en-content-cta { position: relative; padding: 75px 0; overflow: hidden; color: #fff; background: radial-gradient(circle at 85% 12%, rgba(210,144,100,.2), transparent 40%), linear-gradient(140deg,#07111f,#152a45); }
 .en-content-cta::before { content: ""; position: absolute; width: 340px; height: 340px; bottom: -170px; left: -90px; border-radius: 50%; border: 1px solid rgba(233,177,128,.14); background: radial-gradient(circle, rgba(210,144,100,.09), transparent 70%); pointer-events: none; }
 .en-content-cta-inner { position: relative; z-index: 1; text-align: center; max-width: 760px; }

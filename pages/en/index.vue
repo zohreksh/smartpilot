@@ -96,8 +96,6 @@ onBeforeUnmount(() => {
       </div>
     </section>
 
-    <RetailDemoCallout />
-
     <section class="en-strip" aria-label="SmartPilot at a glance">
       <div class="container en-strip-grid">
         <article class="en-strip-card">
@@ -114,6 +112,8 @@ onBeforeUnmount(() => {
         </article>
       </div>
     </section>
+
+    <RetailDemoCallout />
 
     <section id="services" class="en-section container">
       <div class="en-heading">
