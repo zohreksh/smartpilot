@@ -107,6 +107,7 @@ useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"Services","path":"/en
             <div class="en-services-actions">
               <NuxtLink class="en-services-primary" to="/en/contact">Discuss your project <span aria-hidden="true">↗</span></NuxtLink>
               <NuxtLink class="en-services-secondary" to="/en/projects">Explore selected work <span aria-hidden="true">→</span></NuxtLink>
+              <NuxtLink class="en-services-secondary" to="/en/demo">Try the retail demo <span aria-hidden="true">↗</span></NuxtLink>
             </div>
             <div class="en-services-disciplines" aria-label="SmartPilot service areas">
               <span>Applied AI</span><i aria-hidden="true"></i>

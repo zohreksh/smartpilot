@@ -3,6 +3,8 @@ import fs from "node:fs/promises";
 
 const routes = [
   ["home", "/"],
+  ["demo", "/demo/"],
+  ["english-demo", "/en/demo/"],
   ["english-home", "/en/"],
   ["english-services", "/en/services/"],
   ["english-ai", "/en/services/ai-development/"],
@@ -77,8 +79,47 @@ try {
         if (locale.lang !== "en" || locale.dir !== "ltr") {
           throw new Error(`${viewportName}/${routeName}: wrong locale ${JSON.stringify(locale)}`);
         }
-        if (!(await page.locator('a[hreflang="fa"]').count())) {
+        if (!(await page.locator('link[rel="alternate"][hreflang="fa-IR"]').count())) {
           throw new Error(`${viewportName}/${routeName}: missing Persian language link`);
+        }
+      }
+
+      if (routeName === "demo" || routeName === "english-demo") {
+        const expectedTitle = routeName === "english-demo" ? "A more helpful way to shop." : "خریدی با راهنمایی بهتر.";
+        if (await page.locator("main.retail-demo h1").innerText() !== expectedTitle) {
+          throw new Error(`${viewportName}/${routeName}: demo title or locale is incorrect`);
+        }
+        if (!(await page.locator(".demo-bottom-note").count())) {
+          throw new Error(`${viewportName}/${routeName}: missing demo-only disclosure`);
+        }
+        await page.screenshot({
+          path: `qa-artifacts/${viewportName}-${routeName}-initial.png`,
+          fullPage: true,
+          animations: "disabled",
+        });
+        await page.locator(".choice-card").nth(1).click();
+        await page.locator(".mode-options button").nth(1).click();
+        await page.locator(".prompt-chips button").first().click();
+        if (await page.locator(".product-card").count() !== 3) {
+          throw new Error(`${viewportName}/${routeName}: expected three sample product recommendations`);
+        }
+        await page.locator(".product-card button").first().click();
+        if (!(await page.locator('[role="dialog"][aria-modal="true"]').count())) {
+          throw new Error(`${viewportName}/${routeName}: product details dialog did not open`);
+        }
+        await page.locator(".modal-close").click();
+        await page.locator(".preview-tabs button").nth(1).click();
+        if (!(await page.locator(".owner-view").count())) {
+          throw new Error(`${viewportName}/${routeName}: seller catalogue view did not open`);
+        }
+        await page.screenshot({
+          path: `qa-artifacts/${viewportName}-${routeName}-interaction.png`,
+          fullPage: true,
+          animations: "disabled",
+        });
+        await page.locator(".workspace-footer button").click();
+        if (!(await page.locator(".empty-products").count())) {
+          throw new Error(`${viewportName}/${routeName}: reset did not restore initial demo state`);
         }
       }
 
@@ -148,11 +189,26 @@ try {
         brokenImages: Array.from(document.images)
           .filter((img) => img.complete && img.naturalWidth === 0)
           .map((img) => img.currentSrc || img.src),
+        overflowElements: Array.from(document.querySelectorAll("body *"))
+          .map((el) => {
+            const rect = el.getBoundingClientRect();
+            return {
+              tag: el.tagName.toLowerCase(),
+              className: typeof el.className === "string" ? el.className : "",
+              text: (el.innerText || "").trim().slice(0, 70),
+              left: Math.round(rect.left),
+              right: Math.round(rect.right),
+              width: Math.round(rect.width),
+            };
+          })
+          .filter((el) => el.right > window.innerWidth + 2 || el.left < -2)
+          .sort((a, b) => b.right - a.right)
+          .slice(0, 12),
       }));
 
       if (layout.scrollWidth > layout.clientWidth + 2) {
         throw new Error(
-          `${viewportName}/${routeName}: horizontal overflow ${layout.scrollWidth}px > ${layout.clientWidth}px`,
+          `${viewportName}/${routeName}: horizontal overflow ${layout.scrollWidth}px > ${layout.clientWidth}px; elements=${JSON.stringify(layout.overflowElements)}`,
         );
       }
 

@@ -35,24 +35,7 @@ const sections = [
     "id": "team",
     "title": "Clear ownership for architecture and product quality",
     "description": "We lead the core architecture and add complementary specialists as required.",
-    "items": [
-      {
-        "title": "Zohreh Keshavarz",
-        "description": "Product architecture and development focused on user journeys and a practical growth roadmap.",
-        "link": "https://www.linkedin.com/in/zohre-keshavarz-2a3221bb",
-        "image": "/images/team/zohreh.webp"
-      },
-      {
-        "title": "Hossein Kolani",
-        "description": "Software architecture and development with a focus on specialized systems and applied AI.",
-        "link": "https://www.linkedin.com/in/hossien-kolani-720103bb",
-        "image": "/images/team/hossein.webp"
-      },
-      {
-        "title": "Complementary specialists",
-        "description": "Bring in UI/UX, infrastructure, SEO and other expertise when needed."
-      }
-    ]
+    "variant": "founders"
   },
   {
     "kicker": "PROCESS",
@@ -88,6 +71,29 @@ useBreadcrumbSchema([{"name":"Home","path":"/en"},{"name":"About","path":"/en/ab
     kicker="ABOUT SMARTPILOT"
     title="We build digital products around real-world complexity."
     introduction="SmartPilot brings product thinking, software engineering, intelligent search and applied AI together—so technology solves the right problem and remains useful as the business grows."
+    :founders="[
+      {
+        name: 'Zohreh Keshavarz',
+        role: 'Product architect & developer',
+        image: '/images/team/zohreh.webp',
+        description: 'Focused on turning business needs into user journeys, product flow and an executable growth roadmap.',
+        skills: ['Experience & product flow architecture', 'Development roadmap & prioritisation', 'Growth & product optimisation'],
+        linkedin: 'https://www.linkedin.com/in/zohre-keshavarz-2a3221bb'
+      },
+      {
+        name: 'Hossein Kolani',
+        role: 'Software architect & developer',
+        image: '/images/team/hossein.webp',
+        description: 'Focused on technical architecture, dedicated systems and bringing AI capabilities into the product.',
+        skills: ['Extensible systems architecture', 'AI & intelligent capabilities', 'Specialised systems design'],
+        linkedin: 'https://www.linkedin.com/in/hossien-kolani-720103bb'
+      }
+    ]"
+    :specialists="{
+      title: 'Network of complementary specialists',
+      description: 'Complementary expertise joins the team only where the project really needs it.',
+      chips: ['UI/UX', 'Frontend', 'Backend', 'DevOps', 'SEO', 'AI']
+    }"
     :sections="sections"
   >
     <template #hero>
