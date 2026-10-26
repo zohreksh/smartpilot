@@ -6,6 +6,15 @@
   font-display: swap;
 }
 
+/* Self-hosted variable Inter (latin subset) for English routes. */
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   --bg: #fcf8f4;
   --surface: #fff;
@@ -423,4 +432,10 @@ a {
   .home-section-description {
     font-size: 14px;
   }
+}
+
+/* The existing Persian pages remain RTL. English routes opt into LTR. */
+body[dir="ltr"] {
+  direction: ltr;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
 }

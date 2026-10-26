@@ -14,6 +14,7 @@ usePageSeo({
       <HeroSection />
     </section>
     <ServicesSection />
+    <RetailDemoCallout />
     <ProjectsSection />
     <WhyUsSection />
     <TeamSection />
