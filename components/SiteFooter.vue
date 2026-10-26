@@ -421,6 +421,15 @@ const focusLinks = computed(() => isEnglish.value
     padding: 30px 0 16px;
   }
 
+  /* Keep decorative rings inside the mobile viewport. */
+  .footer-glow-one {
+    right: 0;
+  }
+
+  .footer-glow-two {
+    left: 0;
+  }
+
   .footer-main {
     gap: 22px;
     padding: 0 4px 24px;
